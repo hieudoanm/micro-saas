@@ -1,5 +1,7 @@
 # `micro/saas`
 
+![cover](./images/cover.png)
+
 ## Table of Contents
 
 - [`micro/saas`](#microsaas)
