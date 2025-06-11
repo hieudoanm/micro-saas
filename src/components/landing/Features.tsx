@@ -33,7 +33,7 @@ export const Features: FC = () => {
 				].map(({ id = '', emoji = '', title = '', description = '' }) => {
 					return (
 						<div key={id} className="col-span-1">
-							<div className="flex flex-col items-center justify-center gap-y-2 rounded-lg border border-neutral-800 bg-neutral-900/40 p-4 shadow shadow-neutral-100/10 md:gap-y-4">
+							<div className="flex flex-col items-center justify-center gap-y-2 rounded-lg border border-neutral-800 bg-neutral-900/40 p-4 shadow shadow-neutral-100/10 transition-all hover:scale-110 md:gap-y-4">
 								<span className="text-4xl">{emoji}</span>
 								<h3 className="text-bold text-xl">{title}</h3>
 								<p className="text-center text-sm text-neutral-400">{description}</p>

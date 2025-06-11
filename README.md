@@ -21,6 +21,8 @@
 8. 🔗 [tRPC](https://trpc.io/) – Create fully typesafe APIs without code generation—perfect for TypeScript full-stack apps.
 9. 🧱 [Zod](https://zod.dev/) – A TypeScript-first schema declaration and validation library, ideal for form validation and API contracts.
 10. 🛢️ [Prisma](https://www.prisma.io/) – A modern ORM that simplifies database access with auto-generated, type-safe queries.
+11. 🐳 [Docker](https://www.docker.com/) – A containerization platform that enables consistent development, testing, and deployment environments across systems.
+12. 🔁 [Github Actions](https://github.com/features/actions) – A powerful CI/CD automation tool built into GitHub for running workflows on code changes, tests, deployments, and more.
 
 ## Folder Structure
 

@@ -1,16 +1,16 @@
-import { Button } from '@micro/components/common/Button';
+import { LargeButton } from '@micro/components/common/Button';
 import { FC } from 'react';
 
 export const CTA: FC = () => {
 	return (
-		<section className="container mx-auto flex flex-col gap-y-8 px-4 pt-8 pb-4 md:gap-y-16 md:px-8 md:pt-16 md:pb-8">
-			<div className="mx-auto w-full max-w-2xl">
-				<div className="flex flex-col items-center justify-center gap-y-2 md:gap-y-4">
-					<h2 className="text-3xl font-extrabold">Call to Action</h2>
-					<p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.</p>
-					<div className="flex w-full items-center justify-center">
-						<Button>Get Started</Button>
-					</div>
+		<section className="container mx-auto flex flex-col px-4 pt-8 pb-4 md:px-8 md:pt-16 md:pb-8">
+			<div className="mx-auto w-full max-w-2xl space-y-4 md:space-y-8">
+				<h2 className="text-center text-3xl font-extrabold">Call to Action</h2>
+				<p className="text-center text-base md:text-lg">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
+				</p>
+				<div className="flex w-full items-center justify-center">
+					<LargeButton>Get Started</LargeButton>
 				</div>
 			</div>
 		</section>
