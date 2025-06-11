@@ -1,8 +1,8 @@
-# Micro SaaS
+# `micro/saas`
 
 ## Table of Contents
 
-- [Micro SaaS](#micro-saas)
+- [`micro/saas`](#microsaas)
   - [Table of Contents](#table-of-contents)
   - [Techstack](#techstack)
   - [Folder Structure](#folder-structure)

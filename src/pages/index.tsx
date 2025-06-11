@@ -1,76 +1,71 @@
-import Image from 'next/image';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { NextPage } from 'next';
+import Link from 'next/link';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
+const year = new Date().getFullYear();
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
-
-export default function Home() {
+const HomePage: NextPage = () => {
 	return (
-		<div
-			className={`${geistSans.className} ${geistMono.className} grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20`}>
-			<main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-				<Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
-				<ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-					<li className="mb-2 tracking-[-.01em]">
-						Get started by editing{' '}
-						<code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-							src/pages/index.tsx
-						</code>
-						.
-					</li>
-					<li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-				</ol>
-				<div className="flex flex-col items-center gap-4 sm:flex-row">
-					<a
-						className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-						href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer">
-						<Image className="dark:invert" src="/vercel.svg" alt="Vercel logomark" width={20} height={20} />
-						Deploy now
-					</a>
-					<a
-						className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-						href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer">
-						Read our docs
-					</a>
+		<div className="flex flex-col gap-y-8 md:gap-y-16">
+			<nav>
+				<div className="container mx-auto px-4 py-2 md:px-8 md:py-4">
+					<div className="flex items-center justify-between">
+						<code>micro/saas</code>
+						<Link href="#" target="_blank">
+							GitHub
+						</Link>
+					</div>
 				</div>
+			</nav>
+			<main className="container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8">
+				<section className="flex flex-col gap-y-4 md:gap-y-8">
+					<h1 className="text-center text-6xl font-black">micro/saas</h1>
+					<p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus. </p>
+					<div className="flex w-full items-center justify-center">
+						<button className="rounded-lg border border-neutral-800 px-4 py-2">Get Started</button>
+					</div>
+				</section>
+				<section className="flex flex-col gap-y-8 md:gap-y-16">
+					<h2 className="text-center text-3xl font-extrabold">Features</h2>
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16">
+						{[
+							{
+								id: 'feature-1',
+								title: 'Feature 1',
+								description:
+									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius est in justo egestas eleifend. Nulla vitae nibh volutpat, rhoncus.',
+							},
+							{
+								id: 'feature-2',
+								title: 'Feature 2',
+								description:
+									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius est in justo egestas eleifend. Nulla vitae nibh volutpat, rhoncus.',
+							},
+							{
+								id: 'feature-3',
+								title: 'Feature 3',
+								description:
+									'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius est in justo egestas eleifend. Nulla vitae nibh volutpat, rhoncus.',
+							},
+						].map(({ id = '', title = '', description = '' }) => {
+							return (
+								<div key={id} className="col-span-1 flex flex-col gap-y-4 md:gap-y-8">
+									<h3 className="text-bold text-center text-2xl">{title}</h3>
+									<p className="text-neutral-500">{description}</p>
+								</div>
+							);
+						})}
+					</div>
+				</section>
 			</main>
-			<footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer">
-					<Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-					Learn
-				</a>
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer">
-					<Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-					Examples
-				</a>
-				<a
-					className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-					href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer">
-					<Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-					Go to nextjs.org →
-				</a>
+			<footer>
+				<div className="container mx-auto px-4 py-2 md:px-8 md:py-4">
+					<p className="text-center">
+						&copy; {year} <code>micro/saas</code>. All Rights Reserved.
+					</p>
+				</div>
 			</footer>
 		</div>
 	);
-}
+};
+
+export default HomePage;
