@@ -57,6 +57,6 @@
 		"rimraf": "6.0.1",
 		"tailwindcss": "4.1.9",
 		"typescript": "5.8.3",
-		"zod": "3.25.61"
+		"zod": "3.25.62"
 	}
 }
