@@ -25,7 +25,8 @@
 		"build": "next build",
 		"prestart": "kill-port 3000",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"test": "jest"
 	},
 	"dependencies": {
 		"next": "15.3.3",
@@ -46,6 +47,8 @@
 		"eslint": "9.28.0",
 		"eslint-config-next": "15.3.3",
 		"husky": "9.1.7",
+		"jest": "30.0.0",
+		"jest-environment-jsdom": "30.0.0",
 		"kill-port": "2.0.1",
 		"prettier": "3.5.3",
 		"prettier-plugin-tailwindcss": "0.6.12",
