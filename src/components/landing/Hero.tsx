@@ -1,4 +1,4 @@
-import { Button } from '@micro/components/common/Button';
+import { LargeButton } from '@micro/components/common/Button';
 import { FC } from 'react';
 
 export const Hero: FC = () => {
@@ -14,7 +14,7 @@ export const Hero: FC = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
 				</p>
 				<div className="flex w-full items-center justify-center">
-					<Button>Get Started</Button>
+					<LargeButton>Get Started</LargeButton>
 				</div>
 			</div>
 		</section>

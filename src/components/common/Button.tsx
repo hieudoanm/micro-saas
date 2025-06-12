@@ -1,16 +1,8 @@
 import { FC, ReactNode } from 'react';
 
-export const SmallButton: FC<{ children: ReactNode }> = ({ children = <></> }) => {
-	return (
-		<button className="cursor-pointer rounded bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-2 py-1 text-sm">
-			{children}
-		</button>
-	);
-};
-
 export const Button: FC<{ children: ReactNode }> = ({ children = <></> }) => {
 	return (
-		<button className="cursor-pointer rounded-lg bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2">
+		<button className="cursor-pointer rounded-lg bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-2 py-1 text-sm md:px-4 md:py-2 md:text-base">
 			{children}
 		</button>
 	);
