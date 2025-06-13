@@ -10,7 +10,7 @@ export const CTA: FC = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
 				</p>
 				<div className="flex w-full items-center justify-center">
-					<LargeButton>Get Started</LargeButton>
+					<LargeButton>Sign Up</LargeButton>
 				</div>
 			</div>
 		</section>
