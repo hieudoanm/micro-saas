@@ -13,11 +13,11 @@ export const Hero: FC = () => {
 				<p className="text-center text-base md:text-lg">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
 				</p>
-				<div className="mx-auto w-full max-w-lg rounded-full">
+				<div className="mx-auto w-full max-w-lg rounded-full shadow md:shadow-purple-900">
 					<div className="overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]">
 						<div className="flex rounded-full bg-neutral-900 p-1 md:p-2">
 							<input className="grow rounded-full border-0 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base"></input>
-							<Button>🔍 Search</Button>
+							<Button>Search</Button>
 						</div>
 					</div>
 				</div>

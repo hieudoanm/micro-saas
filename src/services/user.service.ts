@@ -2,6 +2,15 @@ import { prismaClient } from '@micro/prisma/prisma.client';
 import { Password } from '@micro/utils/password';
 import { tryCatch } from '@micro/utils/try-catch';
 
+export const getUser = async ({ email }: { email: string }) => {
+	const { data: user, error: findError } = await tryCatch(
+		prismaClient.user.findUnique({ select: { email: true }, where: { email } }),
+	);
+	if (findError) throw new Error(findError.message);
+	if (!user) throw new Error('Invalid Email');
+	return user;
+};
+
 const changePassword = async ({
 	email = '',
 	oldPassword = '',
@@ -29,5 +38,5 @@ const changePassword = async ({
 };
 
 export const UserService = () => {
-	return { changePassword };
+	return { getUser, changePassword };
 };

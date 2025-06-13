@@ -71,38 +71,58 @@
 			t.d(s, { $: () => a, r: () => r });
 			var l = t(5640);
 			let a = (e) => {
-					let { size: s = 'md', type: t = 'button', children: a = (0, l.jsx)(l.Fragment, {}) } = e;
+					let {
+						size: s = 'md',
+						type: t = 'button',
+						disabled: a = !1,
+						onClick: r = () => {},
+						children: i = (0, l.jsx)(l.Fragment, {}),
+					} = e;
 					return 'sm' === s
 						? (0, l.jsx)('button', {
 								type: t,
+								disabled: a,
+								onClick: r,
 								className:
 									'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm',
-								children: a,
+								children: i,
 							})
 						: 'lg' === s
 							? (0, l.jsx)('button', {
 									type: t,
+									disabled: a,
+									onClick: r,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-									children: a,
+									children: i,
 								})
 							: (0, l.jsx)('button', {
 									type: t,
+									disabled: a,
+									onClick: r,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-									children: a,
+									children: i,
 								});
 				},
 				r = (e) => {
-					let { size: s = 'md', type: t = 'button', children: a = (0, l.jsx)(l.Fragment, {}) } = e;
+					let {
+						size: s = 'md',
+						type: t = 'button',
+						disabled: a = !1,
+						onClick: r = () => {},
+						children: i = (0, l.jsx)(l.Fragment, {}),
+					} = e;
 					return 'sm' === s
 						? (0, l.jsx)('div', {
 								className:
 									'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 								children: (0, l.jsx)('button', {
 									type: t,
+									disabled: a,
+									onClick: r,
 									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
-									children: a,
+									children: i,
 								}),
 							})
 						: 'lg' === s
@@ -111,9 +131,11 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
+										disabled: a,
+										onClick: r,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-										children: a,
+										children: i,
 									}),
 								})
 							: (0, l.jsx)('div', {
@@ -121,16 +143,18 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
+										disabled: a,
+										onClick: r,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-										children: a,
+										children: i,
 									}),
 								});
 				};
 		},
 		5834: (e, s, t) => {
 			'use strict';
-			t.r(s), t.d(s, { default: () => b });
+			t.r(s), t.d(s, { default: () => w });
 			var l = t(5640),
 				a = t(1988),
 				r = t(8004),
@@ -370,7 +394,7 @@
 								children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.',
 							}),
 							(0, l.jsx)('div', {
-								className: 'mx-auto w-full max-w-lg rounded-full',
+								className: 'mx-auto w-full max-w-lg rounded-full shadow md:shadow-purple-900',
 								children: (0, l.jsx)('div', {
 									className:
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
@@ -381,7 +405,7 @@
 												className:
 													'grow rounded-full border-0 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base',
 											}),
-											(0, l.jsx)(i.$, { children: '\uD83D\uDD0D Search' }),
+											(0, l.jsx)(i.$, { children: 'Search' }),
 										],
 									}),
 								}),
@@ -389,27 +413,43 @@
 						],
 					}),
 				});
-			var h = t(5089),
-				f = t.n(h),
-				g = t(8248);
-			let j = () =>
-					(0, l.jsxs)(g.o, {
+			var h = t(1029),
+				g = t(5089),
+				f = t.n(g),
+				j = t(8248);
+			let v = () => {
+					var e;
+					let { isAuthenticated: s = !1, user: t, signOut: a } = (0, h.J)();
+					return (0, l.jsxs)(j.o, {
 						children: [
 							(0, l.jsx)(f(), {
 								href: '/',
-								className: 'text-xl font-black',
+								className: 'text-xl font-black whitespace-nowrap',
 								children: (0, l.jsx)(n.WG, { children: m.C }),
 							}),
-							(0, l.jsxs)('div', {
-								className: 'flex items-center gap-x-2 md:gap-x-4',
-								children: [
-									(0, l.jsx)(f(), { href: '/auth/sign-in', children: (0, l.jsx)(i.r, { children: 'Sign In' }) }),
-									(0, l.jsx)(f(), { href: '/auth/sign-up', children: (0, l.jsx)(i.$, { children: 'Sign Up' }) }),
-								],
-							}),
+							s &&
+								(0, l.jsxs)('div', {
+									className: 'flex items-center gap-x-2 md:gap-x-4',
+									children: [
+										(0, l.jsx)('p', {
+											className: 'w-12 truncate text-right md:w-48',
+											children: null != (e = null == t ? void 0 : t.email) ? e : '',
+										}),
+										(0, l.jsx)(i.$, { onClick: a, children: 'Sign Out' }),
+									],
+								}),
+							!s &&
+								(0, l.jsxs)('div', {
+									className: 'flex items-center gap-x-2 md:gap-x-4',
+									children: [
+										(0, l.jsx)(f(), { href: '/auth/sign-in', children: (0, l.jsx)(i.r, { children: 'Sign In' }) }),
+										(0, l.jsx)(f(), { href: '/auth/sign-up', children: (0, l.jsx)(i.$, { children: 'Sign Up' }) }),
+									],
+								}),
 						],
-					}),
-				v = () =>
+					});
+				},
+				b = () =>
 					(0, l.jsx)('section', {
 						className: 'container mx-auto flex flex-col gap-y-8 px-4 py-8 md:gap-y-16 md:px-8 md:py-16',
 						children: (0, l.jsx)('div', {
@@ -426,21 +466,26 @@
 							}),
 						}),
 					}),
-				b = () =>
+				w = () =>
 					(0, l.jsxs)('div', {
 						className: 'flex flex-col gap-y-8 md:gap-y-16',
 						children: [
 							(0, l.jsx)(r.q, {}),
-							(0, l.jsx)(j, {}),
+							(0, l.jsx)(v, {}),
 							(0, l.jsxs)('main', {
 								className: 'flex flex-col gap-y-8 md:gap-y-16',
 								children: [
 									(0, l.jsx)(p, {}),
-									(0, l.jsx)(x, {}),
-									(0, l.jsx)(o, {}),
-									(0, l.jsx)(v, {}),
-									(0, l.jsx)(u, {}),
-									(0, l.jsx)(d, {}),
+									(0, l.jsxs)('div', {
+										className: 'flex flex-col gap-y-8 md:gap-y-16',
+										children: [
+											(0, l.jsx)(x, {}),
+											(0, l.jsx)(o, {}),
+											(0, l.jsx)(b, {}),
+											(0, l.jsx)(u, {}),
+											(0, l.jsx)(d, {}),
+										],
+									}),
 								],
 							}),
 							(0, l.jsx)(a.w, {}),

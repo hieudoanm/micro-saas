@@ -19,9 +19,17 @@ const setHttpCookie = (res: NextApiResponse, token: string) => {
 	res.setHeader('Set-Cookie', cookie);
 };
 
-export const signIn = publicProcedure
-	.input(z.object({ email: z.string(), password: z.string() }))
-	.mutation(async (options) => {
+export const authUser = {
+	signUp: publicProcedure.input(z.object({ email: z.string(), password: z.string() })).mutation(async (options) => {
+		const { email, password } = options.input;
+		const { data, error } = await tryCatch(AuthService().user({ email, password }).signUp());
+		if (error) {
+			console.error(error.message);
+			return { success: false };
+		}
+		return { success: data.success };
+	}),
+	signIn: publicProcedure.input(z.object({ email: z.string(), password: z.string() })).mutation(async (options) => {
 		const { res } = options.ctx;
 		const { email, password } = options.input;
 		const { data, error } = await tryCatch(AuthService().user({ email, password }).signIn());
@@ -32,16 +40,10 @@ export const signIn = publicProcedure
 		const { success, token } = data;
 		setHttpCookie(res, token);
 		return { success };
-	});
-
-export const signUp = publicProcedure
-	.input(z.object({ email: z.string(), password: z.string() }))
-	.mutation(async (options) => {
-		const { email, password } = options.input;
-		const { data, error } = await tryCatch(AuthService().user({ email, password }).signUp());
-		if (error) {
-			console.error(error.message);
-			return { success: false };
-		}
-		return { success: data.success };
-	});
+	}),
+	signOut: publicProcedure.mutation((options) => {
+		const { res } = options.ctx;
+		setHttpCookie(res, '');
+		return { success: true };
+	}),
+};

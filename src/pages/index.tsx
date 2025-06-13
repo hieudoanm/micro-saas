@@ -16,11 +16,13 @@ const HomePage: NextPage = () => {
 			<Navbar />
 			<main className="flex flex-col gap-y-8 md:gap-y-16">
 				<Hero />
-				<Features />
-				<Demo />
-				<Testimonials />
-				<FrequentlyAskedQuestions />
-				<CallToAction />
+				<div className="flex flex-col gap-y-8 md:gap-y-16">
+					<Features />
+					<Demo />
+					<Testimonials />
+					<FrequentlyAskedQuestions />
+					<CallToAction />
+				</div>
 			</main>
 			<Footer />
 		</div>

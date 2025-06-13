@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,10 +9,10 @@ datasource db {
 
 model User {
   email          String               @id @map("email") @db.VarChar(255)
-  password       String               @map("password") @db.Text // hashed version of the raw password
+  password       String               @map("password") @db.Text
+  createdAt      DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime             @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
   passwordResets PasswordResetToken[]
-  createdAt      DateTime             @default(now()) @map("created_at") @db.Timestamptz()
-  updatedAt      DateTime             @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
 
   @@index([email])
   @@map("users")
@@ -26,14 +20,14 @@ model User {
 
 model PasswordResetToken {
   id        String   @id @default(uuid()) @map("id")
-  user      User     @relation(fields: [userEmail], references: [email], onDelete: Cascade)
   userEmail String
-  token     String   @unique @map("token") @db.Text // hashed version of the raw token
-  expiresAt DateTime @default(now()) @map("expires_at") @db.Timestamptz()
-  used      Boolean  @default(false) @map("used") @db.Boolean
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz()
-  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
+  token     String   @unique @map("token")
+  expiresAt DateTime @default(now()) @map("expires_at") @db.Timestamptz(6)
+  used      Boolean  @default(false) @map("used")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  user      User     @relation(fields: [userEmail], references: [email], onDelete: Cascade)
 
-  @@index([token]) // fast lookup by hash
+  @@index([token])
   @@map("password_reset_tokens")
 }

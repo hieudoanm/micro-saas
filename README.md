@@ -34,6 +34,7 @@
 1. 🔗 [tRPC](https://trpc.io/) – Create fully typesafe APIs without code generation—perfect for TypeScript full-stack apps.
 2. 🧱 [Zod](https://zod.dev/) – A TypeScript-first schema declaration and validation library, ideal for form validation and API contracts.
 3. 🛢️ [Prisma](https://www.prisma.io/) – A modern ORM that simplifies database access with auto-generated, type-safe queries.
+4. 🐘 PostgreSQL – A powerful, open-source relational database known for reliability, feature richness, and robust SQL compliance.
 
 ### DevOps
 

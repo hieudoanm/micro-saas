@@ -1,6 +1,39 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[436],
+	[834],
 	{
+		914: (e, r, t) => {
+			'use strict';
+			t.r(r), t.d(r, { default: () => c });
+			var l = t(5640),
+				s = t(1999),
+				a = t(3489),
+				d = t(3643),
+				n = t(5089),
+				i = t.n(n),
+				x = t(148);
+			let c = () => {
+				let [{ email: e = '' }, r] = (0, x.useState)({ email: '' });
+				return (0, l.jsx)(s.m, {
+					children: (0, l.jsxs)('form', {
+						className: 'flex flex-col gap-y-4',
+						children: [
+							(0, l.jsx)(d.p, {
+								id: 'email',
+								type: 'email',
+								name: 'email',
+								placeholder: 'Email',
+								value: e,
+								onChange: (e) => {
+									r((r) => ({ ...r, email: e.target.value }));
+								},
+							}),
+							(0, l.jsx)(a.$, { type: 'submit', children: 'Recover Password' }),
+							(0, l.jsx)(i(), { href: '/auth/sign-in', children: (0, l.jsx)(a.r, { children: 'Back to Sign In' }) }),
+						],
+					}),
+				});
+			};
+		},
 		1988: (e, r, t) => {
 			'use strict';
 			t.d(r, { w: () => i });
@@ -56,7 +89,7 @@
 				n = t.n(d),
 				i = t(8248),
 				x = t(2942);
-			let o = () =>
+			let c = () =>
 				(0, l.jsx)(i.o, {
 					children: (0, l.jsx)(n(), {
 						href: '/',
@@ -64,14 +97,14 @@
 						children: (0, l.jsx)(x.WG, { children: 'micro/saas' }),
 					}),
 				});
-			var c = t(2123);
+			var o = t(2123);
 			let u = (e) => {
 				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsxs)('div', {
 					className: 'flex h-screen w-screen flex-col',
 					children: [
 						(0, l.jsx)(a.q, {}),
-						(0, l.jsx)(o, {}),
+						(0, l.jsx)(c, {}),
 						(0, l.jsx)('div', {
 							className: 'grow',
 							children: (0, l.jsx)('div', {
@@ -84,7 +117,7 @@
 										children: [
 											(0, l.jsx)('h1', {
 												className: 'text-center text-3xl font-black md:text-4xl',
-												children: (0, l.jsx)(x.WG, { children: c.C }),
+												children: (0, l.jsx)(x.WG, { children: o.C }),
 											}),
 											r,
 										],
@@ -96,6 +129,14 @@
 					],
 				});
 			};
+		},
+		2e3: (e, r, t) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/auth/password/forget',
+				function () {
+					return t(914);
+				},
+			]);
 		},
 		2942: (e, r, t) => {
 			'use strict';
@@ -117,51 +158,63 @@
 					});
 				};
 		},
-		3280: (e, r, t) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/auth/sign-up',
-				function () {
-					return t(4496);
-				},
-			]);
-		},
 		3489: (e, r, t) => {
 			'use strict';
 			t.d(r, { $: () => s, r: () => a });
 			var l = t(5640);
 			let s = (e) => {
-					let { size: r = 'md', type: t = 'button', children: s = (0, l.jsx)(l.Fragment, {}) } = e;
+					let {
+						size: r = 'md',
+						type: t = 'button',
+						disabled: s = !1,
+						onClick: a = () => {},
+						children: d = (0, l.jsx)(l.Fragment, {}),
+					} = e;
 					return 'sm' === r
 						? (0, l.jsx)('button', {
 								type: t,
+								disabled: s,
+								onClick: a,
 								className:
 									'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm',
-								children: s,
+								children: d,
 							})
 						: 'lg' === r
 							? (0, l.jsx)('button', {
 									type: t,
+									disabled: s,
+									onClick: a,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-									children: s,
+									children: d,
 								})
 							: (0, l.jsx)('button', {
 									type: t,
+									disabled: s,
+									onClick: a,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-									children: s,
+									children: d,
 								});
 				},
 				a = (e) => {
-					let { size: r = 'md', type: t = 'button', children: s = (0, l.jsx)(l.Fragment, {}) } = e;
+					let {
+						size: r = 'md',
+						type: t = 'button',
+						disabled: s = !1,
+						onClick: a = () => {},
+						children: d = (0, l.jsx)(l.Fragment, {}),
+					} = e;
 					return 'sm' === r
 						? (0, l.jsx)('div', {
 								className:
 									'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 								children: (0, l.jsx)('button', {
 									type: t,
+									disabled: s,
+									onClick: a,
 									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
-									children: s,
+									children: d,
 								}),
 							})
 						: 'lg' === r
@@ -170,9 +223,11 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
+										disabled: s,
+										onClick: a,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-										children: s,
+										children: d,
 									}),
 								})
 							: (0, l.jsx)('div', {
@@ -180,9 +235,11 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
+										disabled: s,
+										onClick: a,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-										children: s,
+										children: d,
 									}),
 								});
 				};
@@ -201,61 +258,22 @@
 					onChange: n = () => {},
 					required: i = !1,
 					readOnly: x = !1,
-					disabled: o = !1,
+					disabled: c = !1,
 				} = e;
-				return (0, l.jsx)('input', {
-					type: r,
-					id: t,
-					name: s,
-					placeholder: a,
-					className: 'w-full rounded-full border border-neutral-800 px-4 py-2 focus:outline-none',
-					value: d,
-					onChange: n,
-					required: i,
-					readOnly: x,
-					disabled: o,
-				});
-			};
-		},
-		4496: (e, r, t) => {
-			'use strict';
-			t.r(r), t.d(r, { default: () => o });
-			var l = t(5640),
-				s = t(1999),
-				a = t(3489),
-				d = t(3643),
-				n = t(5089),
-				i = t.n(n),
-				x = t(148);
-			let o = () => {
-				let [{ email: e = '', password: r = '' }, t] = (0, x.useState)({ email: '', password: '' });
-				return (0, l.jsx)(s.m, {
-					children: (0, l.jsxs)('form', {
-						className: 'flex flex-col gap-y-4',
-						children: [
-							(0, l.jsx)(d.p, {
-								id: 'email',
-								type: 'email',
-								name: 'email',
-								placeholder: 'Email',
-								value: e,
-								onChange: (e) => {
-									t((r) => ({ ...r, email: e.target.value }));
-								},
-							}),
-							(0, l.jsx)(d.p, {
-								id: 'password',
-								type: 'password',
-								name: 'password',
-								placeholder: 'Password',
-								value: r,
-								onChange: (e) => {
-									t((r) => ({ ...r, password: e.target.value }));
-								},
-							}),
-							(0, l.jsx)(a.$, { children: 'Sign Up' }),
-							(0, l.jsx)(i(), { href: '/auth/sign-in', children: (0, l.jsx)(a.r, { children: 'Sign In' }) }),
-						],
+				return (0, l.jsx)('div', {
+					className: 'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+					children: (0, l.jsx)('input', {
+						type: r,
+						id: t,
+						name: s,
+						placeholder: a,
+						className:
+							'w-full rounded-full bg-neutral-900 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base',
+						value: d,
+						onChange: n,
+						required: i,
+						readOnly: x,
+						disabled: c,
 					}),
 				});
 			};
@@ -292,6 +310,6 @@
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [89, 636, 593, 792], () => r(3280)), (_N_E = e.O());
+		e.O(0, [89, 636, 593, 792], () => r(2e3)), (_N_E = e.O());
 	},
 ]);

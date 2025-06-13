@@ -19,14 +19,17 @@
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
 	"scripts": {
 		"format": "prisma format && prettier --cache --write .",
+		"prisma:generate": "prisma format && prisma generate",
+		"prelint": "pnpm prisma:generate",
 		"lint": "next lint",
-		"predev": "kill-port 3000",
-		"dev": "next dev --turbopack",
-		"prebuild": "rimraf .next",
+		"predev": "pnpm prisma:generate && kill-port 3000",
+		"dev": "next dev",
+		"prebuild": "pnpm prisma:generate && rimraf .next",
 		"build": "next build",
-		"prestart": "kill-port 3000",
 		"postbuild": "touch docs/.nojekyll",
+		"prestart": "pnpm prisma:generate && kill-port 3000",
 		"start": "next start",
+		"pretest": "pnpm prisma:generate && rimraf coverage",
 		"test": "jest"
 	},
 	"dependencies": {

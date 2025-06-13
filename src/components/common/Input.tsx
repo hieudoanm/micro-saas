@@ -24,17 +24,19 @@ export const Input: FC<InputProps> = ({
 	disabled = false,
 }) => {
 	return (
-		<input
-			type={type}
-			id={id}
-			name={name}
-			placeholder={placeholder}
-			className="w-full rounded-full border border-neutral-800 px-4 py-2 focus:outline-none"
-			value={value}
-			onChange={onChange}
-			required={required}
-			readOnly={readOnly}
-			disabled={disabled}
-		/>
+		<div className="overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]">
+			<input
+				type={type}
+				id={id}
+				name={name}
+				placeholder={placeholder}
+				className="w-full rounded-full bg-neutral-900 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base"
+				value={value}
+				onChange={onChange}
+				required={required}
+				readOnly={readOnly}
+				disabled={disabled}
+			/>
+		</div>
 	);
 };
