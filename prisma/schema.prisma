@@ -6,10 +6,34 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  email          String               @id @map("email") @db.VarChar(255)
+  password       String               @map("password") @db.Text // hashed version of the raw password
+  passwordResets PasswordResetToken[]
+  createdAt      DateTime             @default(now()) @map("created_at") @db.Timestamptz()
+  updatedAt      DateTime             @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
+
+  @@index([email])
+  @@map("users")
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid()) @map("id")
+  user      User     @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+  userEmail String
+  token     String   @unique @map("token") @db.Text // hashed version of the raw token
+  expiresAt DateTime @default(now()) @map("expires_at") @db.Timestamptz()
+  used      Boolean  @default(false) @map("used") @db.Boolean
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz()
+
+  @@index([token]) // fast lookup by hash
+  @@map("password_reset_tokens")
 }

@@ -1,5 +1,5 @@
-import { LargeButton } from '@micro/components/common/Button';
 import { FC } from 'react';
+import { Button } from '../common/Button';
 
 export const CTA: FC = () => {
 	return (
@@ -10,7 +10,7 @@ export const CTA: FC = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
 				</p>
 				<div className="flex w-full items-center justify-center">
-					<LargeButton>Sign Up</LargeButton>
+					<Button size="lg">Sign Up</Button>
 				</div>
 			</div>
 		</section>

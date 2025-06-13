@@ -1,11 +1,11 @@
+import { Footer } from '@micro/components/common/Footer';
+import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
 import { CTA } from '@micro/components/landing/CTA';
 import { Demo } from '@micro/components/landing/Demo';
 import { FAQ } from '@micro/components/landing/FAQ';
 import { Features } from '@micro/components/landing/Features';
-import { Footer } from '@micro/components/landing/Footer';
 import { Hero } from '@micro/components/landing/Hero';
 import { Navbar } from '@micro/components/landing/Navbar';
-import { RadialGradientBackground } from '@micro/components/landing/RadialGradientBackground';
 import { Testimonials } from '@micro/components/landing/Testimonials';
 import { NextPage } from 'next';
 

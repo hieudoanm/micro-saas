@@ -104,6 +104,8 @@
 		--font-weight-extrabold: 800;
 		--font-weight-black: 900;
 		--radius-lg: 0.5rem;
+		--radius-xl: 0.75rem;
+		--radius-2xl: 1rem;
 		--default-transition-duration: 0.15s;
 		--default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		--default-font-family: var(--font-sans);
@@ -2106,6 +2108,12 @@
 	.h-3 {
 		height: calc(var(--spacing) * 3);
 	}
+	.h-full {
+		height: 100%;
+	}
+	.h-screen {
+		height: 100vh;
+	}
 	.w-3 {
 		width: calc(var(--spacing) * 3);
 	}
@@ -2175,6 +2183,9 @@
 	.justify-center {
 		justify-content: center;
 	}
+	.gap-1 {
+		gap: calc(var(--spacing) * 1);
+	}
 	.gap-4 {
 		gap: calc(var(--spacing) * 4);
 	}
@@ -2222,11 +2233,17 @@
 	.rounded {
 		border-radius: 0.25rem;
 	}
+	.rounded-2xl {
+		border-radius: var(--radius-2xl);
+	}
 	.rounded-full {
 		border-radius: 3.40282e38px;
 	}
 	.rounded-lg {
 		border-radius: var(--radius-lg);
+	}
+	.rounded-xl {
+		border-radius: var(--radius-xl);
 	}
 	.border {
 		border-style: var(--tw-border-style);
@@ -2244,11 +2261,18 @@
 		border-bottom-style: var(--tw-border-style);
 		border-bottom-width: 1px;
 	}
+	.border-dotted {
+		--tw-border-style: dotted;
+		border-style: dotted;
+	}
 	.border-neutral-800 {
 		border-color: var(--color-neutral-800);
 	}
 	.bg-green-500 {
 		background-color: var(--color-green-500);
+	}
+	.bg-neutral-900 {
+		background-color: var(--color-neutral-900);
 	}
 	.bg-neutral-900\/40 {
 		background-color: #17171766;
@@ -2256,6 +2280,14 @@
 	@supports (color: color-mix(in lab, red, red)) {
 		.bg-neutral-900\/40 {
 			background-color: color-mix(in oklab, var(--color-neutral-900) 40%, transparent);
+		}
+	}
+	.bg-neutral-900\/80 {
+		background-color: #171717cc;
+	}
+	@supports (color: color-mix(in lab, red, red)) {
+		.bg-neutral-900\/80 {
+			background-color: color-mix(in oklab, var(--color-neutral-900) 80%, transparent);
 		}
 	}
 	.bg-red-500 {
@@ -2311,6 +2343,12 @@
 	}
 	.p-4 {
 		padding: calc(var(--spacing) * 4);
+	}
+	.p-8 {
+		padding: calc(var(--spacing) * 8);
+	}
+	.p-\[1px\] {
+		padding: 1px;
 	}
 	.px-2 {
 		padding-inline: calc(var(--spacing) * 2);
@@ -2481,6 +2519,12 @@
 		.md\:grid-cols-3 {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
+		.md\:flex-row {
+			flex-direction: row;
+		}
+		.md\:gap-4 {
+			gap: calc(var(--spacing) * 4);
+		}
 		.md\:gap-8 {
 			gap: calc(var(--spacing) * 8);
 		}
@@ -2488,6 +2532,9 @@
 			--tw-space-y-reverse: 0;
 			margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
 			margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+		}
+		.md\:gap-x-4 {
+			column-gap: calc(var(--spacing) * 4);
 		}
 		.md\:gap-y-4 {
 			row-gap: calc(var(--spacing) * 4);
@@ -2503,6 +2550,9 @@
 		}
 		.md\:p-4 {
 			padding: calc(var(--spacing) * 4);
+		}
+		.md\:p-8 {
+			padding: calc(var(--spacing) * 8);
 		}
 		.md\:px-4 {
 			padding-inline: calc(var(--spacing) * 4);
@@ -2530,6 +2580,10 @@
 		}
 		.md\:pb-8 {
 			padding-bottom: calc(var(--spacing) * 8);
+		}
+		.md\:text-4xl {
+			font-size: var(--text-4xl);
+			line-height: var(--tw-leading, var(--text-4xl--line-height));
 		}
 		.md\:text-6xl {
 			font-size: var(--text-6xl);

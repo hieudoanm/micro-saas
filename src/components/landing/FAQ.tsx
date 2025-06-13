@@ -51,7 +51,7 @@ export const FAQ: FC = () => {
 	return (
 		<section className="container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8">
 			<h2 className="text-center text-3xl font-extrabold">Frequently Asked Questions</h2>
-			<div className="divide-y divide-neutral-800 overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900/40 shadow-lg shadow-neutral-100/10">
+			<div className="divide-y divide-neutral-800 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/40 shadow-lg shadow-neutral-100/10">
 				{faqs.map(({ id = '', question = '', answer = '' }) => {
 					return (
 						<details key={id} className="group">

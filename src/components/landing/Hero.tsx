@@ -13,9 +13,13 @@ export const Hero: FC = () => {
 				<p className="text-center text-base md:text-lg">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus.
 				</p>
-				<div className="mx-auto flex w-full max-w-lg rounded-full border border-neutral-800 bg-neutral-900/40 p-1 shadow shadow-neutral-100/10 md:p-2">
-					<input className="grow rounded-full border-0 px-4 py-2 focus:outline-none"></input>
-					<Button>Sign Up</Button>
+				<div className="mx-auto w-full max-w-lg rounded-full">
+					<div className="overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]">
+						<div className="flex rounded-full bg-neutral-900 p-1 md:p-2">
+							<input className="grow rounded-full border-0 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base"></input>
+							<Button>Sign Up</Button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
