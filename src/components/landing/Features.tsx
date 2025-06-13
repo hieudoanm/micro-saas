@@ -1,11 +1,12 @@
 import { FC } from 'react';
+import { Heading2, Heading6 } from '../common/Typography';
 
 export const Features: FC = () => {
 	return (
 		<section className="container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8">
-			<div className="flex flex-col gap-y-4">
-				<h2 className="text-center text-3xl font-extrabold">Features</h2>
-				<h3 className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+			<div className="flex flex-col gap-y-4 text-center">
+				<Heading2>Features</Heading2>
+				<Heading6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Heading6>
 			</div>
 			<div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
 				{[

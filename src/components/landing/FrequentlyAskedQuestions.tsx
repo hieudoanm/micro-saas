@@ -1,6 +1,7 @@
 import { FC } from 'react';
+import { Heading2, Heading6 } from '../common/Typography';
 
-export const FAQ: FC = () => {
+export const FrequentlyAskedQuestions: FC = () => {
 	const faqs: { id: string; question: string; answer: string }[] = [
 		{
 			id: 'question-1',
@@ -50,7 +51,10 @@ export const FAQ: FC = () => {
 
 	return (
 		<section className="container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8">
-			<h2 className="text-center text-3xl font-extrabold">Frequently Asked Questions</h2>
+			<div className="flex flex-col gap-y-4 text-center">
+				<Heading2>Frequently Asked Questions</Heading2>
+				<Heading6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Heading6>
+			</div>
 			<div className="divide-y divide-neutral-800 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/40 shadow-lg shadow-neutral-100/10">
 				{faqs.map(({ id = '', question = '', answer = '' }) => {
 					return (

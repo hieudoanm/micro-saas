@@ -1,3 +1,4 @@
+import { APP_NAME } from '@micro/constants/constants';
 import '@micro/styles/globals.css';
 import { trpc } from '@micro/utils/trpc';
 import type { AppProps } from 'next/app';
@@ -19,7 +20,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
-				<title>@micro/saas</title>
+				<title>{APP_NAME}</title>
 			</Head>
 			<div className={`${geistSans.className} ${geistMono.className} `}>
 				<Component {...pageProps} />

@@ -1,20 +1,27 @@
 import { Container } from '@micro/components/auth/Container';
 import { Button, OutlineButton } from '@micro/components/common/Button';
+import { Input } from '@micro/components/common/Input';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const PasswordForgetPage: NextPage = () => {
+	const [{ email = '' }, setState] = useState<{ email: string }>({ email: '' });
+
 	return (
 		<Container>
 			<form className="flex flex-col gap-y-4">
-				<input
+				<Input
 					id="email"
 					type="email"
 					name="email"
 					placeholder="Email"
-					className="w-full rounded-full border border-neutral-800 px-4 py-2 focus:outline-none"
+					value={email}
+					onChange={(event) => {
+						setState((previous) => ({ ...previous, email: event.target.value }));
+					}}
 				/>
-				<Button>Recover Password</Button>
+				<Button type="submit">Recover Password</Button>
 				<Link href="/auth/sign-in">
 					<OutlineButton>Back to Sign In</OutlineButton>
 				</Link>

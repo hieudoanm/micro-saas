@@ -1,9 +1,9 @@
 import { Footer } from '@micro/components/common/Footer';
 import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
-import { CTA } from '@micro/components/landing/CTA';
+import { CallToAction } from '@micro/components/landing/CallToAction';
 import { Demo } from '@micro/components/landing/Demo';
-import { FAQ } from '@micro/components/landing/FAQ';
 import { Features } from '@micro/components/landing/Features';
+import { FrequentlyAskedQuestions } from '@micro/components/landing/FrequentlyAskedQuestions';
 import { Hero } from '@micro/components/landing/Hero';
 import { Navbar } from '@micro/components/landing/Navbar';
 import { Testimonials } from '@micro/components/landing/Testimonials';
@@ -19,8 +19,8 @@ const HomePage: NextPage = () => {
 				<Features />
 				<Demo />
 				<Testimonials />
-				<FAQ />
-				<CTA />
+				<FrequentlyAskedQuestions />
+				<CallToAction />
 			</main>
 			<Footer />
 		</div>

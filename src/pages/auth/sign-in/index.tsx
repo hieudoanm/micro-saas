@@ -1,27 +1,41 @@
 import { Container } from '@micro/components/auth/Container';
 import { Button, OutlineButton } from '@micro/components/common/Button';
+import { Input } from '@micro/components/common/Input';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const SignInPage: NextPage = () => {
+	const [{ email = '', password = '' }, setState] = useState<{ email: string; password: string }>({
+		email: '',
+		password: '',
+	});
+
 	return (
 		<Container>
 			<form className="flex flex-col gap-y-4">
-				<input
+				<Input
 					id="email"
 					type="email"
 					name="email"
 					placeholder="Email"
-					className="w-full rounded-full border border-neutral-800 px-4 py-2 focus:outline-none"
+					value={email}
+					onChange={(event) => {
+						setState((previous) => ({ ...previous, email: event.target.value }));
+					}}
 				/>
-				<input
+				<Input
 					id="password"
 					type="password"
 					name="password"
 					placeholder="Password"
-					className="w-full rounded-full border border-neutral-800 px-4 py-2 focus:outline-none"
+					value={password}
+					onChange={(event) => {
+						setState((previous) => ({ ...previous, password: event.target.value }));
+					}}
 				/>
-				<div className="px-4">
+				<div className="flex justify-between px-4">
+					<span className="border-b border-dotted">Remember Me</span>
 					<Link href="/auth/password/forget" className="border-b border-dotted">
 						Forget Password
 					</Link>
