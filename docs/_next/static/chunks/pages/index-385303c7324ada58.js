@@ -28,8 +28,8 @@
 				i = [];
 			function o(e) {
 				let { rootRef: t, rootMargin: s, disabled: o } = e,
-					d = o || !a,
-					[u, c] = (0, r.useState)(!1),
+					u = o || !a,
+					[d, c] = (0, r.useState)(!1),
 					f = (0, r.useRef)(null),
 					p = (0, r.useCallback)((e) => {
 						f.current = e;
@@ -37,7 +37,7 @@
 				return (
 					(0, r.useEffect)(() => {
 						if (a) {
-							if (d || u) return;
+							if (u || d) return;
 							let e = f.current;
 							if (e && e.tagName)
 								return (function (e, t, s) {
@@ -80,14 +80,14 @@
 										}
 									);
 								})(e, (e) => e && c(e), { root: null == t ? void 0 : t.current, rootMargin: s });
-						} else if (!u) {
+						} else if (!d) {
 							let e = (0, l.requestIdleCallback)(() => c(!0));
 							return () => (0, l.cancelIdleCallback)(e);
 						}
-					}, [d, s, t, u, f.current]),
+					}, [u, s, t, d, f.current]),
 					[
 						p,
-						u,
+						d,
 						(0, r.useCallback)(() => {
 							c(!1);
 						}, []),
@@ -138,8 +138,8 @@
 				n = s(412),
 				i = s(4086),
 				o = s(2047),
-				d = s(1153),
-				u = s(3578),
+				u = s(1153),
+				d = s(3578),
 				c = s(8651),
 				f = s(1229),
 				p = s(3822),
@@ -213,11 +213,11 @@
 								O && r.props && 'function' == typeof r.props.onClick && r.props.onClick(e),
 								L &&
 									(e.defaultPrevented ||
-										(function (e, t, s, r, l, a, n, o, d) {
-											let { nodeName: u } = e.currentTarget;
+										(function (e, t, s, r, l, a, n, o, u) {
+											let { nodeName: d } = e.currentTarget;
 											if (
 												!(
-													('A' === u.toUpperCase() &&
+													('A' === d.toUpperCase() &&
 														(function (e) {
 															let t = e.currentTarget.getAttribute('target');
 															return (
@@ -238,10 +238,10 @@
 												}
 												e.preventDefault(),
 													(() => {
-														if (d) {
+														if (u) {
 															let e = !1;
 															if (
-																(d({
+																(u({
 																	preventDefault: () => {
 																		e = !0;
 																	},
@@ -269,13 +269,13 @@
 								L && g(L, E, R, { locale: S, priority: !0, bypassPrefetchedCheck: !0 });
 						},
 					};
-					if ((0, d.isAbsoluteUrl)(R)) W.href = R;
+					if ((0, u.isAbsoluteUrl)(R)) W.href = R;
 					else if (!O || y || ('a' === r.type && !('href' in r.props))) {
 						let e = void 0 !== S ? S : null == L ? void 0 : L.locale;
 						W.href =
 							((null == L ? void 0 : L.isLocaleDomain) &&
 								(0, p.getDomainLocale)(R, e, null == L ? void 0 : L.locales, null == L ? void 0 : L.domainLocales)) ||
-							(0, x.addBasePath)((0, u.addLocale)(R, e, null == L ? void 0 : L.defaultLocale));
+							(0, x.addBasePath)((0, d.addLocale)(R, e, null == L ? void 0 : L.defaultLocale));
 					}
 					return O ? a.default.cloneElement(r, W) : (0, l.jsx)('a', { ...P, ...W, children: s });
 				}),
@@ -296,7 +296,7 @@
 					let { children: t = (0, r.jsx)(r.Fragment, {}) } = e;
 					return (0, r.jsx)('button', {
 						className:
-							'cursor-pointer rounded-lg bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-2 py-1 text-sm md:px-4 md:py-2 md:text-base',
+							'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
 						children: t,
 					});
 				},
@@ -304,7 +304,7 @@
 					let { children: t = (0, r.jsx)(r.Fragment, {}) } = e;
 					return (0, r.jsx)('button', {
 						className:
-							'cursor-pointer rounded-lg bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-5 md:py-3 md:text-lg',
+							'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-5 md:py-3 md:text-lg',
 						children: t,
 					});
 				},
@@ -366,7 +366,7 @@
 						})
 					);
 				},
-				d = () =>
+				u = () =>
 					(0, r.jsxs)('section', {
 						className: 'container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8',
 						children: [
@@ -458,7 +458,7 @@
 							}),
 						],
 					}),
-				u = () =>
+				d = () =>
 					(0, r.jsxs)('section', {
 						className: 'container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8',
 						children: [
@@ -621,10 +621,10 @@
 								className: 'flex flex-col gap-y-8 md:gap-y-16',
 								children: [
 									(0, r.jsx)(m, {}),
-									(0, r.jsx)(u, {}),
+									(0, r.jsx)(d, {}),
 									(0, r.jsx)(o, {}),
 									(0, r.jsx)(j, {}),
-									(0, r.jsx)(d, {}),
+									(0, r.jsx)(u, {}),
 									(0, r.jsx)(n, {}),
 								],
 							}),
