@@ -1,12 +1,13 @@
 import type { NextConfig } from 'next';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
+const BASE_PATH = 'micro-saas';
 
 const nextConfig: NextConfig = {
 	/* config options here */
 	trailingSlash: true,
 	reactStrictMode: true,
-	basePath: NODE_ENV === 'development' ? '' : '/micro-saas',
+	basePath: NODE_ENV === 'development' ? '' : `/${BASE_PATH}`,
 	output: NODE_ENV === 'development' ? 'standalone' : 'export',
 	distDir: NODE_ENV === 'development' ? '.next' : 'docs',
 };

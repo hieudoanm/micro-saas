@@ -5,7 +5,8 @@
 	"description": "Micro SaaS",
 	"keywords": [
 		"micro",
-		"saas"
+		"saas",
+		"template"
 	],
 	"homepage": "https://github.com/hieudoanm/micro-saas#readme",
 	"bugs": {
@@ -17,6 +18,7 @@
 	},
 	"license": "MIT",
 	"author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+	"packageManager": "pnpm@10.12.1",
 	"scripts": {
 		"format": "prisma format && prettier --cache --write .",
 		"prisma:generate": "prisma format && prisma generate",
@@ -34,22 +36,23 @@
 	},
 	"dependencies": {
 		"@prisma/client": "6.9.0",
+		"@tanstack/react-query": "5.80.7",
+		"@trpc/client": "11.4.1",
+		"@trpc/next": "11.4.1",
+		"@trpc/react-query": "11.4.1",
+		"@trpc/server": "11.4.1",
 		"bcrypt": "6.0.0",
 		"cookie": "1.0.2",
 		"jsonwebtoken": "9.0.2",
 		"next": "15.3.3",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"resend": "^4.6.0"
+		"resend": "4.6.0",
+		"zod": "3.25.64"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "3.3.1",
 		"@tailwindcss/postcss": "4.1.10",
-		"@tanstack/react-query": "5.80.7",
-		"@trpc/client": "11.4.1",
-		"@trpc/next": "11.4.1",
-		"@trpc/react-query": "11.4.1",
-		"@trpc/server": "11.4.1",
 		"@types/bcrypt": "5.0.2",
 		"@types/jsonwebtoken": "9.0.9",
 		"@types/node": "24.0.1",
@@ -68,7 +71,6 @@
 		"prisma-dbml-generator": "0.12.0",
 		"rimraf": "6.0.1",
 		"tailwindcss": "4.1.10",
-		"typescript": "5.8.3",
-		"zod": "3.25.64"
+		"typescript": "5.8.3"
 	}
 }
