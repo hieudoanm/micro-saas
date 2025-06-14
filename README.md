@@ -10,6 +10,7 @@
     - [Dev Tools](#dev-tools)
     - [Front-end](#front-end)
     - [Back-end](#back-end)
+    - [SaaS](#saas)
     - [DevOps](#devops)
   - [Folder Structure](#folder-structure)
 
@@ -28,7 +29,6 @@
 1. 💨 [Tailwind CSS](https://tailwindcss.com/) – A utility-first CSS framework for building modern, responsive UIs quickly.
 2. ⚡ [Next.js](https://nextjs.org/) – A React framework for building scalable, full-stack web apps with server-side rendering and API routes.
 3. 🌼 [DaisyUI](https://daisyui.com) - A Tailwind CSS component library that provides beautiful, customizable UI elements out of the box.
-4. 💳 [Paddle](https://www.paddle.com/) - A complete payments infrastructure for SaaS businesses, handling checkout, subscriptions, taxes, and compliance globally.
 
 ### Back-end
 
@@ -36,6 +36,11 @@
 2. 🧱 [Zod](https://zod.dev/) – A TypeScript-first schema declaration and validation library, ideal for form validation and API contracts.
 3. 🛢️ [Prisma](https://www.prisma.io/) – A modern ORM that simplifies database access with auto-generated, type-safe queries.
 4. 🐘 [PostgreSQL](https://www.postgresql.org/) – A powerful, open-source relational database known for reliability, feature richness, and robust SQL compliance.
+
+### SaaS
+
+1. 💳 [Paddle](https://www.paddle.com/) - A complete payments infrastructure for SaaS businesses, handling checkout, subscriptions, taxes, and compliance globally.
+2. ✉️ [Resend](https://resend.com) - A modern email API for developers, making it easy to send, receive, and manage transactional emails with high deliverability and detailed analytics.
 
 ### DevOps
 
@@ -52,6 +57,9 @@
 │   ├── robots.txt
 │   └── sitemap.xml
 ├── src
+│   ├── pages
+│   │   ├── email
+│   │   └── database
 │   ├── pages
 │   │   ├── api
 │   │   └── app

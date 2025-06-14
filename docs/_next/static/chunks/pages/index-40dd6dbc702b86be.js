@@ -370,17 +370,17 @@
 									description:
 										'Secure sign-up, login, and password recovery built-in. Focus on your product — not reinventing login screens.',
 								},
+								email: {
+									emoji: '✉️',
+									title: 'Integrated Email Delivery',
+									description:
+										'Send transactional emails like verification and password resets with Resend — reliable delivery, zero hassle.',
+								},
 								payment: {
 									emoji: '\uD83D\uDE80',
 									title: 'Seamless Paddle Payments',
 									description:
 										'Integrated subscription billing with Paddle — global taxes, compliance, and invoicing handled for you.',
-								},
-								starter: {
-									emoji: '\uD83D\uDE80',
-									title: 'Production-Ready Starter Kit',
-									description:
-										'Clean, scalable codebase with database, API routes, and deployment config — go live in hours, not weeks.',
 								},
 							},
 						},

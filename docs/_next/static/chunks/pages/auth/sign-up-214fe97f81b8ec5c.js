@@ -1,5 +1,5 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-	[190],
+	[436],
 	{
 		991: (e, r, t) => {
 			e.exports = t(9303);
@@ -8,9 +8,9 @@
 			'use strict';
 			t.d(r, { w: () => i });
 			var l = t(5640),
-				s = t(9428),
-				a = t(3242),
-				d = t.n(a);
+				a = t(9428),
+				s = t(3242),
+				d = t.n(s);
 			let n = new Date().getFullYear(),
 				i = () =>
 					(0, l.jsx)('footer', {
@@ -23,7 +23,7 @@
 									(0, l.jsxs)('div', {
 										className: 'flex flex-col gap-1 md:flex-row',
 										children: [
-											(0, l.jsxs)('p', { children: ['\xa9 ', n, ' ', s.C, '.'] }),
+											(0, l.jsxs)('p', { children: ['\xa9 ', n, ' ', a.C, '.'] }),
 											(0, l.jsx)('p', { children: 'All Rights Reserved.' }),
 										],
 									}),
@@ -51,9 +51,9 @@
 		},
 		1991: (e, r, t) => {
 			'use strict';
-			t.d(r, { q: () => s });
+			t.d(r, { q: () => a });
 			var l = t(5640);
-			let s = () =>
+			let a = () =>
 				(0, l.jsx)('div', {
 					className:
 						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
@@ -65,13 +65,13 @@
 		},
 		2353: (e, r, t) => {
 			'use strict';
-			t.d(r, { TT: () => a, WG: () => d, fV: () => s });
+			t.d(r, { TT: () => s, WG: () => d, fV: () => a });
 			var l = t(5640);
-			let s = (e) => {
+			let a = (e) => {
 					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 					return (0, l.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: r });
 				},
-				a = (e) => {
+				s = (e) => {
 					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 					return (0, l.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: r });
 				},
@@ -83,39 +83,109 @@
 					});
 				};
 		},
-		3419: (e, r, t) => {
+		2355: (e, r, t) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/auth/sign-in',
+				'/auth/sign-up',
 				function () {
-					return t(5349);
+					return t(3079);
 				},
 			]);
 		},
+		3079: (e, r, t) => {
+			'use strict';
+			t.r(r), t.d(r, { default: () => c });
+			var l = t(5640),
+				a = t(9650),
+				s = t(7906),
+				d = t(3782),
+				n = t(331),
+				i = t(3242),
+				o = t.n(i),
+				u = t(991),
+				x = t(148);
+			let c = () => {
+				let { push: e } = (0, u.useRouter)(),
+					[{ loading: r = !1, name: t = '', email: i = '', password: c = '' }, m] = (0, x.useState)({
+						loading: !1,
+						name: '',
+						email: '',
+						password: '',
+					}),
+					p = async (r) => {
+						r.preventDefault();
+						let { success: t } = await n.r.auth.user.signUp.mutate({ email: i, password: c });
+						t ? (alert('Sign Up Successfully'), e('/auth/sign-in')) : alert('Failed to Sign Up');
+					};
+				return (0, l.jsx)(d.$, {
+					children: (0, l.jsxs)('form', {
+						onSubmit: p,
+						className: 'flex flex-col gap-y-4',
+						children: [
+							(0, l.jsx)(s.p, {
+								id: 'name',
+								type: 'name',
+								name: 'name',
+								placeholder: 'Name',
+								value: t,
+								onChange: (e) => {
+									m((r) => ({ ...r, name: e.target.value }));
+								},
+								required: !0,
+							}),
+							(0, l.jsx)(s.p, {
+								id: 'email',
+								type: 'email',
+								name: 'email',
+								placeholder: 'Email',
+								value: i,
+								onChange: (e) => {
+									m((r) => ({ ...r, email: e.target.value }));
+								},
+								required: !0,
+							}),
+							(0, l.jsx)(s.p, {
+								id: 'password',
+								type: 'password',
+								name: 'password',
+								placeholder: 'Password',
+								value: c,
+								onChange: (e) => {
+									m((r) => ({ ...r, password: e.target.value }));
+								},
+								required: !0,
+							}),
+							(0, l.jsx)(a.$, { type: 'submit', children: r ? 'Loading' : 'Sign Up' }),
+							(0, l.jsx)(o(), { href: '/auth/sign-in', children: (0, l.jsx)(a.r, { children: 'Sign In' }) }),
+						],
+					}),
+				});
+			};
+		},
 		3782: (e, r, t) => {
 			'use strict';
-			t.d(r, { $: () => u });
+			t.d(r, { $: () => c });
 			var l = t(5640),
-				s = t(3242),
-				a = t.n(s),
+				a = t(3242),
+				s = t.n(a),
 				d = t(4053),
 				n = t(2353);
 			let i = () =>
 				(0, l.jsx)(d.o, {
-					children: (0, l.jsx)(a(), {
+					children: (0, l.jsx)(s(), {
 						href: '/',
 						className: 'text-xl font-black',
 						children: (0, l.jsx)(n.WG, { children: 'micro/saas' }),
 					}),
 				});
 			var o = t(1111),
-				x = t(1991),
-				c = t(9428);
-			let u = (e) => {
+				u = t(1991),
+				x = t(9428);
+			let c = (e) => {
 				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsxs)('div', {
 					className: 'flex h-screen w-screen flex-col',
 					children: [
-						(0, l.jsx)(x.q, {}),
+						(0, l.jsx)(u.q, {}),
 						(0, l.jsx)(i, {}),
 						(0, l.jsx)('div', {
 							className: 'grow',
@@ -129,7 +199,7 @@
 										children: [
 											(0, l.jsx)('h1', {
 												className: 'text-center text-3xl font-black md:text-4xl',
-												children: (0, l.jsx)(n.WG, { children: c.C }),
+												children: (0, l.jsx)(n.WG, { children: x.C }),
 											}),
 											r,
 										],
@@ -144,9 +214,9 @@
 		},
 		4053: (e, r, t) => {
 			'use strict';
-			t.d(r, { o: () => s });
+			t.d(r, { o: () => a });
 			var l = t(5640);
-			let s = (e) => {
+			let a = (e) => {
 				let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsx)('nav', {
 					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
@@ -157,127 +227,57 @@
 				});
 			};
 		},
-		5349: (e, r, t) => {
-			'use strict';
-			t.r(r), t.d(r, { default: () => m });
-			var l = t(5640),
-				s = t(9650),
-				a = t(7906),
-				d = t(6714),
-				n = t(3782),
-				i = t(7857),
-				o = t(3242),
-				x = t.n(o),
-				c = t(991),
-				u = t(148);
-			let m = () => {
-				let { push: e } = (0, c.useRouter)(),
-					{ refresh: r } = (0, d.J)(),
-					[{ email: t = '', password: o = '' }, m] = (0, u.useState)({ email: '', password: '' }),
-					p = async (l) => {
-						l.preventDefault();
-						let { success: s } = await i.r.auth.user.signIn.mutate({ email: t, password: o });
-						s ? (alert('Sign In Successfully'), r(), e('/')) : alert('Failed to Sign In');
-					};
-				return (0, l.jsx)(n.$, {
-					children: (0, l.jsxs)('form', {
-						onSubmit: p,
-						className: 'flex flex-col gap-y-4',
-						children: [
-							(0, l.jsx)(a.p, {
-								id: 'email',
-								type: 'email',
-								name: 'email',
-								placeholder: 'Email',
-								value: t,
-								onChange: (e) => {
-									m((r) => ({ ...r, email: e.target.value }));
-								},
-								required: !0,
-							}),
-							(0, l.jsx)(a.p, {
-								id: 'password',
-								type: 'password',
-								name: 'password',
-								placeholder: 'Password',
-								value: o,
-								onChange: (e) => {
-									m((r) => ({ ...r, password: e.target.value }));
-								},
-								required: !0,
-							}),
-							(0, l.jsxs)('div', {
-								className: 'flex justify-between px-4',
-								children: [
-									(0, l.jsx)('span', {
-										className: 'border-b border-dotted text-sm md:text-base',
-										children: 'Remember Me',
-									}),
-									(0, l.jsx)(x(), {
-										href: '/auth/password/forget',
-										className: 'border-b border-dotted text-sm md:text-base',
-										children: 'Forget Password',
-									}),
-								],
-							}),
-							(0, l.jsx)(s.$, { type: 'submit', children: 'Sign In' }),
-							(0, l.jsx)(x(), { href: '/auth/sign-up', children: (0, l.jsx)(s.r, { children: 'Sign Up' }) }),
-						],
-					}),
-				});
-			};
-		},
 		7906: (e, r, t) => {
 			'use strict';
-			t.d(r, { p: () => s });
+			t.d(r, { p: () => a });
 			var l = t(5640);
-			let s = (e) => {
+			let a = (e) => {
 				let {
 					type: r = 'text',
 					id: t = '',
-					name: s = '',
-					placeholder: a = '',
+					name: a = '',
+					placeholder: s = '',
 					value: d = '',
 					onChange: n = () => {},
 					required: i = !1,
 					readOnly: o = !1,
-					disabled: x = !1,
+					disabled: u = !1,
 				} = e;
 				return (0, l.jsx)('div', {
 					className: 'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 					children: (0, l.jsx)('input', {
 						type: r,
 						id: t,
-						name: s,
-						placeholder: a,
+						name: a,
+						placeholder: s,
 						className:
 							'w-full rounded-full bg-neutral-900 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base',
 						value: d,
 						onChange: n,
 						required: i,
 						readOnly: o,
-						disabled: x,
+						disabled: u,
 					}),
 				});
 			};
 		},
 		9650: (e, r, t) => {
 			'use strict';
-			t.d(r, { $: () => s, r: () => a });
+			t.d(r, { $: () => a, r: () => s });
 			var l = t(5640);
-			let s = (e) => {
+			let a = (e) => {
 					let {
 						size: r = 'md',
 						type: t = 'button',
-						disabled: s = !1,
-						onClick: a = () => {},
+						disabled: a = !1,
+						onClick: s = () => {},
 						children: d = (0, l.jsx)(l.Fragment, {}),
 					} = e;
 					return 'sm' === r
 						? (0, l.jsx)('button', {
 								type: t,
-								disabled: s,
-								onClick: a,
+								disabled: a,
+								onClick: s,
 								className:
 									'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm',
 								children: d,
@@ -285,27 +285,27 @@
 						: 'lg' === r
 							? (0, l.jsx)('button', {
 									type: t,
-									disabled: s,
-									onClick: a,
+									disabled: a,
+									onClick: s,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
 									children: d,
 								})
 							: (0, l.jsx)('button', {
 									type: t,
-									disabled: s,
-									onClick: a,
+									disabled: a,
+									onClick: s,
 									className:
 										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
 									children: d,
 								});
 				},
-				a = (e) => {
+				s = (e) => {
 					let {
 						size: r = 'md',
 						type: t = 'button',
-						disabled: s = !1,
-						onClick: a = () => {},
+						disabled: a = !1,
+						onClick: s = () => {},
 						children: d = (0, l.jsx)(l.Fragment, {}),
 					} = e;
 					return 'sm' === r
@@ -314,8 +314,8 @@
 									'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 								children: (0, l.jsx)('button', {
 									type: t,
-									disabled: s,
-									onClick: a,
+									disabled: a,
+									onClick: s,
 									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
 									children: d,
 								}),
@@ -326,8 +326,8 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
-										disabled: s,
-										onClick: a,
+										disabled: a,
+										onClick: s,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
 										children: d,
@@ -338,8 +338,8 @@
 										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 									children: (0, l.jsx)('button', {
 										type: t,
-										disabled: s,
-										onClick: a,
+										disabled: a,
+										onClick: s,
 										className:
 											'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
 										children: d,
@@ -350,6 +350,6 @@
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [242, 636, 593, 792], () => r(3419)), (_N_E = e.O());
+		e.O(0, [242, 636, 593, 792], () => r(2355)), (_N_E = e.O());
 	},
 ]);

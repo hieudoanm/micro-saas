@@ -1,8 +1,9 @@
-import { prismaClient } from '@micro/prisma/prisma.client';
+import { prismaClient } from '@micro/clients/database/prisma.client';
 import { JWT } from '@micro/utils/jwt';
 import { Password } from '@micro/utils/password';
 import { tryCatch } from '@micro/utils/try-catch';
 import crypto from 'node:crypto';
+import { EmailService } from '@micro/services/email.service';
 
 const signUp = async ({
 	email = '',
@@ -66,8 +67,17 @@ const forgetPassword = async ({ email }: { email: string }) => {
 	);
 	if (error) throw new Error(error.message);
 	if (!newPasswordResetToken) throw new Error('Failed to Create Token');
-	// TODO: send email with this token
-	console.log(token);
+	const subject: string = 'Password Reset Request';
+	const html = `
+      <div style="font-family: Arial, sans-serif; line-height: 1.5;">
+        <h2>Password Reset</h2>
+        <p>You requested to reset your password. Please use the following code:</p>
+        <p style="font-size: 20px; font-weight: bold; color: #2c3e50;">${token}</p>
+        <p>If you did not request this, please ignore this email.</p>
+      </div>
+    `;
+	const data = await EmailService().sendEmail({ to: email, subject, html });
+	console.log(data);
 	return { success: true };
 };
 

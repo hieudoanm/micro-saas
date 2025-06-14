@@ -1,4 +1,4 @@
-import { prismaClient } from '@micro/prisma/prisma.client';
+import { prismaClient } from '@micro/clients/database/prisma.client';
 import { Password } from '@micro/utils/password';
 import { tryCatch } from '@micro/utils/try-catch';
 
