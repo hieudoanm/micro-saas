@@ -1,6 +1,6 @@
-import { Container } from '@micro/components/auth/Container';
 import { Button, OutlineButton } from '@micro/components/common/Button';
 import { Input } from '@micro/components/common/Input';
+import { AuthTemplate } from '@micro/templates/AuthTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ const PasswordForgetPage: NextPage = () => {
 	const [{ email = '' }, setState] = useState<{ email: string }>({ email: '' });
 
 	return (
-		<Container>
+		<AuthTemplate>
 			<form className="flex flex-col gap-y-4">
 				<Input
 					id="email"
@@ -26,7 +26,7 @@ const PasswordForgetPage: NextPage = () => {
 					<OutlineButton>Back to Sign In</OutlineButton>
 				</Link>
 			</form>
-		</Container>
+		</AuthTemplate>
 	);
 };
 

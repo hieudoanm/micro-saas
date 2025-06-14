@@ -1,6 +1,6 @@
-import { Container } from '@micro/components/auth/Container';
 import { Button } from '@micro/components/common/Button';
 import { Input } from '@micro/components/common/Input';
+import { AuthTemplate } from '@micro/templates/AuthTemplate';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
@@ -11,7 +11,7 @@ const PasswordResetPage: NextPage = () => {
 	});
 
 	return (
-		<Container>
+		<AuthTemplate>
 			<form className="flex flex-col gap-y-4">
 				<Input
 					id="password"
@@ -35,7 +35,7 @@ const PasswordResetPage: NextPage = () => {
 				/>
 				<Button>Reset Password</Button>
 			</form>
-		</Container>
+		</AuthTemplate>
 	);
 };
 

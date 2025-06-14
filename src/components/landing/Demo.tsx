@@ -1,7 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import { Heading2, Heading6 } from '../common/Typography';
 
-export const Demo: FC = () => {
+export type DemoProps = { title: string; description: string };
+
+export const Demo: FC<DemoProps> = ({ title = '', description = '' }) => {
 	const [origin, setOrigin] = useState<string>('');
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -12,8 +14,8 @@ export const Demo: FC = () => {
 	return (
 		<section className="container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8">
 			<div className="flex flex-col gap-y-4 text-center">
-				<Heading2>Demo</Heading2>
-				<Heading6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Heading6>
+				<Heading2>{title}</Heading2>
+				<Heading6>{description}</Heading6>
 			</div>
 			<div className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/40 shadow-lg shadow-neutral-100/10">
 				{/* <!-- Top Bar --> */}

@@ -1,7 +1,7 @@
-import { Container } from '@micro/components/auth/Container';
 import { Button, OutlineButton } from '@micro/components/common/Button';
 import { Input } from '@micro/components/common/Input';
 import { useUser } from '@micro/contexts/UserContext';
+import { AuthTemplate } from '@micro/templates/AuthTemplate';
 import { trpcClient } from '@micro/utils/trpc';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -33,7 +33,7 @@ const SignInPage: NextPage = () => {
 	};
 
 	return (
-		<Container>
+		<AuthTemplate>
 			<form onSubmit={onSubmit} className="flex flex-col gap-y-4">
 				<Input
 					id="email"
@@ -68,7 +68,7 @@ const SignInPage: NextPage = () => {
 					<OutlineButton>Sign Up</OutlineButton>
 				</Link>
 			</form>
-		</Container>
+		</AuthTemplate>
 	);
 };
 

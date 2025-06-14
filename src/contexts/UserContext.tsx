@@ -1,6 +1,5 @@
-// src/contexts/UserContext.tsx
 import { trpcClient } from '@micro/utils/trpc';
-import React, { createContext, useContext, useState, useEffect, ReactNode, FC, useMemo } from 'react';
+import { createContext, FC, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
 
 interface User {
 	email: string;

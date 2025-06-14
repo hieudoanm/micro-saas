@@ -1,11 +1,11 @@
-import { FC, ReactNode } from 'react';
-import { Footer } from '../common/Footer';
-import { RadialGradientBackground } from '../common/RadialGradientBackground';
-import { Navbar } from './Navbar';
+import { Navbar } from '@micro/components/auth/Navbar';
+import { Footer } from '@micro/components/common/Footer';
+import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
+import { Linear } from '@micro/components/common/Typography';
 import { APP_NAME } from '@micro/constants/constants';
-import { Linear } from '../common/Typography';
+import { FC, ReactNode } from 'react';
 
-export const Container: FC<{ children: ReactNode }> = ({ children = <></> }) => {
+export const AuthTemplate: FC<{ children: ReactNode }> = ({ children = <></> }) => {
 	return (
 		<div className="flex h-screen w-screen flex-col">
 			<RadialGradientBackground />

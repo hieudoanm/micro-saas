@@ -1,7 +1,37 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[731],
 	{
-		3489: (e, r, t) => {
+		4889: (e, r, t) => {
+			'use strict';
+			t.r(r), t.d(r, { default: () => o });
+			var l = t(5640),
+				d = t(9650),
+				s = t(3242),
+				n = t.n(s);
+			let o = () =>
+				(0, l.jsx)('div', {
+					className:
+						'flex min-h-screen items-center justify-center bg-white px-4 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+					children: (0, l.jsxs)('div', {
+						className: 'text-center',
+						children: [
+							(0, l.jsx)('h1', { className: 'text-9xl font-extrabold', children: '404' }),
+							(0, l.jsx)('p', { className: 'mt-4 text-2xl font-semibold', children: 'Page Not Found' }),
+							(0, l.jsx)('p', { className: 'mt-2', children: "Sorry, the page you're looking for doesn't exist." }),
+							(0, l.jsx)(n(), { href: '/', children: (0, l.jsx)(d.$, { children: 'Go Home' }) }),
+						],
+					}),
+				});
+		},
+		7038: (e, r, t) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/_error',
+				function () {
+					return t(4889);
+				},
+			]);
+		},
+		9650: (e, r, t) => {
 			'use strict';
 			t.d(r, { $: () => d, r: () => s });
 			var l = t(5640);
@@ -87,39 +117,9 @@
 								});
 				};
 		},
-		6018: (e, r, t) => {
-			'use strict';
-			t.r(r), t.d(r, { default: () => o });
-			var l = t(5640),
-				d = t(3489),
-				s = t(5089),
-				n = t.n(s);
-			let o = () =>
-				(0, l.jsx)('div', {
-					className:
-						'flex min-h-screen items-center justify-center bg-white px-4 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-					children: (0, l.jsxs)('div', {
-						className: 'text-center',
-						children: [
-							(0, l.jsx)('h1', { className: 'text-9xl font-extrabold', children: '404' }),
-							(0, l.jsx)('p', { className: 'mt-4 text-2xl font-semibold', children: 'Page Not Found' }),
-							(0, l.jsx)('p', { className: 'mt-2', children: "Sorry, the page you're looking for doesn't exist." }),
-							(0, l.jsx)(n(), { href: '/', children: (0, l.jsx)(d.$, { children: 'Go Home' }) }),
-						],
-					}),
-				});
-		},
-		7917: (e, r, t) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/_error',
-				function () {
-					return t(6018);
-				},
-			]);
-		},
 	},
 	(e) => {
 		var r = (r) => e((e.s = r));
-		e.O(0, [89, 636, 593, 792], () => r(7917)), (_N_E = e.O());
+		e.O(0, [242, 636, 593, 792], () => r(7038)), (_N_E = e.O());
 	},
 ]);

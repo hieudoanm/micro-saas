@@ -7,9 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
 model User {
   email          String               @id @map("email") @db.VarChar(255)
   password       String               @map("password") @db.Text
+  name           String               @default("") @map("name") @db.VarChar(255)
   createdAt      DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
   updatedAt      DateTime             @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
   passwordResets PasswordResetToken[]

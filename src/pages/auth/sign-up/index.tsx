@@ -1,6 +1,6 @@
-import { Container } from '@micro/components/auth/Container';
 import { Button, OutlineButton } from '@micro/components/common/Button';
 import { Input } from '@micro/components/common/Input';
+import { AuthTemplate } from '@micro/templates/AuthTemplate';
 import { trpcClient } from '@micro/utils/trpc';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -11,11 +11,12 @@ const SignUpPage: NextPage = () => {
 	const router = useRouter();
 	const { push } = router;
 
-	const [{ loading = false, email = '', password = '' }, setState] = useState<{
+	const [{ loading = false, name = '', email = '', password = '' }, setState] = useState<{
 		loading: boolean;
+		name: string;
 		email: string;
 		password: string;
-	}>({ loading: false, email: '', password: '' });
+	}>({ loading: false, name: '', email: '', password: '' });
 
 	const onSubmit = async (event: FormEvent) => {
 		event.preventDefault();
@@ -30,8 +31,19 @@ const SignUpPage: NextPage = () => {
 	};
 
 	return (
-		<Container>
+		<AuthTemplate>
 			<form onSubmit={onSubmit} className="flex flex-col gap-y-4">
+				<Input
+					id="name"
+					type="name"
+					name="name"
+					placeholder="Name"
+					value={name}
+					onChange={(event) => {
+						setState((previous) => ({ ...previous, name: event.target.value }));
+					}}
+					required
+				/>
 				<Input
 					id="email"
 					type="email"
@@ -59,7 +71,7 @@ const SignUpPage: NextPage = () => {
 					<OutlineButton>Sign In</OutlineButton>
 				</Link>
 			</form>
-		</Container>
+		</AuthTemplate>
 	);
 };
 
