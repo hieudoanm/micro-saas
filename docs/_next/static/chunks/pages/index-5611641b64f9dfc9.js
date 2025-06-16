@@ -271,7 +271,7 @@
 						[{ loading: s = !1, prompt: r = 'Explain how AI works in a few words', answer: l = '' }, i] = (0,
 						x.useState)({ loading: !1, prompt: 'Explain how AI works in a few words', answer: '' });
 					return (0, a.jsx)('section', {
-						className: 'border-b border-neutral-800',
+						className: 'border-b border-neutral-800 pb-8 md:pb-16',
 						children: (0, a.jsx)('div', {
 							className: 'container mx-auto px-4 py-8 md:px-8 md:py-16',
 							children: (0, a.jsxs)('div', {

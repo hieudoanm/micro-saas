@@ -17,7 +17,7 @@ export const Hero: FC<{ description: string }> = ({ description = '' }) => {
 	});
 
 	return (
-		<section className="border-b border-neutral-800">
+		<section className="border-b border-neutral-800 pb-8 md:pb-16">
 			<div className="container mx-auto px-4 py-8 md:px-8 md:py-16">
 				<div className="mx-auto w-full max-w-2xl space-y-4 text-center md:space-y-8">
 					<h1 className="text-center text-5xl font-black md:text-6xl">
