@@ -11,6 +11,10 @@ import { FC } from 'react';
 
 export const LandingTemplate: FC = () => {
 	const landing = {
+		hero: {
+			description:
+				'Kickstart your SaaS faster with secure authentication and hassle-free subscription payments powered by Paddle.',
+		},
 		features: {
 			title: 'Features',
 			description: 'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
@@ -80,11 +84,11 @@ export const LandingTemplate: FC = () => {
 	};
 
 	return (
-		<div className="flex flex-col gap-y-8 md:gap-y-16">
+		<div className="scrollbar-none flex h-screen flex-col gap-y-8 overflow-y-auto md:gap-y-16">
 			<RadialGradientBackground />
 			<Navbar />
 			<main className="flex flex-col gap-y-8 md:gap-y-16">
-				<Hero />
+				<Hero description={landing.hero.description} />
 				<div className="flex flex-col gap-y-8 md:gap-y-16">
 					<Features
 						title={landing.features.title}
