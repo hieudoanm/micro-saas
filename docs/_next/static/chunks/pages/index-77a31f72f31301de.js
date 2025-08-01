@@ -1,102 +1,15 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[332],
 	{
-		1111: (e, t, s) => {
+		2224: (e, t, s) => {
 			'use strict';
-			s.d(t, { w: () => i });
+			(s.r(t), s.d(t, { default: () => k }));
 			var a = s(5640),
-				r = s(9428),
-				l = s(3242),
-				n = s.n(l);
-			let d = new Date().getFullYear(),
-				i = () =>
-					(0, a.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
-						children: (0, a.jsx)('div', {
-							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-							children: (0, a.jsxs)('div', {
-								className: 'flex items-start justify-between',
-								children: [
-									(0, a.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row',
-										children: [
-											(0, a.jsxs)('p', { children: ['\xa9 ', d, ' ', r.C, '.'] }),
-											(0, a.jsx)('p', { children: 'All Rights Reserved.' }),
-										],
-									}),
-									(0, a.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
-										children: [
-											(0, a.jsx)(n(), {
-												href: 'https://github.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'GitHub',
-											}),
-											(0, a.jsx)(n(), {
-												href: 'https://x.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'Twitter',
-											}),
-										],
-									}),
-								],
-							}),
-						}),
-					});
-		},
-		1924: (e, t, s) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/',
-				function () {
-					return s(2822);
-				},
-			]);
-		},
-		1991: (e, t, s) => {
-			'use strict';
-			s.d(t, { q: () => r });
-			var a = s(5640);
-			let r = () =>
-				(0, a.jsx)('div', {
-					className:
-						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
-					children: (0, a.jsx)('div', {
-						className:
-							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
-					}),
-				});
-		},
-		2353: (e, t, s) => {
-			'use strict';
-			s.d(t, { TT: () => l, WG: () => n, fV: () => r });
-			var a = s(5640);
-			let r = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
-				},
-				l = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
-				},
-				n = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
-						children: t,
-					});
-				};
-		},
-		2822: (e, t, s) => {
-			'use strict';
-			s.r(t), s.d(t, { default: () => k });
-			var a = s(5640),
-				r = s(1111),
-				l = s(1991),
-				n = s(9650),
-				d = s(2353),
-				i = s(3242),
+				r = s(3187),
+				l = s(3531),
+				n = s(2766),
+				d = s(6957),
+				i = s(1086),
 				o = s.n(i);
 			let c = (e) => {
 				let { title: t = '', description: s = '', action: r = '' } = e;
@@ -257,8 +170,8 @@
 						],
 					});
 				};
-			var h = s(9428),
-				f = s(331);
+			var h = s(8592),
+				f = s(3226);
 			let g = async (e) => {
 					try {
 						return { data: await e, error: null };
@@ -306,7 +219,7 @@
 															i((e) => ({ ...e, loading: !0 }));
 															let { data: a, error: l } = await g(f.r.app.gemini.generate.mutate({ prompt: r }));
 															if ((i((e) => ({ ...e, loading: !1 })), l)) {
-																console.error(l), alert(l.message);
+																(console.error(l), alert(l.message));
 																return;
 															}
 															if (!a) return void alert('Invalid Response Data');
@@ -333,8 +246,8 @@
 						}),
 					});
 				};
-			var b = s(6714),
-				y = s(4053);
+			var b = s(3510),
+				y = s(5177);
 			let w = () => {
 					var e;
 					let { isAuthenticated: t = !1, user: s, signOut: r } = (0, b.J)();
@@ -488,22 +401,7 @@
 				},
 				k = () => (0, a.jsx)(N, {});
 		},
-		4053: (e, t, s) => {
-			'use strict';
-			s.d(t, { o: () => r });
-			var a = s(5640);
-			let r = (e) => {
-				let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-				return (0, a.jsx)('nav', {
-					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
-					children: (0, a.jsx)('div', {
-						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, a.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
-					}),
-				});
-			};
-		},
-		9650: (e, t, s) => {
+		2766: (e, t, s) => {
 			'use strict';
 			s.d(t, { $: () => r, r: () => l });
 			var a = s(5640);
@@ -589,9 +487,110 @@
 								});
 				};
 		},
+		3187: (e, t, s) => {
+			'use strict';
+			s.d(t, { w: () => i });
+			var a = s(5640),
+				r = s(8592),
+				l = s(1086),
+				n = s.n(l);
+			let d = new Date().getFullYear(),
+				i = () =>
+					(0, a.jsx)('footer', {
+						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						children: (0, a.jsx)('div', {
+							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+							children: (0, a.jsxs)('div', {
+								className: 'flex items-start justify-between',
+								children: [
+									(0, a.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row',
+										children: [
+											(0, a.jsxs)('p', { children: ['\xa9 ', d, ' ', r.C, '.'] }),
+											(0, a.jsx)('p', { children: 'All Rights Reserved.' }),
+										],
+									}),
+									(0, a.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
+										children: [
+											(0, a.jsx)(n(), {
+												href: 'https://github.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'GitHub',
+											}),
+											(0, a.jsx)(n(), {
+												href: 'https://x.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'Twitter',
+											}),
+										],
+									}),
+								],
+							}),
+						}),
+					});
+		},
+		3531: (e, t, s) => {
+			'use strict';
+			s.d(t, { q: () => r });
+			var a = s(5640);
+			let r = () =>
+				(0, a.jsx)('div', {
+					className:
+						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
+					children: (0, a.jsx)('div', {
+						className:
+							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
+					}),
+				});
+		},
+		3760: (e, t, s) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/',
+				function () {
+					return s(2224);
+				},
+			]);
+		},
+		5177: (e, t, s) => {
+			'use strict';
+			s.d(t, { o: () => r });
+			var a = s(5640);
+			let r = (e) => {
+				let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+				return (0, a.jsx)('nav', {
+					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
+					children: (0, a.jsx)('div', {
+						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+						children: (0, a.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
+					}),
+				});
+			};
+		},
+		6957: (e, t, s) => {
+			'use strict';
+			s.d(t, { TT: () => l, WG: () => n, fV: () => r });
+			var a = s(5640);
+			let r = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
+				},
+				l = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
+				},
+				n = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('span', {
+						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						children: t,
+					});
+				};
+		},
 	},
 	(e) => {
-		var t = (t) => e((e.s = t));
-		e.O(0, [242, 636, 593, 792], () => t(1924)), (_N_E = e.O());
+		(e.O(0, [86, 636, 593, 792], () => e((e.s = 3760))), (_N_E = e.O()));
 	},
 ]);
