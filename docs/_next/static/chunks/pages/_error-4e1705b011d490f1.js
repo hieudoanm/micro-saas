@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[731],
 	{
-		2766: (e, t, r) => {
+		8503: (e, t, r) => {
 			'use strict';
 			r.d(t, { $: () => d, r: () => s });
 			var l = r(5640);
@@ -87,20 +87,12 @@
 								});
 				};
 		},
-		3098: (e, t, r) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/_error',
-				function () {
-					return r(9021);
-				},
-			]);
-		},
-		9021: (e, t, r) => {
+		8892: (e, t, r) => {
 			'use strict';
 			(r.r(t), r.d(t, { default: () => o }));
 			var l = r(5640),
-				d = r(2766),
-				s = r(1086),
+				d = r(8503),
+				s = r(2299),
 				n = r.n(s);
 			let o = () =>
 				(0, l.jsx)('div', {
@@ -117,8 +109,16 @@
 					}),
 				});
 		},
+		9671: (e, t, r) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/_error',
+				function () {
+					return r(8892);
+				},
+			]);
+		},
 	},
 	(e) => {
-		(e.O(0, [86, 636, 593, 792], () => e((e.s = 3098))), (_N_E = e.O()));
+		(e.O(0, [299, 636, 593, 792], () => e((e.s = 9671))), (_N_E = e.O()));
 	},
 ]);

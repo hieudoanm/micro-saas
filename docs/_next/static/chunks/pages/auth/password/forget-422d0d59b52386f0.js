@@ -1,14 +1,34 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[834],
 	{
-		1533: (e, t, r) => {
+		140: (e, t, r) => {
+			'use strict';
+			r.d(t, { TT: () => a, WG: () => d, fV: () => s });
+			var l = r(5640);
+			let s = (e) => {
+					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
+				},
+				a = (e) => {
+					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
+				},
+				d = (e) => {
+					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
+					return (0, l.jsx)('span', {
+						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						children: t,
+					});
+				};
+		},
+		940: (e, t, r) => {
 			'use strict';
 			(r.r(t), r.d(t, { default: () => c }));
 			var l = r(5640),
-				s = r(2766),
-				a = r(1766),
-				d = r(6066),
-				n = r(1086),
+				s = r(8503),
+				a = r(5365),
+				d = r(9432),
+				n = r(2299),
 				i = r.n(n),
 				x = r(148);
 			let c = () => {
@@ -34,7 +54,21 @@
 				});
 			};
 		},
-		1766: (e, t, r) => {
+		4370: (e, t, r) => {
+			'use strict';
+			r.d(t, { q: () => s });
+			var l = r(5640);
+			let s = () =>
+				(0, l.jsx)('div', {
+					className:
+						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
+					children: (0, l.jsx)('div', {
+						className:
+							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
+					}),
+				});
+		},
+		5365: (e, t, r) => {
 			'use strict';
 			r.d(t, { p: () => s });
 			var l = r(5640);
@@ -68,7 +102,67 @@
 				});
 			};
 		},
-		2766: (e, t, r) => {
+		7650: (e, t, r) => {
+			'use strict';
+			r.d(t, { o: () => s });
+			var l = r(5640);
+			let s = (e) => {
+				let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
+				return (0, l.jsx)('nav', {
+					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
+					children: (0, l.jsx)('div', {
+						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+						children: (0, l.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
+					}),
+				});
+			};
+		},
+		8462: (e, t, r) => {
+			'use strict';
+			r.d(t, { w: () => i });
+			var l = r(5640),
+				s = r(8609),
+				a = r(2299),
+				d = r.n(a);
+			let n = new Date().getFullYear(),
+				i = () =>
+					(0, l.jsx)('footer', {
+						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						children: (0, l.jsx)('div', {
+							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+							children: (0, l.jsxs)('div', {
+								className: 'flex items-start justify-between',
+								children: [
+									(0, l.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row',
+										children: [
+											(0, l.jsxs)('p', { children: ['\xa9 ', n, ' ', s.C, '.'] }),
+											(0, l.jsx)('p', { children: 'All Rights Reserved.' }),
+										],
+									}),
+									(0, l.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
+										children: [
+											(0, l.jsx)(d(), {
+												href: 'https://github.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'GitHub',
+											}),
+											(0, l.jsx)(d(), {
+												href: 'https://x.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'Twitter',
+											}),
+										],
+									}),
+								],
+							}),
+						}),
+					});
+		},
+		8503: (e, t, r) => {
 			'use strict';
 			r.d(t, { $: () => s, r: () => a });
 			var l = r(5640);
@@ -154,88 +248,14 @@
 								});
 				};
 		},
-		3187: (e, t, r) => {
-			'use strict';
-			r.d(t, { w: () => i });
-			var l = r(5640),
-				s = r(8592),
-				a = r(1086),
-				d = r.n(a);
-			let n = new Date().getFullYear(),
-				i = () =>
-					(0, l.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
-						children: (0, l.jsx)('div', {
-							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-							children: (0, l.jsxs)('div', {
-								className: 'flex items-start justify-between',
-								children: [
-									(0, l.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row',
-										children: [
-											(0, l.jsxs)('p', { children: ['\xa9 ', n, ' ', s.C, '.'] }),
-											(0, l.jsx)('p', { children: 'All Rights Reserved.' }),
-										],
-									}),
-									(0, l.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
-										children: [
-											(0, l.jsx)(d(), {
-												href: 'https://github.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'GitHub',
-											}),
-											(0, l.jsx)(d(), {
-												href: 'https://x.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'Twitter',
-											}),
-										],
-									}),
-								],
-							}),
-						}),
-					});
-		},
-		3531: (e, t, r) => {
-			'use strict';
-			r.d(t, { q: () => s });
-			var l = r(5640);
-			let s = () =>
-				(0, l.jsx)('div', {
-					className:
-						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
-					children: (0, l.jsx)('div', {
-						className:
-							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
-					}),
-				});
-		},
-		5177: (e, t, r) => {
-			'use strict';
-			r.d(t, { o: () => s });
-			var l = r(5640);
-			let s = (e) => {
-				let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-				return (0, l.jsx)('nav', {
-					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
-					children: (0, l.jsx)('div', {
-						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, l.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
-					}),
-				});
-			};
-		},
-		6066: (e, t, r) => {
+		9432: (e, t, r) => {
 			'use strict';
 			r.d(t, { $: () => u });
 			var l = r(5640),
-				s = r(1086),
+				s = r(2299),
 				a = r.n(s),
-				d = r(5177),
-				n = r(6957);
+				d = r(7650),
+				n = r(140);
 			let i = () =>
 				(0, l.jsx)(d.o, {
 					children: (0, l.jsx)(a(), {
@@ -244,9 +264,9 @@
 						children: (0, l.jsx)(n.WG, { children: 'micro/saas' }),
 					}),
 				});
-			var x = r(3187),
-				c = r(3531),
-				o = r(8592);
+			var x = r(8462),
+				c = r(4370),
+				o = r(8609);
 			let u = (e) => {
 				let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
 				return (0, l.jsxs)('div', {
@@ -279,36 +299,16 @@
 				});
 			};
 		},
-		6151: (e, t, r) => {
+		9750: (e, t, r) => {
 			(window.__NEXT_P = window.__NEXT_P || []).push([
 				'/auth/password/forget',
 				function () {
-					return r(1533);
+					return r(940);
 				},
 			]);
 		},
-		6957: (e, t, r) => {
-			'use strict';
-			r.d(t, { TT: () => a, WG: () => d, fV: () => s });
-			var l = r(5640);
-			let s = (e) => {
-					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
-				},
-				a = (e) => {
-					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
-				},
-				d = (e) => {
-					let { children: t = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
-						children: t,
-					});
-				};
-		},
 	},
 	(e) => {
-		(e.O(0, [86, 636, 593, 792], () => e((e.s = 6151))), (_N_E = e.O()));
+		(e.O(0, [299, 636, 593, 792], () => e((e.s = 9750))), (_N_E = e.O()));
 	},
 ]);

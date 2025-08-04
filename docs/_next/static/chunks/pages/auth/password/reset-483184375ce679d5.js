@@ -1,7 +1,89 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[882],
 	{
-		1766: (e, r, t) => {
+		140: (e, r, t) => {
+			'use strict';
+			t.d(r, { TT: () => a, WG: () => d, fV: () => l });
+			var s = t(5640);
+			let l = (e) => {
+					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
+					return (0, s.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: r });
+				},
+				a = (e) => {
+					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
+					return (0, s.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: r });
+				},
+				d = (e) => {
+					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
+					return (0, s.jsx)('span', {
+						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						children: r,
+					});
+				};
+		},
+		3072: (e, r, t) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/auth/password/reset',
+				function () {
+					return t(4242);
+				},
+			]);
+		},
+		4242: (e, r, t) => {
+			'use strict';
+			(t.r(r), t.d(r, { default: () => o }));
+			var s = t(5640),
+				l = t(8503),
+				a = t(5365),
+				d = t(9432),
+				n = t(148);
+			let o = () => {
+				let [{ password: e = '', confirmPassword: r = '' }, t] = (0, n.useState)({ password: '', confirmPassword: '' });
+				return (0, s.jsx)(d.$, {
+					children: (0, s.jsxs)('form', {
+						className: 'flex flex-col gap-y-4',
+						children: [
+							(0, s.jsx)(a.p, {
+								id: 'password',
+								type: 'password',
+								name: 'password',
+								placeholder: 'Password',
+								value: e,
+								onChange: (e) => {
+									t((r) => ({ ...r, password: e.target.value }));
+								},
+							}),
+							(0, s.jsx)(a.p, {
+								id: 'password',
+								type: 'confirmPassword',
+								name: 'confirmPassword',
+								placeholder: 'Confirm Password',
+								value: r,
+								onChange: (e) => {
+									t((r) => ({ ...r, confirmPassword: e.target.value }));
+								},
+							}),
+							(0, s.jsx)(l.$, { children: 'Reset Password' }),
+						],
+					}),
+				});
+			};
+		},
+		4370: (e, r, t) => {
+			'use strict';
+			t.d(r, { q: () => l });
+			var s = t(5640);
+			let l = () =>
+				(0, s.jsx)('div', {
+					className:
+						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
+					children: (0, s.jsx)('div', {
+						className:
+							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
+					}),
+				});
+		},
+		5365: (e, r, t) => {
 			'use strict';
 			t.d(r, { p: () => l });
 			var s = t(5640);
@@ -35,7 +117,67 @@
 				});
 			};
 		},
-		2766: (e, r, t) => {
+		7650: (e, r, t) => {
+			'use strict';
+			t.d(r, { o: () => l });
+			var s = t(5640);
+			let l = (e) => {
+				let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
+				return (0, s.jsx)('nav', {
+					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
+					children: (0, s.jsx)('div', {
+						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+						children: (0, s.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: r }),
+					}),
+				});
+			};
+		},
+		8462: (e, r, t) => {
+			'use strict';
+			t.d(r, { w: () => o });
+			var s = t(5640),
+				l = t(8609),
+				a = t(2299),
+				d = t.n(a);
+			let n = new Date().getFullYear(),
+				o = () =>
+					(0, s.jsx)('footer', {
+						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						children: (0, s.jsx)('div', {
+							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+							children: (0, s.jsxs)('div', {
+								className: 'flex items-start justify-between',
+								children: [
+									(0, s.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row',
+										children: [
+											(0, s.jsxs)('p', { children: ['\xa9 ', n, ' ', l.C, '.'] }),
+											(0, s.jsx)('p', { children: 'All Rights Reserved.' }),
+										],
+									}),
+									(0, s.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
+										children: [
+											(0, s.jsx)(d(), {
+												href: 'https://github.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'GitHub',
+											}),
+											(0, s.jsx)(d(), {
+												href: 'https://x.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'Twitter',
+											}),
+										],
+									}),
+								],
+							}),
+						}),
+					});
+		},
+		8503: (e, r, t) => {
 			'use strict';
 			t.d(r, { $: () => l, r: () => a });
 			var s = t(5640);
@@ -121,136 +263,14 @@
 								});
 				};
 		},
-		2989: (e, r, t) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/auth/password/reset',
-				function () {
-					return t(3221);
-				},
-			]);
-		},
-		3187: (e, r, t) => {
-			'use strict';
-			t.d(r, { w: () => o });
-			var s = t(5640),
-				l = t(8592),
-				a = t(1086),
-				d = t.n(a);
-			let n = new Date().getFullYear(),
-				o = () =>
-					(0, s.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
-						children: (0, s.jsx)('div', {
-							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-							children: (0, s.jsxs)('div', {
-								className: 'flex items-start justify-between',
-								children: [
-									(0, s.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row',
-										children: [
-											(0, s.jsxs)('p', { children: ['\xa9 ', n, ' ', l.C, '.'] }),
-											(0, s.jsx)('p', { children: 'All Rights Reserved.' }),
-										],
-									}),
-									(0, s.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
-										children: [
-											(0, s.jsx)(d(), {
-												href: 'https://github.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'GitHub',
-											}),
-											(0, s.jsx)(d(), {
-												href: 'https://x.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'Twitter',
-											}),
-										],
-									}),
-								],
-							}),
-						}),
-					});
-		},
-		3221: (e, r, t) => {
-			'use strict';
-			(t.r(r), t.d(r, { default: () => o }));
-			var s = t(5640),
-				l = t(2766),
-				a = t(1766),
-				d = t(6066),
-				n = t(148);
-			let o = () => {
-				let [{ password: e = '', confirmPassword: r = '' }, t] = (0, n.useState)({ password: '', confirmPassword: '' });
-				return (0, s.jsx)(d.$, {
-					children: (0, s.jsxs)('form', {
-						className: 'flex flex-col gap-y-4',
-						children: [
-							(0, s.jsx)(a.p, {
-								id: 'password',
-								type: 'password',
-								name: 'password',
-								placeholder: 'Password',
-								value: e,
-								onChange: (e) => {
-									t((r) => ({ ...r, password: e.target.value }));
-								},
-							}),
-							(0, s.jsx)(a.p, {
-								id: 'password',
-								type: 'confirmPassword',
-								name: 'confirmPassword',
-								placeholder: 'Confirm Password',
-								value: r,
-								onChange: (e) => {
-									t((r) => ({ ...r, confirmPassword: e.target.value }));
-								},
-							}),
-							(0, s.jsx)(l.$, { children: 'Reset Password' }),
-						],
-					}),
-				});
-			};
-		},
-		3531: (e, r, t) => {
-			'use strict';
-			t.d(r, { q: () => l });
-			var s = t(5640);
-			let l = () =>
-				(0, s.jsx)('div', {
-					className:
-						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
-					children: (0, s.jsx)('div', {
-						className:
-							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
-					}),
-				});
-		},
-		5177: (e, r, t) => {
-			'use strict';
-			t.d(r, { o: () => l });
-			var s = t(5640);
-			let l = (e) => {
-				let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-				return (0, s.jsx)('nav', {
-					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
-					children: (0, s.jsx)('div', {
-						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, s.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: r }),
-					}),
-				});
-			};
-		},
-		6066: (e, r, t) => {
+		9432: (e, r, t) => {
 			'use strict';
 			t.d(r, { $: () => u });
 			var s = t(5640),
-				l = t(1086),
+				l = t(2299),
 				a = t.n(l),
-				d = t(5177),
-				n = t(6957);
+				d = t(7650),
+				n = t(140);
 			let o = () =>
 				(0, s.jsx)(d.o, {
 					children: (0, s.jsx)(a(), {
@@ -259,9 +279,9 @@
 						children: (0, s.jsx)(n.WG, { children: 'micro/saas' }),
 					}),
 				});
-			var i = t(3187),
-				x = t(3531),
-				c = t(8592);
+			var i = t(8462),
+				x = t(4370),
+				c = t(8609);
 			let u = (e) => {
 				let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
 				return (0, s.jsxs)('div', {
@@ -294,28 +314,8 @@
 				});
 			};
 		},
-		6957: (e, r, t) => {
-			'use strict';
-			t.d(r, { TT: () => a, WG: () => d, fV: () => l });
-			var s = t(5640);
-			let l = (e) => {
-					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-					return (0, s.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: r });
-				},
-				a = (e) => {
-					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-					return (0, s.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: r });
-				},
-				d = (e) => {
-					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-					return (0, s.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
-						children: r,
-					});
-				};
-		},
 	},
 	(e) => {
-		(e.O(0, [86, 636, 593, 792], () => e((e.s = 2989))), (_N_E = e.O()));
+		(e.O(0, [299, 636, 593, 792], () => e((e.s = 3072))), (_N_E = e.O()));
 	},
 ]);
