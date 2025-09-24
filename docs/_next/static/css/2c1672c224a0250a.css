@@ -607,6 +607,49 @@
 }
 @layer components;
 @layer utilities {
+	.diff {
+		webkit-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		direction: ltr;
+		grid-template-rows: 1fr 1.8rem 1fr;
+		grid-template-columns: auto 1fr;
+		width: 100%;
+		display: grid;
+		position: relative;
+		overflow: hidden;
+		container-type: inline-size;
+	}
+	.diff:focus-visible,
+	.diff:has(.diff-item-1:focus-visible) {
+		outline-style: var(--tw-outline-style);
+		outline-offset: 1px;
+		outline-width: 2px;
+		outline-color: var(--color-base-content);
+	}
+	.diff:focus-visible .diff-resizer {
+		min-width: 95cqi;
+		max-width: 95cqi;
+	}
+	.diff:has(.diff-item-1:focus-visible) {
+		outline-style: var(--tw-outline-style);
+		outline-offset: 1px;
+		outline-width: 2px;
+	}
+	.diff:has(.diff-item-1:focus-visible) .diff-resizer {
+		min-width: 5cqi;
+		max-width: 5cqi;
+	}
+	@supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+		.diff:focus .diff-resizer {
+			min-width: 5cqi;
+			max-width: 5cqi;
+		}
+		.diff:has(.diff-item-1:focus) .diff-resizer {
+			min-width: 95cqi;
+			max-width: 95cqi;
+		}
+	}
 	.tab {
 		cursor: pointer;
 		appearance: none;
@@ -2731,6 +2774,34 @@
 	.filter {
 		filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,)
 			var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+	}
+	.transition {
+		transition-property:
+			color,
+			background-color,
+			border-color,
+			outline-color,
+			text-decoration-color,
+			fill,
+			stroke,
+			--tw-gradient-from,
+			--tw-gradient-via,
+			--tw-gradient-to,
+			opacity,
+			box-shadow,
+			transform,
+			translate,
+			scale,
+			rotate,
+			filter,
+			-webkit-backdrop-filter,
+			backdrop-filter,
+			display,
+			content-visibility,
+			overlay,
+			pointer-events;
+		transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+		transition-duration: var(--tw-duration, var(--default-transition-duration));
 	}
 	.transition-all {
 		transition-property: all;

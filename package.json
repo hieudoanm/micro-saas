@@ -31,12 +31,17 @@
 		"build": "next build",
 		"postbuild": "touch docs/.nojekyll",
 		"build:tauri": "tauri build",
+		"build:android": "rimraf android && cap add android",
+		"build:ios": "rimraf ios && cap add ios",
 		"prestart": "pnpm prisma:generate && kill-port 3000",
 		"start": "next start",
 		"pretest": "pnpm prisma:generate && rimraf coverage",
 		"test": "jest"
 	},
 	"dependencies": {
+		"@capacitor/android": "7.4.3",
+		"@capacitor/core": "7.4.3",
+		"@capacitor/ios": "7.4.3",
 		"@prisma/client": "6.16.2",
 		"@tanstack/react-query": "5.90.2",
 		"@trpc/client": "11.5.1",
@@ -53,6 +58,7 @@
 		"zod": "4.1.11"
 	},
 	"devDependencies": {
+		"@capacitor/cli": "7.4.3",
 		"@eslint/eslintrc": "3.3.1",
 		"@tailwindcss/postcss": "4.1.13",
 		"@tauri-apps/cli": "2.8.4",
