@@ -3,12 +3,12 @@
 		__rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
 		__routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
 		__routerFilterDynamic: { numItems: e, errorRate: 1e-4, numBits: e, numHashes: null, bitArray: [] },
-		'/': [s, 'static/chunks/pages/index-dc4ea2eb951658de.js'],
-		'/_error': [s, 'static/chunks/pages/_error-4e1705b011d490f1.js'],
-		'/auth/password/forget': [s, 'static/chunks/pages/auth/password/forget-422d0d59b52386f0.js'],
-		'/auth/password/reset': [s, 'static/chunks/pages/auth/password/reset-483184375ce679d5.js'],
-		'/auth/sign-in': [s, 'static/chunks/pages/auth/sign-in-ae9fd31702d0d026.js'],
-		'/auth/sign-up': [s, 'static/chunks/pages/auth/sign-up-a4ef1153af9bb7a0.js'],
+		'/': [s, 'static/chunks/pages/index-d521953b852ffa78.js'],
+		'/_error': [s, 'static/chunks/pages/_error-91bee7006f6393af.js'],
+		'/auth/password/forget': [s, 'static/chunks/pages/auth/password/forget-e9ecbe6afc7a10a9.js'],
+		'/auth/password/reset': [s, 'static/chunks/pages/auth/password/reset-e332db6a2abfe3be.js'],
+		'/auth/sign-in': [s, 'static/chunks/pages/auth/sign-in-9a3824c3773defaf.js'],
+		'/auth/sign-up': [s, 'static/chunks/pages/auth/sign-up-b949f56e0caba58c.js'],
 		sortedPages: [
 			'/',
 			'/_app',
@@ -19,5 +19,5 @@
 			'/auth/sign-up',
 		],
 	};
-})('static/chunks/299-8e3abe5a98c2092f.js', 0, 1e-4, null)),
+})('static/chunks/844-872f9066c64a6a46.js', 0, 1e-4, null)),
 	self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB());

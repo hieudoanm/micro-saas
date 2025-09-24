@@ -1,203 +1,15 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
 	[332],
 	{
-		140: (e, t, s) => {
-			'use strict';
-			s.d(t, { TT: () => l, WG: () => n, fV: () => r });
-			var a = s(5640);
-			let r = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
-				},
-				l = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
-				},
-				n = (e) => {
-					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
-						children: t,
-					});
-				};
-		},
-		3863: (e, t, s) => {
-			(window.__NEXT_P = window.__NEXT_P || []).push([
-				'/',
-				function () {
-					return s(8553);
-				},
-			]);
-		},
-		4370: (e, t, s) => {
-			'use strict';
-			s.d(t, { q: () => r });
-			var a = s(5640);
-			let r = () =>
-				(0, a.jsx)('div', {
-					className:
-						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
-					children: (0, a.jsx)('div', {
-						className:
-							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
-					}),
-				});
-		},
-		7650: (e, t, s) => {
-			'use strict';
-			s.d(t, { o: () => r });
-			var a = s(5640);
-			let r = (e) => {
-				let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-				return (0, a.jsx)('nav', {
-					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
-					children: (0, a.jsx)('div', {
-						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, a.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
-					}),
-				});
-			};
-		},
-		8462: (e, t, s) => {
-			'use strict';
-			s.d(t, { w: () => i });
-			var a = s(5640),
-				r = s(8609),
-				l = s(2299),
-				n = s.n(l);
-			let d = new Date().getFullYear(),
-				i = () =>
-					(0, a.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
-						children: (0, a.jsx)('div', {
-							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-							children: (0, a.jsxs)('div', {
-								className: 'flex items-start justify-between',
-								children: [
-									(0, a.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row',
-										children: [
-											(0, a.jsxs)('p', { children: ['\xa9 ', d, ' ', r.C, '.'] }),
-											(0, a.jsx)('p', { children: 'All Rights Reserved.' }),
-										],
-									}),
-									(0, a.jsxs)('div', {
-										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
-										children: [
-											(0, a.jsx)(n(), {
-												href: 'https://github.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'GitHub',
-											}),
-											(0, a.jsx)(n(), {
-												href: 'https://x.com',
-												target: '_blank',
-												className: 'text-right',
-												children: 'Twitter',
-											}),
-										],
-									}),
-								],
-							}),
-						}),
-					});
-		},
-		8503: (e, t, s) => {
-			'use strict';
-			s.d(t, { $: () => r, r: () => l });
-			var a = s(5640);
-			let r = (e) => {
-					let {
-						size: t = 'md',
-						type: s = 'button',
-						disabled: r = !1,
-						onClick: l = () => {},
-						children: n = (0, a.jsx)(a.Fragment, {}),
-					} = e;
-					return 'sm' === t
-						? (0, a.jsx)('button', {
-								type: s,
-								disabled: r,
-								onClick: l,
-								className:
-									'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm',
-								children: n,
-							})
-						: 'lg' === t
-							? (0, a.jsx)('button', {
-									type: s,
-									disabled: r,
-									onClick: l,
-									className:
-										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-									children: n,
-								})
-							: (0, a.jsx)('button', {
-									type: s,
-									disabled: r,
-									onClick: l,
-									className:
-										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-									children: n,
-								});
-				},
-				l = (e) => {
-					let {
-						size: t = 'md',
-						type: s = 'button',
-						disabled: r = !1,
-						onClick: l = () => {},
-						children: n = (0, a.jsx)(a.Fragment, {}),
-					} = e;
-					return 'sm' === t
-						? (0, a.jsx)('div', {
-								className:
-									'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
-								children: (0, a.jsx)('button', {
-									type: s,
-									disabled: r,
-									onClick: l,
-									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
-									children: n,
-								}),
-							})
-						: 'lg' === t
-							? (0, a.jsx)('div', {
-									className:
-										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
-									children: (0, a.jsx)('button', {
-										type: s,
-										disabled: r,
-										onClick: l,
-										className:
-											'w-full cursor-pointer rounded-full bg-neutral-900 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
-										children: n,
-									}),
-								})
-							: (0, a.jsx)('div', {
-									className:
-										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
-									children: (0, a.jsx)('button', {
-										type: s,
-										disabled: r,
-										onClick: l,
-										className:
-											'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
-										children: n,
-									}),
-								});
-				};
-		},
-		8553: (e, t, s) => {
+		1928: (e, t, s) => {
 			'use strict';
 			(s.r(t), s.d(t, { default: () => k }));
-			var a = s(5640),
-				r = s(8462),
-				l = s(4370),
-				n = s(8503),
-				d = s(140),
-				i = s(2299),
+			var a = s(7765),
+				r = s(6610),
+				l = s(9070),
+				n = s(3963),
+				d = s(6656),
+				i = s(2844),
 				o = s.n(i);
 			let c = (e) => {
 				let { title: t = '', description: s = '', action: r = '' } = e;
@@ -221,7 +33,7 @@
 					}),
 				});
 			};
-			var x = s(148);
+			var x = s(5977);
 			let u = (e) => {
 					let { title: t = '', description: s = '' } = e,
 						[r, l] = (0, x.useState)('');
@@ -358,8 +170,8 @@
 						],
 					});
 				};
-			var h = s(8609),
-				f = s(5068);
+			var h = s(4629),
+				f = s(8782);
 			let g = async (e) => {
 					try {
 						return { data: await e, error: null };
@@ -434,8 +246,8 @@
 						}),
 					});
 				};
-			var b = s(5207),
-				y = s(7650);
+			var b = s(4011),
+				y = s(4238);
 			let w = () => {
 					var e;
 					let { isAuthenticated: t = !1, user: s, signOut: r } = (0, b.J)();
@@ -589,8 +401,196 @@
 				},
 				k = () => (0, a.jsx)(N, {});
 		},
+		3963: (e, t, s) => {
+			'use strict';
+			s.d(t, { $: () => r, r: () => l });
+			var a = s(7765);
+			let r = (e) => {
+					let {
+						size: t = 'md',
+						type: s = 'button',
+						disabled: r = !1,
+						onClick: l = () => {},
+						children: n = (0, a.jsx)(a.Fragment, {}),
+					} = e;
+					return 'sm' === t
+						? (0, a.jsx)('button', {
+								type: s,
+								disabled: r,
+								onClick: l,
+								className:
+									'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm',
+								children: n,
+							})
+						: 'lg' === t
+							? (0, a.jsx)('button', {
+									type: s,
+									disabled: r,
+									onClick: l,
+									className:
+										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
+									children: n,
+								})
+							: (0, a.jsx)('button', {
+									type: s,
+									disabled: r,
+									onClick: l,
+									className:
+										'cursor-pointer rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
+									children: n,
+								});
+				},
+				l = (e) => {
+					let {
+						size: t = 'md',
+						type: s = 'button',
+						disabled: r = !1,
+						onClick: l = () => {},
+						children: n = (0, a.jsx)(a.Fragment, {}),
+					} = e;
+					return 'sm' === t
+						? (0, a.jsx)('div', {
+								className:
+									'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+								children: (0, a.jsx)('button', {
+									type: s,
+									disabled: r,
+									onClick: l,
+									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
+									children: n,
+								}),
+							})
+						: 'lg' === t
+							? (0, a.jsx)('div', {
+									className:
+										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+									children: (0, a.jsx)('button', {
+										type: s,
+										disabled: r,
+										onClick: l,
+										className:
+											'w-full cursor-pointer rounded-full bg-neutral-900 px-4 py-2 text-base md:px-6 md:py-3 md:text-lg',
+										children: n,
+									}),
+								})
+							: (0, a.jsx)('div', {
+									className:
+										'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+									children: (0, a.jsx)('button', {
+										type: s,
+										disabled: r,
+										onClick: l,
+										className:
+											'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm md:px-4 md:py-2 md:text-base',
+										children: n,
+									}),
+								});
+				};
+		},
+		4238: (e, t, s) => {
+			'use strict';
+			s.d(t, { o: () => r });
+			var a = s(7765);
+			let r = (e) => {
+				let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+				return (0, a.jsx)('nav', {
+					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
+					children: (0, a.jsx)('div', {
+						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+						children: (0, a.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
+					}),
+				});
+			};
+		},
+		5870: (e, t, s) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/',
+				function () {
+					return s(1928);
+				},
+			]);
+		},
+		6610: (e, t, s) => {
+			'use strict';
+			s.d(t, { w: () => i });
+			var a = s(7765),
+				r = s(4629),
+				l = s(2844),
+				n = s.n(l);
+			let d = new Date().getFullYear(),
+				i = () =>
+					(0, a.jsx)('footer', {
+						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						children: (0, a.jsx)('div', {
+							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+							children: (0, a.jsxs)('div', {
+								className: 'flex items-start justify-between',
+								children: [
+									(0, a.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row',
+										children: [
+											(0, a.jsxs)('p', { children: ['\xa9 ', d, ' ', r.C, '.'] }),
+											(0, a.jsx)('p', { children: 'All Rights Reserved.' }),
+										],
+									}),
+									(0, a.jsxs)('div', {
+										className: 'flex flex-col gap-1 md:flex-row md:gap-4',
+										children: [
+											(0, a.jsx)(n(), {
+												href: 'https://github.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'GitHub',
+											}),
+											(0, a.jsx)(n(), {
+												href: 'https://x.com',
+												target: '_blank',
+												className: 'text-right',
+												children: 'Twitter',
+											}),
+										],
+									}),
+								],
+							}),
+						}),
+					});
+		},
+		6656: (e, t, s) => {
+			'use strict';
+			s.d(t, { TT: () => l, WG: () => n, fV: () => r });
+			var a = s(7765);
+			let r = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
+				},
+				l = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
+				},
+				n = (e) => {
+					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
+					return (0, a.jsx)('span', {
+						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						children: t,
+					});
+				};
+		},
+		9070: (e, t, s) => {
+			'use strict';
+			s.d(t, { q: () => r });
+			var a = s(7765);
+			let r = () =>
+				(0, a.jsx)('div', {
+					className:
+						'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
+					children: (0, a.jsx)('div', {
+						className:
+							'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
+					}),
+				});
+		},
 	},
 	(e) => {
-		(e.O(0, [299, 636, 593, 792], () => e((e.s = 3863))), (_N_E = e.O()));
+		(e.O(0, [844, 636, 593, 792], () => e((e.s = 5870))), (_N_E = e.O()));
 	},
 ]);
