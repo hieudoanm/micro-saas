@@ -65,7 +65,7 @@
 		"@types/bcrypt": "6.0.0",
 		"@types/jsonwebtoken": "9.0.10",
 		"@types/node": "24.6.0",
-		"@types/react": "19.1.15",
+		"@types/react": "19.1.16",
 		"@types/react-dom": "19.1.9",
 		"daisyui": "5.1.25",
 		"eslint": "9.36.0",
