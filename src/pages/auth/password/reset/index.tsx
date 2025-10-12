@@ -5,7 +5,10 @@ import { NextPage } from 'next';
 import { useState } from 'react';
 
 const PasswordResetPage: NextPage = () => {
-	const [{ password = '', confirmPassword = '' }, setState] = useState<{ password: string; confirmPassword: string }>({
+	const [{ password = '', confirmPassword = '' }, setState] = useState<{
+		password: string;
+		confirmPassword: string;
+	}>({
 		password: '',
 		confirmPassword: '',
 	});
@@ -20,7 +23,10 @@ const PasswordResetPage: NextPage = () => {
 					placeholder="Password"
 					value={password}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, password: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							password: event.target.value,
+						}));
 					}}
 				/>
 				<Input
@@ -30,7 +36,10 @@ const PasswordResetPage: NextPage = () => {
 					placeholder="Confirm Password"
 					value={confirmPassword}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, confirmPassword: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							confirmPassword: event.target.value,
+						}));
 					}}
 				/>
 				<Button>Reset Password</Button>

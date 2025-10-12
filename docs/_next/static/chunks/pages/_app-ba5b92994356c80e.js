@@ -8,7 +8,7 @@
 				s = r(4629),
 				i = r(4011);
 			r(2630);
-			var o = r(8782),
+			var o = r(7311),
 				u = r(3473),
 				a = r.n(u),
 				l = r(7159),
@@ -19,7 +19,9 @@
 				let { Component: t, pageProps: r } = e;
 				return (0, n.jsxs)(n.Fragment, {
 					children: [
-						(0, n.jsx)(d(), { children: (0, n.jsx)('title', { children: s.C }) }),
+						(0, n.jsx)(d(), {
+							children: (0, n.jsx)('title', { children: s.C }),
+						}),
 						(0, n.jsx)('div', {
 							className: ''.concat(a().className, ' ').concat(c().className),
 							children: (0, n.jsx)(i.v, { children: (0, n.jsx)(t, { ...r }) }),
@@ -40,12 +42,15 @@
 			'use strict';
 			r.d(t, { J: () => a, v: () => u });
 			var n = r(7765),
-				s = r(8782),
+				s = r(7311),
 				i = r(5977);
 			let o = (0, i.createContext)(void 0),
 				u = (e) => {
 					let { children: t } = e,
-						[{ isAuthenticated: r = !1, isLoading: u = !1, user: a = null }, l] = (0, i.useState)({
+						[
+							{ isAuthenticated: r = !1, isLoading: u = !1, user: a = null },
+							l,
+						] = (0, i.useState)({
 							isAuthenticated: !1,
 							isLoading: !1,
 							user: null,
@@ -56,7 +61,8 @@
 								let { user: e } = await s.r.app.user.get.query();
 								l((t) => ({ ...t, isAuthenticated: !0, user: e }));
 							} catch (e) {
-								(console.error(e), l((e) => ({ ...e, isAuthenticated: !1, user: null })));
+								(console.error(e),
+									l((e) => ({ ...e, isAuthenticated: !1, user: null })));
 							} finally {
 								l((e) => ({ ...e, isLoading: !1 }));
 							}
@@ -64,7 +70,9 @@
 						h = async () => {
 							try {
 								let { success: e } = await s.r.auth.user.signOut.mutate();
-								e && (alert('Sign Out Successfully'), l((e) => ({ ...e, isAuthenticated: !1, user: null })));
+								e &&
+									(alert('Sign Out Successfully'),
+									l((e) => ({ ...e, isAuthenticated: !1, user: null })));
 							} catch (e) {
 								console.error(e);
 							}
@@ -73,7 +81,13 @@
 						c();
 					}, []);
 					let d = (0, i.useMemo)(
-						() => ({ isAuthenticated: r, isLoading: u, user: a, refresh: c, signOut: h }),
+						() => ({
+							isAuthenticated: r,
+							isLoading: u,
+							user: a,
+							refresh: c,
+							signOut: h,
+						}),
 						[r, u, a, c, h],
 					);
 					return (0, n.jsx)(o.Provider, { value: d, children: t });
@@ -99,15 +113,15 @@
 		},
 		7159: (e) => {
 			e.exports = {
-				style: { fontFamily: "'Geist Mono', 'Geist Mono Fallback'", fontStyle: 'normal' },
+				style: {
+					fontFamily: "'Geist Mono', 'Geist Mono Fallback'",
+					fontStyle: 'normal',
+				},
 				className: '__className_5170de',
 				variable: '__variable_5170de',
 			};
 		},
-		7558: (e, t, r) => {
-			e.exports = r(5989);
-		},
-		8782: (e, t, r) => {
+		7311: (e, t, r) => {
 			'use strict';
 			r.d(t, { r: () => rO, t: () => rg });
 			var n,
@@ -119,7 +133,10 @@
 				l = Object.prototype.hasOwnProperty,
 				c = (e, t) =>
 					function () {
-						return (t || (0, e[u(e)[0]])((t = { exports: {} }).exports, t), t.exports);
+						return (
+							t || (0, e[u(e)[0]])((t = { exports: {} }).exports, t),
+							t.exports
+						);
 					},
 				h = (e, t, r) => (
 					(r = null != e ? s(a(e)) : {}),
@@ -129,9 +146,17 @@
 								((s = a[c]),
 									l.call(e, s) ||
 										s === r ||
-										i(e, s, { get: ((e) => t[e]).bind(null, s), enumerable: !(n = o(t, s)) || n.enumerable }));
+										i(e, s, {
+											get: ((e) => t[e]).bind(null, s),
+											enumerable: !(n = o(t, s)) || n.enumerable,
+										}));
 						return e;
-					})(!t && e && e.__esModule ? r : i(r, 'default', { value: e, enumerable: !0 }), e)
+					})(
+						!t && e && e.__esModule
+							? r
+							: i(r, 'default', { value: e, enumerable: !0 }),
+						e,
+					)
 				),
 				d = c({
 					'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js'(
@@ -141,12 +166,16 @@
 						function r(e) {
 							return (
 								(t.exports = r =
-									'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+									'function' == typeof Symbol &&
+									'symbol' == typeof Symbol.iterator
 										? function (e) {
 												return typeof e;
 											}
 										: function (e) {
-												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+												return e &&
+													'function' == typeof Symbol &&
+													e.constructor === Symbol &&
+													e !== Symbol.prototype
 													? 'symbol'
 													: typeof e;
 											}),
@@ -155,7 +184,9 @@
 								r(e)
 							);
 						}
-						((t.exports = r), (t.exports.__esModule = !0), (t.exports.default = t.exports));
+						((t.exports = r),
+							(t.exports.__esModule = !0),
+							(t.exports.default = t.exports));
 					},
 				}),
 				p = c({
@@ -202,7 +233,12 @@
 						((t.exports = function (e, t, n) {
 							return (
 								(t = r(t)) in e
-									? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+									? Object.defineProperty(e, t, {
+											value: n,
+											enumerable: !0,
+											configurable: !0,
+											writable: !0,
+										})
 									: (e[t] = n),
 								e
 							);
@@ -237,9 +273,16 @@
 											r(e, t, s[t]);
 										})
 									: Object.getOwnPropertyDescriptors
-										? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+										? Object.defineProperties(
+												e,
+												Object.getOwnPropertyDescriptors(s),
+											)
 										: n(Object(s)).forEach(function (t) {
-												Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+												Object.defineProperty(
+													e,
+													t,
+													Object.getOwnPropertyDescriptor(s, t),
+												);
 											});
 							}
 							return e;
@@ -260,7 +303,8 @@
 								i = !0;
 								return;
 							}
-							!s && ((s = !0), 'function' == typeof r ? r() : r && r.unsubscribe());
+							!s &&
+								((s = !0), 'function' == typeof r ? r() : r && r.unsubscribe());
 						}
 						return (
 							(r = e({
@@ -297,7 +341,10 @@
 			function O(e) {
 				return !!e && !Array.isArray(e) && 'object' == typeof e;
 			}
-			(g.BAD_GATEWAY, g.SERVICE_UNAVAILABLE, g.GATEWAY_TIMEOUT, g.INTERNAL_SERVER_ERROR);
+			(g.BAD_GATEWAY,
+				g.SERVICE_UNAVAILABLE,
+				g.GATEWAY_TIMEOUT,
+				g.INTERNAL_SERVER_ERROR);
 			let x = 'function' == typeof Symbol && !!Symbol.asyncIterator;
 			function w(e) {
 				return x && O(e) && Symbol.asyncIterator in e;
@@ -315,18 +362,32 @@
 							(0, P.default)(this, 'meta', void 0),
 							(this.meta = null == r ? void 0 : r.meta),
 							(this.cause = i),
-							(this.shape = null == r || null == (n = r.result) ? void 0 : n.error),
-							(this.data = null == r || null == (s = r.result) ? void 0 : s.error.data),
+							(this.shape =
+								null == r || null == (n = r.result) ? void 0 : n.error),
+							(this.data =
+								null == r || null == (s = r.result) ? void 0 : s.error.data),
 							(this.name = 'TRPCClientError'),
 							Object.setPrototypeOf(this, e.prototype));
 					}
 					static from(t, r = {}) {
 						return t instanceof S
-							? (r.meta && (t.meta = (0, j.default)((0, j.default)({}, t.meta), r.meta)), t)
-							: O(t) && O(t.error) && 'number' == typeof t.error.code && 'string' == typeof t.error.message
-								? new e(t.error.message, (0, j.default)((0, j.default)({}, r), {}, { result: t }))
+							? (r.meta &&
+									(t.meta = (0, j.default)((0, j.default)({}, t.meta), r.meta)),
+								t)
+							: O(t) &&
+								  O(t.error) &&
+								  'number' == typeof t.error.code &&
+								  'string' == typeof t.error.message
+								? new e(
+										t.error.message,
+										(0, j.default)((0, j.default)({}, r), {}, { result: t }),
+									)
 								: new e(
-										'string' == typeof t ? t : O(t) && 'string' == typeof t.message ? t.message : 'Unknown error',
+										'string' == typeof t
+											? t
+											: O(t) && 'string' == typeof t.message
+												? t.message
+												: 'Unknown error',
 										(0, j.default)((0, j.default)({}, r), {}, { cause: t }),
 									);
 					}
@@ -360,10 +421,14 @@
 						r = t[0].replace(/\/$/, '') + '/' + e.path,
 						n = [];
 					if (
-						(t[1] && n.push(t[1]), 'inputs' in e && n.push('batch=1'), 'query' === e.type || 'subscription' === e.type)
+						(t[1] && n.push(t[1]),
+						'inputs' in e && n.push('batch=1'),
+						'query' === e.type || 'subscription' === e.type)
 					) {
 						let t = Q(e);
-						void 0 !== t && 'POST' !== e.methodOverride && n.push(`input=${encodeURIComponent(JSON.stringify(t))}`);
+						void 0 !== t &&
+							'POST' !== e.methodOverride &&
+							n.push(`input=${encodeURIComponent(JSON.stringify(t))}`);
 					}
 					return (n.length && (r += '?' + n.join('&')), r);
 				},
@@ -383,7 +448,10 @@
 					r,
 					n = e.signal;
 				if (null == n ? void 0 : n.aborted) {
-					if ((null == (r = n.throwIfAborted) || r.call(n), 'undefined' != typeof DOMException))
+					if (
+						(null == (r = n.throwIfAborted) || r.call(n),
+						'undefined' != typeof DOMException)
+					)
 						throw new DOMException('AbortError', 'AbortError');
 					throw new D();
 				}
@@ -396,15 +464,27 @@
 					})(),
 					a = (0, R.default)(
 						(0, R.default)(
-							(0, R.default)({}, e.contentTypeHeader && 'GET' !== o ? { 'content-type': e.contentTypeHeader } : {}),
-							e.trpcAcceptHeader ? { 'trpc-accept': e.trpcAcceptHeader } : void 0,
+							(0, R.default)(
+								{},
+								e.contentTypeHeader && 'GET' !== o
+									? { 'content-type': e.contentTypeHeader }
+									: {},
+							),
+							e.trpcAcceptHeader
+								? { 'trpc-accept': e.trpcAcceptHeader }
+								: void 0,
 						),
 						u,
 					);
 				return (function (e) {
 					if (e) return e;
-					if ('undefined' != typeof window && 'function' == typeof window.fetch) return window.fetch;
-					if ('undefined' != typeof globalThis && 'function' == typeof globalThis.fetch) return globalThis.fetch;
+					if ('undefined' != typeof window && 'function' == typeof window.fetch)
+						return window.fetch;
+					if (
+						'undefined' != typeof globalThis &&
+						'function' == typeof globalThis.fetch
+					)
+						return globalThis.fetch;
 					throw Error('No fetch implementation found');
 				})(e.fetch)(s, { method: o, signal: e.signal, body: i, headers: a });
 			}
@@ -424,7 +504,10 @@
 				L = Object.prototype.hasOwnProperty,
 				N = (e, t) =>
 					function () {
-						return (t || (0, e[F(e)[0]])((t = { exports: {} }).exports, t), t.exports);
+						return (
+							t || (0, e[F(e)[0]])((t = { exports: {} }).exports, t),
+							t.exports
+						);
 					},
 				K = (e, t, r) => (
 					(r = null != e ? T(U(e)) : {}),
@@ -434,9 +517,17 @@
 								((s = i[o]),
 									L.call(e, s) ||
 										s === r ||
-										k(e, s, { get: ((e) => t[e]).bind(null, s), enumerable: !(n = A(t, s)) || n.enumerable }));
+										k(e, s, {
+											get: ((e) => t[e]).bind(null, s),
+											enumerable: !(n = A(t, s)) || n.enumerable,
+										}));
 						return e;
-					})(!t && e && e.__esModule ? r : k(r, 'default', { value: e, enumerable: !0 }), e)
+					})(
+						!t && e && e.__esModule
+							? r
+							: k(r, 'default', { value: e, enumerable: !0 }),
+						e,
+					)
 				);
 			let G = () => {},
 				H = (e) => {
@@ -449,15 +540,23 @@
 							null != n[s] ||
 								(n[s] = new Proxy(G, {
 									get(s, i) {
-										if ('string' == typeof i && 'then' !== i) return e(t, [...r, i], n);
+										if ('string' == typeof i && 'then' !== i)
+											return e(t, [...r, i], n);
 									},
 									apply(e, n, s) {
 										let i = r[r.length - 1],
 											o = { args: s, path: r };
 										return (
 											'call' === i
-												? (o = { args: s.length >= 2 ? [s[1]] : [], path: r.slice(0, -1) })
-												: 'apply' === i && (o = { args: s.length >= 2 ? s[1] : [], path: r.slice(0, -1) }),
+												? (o = {
+														args: s.length >= 2 ? [s[1]] : [],
+														path: r.slice(0, -1),
+													})
+												: 'apply' === i &&
+													(o = {
+														args: s.length >= 2 ? s[1] : [],
+														path: r.slice(0, -1),
+													}),
 											H(o.args),
 											H(o.path),
 											t(o)
@@ -481,12 +580,16 @@
 						function r(e) {
 							return (
 								(t.exports = r =
-									'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+									'function' == typeof Symbol &&
+									'symbol' == typeof Symbol.iterator
 										? function (e) {
 												return typeof e;
 											}
 										: function (e) {
-												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+												return e &&
+													'function' == typeof Symbol &&
+													e.constructor === Symbol &&
+													e !== Symbol.prototype
 													? 'symbol'
 													: typeof e;
 											}),
@@ -495,7 +598,9 @@
 								r(e)
 							);
 						}
-						((t.exports = r), (t.exports.__esModule = !0), (t.exports.default = t.exports));
+						((t.exports = r),
+							(t.exports.__esModule = !0),
+							(t.exports.default = t.exports));
 					},
 				}),
 				$ = N({
@@ -542,7 +647,12 @@
 						((t.exports = function (e, t, n) {
 							return (
 								(t = r(t)) in e
-									? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+									? Object.defineProperty(e, t, {
+											value: n,
+											enumerable: !0,
+											configurable: !0,
+											writable: !0,
+										})
 									: (e[t] = n),
 								e
 							);
@@ -577,9 +687,16 @@
 											r(e, t, s[t]);
 										})
 									: Object.getOwnPropertyDescriptors
-										? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+										? Object.defineProperties(
+												e,
+												Object.getOwnPropertyDescriptors(s),
+											)
 										: n(Object(s)).forEach(function (t) {
-												Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+												Object.defineProperty(
+													e,
+													t,
+													Object.getOwnPropertyDescriptor(s, t),
+												);
 											});
 							}
 							return e;
@@ -597,7 +714,9 @@
 				};
 			(K(Y(), 1), Symbol());
 			let ee = () => {
-				throw Error('Something went wrong. Please submit an issue at https://github.com/trpc/trpc/issues/new');
+				throw Error(
+					'Something went wrong. Please submit an issue at https://github.com/trpc/trpc/issues/new',
+				);
 			};
 			function et(e) {
 				let t = null,
@@ -620,7 +739,9 @@
 								continue;
 							}
 							if (0 === u.length) {
-								(null == (i = o.reject) || i.call(o, Error('Input is too big for a single dispatch')), n++);
+								(null == (i = o.reject) ||
+									i.call(o, Error('Input is too big for a single dispatch')),
+									n++);
 								continue;
 							}
 							r.push([]);
@@ -648,7 +769,8 @@
 								),
 								t.items)) {
 									var r;
-									(null == (r = n.reject) || r.call(n, Error('Missing result')), (n.batch = null));
+									(null == (r = n.reject) || r.call(n, Error('Missing result')),
+										(n.batch = null));
 								}
 							})
 							.catch((e) => {
@@ -661,9 +783,18 @@
 				}
 				return {
 					load: function (e) {
-						let s = { aborted: !1, key: e, batch: null, resolve: ee, reject: ee },
+						let s = {
+								aborted: !1,
+								key: e,
+								batch: null,
+								resolve: ee,
+								reject: ee,
+							},
 							i = new Promise((e, r) => {
-								((s.reject = r), (s.resolve = e), null != t || (t = []), t.push(s));
+								((s.reject = r),
+									(s.resolve = e),
+									null != t || (t = []),
+									t.push(s));
 							});
 						return (null != r || (r = setTimeout(n)), i);
 					},
@@ -679,7 +810,10 @@
 				return t + `${r}connectionParams=1`;
 			}
 			async function ei(e) {
-				return JSON.stringify({ method: 'connectionParams', data: await en(e) });
+				return JSON.stringify({
+					method: 'connectionParams',
+					data: await en(e),
+				});
 			}
 			(h(y(), 1), h(y(), 1));
 			var eo = h(y(), 1),
@@ -716,13 +850,15 @@
 								})(0),
 							),
 							(0, eo.default)(this, 'openPromise', null),
-							(this.WebSocketPonyfill = null != (r = t.WebSocketPonyfill) ? r : WebSocket),
+							(this.WebSocketPonyfill =
+								null != (r = t.WebSocketPonyfill) ? r : WebSocket),
 							!this.WebSocketPonyfill)
 						)
 							throw Error(
 								"No WebSocket implementation found - you probably don't want to use this on the server, but if you do you need to pass a `WebSocket`-ponyfill",
 							);
-						((this.urlOptions = t.urlOptions), (this.keepAliveOpts = t.keepAlive));
+						((this.urlOptions = t.urlOptions),
+							(this.keepAliveOpts = t.keepAlive));
 					}
 					get ws() {
 						return this.wsObservable.get();
@@ -731,7 +867,11 @@
 						this.wsObservable.next(e);
 					}
 					isOpen() {
-						return !!this.ws && this.ws.readyState === this.WebSocketPonyfill.OPEN && !this.openPromise;
+						return (
+							!!this.ws &&
+							this.ws.readyState === this.WebSocketPonyfill.OPEN &&
+							!this.openPromise
+						);
 					}
 					isClosed() {
 						return (
@@ -763,7 +903,10 @@
 										}
 										(e.addEventListener('open', i),
 											e.addEventListener('message', ({ data: e }) => {
-												(clearTimeout(n), i(), 'PONG' === e && (clearTimeout(s), clearTimeout(n), i()));
+												(clearTimeout(n),
+													i(),
+													'PONG' === e &&
+														(clearTimeout(s), clearTimeout(n), i()));
 											}),
 											e.addEventListener('close', () => {
 												(clearTimeout(n), clearTimeout(s));
@@ -794,7 +937,8 @@
 										n
 									);
 								})(e),
-								t.urlOptions.connectionParams && e.send(await ei(t.urlOptions.connectionParams)));
+								t.urlOptions.connectionParams &&
+									e.send(await ei(t.urlOptions.connectionParams)));
 						});
 						try {
 							await t.openPromise;
@@ -830,13 +974,19 @@
 							op: (0, el.default)(
 								(0, el.default)({}, e),
 								{},
-								{ context: null != (t = e.context) ? t : {}, id: ++this.requestId },
+								{
+									context: null != (t = e.context) ? t : {},
+									id: ++this.requestId,
+								},
 							),
 						}),
 						v((e) =>
 							(function e(t = 0, n = r.op) {
 								let s = r.links[t];
-								if (!s) throw Error('No more links to execute - did you forget to add an ending link?');
+								if (!s)
+									throw Error(
+										'No more links to execute - did you forget to add an ending link?',
+									);
 								return s({ op: n, next: (r) => e(t + 1, r) });
 							})().subscribe(e),
 						)).pipe((e) => {
@@ -944,10 +1094,12 @@
 								var t, n, s, i;
 								switch (e.result.type) {
 									case 'state':
-										null == (t = r.onConnectionStateChange) || t.call(r, e.result);
+										null == (t = r.onConnectionStateChange) ||
+											t.call(r, e.result);
 										break;
 									case 'started':
-										null == (n = r.onStarted) || n.call(r, { context: e.context });
+										null == (n = r.onStarted) ||
+											n.call(r, { context: e.context });
 										break;
 									case 'stopped':
 										null == (s = r.onStopped) || s.call(r);
@@ -992,7 +1144,8 @@
 						) {
 							function r(e) {
 								function t(e) {
-									if (Object(e) !== e) return Promise.reject(TypeError(e + ' is not an object.'));
+									if (Object(e) !== e)
+										return Promise.reject(TypeError(e + ' is not an object.'));
 									var t = e.done;
 									return Promise.resolve(e.value).then(function (e) {
 										return { value: e, done: t };
@@ -1009,11 +1162,15 @@
 										},
 										return: function (e) {
 											var r = this.s.return;
-											return void 0 === r ? Promise.resolve({ value: e, done: !0 }) : t(r.apply(this.s, arguments));
+											return void 0 === r
+												? Promise.resolve({ value: e, done: !0 })
+												: t(r.apply(this.s, arguments));
 										},
 										throw: function (e) {
 											var r = this.s.return;
-											return void 0 === r ? Promise.reject(e) : t(r.apply(this.s, arguments));
+											return void 0 === r
+												? Promise.reject(e)
+												: t(r.apply(this.s, arguments));
 										},
 									}),
 									new r(e)
@@ -1024,7 +1181,12 @@
 									n,
 									s,
 									i = 2;
-								for ('undefined' != typeof Symbol && ((n = Symbol.asyncIterator), (s = Symbol.iterator)); i--; ) {
+								for (
+									'undefined' != typeof Symbol &&
+									((n = Symbol.asyncIterator), (s = Symbol.iterator));
+									i--;
+
+								) {
 									if (n && null != (t = e[n])) return t.call(e);
 									if (s && null != (t = e[s])) return new r(t.call(e));
 									((n = '@@asyncIterator'), (s = '@@iterator'));
@@ -1049,17 +1211,33 @@
 										? SuppressedError
 										: function (e, t) {
 												var r = Error();
-												return ((r.name = 'SuppressedError'), (r.error = e), (r.suppressed = t), r);
+												return (
+													(r.name = 'SuppressedError'),
+													(r.error = e),
+													(r.suppressed = t),
+													r
+												);
 											},
 								t = {},
 								r = [];
 							function n(e, t) {
 								if (null != t) {
 									if (Object(t) !== t)
-										throw TypeError('using declarations can only be used with objects, functions, null, or undefined.');
-									if (e) var n = t[Symbol.asyncDispose || Symbol.for('Symbol.asyncDispose')];
-									if (void 0 === n && ((n = t[Symbol.dispose || Symbol.for('Symbol.dispose')]), e)) var s = n;
-									if ('function' != typeof n) throw TypeError('Object is not disposable.');
+										throw TypeError(
+											'using declarations can only be used with objects, functions, null, or undefined.',
+										);
+									if (e)
+										var n =
+											t[
+												Symbol.asyncDispose || Symbol.for('Symbol.asyncDispose')
+											];
+									if (
+										void 0 === n &&
+										((n = t[Symbol.dispose || Symbol.for('Symbol.dispose')]), e)
+									)
+										var s = n;
+									if ('function' != typeof n)
+										throw TypeError('Object is not disposable.');
 									(s &&
 										(n = function () {
 											try {
@@ -1083,15 +1261,22 @@
 									function o() {
 										for (; (n = r.pop()); )
 											try {
-												if (!n.a && 1 === i) return ((i = 0), r.push(n), Promise.resolve().then(o));
+												if (!n.a && 1 === i)
+													return (
+														(i = 0),
+														r.push(n),
+														Promise.resolve().then(o)
+													);
 												if (n.d) {
 													var e = n.d.call(n.v);
-													if (n.a) return ((i |= 2), Promise.resolve(e).then(o, u));
+													if (n.a)
+														return ((i |= 2), Promise.resolve(e).then(o, u));
 												} else i |= 1;
 											} catch (e) {
 												return u(e);
 											}
-										if (1 === i) return s !== t ? Promise.reject(s) : Promise.resolve();
+										if (1 === i)
+											return s !== t ? Promise.reject(s) : Promise.resolve();
 										if (s !== t) throw s;
 									}
 									function u(r) {
@@ -1181,7 +1366,10 @@
 							}),
 								'function' != typeof e.return && (this.return = void 0));
 						}
-						((n.prototype[('function' == typeof Symbol && Symbol.asyncIterator) || '@@asyncIterator'] = function () {
+						((n.prototype[
+							('function' == typeof Symbol && Symbol.asyncIterator) ||
+								'@@asyncIterator'
+						] = function () {
 							return this;
 						}),
 							(n.prototype.next = function (e) {
@@ -1211,7 +1399,10 @@
 				ej = Object.prototype.hasOwnProperty,
 				eS = (e, t) =>
 					function () {
-						return (t || (0, e[ew(e)[0]])((t = { exports: {} }).exports, t), t.exports);
+						return (
+							t || (0, e[ew(e)[0]])((t = { exports: {} }).exports, t),
+							t.exports
+						);
 					},
 				eC = eS({
 					'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/typeof.js'(
@@ -1221,12 +1412,16 @@
 						function r(e) {
 							return (
 								(t.exports = r =
-									'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+									'function' == typeof Symbol &&
+									'symbol' == typeof Symbol.iterator
 										? function (e) {
 												return typeof e;
 											}
 										: function (e) {
-												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+												return e &&
+													'function' == typeof Symbol &&
+													e.constructor === Symbol &&
+													e !== Symbol.prototype
 													? 'symbol'
 													: typeof e;
 											}),
@@ -1235,7 +1430,9 @@
 								r(e)
 							);
 						}
-						((t.exports = r), (t.exports.__esModule = !0), (t.exports.default = t.exports));
+						((t.exports = r),
+							(t.exports.__esModule = !0),
+							(t.exports.default = t.exports));
 					},
 				}),
 				eR = eS({
@@ -1282,7 +1479,12 @@
 						((t.exports = function (e, t, n) {
 							return (
 								(t = r(t)) in e
-									? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+									? Object.defineProperty(e, t, {
+											value: n,
+											enumerable: !0,
+											configurable: !0,
+											writable: !0,
+										})
 									: (e[t] = n),
 								e
 							);
@@ -1317,9 +1519,16 @@
 											r(e, t, s[t]);
 										})
 									: Object.getOwnPropertyDescriptors
-										? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+										? Object.defineProperties(
+												e,
+												Object.getOwnPropertyDescriptors(s),
+											)
 										: n(Object(s)).forEach(function (t) {
-												Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+												Object.defineProperty(
+													e,
+													t,
+													Object.getOwnPropertyDescriptor(s, t),
+												);
 											});
 							}
 							return e;
@@ -1335,7 +1544,10 @@
 				eT = (e) => {
 					let t = eE.useContext(eI);
 					if (e) return e;
-					if (!t) throw Error('No QueryClient set, use QueryClientProvider to set one');
+					if (!t)
+						throw Error(
+							'No QueryClient set, use QueryClientProvider to set one',
+						);
 					return t;
 				},
 				ek = ({ client: e, children: t }) => (
@@ -1390,7 +1602,14 @@
 				return 'function' == typeof e ? e(t) : e;
 			}
 			function eW(e, t) {
-				let { type: r = 'all', exact: n, fetchStatus: s, predicate: i, queryKey: o, stale: u } = e;
+				let {
+					type: r = 'all',
+					exact: n,
+					fetchStatus: s,
+					predicate: i,
+					queryKey: o,
+					stale: u,
+				} = e;
 				if (o) {
 					if (n) {
 						if (t.queryHash !== eB(o, t.options)) return !1;
@@ -1400,7 +1619,11 @@
 					let e = t.isActive();
 					if (('active' === r && !e) || ('inactive' === r && e)) return !1;
 				}
-				return ('boolean' != typeof u || t.isStale() === u) && (!s || s === t.state.fetchStatus) && (!i || !!i(t));
+				return (
+					('boolean' != typeof u || t.isStale() === u) &&
+					(!s || s === t.state.fetchStatus) &&
+					(!i || !!i(t))
+				);
 			}
 			function ez(e, t) {
 				let { exact: r, status: n, predicate: s, mutationKey: i } = e;
@@ -1453,7 +1676,12 @@
 						((o[i] = l), (r ? a < n : eV.call(e, i)) && u++);
 						continue;
 					}
-					if (null === l || null === c || 'object' != typeof l || 'object' != typeof c) {
+					if (
+						null === l ||
+						null === c ||
+						'object' != typeof l ||
+						'object' != typeof c
+					) {
 						o[i] = c;
 						continue;
 					}
@@ -1475,7 +1703,11 @@
 				let t = e.constructor;
 				if (void 0 === t) return !0;
 				let r = t.prototype;
-				return !!e1(r) && !!r.hasOwnProperty('isPrototypeOf') && Object.getPrototypeOf(e) === Object.prototype;
+				return (
+					!!e1(r) &&
+					!!r.hasOwnProperty('isPrototypeOf') &&
+					Object.getPrototypeOf(e) === Object.prototype
+				);
 			}
 			function e1(e) {
 				return '[object Object]' === Object.prototype.toString.call(e);
@@ -1506,7 +1738,7 @@
 			function e4(e, t) {
 				return 'function' == typeof e ? e(...t) : !!e;
 			}
-			function e8() {
+			function e9() {
 				let e,
 					t,
 					r = new Promise((r, n) => {
@@ -1527,55 +1759,84 @@
 					r
 				);
 			}
-			function e9(e) {
+			function e8(e) {
 				return e;
 			}
 			function te(e, t, r) {
 				if ('object' != typeof t || null === t) return;
 				let n = e.getMutationCache(),
 					s = e.getQueryCache(),
-					i = r?.defaultOptions?.deserializeData ?? e.getDefaultOptions().hydrate?.deserializeData ?? e9,
+					i =
+						r?.defaultOptions?.deserializeData ??
+						e.getDefaultOptions().hydrate?.deserializeData ??
+						e8,
 					o = t.mutations || [],
 					u = t.queries || [];
 				(o.forEach(({ state: t, ...s }) => {
-					n.build(e, { ...e.getDefaultOptions().hydrate?.mutations, ...r?.defaultOptions?.mutations, ...s }, t);
+					n.build(
+						e,
+						{
+							...e.getDefaultOptions().hydrate?.mutations,
+							...r?.defaultOptions?.mutations,
+							...s,
+						},
+						t,
+					);
 				}),
-					u.forEach(({ queryKey: t, state: n, queryHash: o, meta: u, promise: a, dehydratedAt: l }) => {
-						let c = a
-								? (function (e) {
-										let t;
-										if ((e.then((e) => ((t = e), e), eL)?.catch(eL), void 0 !== t)) return { data: t };
-									})(a)
-								: void 0,
-							h = void 0 === n.data ? c?.data : n.data,
-							d = void 0 === h ? h : i(h),
-							p = s.get(o),
-							f = p?.state.status === 'pending',
-							y = p?.state.fetchStatus === 'fetching';
-						if (p) {
-							let e = c && void 0 !== l && l > p.state.dataUpdatedAt;
-							if (n.dataUpdatedAt > p.state.dataUpdatedAt || e) {
-								let { fetchStatus: e, ...t } = n;
-								p.setState({ ...t, data: d });
-							}
-						} else
-							p = s.build(
-								e,
-								{
-									...e.getDefaultOptions().hydrate?.queries,
-									...r?.defaultOptions?.queries,
-									queryKey: t,
-									queryHash: o,
-									meta: u,
-								},
-								{ ...n, data: d, fetchStatus: 'idle', status: void 0 !== d ? 'success' : n.status },
-							);
-						a &&
-							!f &&
-							!y &&
-							(void 0 === l || l > p.state.dataUpdatedAt) &&
-							p.fetch(void 0, { initialPromise: Promise.resolve(a).then(i) });
-					}));
+					u.forEach(
+						({
+							queryKey: t,
+							state: n,
+							queryHash: o,
+							meta: u,
+							promise: a,
+							dehydratedAt: l,
+						}) => {
+							let c = a
+									? (function (e) {
+											let t;
+											if (
+												(e.then((e) => ((t = e), e), eL)?.catch(eL),
+												void 0 !== t)
+											)
+												return { data: t };
+										})(a)
+									: void 0,
+								h = void 0 === n.data ? c?.data : n.data,
+								d = void 0 === h ? h : i(h),
+								p = s.get(o),
+								f = p?.state.status === 'pending',
+								y = p?.state.fetchStatus === 'fetching';
+							if (p) {
+								let e = c && void 0 !== l && l > p.state.dataUpdatedAt;
+								if (n.dataUpdatedAt > p.state.dataUpdatedAt || e) {
+									let { fetchStatus: e, ...t } = n;
+									p.setState({ ...t, data: d });
+								}
+							} else
+								p = s.build(
+									e,
+									{
+										...e.getDefaultOptions().hydrate?.queries,
+										...r?.defaultOptions?.queries,
+										queryKey: t,
+										queryHash: o,
+										meta: u,
+									},
+									{
+										...n,
+										data: d,
+										fetchStatus: 'idle',
+										status: void 0 !== d ? 'success' : n.status,
+									},
+								);
+							a &&
+								!f &&
+								!y &&
+								(void 0 === l || l > p.state.dataUpdatedAt) &&
+								p.fetch(void 0, { initialPromise: Promise.resolve(a).then(i) });
+						},
+					));
 			}
 			var tt = ({ children: e, options: t = {}, state: r, queryClient: n }) => {
 					let s = eT(n),
@@ -1600,7 +1861,10 @@
 										o.push(r)
 									: n.push(r);
 							}
-							if ((n.length > 0 && te(s, { queries: n }, i.current), o.length > 0)) return o;
+							if (
+								(n.length > 0 && te(s, { queries: n }, i.current), o.length > 0)
+							)
+								return o;
 						}
 					}, [s, r]);
 					return (
@@ -1618,7 +1882,10 @@
 				tu = Object.prototype.hasOwnProperty,
 				ta = (e, t) =>
 					function () {
-						return (t || (0, e[ti(e)[0]])((t = { exports: {} }).exports, t), t.exports);
+						return (
+							t || (0, e[ti(e)[0]])((t = { exports: {} }).exports, t),
+							t.exports
+						);
 					},
 				tl = (e, t, r) => (
 					(r = null != e ? tr(to(e)) : {}),
@@ -1628,9 +1895,17 @@
 								((s = i[o]),
 									tu.call(e, s) ||
 										s === r ||
-										tn(e, s, { get: ((e) => t[e]).bind(null, s), enumerable: !(n = ts(t, s)) || n.enumerable }));
+										tn(e, s, {
+											get: ((e) => t[e]).bind(null, s),
+											enumerable: !(n = ts(t, s)) || n.enumerable,
+										}));
 						return e;
-					})(!t && e && e.__esModule ? r : tn(r, 'default', { value: e, enumerable: !0 }), e)
+					})(
+						!t && e && e.__esModule
+							? r
+							: tn(r, 'default', { value: e, enumerable: !0 }),
+						e,
+					)
 				),
 				tc = ta({
 					'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectWithoutPropertiesLoose.js'(
@@ -1665,7 +1940,9 @@
 							if (Object.getOwnPropertySymbols) {
 								var o = Object.getOwnPropertySymbols(e);
 								for (s = 0; s < o.length; s++)
-									((n = o[s]), t.includes(n) || ({}.propertyIsEnumerable.call(e, n) && (i[n] = e[n])));
+									((n = o[s]),
+										t.includes(n) ||
+											({}.propertyIsEnumerable.call(e, n) && (i[n] = e[n])));
 							}
 							return i;
 						}),
@@ -1681,12 +1958,16 @@
 						function r(e) {
 							return (
 								(t.exports = r =
-									'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+									'function' == typeof Symbol &&
+									'symbol' == typeof Symbol.iterator
 										? function (e) {
 												return typeof e;
 											}
 										: function (e) {
-												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+												return e &&
+													'function' == typeof Symbol &&
+													e.constructor === Symbol &&
+													e !== Symbol.prototype
 													? 'symbol'
 													: typeof e;
 											}),
@@ -1695,7 +1976,9 @@
 								r(e)
 							);
 						}
-						((t.exports = r), (t.exports.__esModule = !0), (t.exports.default = t.exports));
+						((t.exports = r),
+							(t.exports.__esModule = !0),
+							(t.exports.default = t.exports));
 					},
 				}),
 				tp = ta({
@@ -1742,7 +2025,12 @@
 						((t.exports = function (e, t, n) {
 							return (
 								(t = r(t)) in e
-									? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
+									? Object.defineProperty(e, t, {
+											value: n,
+											enumerable: !0,
+											configurable: !0,
+											writable: !0,
+										})
 									: (e[t] = n),
 								e
 							);
@@ -1777,9 +2065,16 @@
 											r(e, t, s[t]);
 										})
 									: Object.getOwnPropertyDescriptors
-										? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+										? Object.defineProperties(
+												e,
+												Object.getOwnPropertyDescriptors(s),
+											)
 										: n(Object(s)).forEach(function (t) {
-												Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+												Object.defineProperty(
+													e,
+													t,
+													Object.getOwnPropertyDescriptor(s, t),
+												);
 											});
 							}
 							return e;
@@ -1811,7 +2106,8 @@
 			}
 			var tw = class {
 					constructor() {
-						((this.listeners = new Set()), (this.subscribe = this.subscribe.bind(this)));
+						((this.listeners = new Set()),
+							(this.subscribe = this.subscribe.bind(this)));
 					}
 					subscribe(e) {
 						return (
@@ -1869,7 +2165,9 @@
 						});
 					}
 					isFocused() {
-						return 'boolean' == typeof this.#r ? this.#r : globalThis.document?.visibilityState !== 'hidden';
+						return 'boolean' == typeof this.#r
+							? this.#r
+							: globalThis.document?.visibilityState !== 'hidden';
 					}
 				})(),
 				tj = function (e) {
@@ -1948,7 +2246,8 @@
 										window.addEventListener('online', t, !1),
 										window.addEventListener('offline', r, !1),
 										() => {
-											(window.removeEventListener('online', t), window.removeEventListener('offline', r));
+											(window.removeEventListener('online', t),
+												window.removeEventListener('offline', r));
 										}
 									);
 								}
@@ -1961,7 +2260,9 @@
 						this.hasListeners() || (this.#n?.(), (this.#n = void 0));
 					}
 					setEventListener(e) {
-						((this.#s = e), this.#n?.(), (this.#n = e(this.setOnline.bind(this))));
+						((this.#s = e),
+							this.#n?.(),
+							(this.#n = e(this.setOnline.bind(this))));
 					}
 					setOnline(e) {
 						this.#i !== e &&
@@ -1982,15 +2283,20 @@
 			}
 			var tQ = class extends Error {
 				constructor(e) {
-					(super('CancelledError'), (this.revert = e?.revert), (this.silent = e?.silent));
+					(super('CancelledError'),
+						(this.revert = e?.revert),
+						(this.silent = e?.silent));
 				}
 			};
 			function tq(e) {
 				let t,
 					r = !1,
 					n = 0,
-					s = e8(),
-					i = () => tP.isFocused() && ('always' === e.networkMode || tC.isOnline()) && e.canRun(),
+					s = e9(),
+					i = () =>
+						tP.isFocused() &&
+						('always' === e.networkMode || tC.isOnline()) &&
+						e.canRun(),
 					o = () => t_(e.networkMode) && e.canRun(),
 					u = (e) => {
 						'pending' === s.status && (t?.(), s.resolve(e));
@@ -2023,7 +2329,10 @@
 								let o = e.retry ?? 3 * !eU,
 									u = e.retryDelay ?? tR,
 									h = 'function' == typeof u ? u(n, t) : u,
-									d = !0 === o || ('number' == typeof o && n < o) || ('function' == typeof o && o(n, t));
+									d =
+										!0 === o ||
+										('number' == typeof o && n < o) ||
+										('function' == typeof o && o(n, t));
 								if (r || !d) return void a(t);
 								(n++,
 									e.onFail?.(n, t),
@@ -2110,22 +2419,40 @@
 							this.state && void 0 === this.state.data)
 						) {
 							let e = tI(this.options);
-							void 0 !== e.data && (this.setData(e.data, { updatedAt: e.dataUpdatedAt, manual: !0 }), (this.#u = e));
+							void 0 !== e.data &&
+								(this.setData(e.data, {
+									updatedAt: e.dataUpdatedAt,
+									manual: !0,
+								}),
+								(this.#u = e));
 						}
 					}
 					optionalRemove() {
-						this.observers.length || 'idle' !== this.state.fetchStatus || this.#l.remove(this);
+						this.observers.length ||
+							'idle' !== this.state.fetchStatus ||
+							this.#l.remove(this);
 					}
 					setData(e, t) {
 						let r = e2(this.state.data, e, this.options);
-						return (this.#f({ data: r, type: 'success', dataUpdatedAt: t?.updatedAt, manual: t?.manual }), r);
+						return (
+							this.#f({
+								data: r,
+								type: 'success',
+								dataUpdatedAt: t?.updatedAt,
+								manual: t?.manual,
+							}),
+							r
+						);
 					}
 					setState(e, t) {
 						this.#f({ type: 'setState', state: e, setStateOptions: t });
 					}
 					cancel(e) {
 						let t = this.#h?.promise;
-						return (this.#h?.cancel(e), t ? t.then(eL).catch(eL) : Promise.resolve());
+						return (
+							this.#h?.cancel(e),
+							t ? t.then(eL).catch(eL) : Promise.resolve()
+						);
 					}
 					destroy() {
 						(super.destroy(), this.cancel({ silent: !0 }));
@@ -2134,16 +2461,23 @@
 						(this.destroy(), this.setState(this.#u));
 					}
 					isActive() {
-						return this.observers.some((e) => !1 !== eH(e.options.enabled, this));
+						return this.observers.some(
+							(e) => !1 !== eH(e.options.enabled, this),
+						);
 					}
 					isDisabled() {
 						return this.getObserversCount() > 0
 							? !this.isActive()
-							: this.options.queryFn === e5 || this.state.dataUpdateCount + this.state.errorUpdateCount === 0;
+							: this.options.queryFn === e5 ||
+									this.state.dataUpdateCount + this.state.errorUpdateCount ===
+										0;
 					}
 					isStatic() {
 						return (
-							this.getObserversCount() > 0 && this.observers.some((e) => 'static' === eG(e.options.staleTime, this))
+							this.getObserversCount() > 0 &&
+							this.observers.some(
+								(e) => 'static' === eG(e.options.staleTime, this),
+							)
 						);
 					}
 					isStale() {
@@ -2154,7 +2488,9 @@
 					isStaleByTime(e = 0) {
 						return (
 							void 0 === this.state.data ||
-							('static' !== e && (!!this.state.isInvalidated || !eK(this.state.dataUpdatedAt, e)))
+							('static' !== e &&
+								(!!this.state.isInvalidated ||
+									!eK(this.state.dataUpdatedAt, e)))
 						);
 					}
 					onFocus() {
@@ -2169,14 +2505,26 @@
 						this.observers.includes(e) ||
 							(this.observers.push(e),
 							this.clearGcTimeout(),
-							this.#l.notify({ type: 'observerAdded', query: this, observer: e }));
+							this.#l.notify({
+								type: 'observerAdded',
+								query: this,
+								observer: e,
+							}));
 					}
 					removeObserver(e) {
 						this.observers.includes(e) &&
 							((this.observers = this.observers.filter((t) => t !== e)),
 							this.observers.length ||
-								(this.#h && (this.#p ? this.#h.cancel({ revert: !0 }) : this.#h.cancelRetry()), this.scheduleGc()),
-							this.#l.notify({ type: 'observerRemoved', query: this, observer: e }));
+								(this.#h &&
+									(this.#p
+										? this.#h.cancel({ revert: !0 })
+										: this.#h.cancelRetry()),
+								this.scheduleGc()),
+							this.#l.notify({
+								type: 'observerRemoved',
+								query: this,
+								observer: e,
+							}));
 					}
 					getObserversCount() {
 						return this.observers.length;
@@ -2185,9 +2533,14 @@
 						this.state.isInvalidated || this.#f({ type: 'invalidate' });
 					}
 					async fetch(e, t) {
-						if ('idle' !== this.state.fetchStatus && this.#h?.status() !== 'rejected') {
-							if (void 0 !== this.state.data && t?.cancelRefetch) this.cancel({ silent: !0 });
-							else if (this.#h) return (this.#h.continueRetry(), this.#h.promise);
+						if (
+							'idle' !== this.state.fetchStatus &&
+							this.#h?.status() !== 'rejected'
+						) {
+							if (void 0 !== this.state.data && t?.cancelRefetch)
+								this.cancel({ silent: !0 });
+							else if (this.#h)
+								return (this.#h.continueRetry(), this.#h.promise);
 						}
 						if ((e && this.setOptions(e), !this.options.queryFn)) {
 							let e = this.observers.find((e) => e.options.queryFn);
@@ -2195,15 +2548,24 @@
 						}
 						let r = new AbortController(),
 							n = (e) => {
-								Object.defineProperty(e, 'signal', { enumerable: !0, get: () => ((this.#p = !0), r.signal) });
+								Object.defineProperty(e, 'signal', {
+									enumerable: !0,
+									get: () => ((this.#p = !0), r.signal),
+								});
 							},
 							s = () => {
 								let e = e6(this.options, t),
 									r = (() => {
-										let e = { client: this.#c, queryKey: this.queryKey, meta: this.meta };
+										let e = {
+											client: this.#c,
+											queryKey: this.queryKey,
+											meta: this.meta,
+										};
 										return (n(e), e);
 									})();
-								return ((this.#p = !1), this.options.persister) ? this.options.persister(e, r, this) : e(r);
+								return ((this.#p = !1), this.options.persister)
+									? this.options.persister(e, r, this)
+									: e(r);
 							},
 							i = (() => {
 								let e = {
@@ -2218,13 +2580,17 @@
 							})();
 						(this.options.behavior?.onFetch(i, this),
 							(this.#a = this.state),
-							('idle' === this.state.fetchStatus || this.state.fetchMeta !== i.fetchOptions?.meta) &&
+							('idle' === this.state.fetchStatus ||
+								this.state.fetchMeta !== i.fetchOptions?.meta) &&
 								this.#f({ type: 'fetch', meta: i.fetchOptions?.meta }),
 							(this.#h = tq({
 								initialPromise: t?.initialPromise,
 								fn: i.fetchFn,
 								onCancel: (e) => {
-									(e instanceof tQ && e.revert && this.setState({ ...this.#a, fetchStatus: 'idle' }), r.abort());
+									(e instanceof tQ &&
+										e.revert &&
+										this.setState({ ...this.#a, fetchStatus: 'idle' }),
+										r.abort());
 								},
 								onFail: (e, t) => {
 									this.#f({ type: 'failed', failureCount: e, error: t });
@@ -2242,7 +2608,8 @@
 							})));
 						try {
 							let e = await this.#h.start();
-							if (void 0 === e) throw Error(`${this.queryHash} data is undefined`);
+							if (void 0 === e)
+								throw Error(`${this.queryHash} data is undefined`);
 							return (
 								this.setData(e),
 								this.#l.config.onSuccess?.(e, this),
@@ -2271,13 +2638,21 @@
 						let t = (t) => {
 							switch (e.type) {
 								case 'failed':
-									return { ...t, fetchFailureCount: e.failureCount, fetchFailureReason: e.error };
+									return {
+										...t,
+										fetchFailureCount: e.failureCount,
+										fetchFailureReason: e.error,
+									};
 								case 'pause':
 									return { ...t, fetchStatus: 'paused' };
 								case 'continue':
 									return { ...t, fetchStatus: 'fetching' };
 								case 'fetch':
-									return { ...t, ...tM(t.data, this.options), fetchMeta: e.meta ?? null };
+									return {
+										...t,
+										...tM(t.data, this.options),
+										fetchMeta: e.meta ?? null,
+									};
 								case 'success':
 									let r = {
 										...t,
@@ -2287,7 +2662,11 @@
 										error: null,
 										isInvalidated: !1,
 										status: 'success',
-										...(!e.manual && { fetchStatus: 'idle', fetchFailureCount: 0, fetchFailureReason: null }),
+										...(!e.manual && {
+											fetchStatus: 'idle',
+											fetchFailureCount: 0,
+											fetchFailureReason: null,
+										}),
 									};
 									return ((this.#a = e.manual ? r : void 0), r);
 								case 'error':
@@ -2326,9 +2705,16 @@
 				};
 			}
 			function tI(e) {
-				let t = 'function' == typeof e.initialData ? e.initialData() : e.initialData,
+				let t =
+						'function' == typeof e.initialData
+							? e.initialData()
+							: e.initialData,
 					r = void 0 !== t,
-					n = r ? ('function' == typeof e.initialDataUpdatedAt ? e.initialDataUpdatedAt() : e.initialDataUpdatedAt) : 0;
+					n = r
+						? 'function' == typeof e.initialDataUpdatedAt
+							? e.initialDataUpdatedAt()
+							: e.initialDataUpdatedAt
+						: 0;
 				return {
 					data: t,
 					dataUpdateCount: 0,
@@ -2350,7 +2736,7 @@
 						(this.options = t),
 						(this.#c = e),
 						(this.#y = null),
-						(this.#m = e8()),
+						(this.#m = e9()),
 						this.bindMethods(),
 						this.setOptions(t));
 				}
@@ -2374,7 +2760,9 @@
 				}
 				onSubscribe() {
 					1 === this.listeners.size &&
-						(this.#v.addObserver(this), tk(this.#v, this.options) ? this.#Q() : this.updateResult(), this.#q());
+						(this.#v.addObserver(this),
+						tk(this.#v, this.options) ? this.#Q() : this.updateResult(),
+						this.#q());
 				}
 				onUnsubscribe() {
 					this.hasListeners() || this.destroy();
@@ -2386,7 +2774,10 @@
 					return tA(this.#v, this.options, this.options.refetchOnWindowFocus);
 				}
 				destroy() {
-					((this.listeners = new Set()), this.#E(), this.#D(), this.#v.removeObserver(this));
+					((this.listeners = new Set()),
+						this.#E(),
+						this.#D(),
+						this.#v.removeObserver(this));
 				}
 				setOptions(e) {
 					let t = this.options,
@@ -2398,23 +2789,34 @@
 							'function' != typeof this.options.enabled &&
 							'boolean' != typeof eH(this.options.enabled, this.#v))
 					)
-						throw Error('Expected enabled to be a boolean or a callback that returns a boolean');
+						throw Error(
+							'Expected enabled to be a boolean or a callback that returns a boolean',
+						);
 					(this.#M(),
 						this.#v.setOptions(this.options),
 						t._defaulted &&
 							!eX(this.options, t) &&
-							this.#c.getQueryCache().notify({ type: 'observerOptionsUpdated', query: this.#v, observer: this }));
+							this.#c
+								.getQueryCache()
+								.notify({
+									type: 'observerOptionsUpdated',
+									query: this.#v,
+									observer: this,
+								}));
 					let n = this.hasListeners();
 					(n && tF(this.#v, r, this.options, t) && this.#Q(),
 						this.updateResult(),
 						n &&
 							(this.#v !== r ||
 								eH(this.options.enabled, this.#v) !== eH(t.enabled, this.#v) ||
-								eG(this.options.staleTime, this.#v) !== eG(t.staleTime, this.#v)) &&
+								eG(this.options.staleTime, this.#v) !==
+									eG(t.staleTime, this.#v)) &&
 							this.#I());
 					let s = this.#T();
 					n &&
-						(this.#v !== r || eH(this.options.enabled, this.#v) !== eH(t.enabled, this.#v) || s !== this.#R) &&
+						(this.#v !== r ||
+							eH(this.options.enabled, this.#v) !== eH(t.enabled, this.#v) ||
+							s !== this.#R) &&
 						this.#k(s);
 				}
 				getOptimisticResult(e) {
@@ -2424,7 +2826,10 @@
 					return (
 						(t = this),
 						(r = s),
-						eX(t.getCurrentResult(), r) || ((this.#g = s), (this.#x = this.options), (this.#O = this.#v.state)),
+						eX(t.getCurrentResult(), r) ||
+							((this.#g = s),
+							(this.#x = this.options),
+							(this.#O = this.#v.state)),
 						s
 					);
 				}
@@ -2439,7 +2844,11 @@
 							'promise' !== r ||
 								this.options.experimental_prefetchInRender ||
 								'pending' !== this.#m.status ||
-								this.#m.reject(Error('experimental_prefetchInRender feature flag is not enabled')),
+								this.#m.reject(
+									Error(
+										'experimental_prefetchInRender feature flag is not enabled',
+									),
+								),
 							Reflect.get(e, r)
 						),
 					});
@@ -2459,7 +2868,9 @@
 					return r.fetch().then(() => this.createResult(r, t));
 				}
 				fetch(e) {
-					return this.#Q({ ...e, cancelRefetch: e.cancelRefetch ?? !0 }).then(() => (this.updateResult(), this.#g));
+					return this.#Q({ ...e, cancelRefetch: e.cancelRefetch ?? !0 }).then(
+						() => (this.updateResult(), this.#g),
+					);
 				}
 				#Q(e) {
 					this.#M();
@@ -2490,7 +2901,8 @@
 							eN(this.#R) &&
 							0 !== this.#R &&
 							(this.#C = eF.setInterval(() => {
-								(this.options.refetchIntervalInBackground || tP.isFocused()) && this.#Q();
+								(this.options.refetchIntervalInBackground || tP.isFocused()) &&
+									this.#Q();
 							}, this.#R)));
 				}
 				#q() {
@@ -2518,7 +2930,8 @@
 							i = !r && tk(e, t),
 							o = r && tF(e, n, t, s);
 						((i || o) && (c = { ...c, ...tM(l.data, e.options) }),
-							'isRestoring' === t._optimisticResults && (c.fetchStatus = 'idle'));
+							'isRestoring' === t._optimisticResults &&
+								(c.fetchStatus = 'idle'));
 					}
 					let { error: d, errorUpdatedAt: p, status: f } = c;
 					r = c.data;
@@ -2531,17 +2944,23 @@
 									'function' == typeof t.placeholderData
 										? t.placeholderData(this.#j?.state.data, this.#j)
 										: t.placeholderData),
-							void 0 !== e && ((f = 'success'), (r = e2(i?.data, e, t)), (h = !0)));
+							void 0 !== e &&
+								((f = 'success'), (r = e2(i?.data, e, t)), (h = !0)));
 					}
 					if (t.select && void 0 !== r && !y)
 						if (i && r === o?.data && t.select === this.#w) r = this.#P;
 						else
 							try {
-								((this.#w = t.select), (r = t.select(r)), (r = e2(i?.data, r, t)), (this.#P = r), (this.#y = null));
+								((this.#w = t.select),
+									(r = t.select(r)),
+									(r = e2(i?.data, r, t)),
+									(this.#P = r),
+									(this.#y = null));
 							} catch (e) {
 								this.#y = e;
 							}
-					this.#y && ((d = this.#y), (r = this.#P), (p = Date.now()), (f = 'error'));
+					this.#y &&
+						((d = this.#y), (r = this.#P), (p = Date.now()), (f = 'error'));
 					let m = 'fetching' === c.fetchStatus,
 						v = 'pending' === f,
 						b = 'error' === f,
@@ -2563,7 +2982,9 @@
 							failureReason: c.fetchFailureReason,
 							errorUpdateCount: c.errorUpdateCount,
 							isFetched: c.dataUpdateCount > 0 || c.errorUpdateCount > 0,
-							isFetchedAfterMount: c.dataUpdateCount > a.dataUpdateCount || c.errorUpdateCount > a.errorUpdateCount,
+							isFetchedAfterMount:
+								c.dataUpdateCount > a.dataUpdateCount ||
+								c.errorUpdateCount > a.errorUpdateCount,
 							isFetching: m,
 							isRefetching: m && !v,
 							isLoadingError: b && !O,
@@ -2577,10 +2998,12 @@
 						};
 					if (this.options.experimental_prefetchInRender) {
 						let t = (e) => {
-								'error' === x.status ? e.reject(x.error) : void 0 !== x.data && e.resolve(x.data);
+								'error' === x.status
+									? e.reject(x.error)
+									: void 0 !== x.data && e.resolve(x.data);
 							},
 							r = () => {
-								t((this.#m = x.promise = e8()));
+								t((this.#m = x.promise = e9()));
 							},
 							s = this.#m;
 						switch (s.status) {
@@ -2624,7 +3047,10 @@
 					let e = this.#c.getQueryCache().build(this.#c, this.options);
 					if (e === this.#v) return;
 					let t = this.#v;
-					((this.#v = e), (this.#b = e.state), this.hasListeners() && (t?.removeObserver(this), e.addObserver(this)));
+					((this.#v = e),
+						(this.#b = e.state),
+						this.hasListeners() &&
+							(t?.removeObserver(this), e.addObserver(this)));
 				}
 				onQueryUpdate() {
 					(this.updateResult(), this.hasListeners() && this.#q());
@@ -2635,7 +3061,9 @@
 							this.listeners.forEach((e) => {
 								e(this.#g);
 							}),
-							this.#c.getQueryCache().notify({ query: this.#v, type: 'observerResultsUpdated' }));
+							this.#c
+								.getQueryCache()
+								.notify({ query: this.#v, type: 'observerResultsUpdated' }));
 					});
 				}
 			};
@@ -2655,7 +3083,11 @@
 				return !1;
 			}
 			function tF(e, t, r, n) {
-				return (e !== t || !1 === eH(n.enabled, e)) && (!r.suspense || 'error' !== e.state.status) && tU(e, r);
+				return (
+					(e !== t || !1 === eH(n.enabled, e)) &&
+					(!r.suspense || 'error' !== e.state.status) &&
+					tU(e, r)
+				);
 			}
 			function tU(e, t) {
 				return !1 !== eH(t.enabled, e) && e.isStaleByTime(eG(t.staleTime, e));
@@ -2676,15 +3108,27 @@
 				),
 				tN = () => eE.useContext(tL),
 				tK = (e, t) => {
-					(e.suspense || e.throwOnError || e.experimental_prefetchInRender) && !t.isReset() && (e.retryOnMount = !1);
+					(e.suspense || e.throwOnError || e.experimental_prefetchInRender) &&
+						!t.isReset() &&
+						(e.retryOnMount = !1);
 				},
 				tG = (e) => {
 					eE.useEffect(() => {
 						e.clearReset();
 					}, [e]);
 				},
-				tH = ({ result: e, errorResetBoundary: t, throwOnError: r, query: n, suspense: s }) =>
-					e.isError && !t.isReset() && !e.isFetching && n && ((s && void 0 === e.data) || e4(r, [e.error, n])),
+				tH = ({
+					result: e,
+					errorResetBoundary: t,
+					throwOnError: r,
+					query: n,
+					suspense: s,
+				}) =>
+					e.isError &&
+					!t.isReset() &&
+					!e.isFetching &&
+					n &&
+					((s && void 0 === e.data) || e4(r, [e.error, n])),
 				tW = eE.createContext(!1),
 				tz = () => eE.useContext(tW);
 			tW.Provider;
@@ -2693,8 +3137,10 @@
 					if (e.suspense) {
 						let t = (e) => ('static' === e ? e : Math.max(e ?? 1e3, 1e3)),
 							r = e.staleTime;
-						((e.staleTime = 'function' == typeof r ? (...e) => t(r(...e)) : t(r)),
-							'number' == typeof e.gcTime && (e.gcTime = Math.max(e.gcTime, 1e3)));
+						((e.staleTime =
+							'function' == typeof r ? (...e) => t(r(...e)) : t(r)),
+							'number' == typeof e.gcTime &&
+								(e.gcTime = Math.max(e.gcTime, 1e3)));
 					}
 				},
 				tJ = (e, t) => e.isLoading && e.isFetching && !t,
@@ -2781,15 +3227,26 @@
 					this.#F.includes(e) ||
 						(this.#F.push(e),
 						this.clearGcTimeout(),
-						this.#U.notify({ type: 'observerAdded', mutation: this, observer: e }));
+						this.#U.notify({
+							type: 'observerAdded',
+							mutation: this,
+							observer: e,
+						}));
 				}
 				removeObserver(e) {
 					((this.#F = this.#F.filter((t) => t !== e)),
 						this.scheduleGc(),
-						this.#U.notify({ type: 'observerRemoved', mutation: this, observer: e }));
+						this.#U.notify({
+							type: 'observerRemoved',
+							mutation: this,
+							observer: e,
+						}));
 				}
 				optionalRemove() {
-					this.#F.length || ('pending' === this.state.status ? this.scheduleGc() : this.#U.remove(this));
+					this.#F.length ||
+						('pending' === this.state.status
+							? this.scheduleGc()
+							: this.#U.remove(this));
 				}
 				continue() {
 					return this.#h?.continue() ?? this.execute(this.state.variables);
@@ -2798,10 +3255,16 @@
 					let t = () => {
 							this.#f({ type: 'continue' });
 						},
-						r = { client: this.#c, meta: this.options.meta, mutationKey: this.options.mutationKey };
+						r = {
+							client: this.#c,
+							meta: this.options.meta,
+							mutationKey: this.options.mutationKey,
+						};
 					this.#h = tq({
 						fn: () =>
-							this.options.mutationFn ? this.options.mutationFn(e, r) : Promise.reject(Error('No mutationFn found')),
+							this.options.mutationFn
+								? this.options.mutationFn(e, r)
+								: Promise.reject(Error('No mutationFn found')),
 						onFail: (e, t) => {
 							this.#f({ type: 'failed', failureCount: e, error: t });
 						},
@@ -2819,15 +3282,35 @@
 					try {
 						if (n) t();
 						else {
-							(this.#f({ type: 'pending', variables: e, isPaused: s }), await this.#U.config.onMutate?.(e, this, r));
+							(this.#f({ type: 'pending', variables: e, isPaused: s }),
+								await this.#U.config.onMutate?.(e, this, r));
 							let t = await this.options.onMutate?.(e, r);
-							t !== this.state.context && this.#f({ type: 'pending', context: t, variables: e, isPaused: s });
+							t !== this.state.context &&
+								this.#f({
+									type: 'pending',
+									context: t,
+									variables: e,
+									isPaused: s,
+								});
 						}
 						let i = await this.#h.start();
 						return (
-							await this.#U.config.onSuccess?.(i, e, this.state.context, this, r),
+							await this.#U.config.onSuccess?.(
+								i,
+								e,
+								this.state.context,
+								this,
+								r,
+							),
 							await this.options.onSuccess?.(i, e, this.state.context, r),
-							await this.#U.config.onSettled?.(i, null, this.state.variables, this.state.context, this, r),
+							await this.#U.config.onSettled?.(
+								i,
+								null,
+								this.state.variables,
+								this.state.context,
+								this,
+								r,
+							),
 							await this.options.onSettled?.(i, null, e, this.state.context, r),
 							this.#f({ type: 'success', data: i }),
 							i
@@ -2835,10 +3318,29 @@
 					} catch (t) {
 						try {
 							throw (
-								await this.#U.config.onError?.(t, e, this.state.context, this, r),
+								await this.#U.config.onError?.(
+									t,
+									e,
+									this.state.context,
+									this,
+									r,
+								),
 								await this.options.onError?.(t, e, this.state.context, r),
-								await this.#U.config.onSettled?.(void 0, t, this.state.variables, this.state.context, this, r),
-								await this.options.onSettled?.(void 0, t, e, this.state.context, r),
+								await this.#U.config.onSettled?.(
+									void 0,
+									t,
+									this.state.variables,
+									this.state.context,
+									this,
+									r,
+								),
+								await this.options.onSettled?.(
+									void 0,
+									t,
+									e,
+									this.state.context,
+									r,
+								),
 								t
 							);
 						} finally {
@@ -2852,7 +3354,11 @@
 					((this.state = ((t) => {
 						switch (e.type) {
 							case 'failed':
-								return { ...t, failureCount: e.failureCount, failureReason: e.error };
+								return {
+									...t,
+									failureCount: e.failureCount,
+									failureReason: e.error,
+								};
 							case 'pause':
 								return { ...t, isPaused: !0 };
 							case 'continue':
@@ -2919,19 +3425,33 @@
 				#L;
 				#N;
 				constructor(e, t) {
-					(super(), (this.#c = e), this.setOptions(t), this.bindMethods(), this.#K());
+					(super(),
+						(this.#c = e),
+						this.setOptions(t),
+						this.bindMethods(),
+						this.#K());
 				}
 				bindMethods() {
-					((this.mutate = this.mutate.bind(this)), (this.reset = this.reset.bind(this)));
+					((this.mutate = this.mutate.bind(this)),
+						(this.reset = this.reset.bind(this)));
 				}
 				setOptions(e) {
 					let t = this.options;
 					((this.options = this.#c.defaultMutationOptions(e)),
 						eX(this.options, t) ||
-							this.#c.getMutationCache().notify({ type: 'observerOptionsUpdated', mutation: this.#L, observer: this }),
-						t?.mutationKey && this.options.mutationKey && e$(t.mutationKey) !== e$(this.options.mutationKey)
+							this.#c
+								.getMutationCache()
+								.notify({
+									type: 'observerOptionsUpdated',
+									mutation: this.#L,
+									observer: this,
+								}),
+						t?.mutationKey &&
+						this.options.mutationKey &&
+						e$(t.mutationKey) !== e$(this.options.mutationKey)
 							? this.reset()
-							: this.#L?.state.status === 'pending' && this.#L.setOptions(this.options));
+							: this.#L?.state.status === 'pending' &&
+								this.#L.setOptions(this.options));
 				}
 				onUnsubscribe() {
 					this.hasListeners() || this.#L?.removeObserver(this);
@@ -2943,7 +3463,10 @@
 					return this.#g;
 				}
 				reset() {
-					(this.#L?.removeObserver(this), (this.#L = void 0), this.#K(), this.#A());
+					(this.#L?.removeObserver(this),
+						(this.#L = void 0),
+						this.#K(),
+						this.#A());
 				}
 				mutate(e, t) {
 					return (
@@ -2971,11 +3494,17 @@
 						if (this.#N && this.hasListeners()) {
 							let t = this.#g.variables,
 								r = this.#g.context,
-								n = { client: this.#c, meta: this.options.meta, mutationKey: this.options.mutationKey };
+								n = {
+									client: this.#c,
+									meta: this.options.meta,
+									mutationKey: this.options.mutationKey,
+								};
 							e?.type === 'success'
-								? (this.#N.onSuccess?.(e.data, t, r, n), this.#N.onSettled?.(e.data, null, t, r, n))
+								? (this.#N.onSuccess?.(e.data, t, r, n),
+									this.#N.onSettled?.(e.data, null, t, r, n))
 								: e?.type === 'error' &&
-									(this.#N.onError?.(e.error, t, r, n), this.#N.onSettled?.(void 0, e.error, t, r, n));
+									(this.#N.onError?.(e.error, t, r, n),
+									this.#N.onSettled?.(void 0, e.error, t, r, n));
 						}
 						this.listeners.forEach((e) => {
 							e(this.#g);
@@ -3024,7 +3553,10 @@
 											o = await l(i),
 											{ maxPages: u } = t.options,
 											a = s ? e3 : e7;
-										return { pages: a(e.pages, o, u), pageParams: a(e.pageParams, n, u) };
+										return {
+											pages: a(e.pages, o, u),
+											pageParams: a(e.pageParams, n, u),
+										};
 									};
 								if (s && i.length) {
 									let e = 'backward' === s,
@@ -3045,7 +3577,12 @@
 							? (t.fetchFn = () =>
 									t.options.persister?.(
 										l,
-										{ client: t.client, queryKey: t.queryKey, meta: t.options.meta, signal: t.signal },
+										{
+											client: t.client,
+											queryKey: t.queryKey,
+											meta: t.options.meta,
+											signal: t.signal,
+										},
 										r,
 									))
 							: (t.fetchFn = l);
@@ -3057,7 +3594,9 @@
 				return t.length > 0 ? e.getNextPageParam(t[n], t, r[n], r) : void 0;
 			}
 			function t3(e, { pages: t, pageParams: r }) {
-				return t.length > 0 ? e.getPreviousPageParam?.(t[0], t, r[0], r) : void 0;
+				return t.length > 0
+					? e.getPreviousPageParam?.(t[0], t, r[0], r)
+					: void 0;
 			}
 			var t5 = class extends tT {
 				constructor(e, t) {
@@ -3075,16 +3614,27 @@
 					return ((e.behavior = t2()), super.getOptimisticResult(e));
 				}
 				fetchNextPage(e) {
-					return this.fetch({ ...e, meta: { fetchMore: { direction: 'forward' } } });
+					return this.fetch({
+						...e,
+						meta: { fetchMore: { direction: 'forward' } },
+					});
 				}
 				fetchPreviousPage(e) {
-					return this.fetch({ ...e, meta: { fetchMore: { direction: 'backward' } } });
+					return this.fetch({
+						...e,
+						meta: { fetchMore: { direction: 'backward' } },
+					});
 				}
 				createResult(e, t) {
 					var r, n;
 					let { state: s } = e,
 						i = super.createResult(e, t),
-						{ isFetching: o, isRefetching: u, isError: a, isRefetchError: l } = i,
+						{
+							isFetching: o,
+							isRefetching: u,
+							isError: a,
+							isRefetchError: l,
+						} = i,
 						c = s.fetchMeta?.fetchMore?.direction,
 						h = a && 'forward' === c,
 						d = o && 'forward' === c,
@@ -3095,7 +3645,8 @@
 						fetchNextPage: this.fetchNextPage,
 						fetchPreviousPage: this.fetchPreviousPage,
 						hasNextPage: !!(r = s.data) && null != t7(t, r),
-						hasPreviousPage: !!(n = s.data) && !!t.getPreviousPageParam && null != t3(t, n),
+						hasPreviousPage:
+							!!(n = s.data) && !!t.getPreviousPageParam && null != t3(t, n),
 						isFetchNextPageError: h,
 						isFetchingNextPage: d,
 						isFetchPreviousPageError: p,
@@ -3120,7 +3671,13 @@
 				#$;
 				#J = [];
 				constructor(e, t, r) {
-					(super(), (this.#c = e), (this.#W = r), (this.#H = []), (this.#F = []), (this.#G = []), this.setQueries(t));
+					(super(),
+						(this.#c = e),
+						(this.#W = r),
+						(this.#H = []),
+						(this.#F = []),
+						(this.#G = []),
+						this.setQueries(t));
 				}
 				onSubscribe() {
 					1 === this.listeners.size &&
@@ -3145,7 +3702,10 @@
 						tS.batch(() => {
 							let e = this.#F,
 								t = this.#Y(this.#H);
-							((this.#J = t), t.forEach((e) => e.observer.setOptions(e.defaultedQueryOptions)));
+							((this.#J = t),
+								t.forEach((e) =>
+									e.observer.setOptions(e.defaultedQueryOptions),
+								));
 							let r = t.map((e) => e.observer),
 								n = r.map((e) => e.getCurrentResult()),
 								s = e.length !== r.length,
@@ -3184,7 +3744,9 @@
 				}
 				getOptimisticResult(e, t) {
 					let r = this.#Y(e),
-						n = r.map((e) => e.observer.getOptimisticResult(e.defaultedQueryOptions));
+						n = r.map((e) =>
+							e.observer.getOptimisticResult(e.defaultedQueryOptions),
+						);
 					return [n, (e) => this.#X(e ?? n, t), () => this.#Z(n, r)];
 				}
 				#Z(e, t) {
@@ -3202,7 +3764,9 @@
 				#X(e, t) {
 					return t
 						? ((this.#z && this.#G === this.#$ && t === this.#B) ||
-								((this.#B = t), (this.#$ = this.#G), (this.#z = eY(this.#z, t(e)))),
+								((this.#B = t),
+								(this.#$ = this.#G),
+								(this.#z = eY(this.#z, t(e)))),
 							this.#z)
 						: e;
 				}
@@ -3215,7 +3779,10 @@
 								s = t.get(n.queryHash);
 							s
 								? r.push({ defaultedQueryOptions: n, observer: s })
-								: r.push({ defaultedQueryOptions: n, observer: new tT(this.#c, n) });
+								: r.push({
+										defaultedQueryOptions: n,
+										observer: new tT(this.#c, n),
+									});
 						}),
 						r
 					);
@@ -3242,7 +3809,7 @@
 					}
 				}
 			};
-			function t8({ queries: e, ...t }, r) {
+			function t9({ queries: e, ...t }, r) {
 				let n = eT(r),
 					s = tz(),
 					i = tN(),
@@ -3250,7 +3817,10 @@
 						() =>
 							e.map((e) => {
 								let t = n.defaultQueryOptions(e);
-								return ((t._optimisticResults = s ? 'isRestoring' : 'optimistic'), t);
+								return (
+									(t._optimisticResults = s ? 'isRestoring' : 'optimistic'),
+									t
+								);
 							}),
 						[e, n, s],
 					);
@@ -3262,7 +3832,10 @@
 					[a, l, c] = u.getOptimisticResult(o, t.combine),
 					h = !s && !1 !== t.subscribed;
 				(eE.useSyncExternalStore(
-					eE.useCallback((e) => (h ? u.subscribe(tS.batchCalls(e)) : eL), [u, h]),
+					eE.useCallback(
+						(e) => (h ? u.subscribe(tS.batchCalls(e)) : eL),
+						[u, h],
+					),
 					() => u.getCurrentResult(),
 					() => u.getCurrentResult(),
 				),
@@ -3297,7 +3870,7 @@
 				if (p?.error) throw p.error;
 				return l(c());
 			}
-			var t9 = class extends tw {
+			var t8 = class extends tw {
 					constructor(e = {}) {
 						(super(), (this.config = e), (this.#H = new Map()));
 					}
@@ -3321,11 +3894,16 @@
 						);
 					}
 					add(e) {
-						this.#H.has(e.queryHash) || (this.#H.set(e.queryHash, e), this.notify({ type: 'added', query: e }));
+						this.#H.has(e.queryHash) ||
+							(this.#H.set(e.queryHash, e),
+							this.notify({ type: 'added', query: e }));
 					}
 					remove(e) {
 						let t = this.#H.get(e.queryHash);
-						t && (e.destroy(), t === e && this.#H.delete(e.queryHash), this.notify({ type: 'removed', query: e }));
+						t &&
+							(e.destroy(),
+							t === e && this.#H.delete(e.queryHash),
+							this.notify({ type: 'removed', query: e }));
 					}
 					clear() {
 						tS.batch(() => {
@@ -3372,7 +3950,11 @@
 				},
 				re = class extends tw {
 					constructor(e = {}) {
-						(super(), (this.config = e), (this.#ee = new Set()), (this.#et = new Map()), (this.#er = 0));
+						(super(),
+							(this.config = e),
+							(this.#ee = new Set()),
+							(this.#et = new Map()),
+							(this.#er = 0));
 					}
 					#ee;
 					#et;
@@ -3455,7 +4037,9 @@
 					}
 					resumePausedMutations() {
 						let e = this.getAll().filter((e) => e.state.isPaused);
-						return tS.batch(() => Promise.all(e.map((e) => e.continue().catch(eL))));
+						return tS.batch(() =>
+							Promise.all(e.map((e) => e.continue().catch(eL))),
+						);
 					}
 				};
 			function rt(e) {
@@ -3471,7 +4055,7 @@
 				#eu;
 				#ea;
 				constructor(e = {}) {
-					((this.#en = e.queryCache || new t9()),
+					((this.#en = e.queryCache || new t8()),
 						(this.#U = e.mutationCache || new re()),
 						(this.#d = e.defaultOptions || {}),
 						(this.#es = new Map()),
@@ -3489,7 +4073,12 @@
 							}))));
 				}
 				unmount() {
-					(this.#eo--, 0 === this.#eo && (this.#eu?.(), (this.#eu = void 0), this.#ea?.(), (this.#ea = void 0)));
+					(this.#eo--,
+						0 === this.#eo &&
+							(this.#eu?.(),
+							(this.#eu = void 0),
+							this.#ea?.(),
+							(this.#ea = void 0)));
 				}
 				isFetching(e) {
 					return this.#en.findAll({ ...e, fetchStatus: 'fetching' }).length;
@@ -3507,20 +4096,30 @@
 						n = r.state.data;
 					return void 0 === n
 						? this.fetchQuery(e)
-						: (e.revalidateIfStale && r.isStaleByTime(eG(t.staleTime, r)) && this.prefetchQuery(t), Promise.resolve(n));
+						: (e.revalidateIfStale &&
+								r.isStaleByTime(eG(t.staleTime, r)) &&
+								this.prefetchQuery(t),
+							Promise.resolve(n));
 				}
 				getQueriesData(e) {
-					return this.#en.findAll(e).map(({ queryKey: e, state: t }) => [e, t.data]);
+					return this.#en
+						.findAll(e)
+						.map(({ queryKey: e, state: t }) => [e, t.data]);
 				}
 				setQueryData(e, t, r) {
 					let n = this.defaultQueryOptions({ queryKey: e }),
 						s = this.#en.get(n.queryHash),
 						i = s?.state.data,
 						o = 'function' == typeof t ? t(i) : t;
-					if (void 0 !== o) return this.#en.build(this, n).setData(o, { ...r, manual: !0 });
+					if (void 0 !== o)
+						return this.#en.build(this, n).setData(o, { ...r, manual: !0 });
 				}
 				setQueriesData(e, t, r) {
-					return tS.batch(() => this.#en.findAll(e).map(({ queryKey: e }) => [e, this.setQueryData(e, t, r)]));
+					return tS.batch(() =>
+						this.#en
+							.findAll(e)
+							.map(({ queryKey: e }) => [e, this.setQueryData(e, t, r)]),
+					);
 				}
 				getQueryState(e) {
 					let t = this.defaultQueryOptions({ queryKey: e });
@@ -3547,7 +4146,9 @@
 				}
 				cancelQueries(e, t = {}) {
 					let r = { revert: !0, ...t };
-					return Promise.all(tS.batch(() => this.#en.findAll(e).map((e) => e.cancel(r))))
+					return Promise.all(
+						tS.batch(() => this.#en.findAll(e).map((e) => e.cancel(r))),
+					)
 						.then(eL)
 						.catch(eL);
 				}
@@ -3558,7 +4159,10 @@
 						}),
 						e?.refetchType === 'none')
 							? Promise.resolve()
-							: this.refetchQueries({ ...e, type: e?.refetchType ?? e?.type ?? 'active' }, t),
+							: this.refetchQueries(
+									{ ...e, type: e?.refetchType ?? e?.type ?? 'active' },
+									t,
+								),
 					);
 				}
 				refetchQueries(e, t = {}) {
@@ -3582,7 +4186,9 @@
 					let t = this.defaultQueryOptions(e);
 					void 0 === t.retry && (t.retry = !1);
 					let r = this.#en.build(this, t);
-					return r.isStaleByTime(eG(t.staleTime, r)) ? r.fetch(t) : Promise.resolve(r.state.data);
+					return r.isStaleByTime(eG(t.staleTime, r))
+						? r.fetch(t)
+						: Promise.resolve(r.state.data);
 				}
 				prefetchQuery(e) {
 					return this.fetchQuery(e).then(eL).catch(eL);
@@ -3597,7 +4203,9 @@
 					return ((e.behavior = t2(e.pages)), this.ensureQueryData(e));
 				}
 				resumePausedMutations() {
-					return tC.isOnline() ? this.#U.resumePausedMutations() : Promise.resolve();
+					return tC.isOnline()
+						? this.#U.resumePausedMutations()
+						: Promise.resolve();
 				}
 				getQueryCache() {
 					return this.#en;
@@ -3639,10 +4247,16 @@
 				}
 				defaultQueryOptions(e) {
 					if (e._defaulted) return e;
-					let t = { ...this.#d.queries, ...this.getQueryDefaults(e.queryKey), ...e, _defaulted: !0 };
+					let t = {
+						...this.#d.queries,
+						...this.getQueryDefaults(e.queryKey),
+						...e,
+						_defaulted: !0,
+					};
 					return (
 						t.queryHash || (t.queryHash = eB(t.queryKey, t)),
-						void 0 === t.refetchOnReconnect && (t.refetchOnReconnect = 'always' !== t.networkMode),
+						void 0 === t.refetchOnReconnect &&
+							(t.refetchOnReconnect = 'always' !== t.networkMode),
 						void 0 === t.throwOnError && (t.throwOnError = !!t.suspense),
 						!t.networkMode && t.persister && (t.networkMode = 'offlineFirst'),
 						t.queryFn === e5 && (t.enabled = !1),
@@ -3673,7 +4287,10 @@
 						n = r.join('.'),
 						[s, i] = e.args;
 					return (0, ri.default)(
-						{ queryKey: tO(r, s, 'query'), queryFn: () => t.query(n, s, null == i ? void 0 : i.trpc) },
+						{
+							queryKey: tO(r, s, 'query'),
+							queryFn: () => t.query(n, s, null == i ? void 0 : i.trpc),
+						},
 						i,
 					);
 				});
@@ -3704,7 +4321,8 @@
 					) {
 						function r(e) {
 							function t(e) {
-								if (Object(e) !== e) return Promise.reject(TypeError(e + ' is not an object.'));
+								if (Object(e) !== e)
+									return Promise.reject(TypeError(e + ' is not an object.'));
 								var t = e.done;
 								return Promise.resolve(e.value).then(function (e) {
 									return { value: e, done: t };
@@ -3721,11 +4339,15 @@
 									},
 									return: function (e) {
 										var r = this.s.return;
-										return void 0 === r ? Promise.resolve({ value: e, done: !0 }) : t(r.apply(this.s, arguments));
+										return void 0 === r
+											? Promise.resolve({ value: e, done: !0 })
+											: t(r.apply(this.s, arguments));
 									},
 									throw: function (e) {
 										var r = this.s.return;
-										return void 0 === r ? Promise.reject(e) : t(r.apply(this.s, arguments));
+										return void 0 === r
+											? Promise.reject(e)
+											: t(r.apply(this.s, arguments));
 									},
 								}),
 								new r(e)
@@ -3736,7 +4358,12 @@
 								n,
 								s,
 								i = 2;
-							for ('undefined' != typeof Symbol && ((n = Symbol.asyncIterator), (s = Symbol.iterator)); i--; ) {
+							for (
+								'undefined' != typeof Symbol &&
+								((n = Symbol.asyncIterator), (s = Symbol.iterator));
+								i--;
+
+							) {
 								if (n && null != (t = e[n])) return t.call(e);
 								if (s && null != (t = e[s])) return new r(t.call(e));
 								((n = '@@asyncIterator'), (s = '@@iterator'));
@@ -3763,7 +4390,11 @@
 				var i = !1,
 					o = !1;
 				try {
-					for (var u, a, l = (0, rl.default)(e); (i = !(a = await l.next()).done); i = !1) {
+					for (
+						var u, a, l = (0, rl.default)(e);
+						(i = !(a = await l.next()).done);
+						i = !1
+					) {
 						let e = a.value;
 						(s.push(e), n.setState({ data: [...s] }));
 					}
@@ -3784,13 +4415,22 @@
 			function rm(e) {
 				var t, r, n;
 				let s =
-						null != (t = null == e || null == (r = e.overrides) || null == (r = r.useMutation) ? void 0 : r.onSuccess)
+						null !=
+						(t =
+							null == e ||
+							null == (r = e.overrides) ||
+							null == (r = r.useMutation)
+								? void 0
+								: r.onSuccess)
 							? t
 							: (e) => e.originalFn(),
 					i = null != (n = null == e ? void 0 : e.context) ? n : rs;
 				function o() {
 					let e = eE.useContext(i);
-					if (!e) throw Error('Unable to find tRPC Context. Did you forget to wrap your App inside `withTRPC` HoC?');
+					if (!e)
+						throw Error(
+							'Unable to find tRPC Context. Did you forget to wrap your App inside `withTRPC` HoC?',
+						);
 					return e;
 				}
 				function u(e, t) {
@@ -3798,7 +4438,9 @@
 					let { queryClient: n, ssrState: s } = o();
 					return s &&
 						'mounted' !== s &&
-						(null == (r = n.getQueryCache().find({ queryKey: e })) ? void 0 : r.state.status) === 'error'
+						(null == (r = n.getQueryCache().find({ queryKey: e }))
+							? void 0
+							: r.state.status) === 'error'
 						? (0, rf.default)({ retryOnMount: !1 }, t)
 						: t;
 				}
@@ -3826,14 +4468,26 @@
 															{},
 															{
 																trpc: (0, rp.default)(
-																	(0, rp.default)({}, null == r ? void 0 : r.trpc),
-																	(null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount)
+																	(0, rp.default)(
+																		{},
+																		null == r ? void 0 : r.trpc,
+																	),
+																	(
+																		null == r || null == (s = r.trpc)
+																			? void 0
+																			: s.abortOnUnmount
+																	)
 																		? { signal: e.signal }
 																		: { signal: null },
 																),
 															},
 														);
-														return await n.query(...ra(t, i, { direction: e.direction, pageParam: e.pageParam }));
+														return await n.query(
+															...ra(t, i, {
+																direction: e.direction,
+																pageParam: e.pageParam,
+															}),
+														);
 													};
 												return Object.assign(
 													(0, rp.default)(
@@ -3843,7 +4497,11 @@
 															initialData: null == r ? void 0 : r.initialData,
 															queryKey: t,
 															queryFn: o ? e5 : u,
-															initialPageParam: null != (i = null == r ? void 0 : r.initialCursor) ? i : null,
+															initialPageParam:
+																null !=
+																(i = null == r ? void 0 : r.initialCursor)
+																	? i
+																	: null,
 														},
 													),
 													{ trpc: rc({ path: e }) },
@@ -3859,8 +4517,15 @@
 																{},
 																{
 																	trpc: (0, rp.default)(
-																		(0, rp.default)({}, null == s ? void 0 : s.trpc),
-																		(null == s || null == (i = s.trpc) ? void 0 : i.abortOnUnmount)
+																		(0, rp.default)(
+																			{},
+																			null == s ? void 0 : s.trpc,
+																		),
+																		(
+																			null == s || null == (i = s.trpc)
+																				? void 0
+																				: i.abortOnUnmount
+																		)
 																			? { signal: e.signal }
 																			: { signal: null },
 																	),
@@ -3873,7 +4538,11 @@
 													(0, rp.default)(
 														(0, rp.default)({}, s),
 														{},
-														{ initialData: null == s ? void 0 : s.initialData, queryKey: t, queryFn: o ? e5 : u },
+														{
+															initialData: null == s ? void 0 : s.initialData,
+															queryKey: t,
+															queryFn: o ? e5 : u,
+														},
 													),
 													{ trpc: rc({ path: e }) },
 												);
@@ -3883,7 +4552,10 @@
 													(0, rp.default)(
 														(0, rp.default)({}, t),
 														{},
-														{ queryKey: e, queryFn: () => n.query(...ra(e, t)) },
+														{
+															queryKey: e,
+															queryFn: () => n.query(...ra(e, t)),
+														},
 													),
 												),
 											fetchInfiniteQuery: (e, t) => {
@@ -3895,8 +4567,14 @@
 														{
 															queryKey: e,
 															queryFn: ({ pageParam: r, direction: s }) =>
-																n.query(...ra(e, t, { pageParam: r, direction: s })),
-															initialPageParam: null != (s = null == t ? void 0 : t.initialCursor) ? s : null,
+																n.query(
+																	...ra(e, t, { pageParam: r, direction: s }),
+																),
+															initialPageParam:
+																null !=
+																(s = null == t ? void 0 : t.initialCursor)
+																	? s
+																	: null,
 														},
 													),
 												);
@@ -3906,7 +4584,10 @@
 													(0, rp.default)(
 														(0, rp.default)({}, t),
 														{},
-														{ queryKey: e, queryFn: () => n.query(...ra(e, t)) },
+														{
+															queryKey: e,
+															queryFn: () => n.query(...ra(e, t)),
+														},
 													),
 												),
 											prefetchInfiniteQuery: (e, t) => {
@@ -3918,8 +4599,14 @@
 														{
 															queryKey: e,
 															queryFn: ({ pageParam: r, direction: s }) =>
-																n.query(...ra(e, t, { pageParam: r, direction: s })),
-															initialPageParam: null != (s = null == t ? void 0 : t.initialCursor) ? s : null,
+																n.query(
+																	...ra(e, t, { pageParam: r, direction: s }),
+																),
+															initialPageParam:
+																null !=
+																(s = null == t ? void 0 : t.initialCursor)
+																	? s
+																	: null,
 														},
 													),
 												);
@@ -3929,33 +4616,77 @@
 													(0, rp.default)(
 														(0, rp.default)({}, t),
 														{},
-														{ queryKey: e, queryFn: () => n.query(...ra(e, t)) },
+														{
+															queryKey: e,
+															queryFn: () => n.query(...ra(e, t)),
+														},
 													),
 												),
 											invalidateQueries: (e, t, n) =>
-												r.invalidateQueries((0, rp.default)((0, rp.default)({}, t), {}, { queryKey: e }), n),
+												r.invalidateQueries(
+													(0, rp.default)(
+														(0, rp.default)({}, t),
+														{},
+														{ queryKey: e },
+													),
+													n,
+												),
 											resetQueries: (e, t, n) =>
-												r.resetQueries((0, rp.default)((0, rp.default)({}, t), {}, { queryKey: e }), n),
+												r.resetQueries(
+													(0, rp.default)(
+														(0, rp.default)({}, t),
+														{},
+														{ queryKey: e },
+													),
+													n,
+												),
 											refetchQueries: (e, t, n) =>
-												r.refetchQueries((0, rp.default)((0, rp.default)({}, t), {}, { queryKey: e }), n),
-											cancelQuery: (e, t) => r.cancelQueries({ queryKey: e }, t),
+												r.refetchQueries(
+													(0, rp.default)(
+														(0, rp.default)({}, t),
+														{},
+														{ queryKey: e },
+													),
+													n,
+												),
+											cancelQuery: (e, t) =>
+												r.cancelQueries({ queryKey: e }, t),
 											setQueryData: (e, t, n) => r.setQueryData(e, t, n),
 											setQueriesData: (e, t, n, s) =>
-												r.setQueriesData((0, rp.default)((0, rp.default)({}, t), {}, { queryKey: e }), n, s),
+												r.setQueriesData(
+													(0, rp.default)(
+														(0, rp.default)({}, t),
+														{},
+														{ queryKey: e },
+													),
+													n,
+													s,
+												),
 											getQueryData: (e) => r.getQueryData(e),
-											setInfiniteQueryData: (e, t, n) => r.setQueryData(e, t, n),
+											setInfiniteQueryData: (e, t, n) =>
+												r.setQueryData(e, t, n),
 											getInfiniteQueryData: (e) => r.getQueryData(e),
 											setMutationDefaults: (t, s) => {
 												let i = t[0];
 												return r.setMutationDefaults(
 													t,
 													'function' == typeof s
-														? s({ canonicalMutationFn: (t) => n.mutation(...ra([i, { input: t }], e)) })
+														? s({
+																canonicalMutationFn: (t) =>
+																	n.mutation(...ra([i, { input: t }], e)),
+															})
 														: s,
 												);
 											},
 											getMutationDefaults: (e) => r.getMutationDefaults(e),
-											isMutating: (e) => r.isMutating((0, rp.default)((0, rp.default)({}, e), {}, { exact: !0 })),
+											isMutating: (e) =>
+												r.isMutating(
+													(0, rp.default)(
+														(0, rp.default)({}, e),
+														{},
+														{ exact: !0 },
+													),
+												),
 										};
 									})({ client: a, queryClient: n }),
 								[a, n],
@@ -3963,7 +4694,13 @@
 							c = eE.useMemo(
 								() =>
 									(0, rf.default)(
-										{ abortOnUnmount: r, queryClient: n, client: a, ssrContext: null != s ? s : null, ssrState: o },
+										{
+											abortOnUnmount: r,
+											queryClient: n,
+											client: a,
+											ssrContext: null != s ? s : null,
+											ssrState: o,
+										},
 										l,
 									),
 								[r, a, l, n, s, o],
@@ -3980,14 +4717,24 @@
 					useUtils: o,
 					useQuery: function (t, r, n) {
 						var s, i, a, l, c;
-						let { abortOnUnmount: h, client: d, ssrState: p, queryClient: f, prefetchQuery: y } = o(),
+						let {
+								abortOnUnmount: h,
+								client: d,
+								ssrState: p,
+								queryClient: f,
+								prefetchQuery: y,
+							} = o(),
 							m = tO(t, r, 'query'),
 							v = f.getQueryDefaults(m),
 							b = r === e5;
 						'undefined' != typeof window ||
 							'prepass' !== p ||
 							(null == n || null == (s = n.trpc) ? void 0 : s.ssr) === !1 ||
-							(null != (i = null == n ? void 0 : n.enabled) ? i : null == v ? void 0 : v.enabled) === !1 ||
+							(null != (i = null == n ? void 0 : n.enabled)
+								? i
+								: null == v
+									? void 0
+									: v.enabled) === !1 ||
 							b ||
 							f.getQueryCache().find({ queryKey: m }) ||
 							y(m, n);
@@ -3995,7 +4742,11 @@
 							O =
 								null !=
 								(a =
-									null != (l = null == n || null == (c = n.trpc) ? void 0 : c.abortOnUnmount)
+									null !=
+									(l =
+										null == n || null == (c = n.trpc)
+											? void 0
+											: c.abortOnUnmount)
 										? l
 										: null == e
 											? void 0
@@ -4016,7 +4767,10 @@
 															{},
 															{
 																trpc: (0, rf.default)(
-																	(0, rf.default)({}, null == g ? void 0 : g.trpc),
+																	(0, rf.default)(
+																		{},
+																		null == g ? void 0 : g.trpc,
+																	),
 																	O ? { signal: e.signal } : { signal: null },
 																),
 															},
@@ -4039,7 +4793,11 @@
 							h =
 								null !=
 								(s =
-									null != (i = null == n || null == (u = n.trpc) ? void 0 : u.abortOnUnmount)
+									null !=
+									(i =
+										null == n || null == (u = n.trpc)
+											? void 0
+											: u.abortOnUnmount)
 										? i
 										: null == e
 											? void 0
@@ -4077,7 +4835,11 @@
 							d =
 								null !=
 								(s =
-									null != (i = null == n || null == (u = n.trpc) ? void 0 : u.abortOnUnmount)
+									null !=
+									(i =
+										null == n || null == (u = n.trpc)
+											? void 0
+											: u.abortOnUnmount)
 										? i
 										: null == e
 											? void 0
@@ -4106,11 +4868,26 @@
 									},
 								)),
 								(l = c.queryClient),
-								tX({ ...a, enabled: !0, suspense: !0, throwOnError: tB, placeholderData: void 0 }, tT, l));
+								tX(
+									{
+										...a,
+										enabled: !0,
+										suspense: !0,
+										throwOnError: tB,
+										placeholderData: void 0,
+									},
+									tT,
+									l,
+								));
 						return ((p.trpc = rh({ path: t })), [p.data, p]);
 					},
 					useQueries: (e, t) => {
-						let { ssrState: r, queryClient: n, prefetchQuery: s, client: i } = o(),
+						let {
+								ssrState: r,
+								queryClient: n,
+								prefetchQuery: s,
+								client: i,
+							} = o(),
 							u = e(ro(i));
 						if ('undefined' == typeof window && 'prepass' === r)
 							for (let e of u) {
@@ -4119,9 +4896,15 @@
 									n.getQueryCache().find({ queryKey: e.queryKey }) ||
 									s(e.queryKey, e);
 							}
-						return t8(
+						return t9(
 							{
-								queries: u.map((e) => (0, rf.default)((0, rf.default)({}, e), {}, { queryKey: e.queryKey })),
+								queries: u.map((e) =>
+									(0, rf.default)(
+										(0, rf.default)({}, e),
+										{},
+										{ queryKey: e.queryKey },
+									),
+								),
 								combine: null == t ? void 0 : t.combine,
 							},
 							n,
@@ -4133,10 +4916,14 @@
 							s =
 								((t = {
 									queries: e(ro(n)).map((e) =>
-										(0, rf.default)((0, rf.default)({}, e), {}, { queryFn: e.queryFn, queryKey: e.queryKey }),
+										(0, rf.default)(
+											(0, rf.default)({}, e),
+											{},
+											{ queryFn: e.queryFn, queryKey: e.queryKey },
+										),
 									),
 								}),
-								t8(
+								t9(
 									{
 										...t,
 										queries: t.queries.map((e) => ({
@@ -4172,7 +4959,8 @@
 										},
 										[n],
 									);
-								if (s.error && e4(n.options.throwOnError, [s.error])) throw s.error;
+								if (s.error && e4(n.options.throwOnError, [s.error]))
+									throw s.error;
 								return { ...s, mutate: i, mutateAsync: s.mutate };
 							})(
 								(0, rf.default)(
@@ -4186,7 +4974,11 @@
 											return s({
 												originalFn: () => {
 													var r, n, s;
-													return null != (r = null == t || null == (n = t.onSuccess) ? void 0 : n.call(t, ...e))
+													return null !=
+														(r =
+															null == t || null == (n = t.onSuccess)
+																? void 0
+																: n.call(t, ...e))
 														? r
 														: null == u || null == (s = u.onSuccess)
 															? void 0
@@ -4194,7 +4986,13 @@
 												},
 												queryClient: n,
 												meta:
-													null != (r = null != (i = null == t ? void 0 : t.meta) ? i : null == u ? void 0 : u.meta)
+													null !=
+													(r =
+														null != (i = null == t ? void 0 : t.meta)
+															? i
+															: null == u
+																? void 0
+																: u.meta)
 														? r
 														: {},
 											});
@@ -4239,50 +5037,82 @@
 							y = eE.useCallback(() => {
 								var r;
 								if ((null == (r = p.current) || r.unsubscribe(), !s))
-									return void f(() => (0, rf.default)((0, rf.default)({}, a), {}, { reset: y }));
-								(f(() => (0, rf.default)((0, rf.default)({}, l), {}, { reset: y })),
-									(p.current = u.subscription(e.join('.'), null != t ? t : void 0, {
-										onStarted: () => {
-											var e, t;
-											(null == (e = (t = c.current).onStarted) || e.call(t),
-												f((e) => (0, rf.default)((0, rf.default)({}, e), {}, { status: 'pending', error: null })));
-										},
-										onData: (e) => {
-											var t, r;
-											(null == (t = (r = c.current).onData) || t.call(r, e),
-												f((t) =>
-													(0, rf.default)((0, rf.default)({}, t), {}, { status: 'pending', data: e, error: null }),
-												));
-										},
-										onError: (e) => {
-											var t, r;
-											(null == (t = (r = c.current).onError) || t.call(r, e),
-												f((t) => (0, rf.default)((0, rf.default)({}, t), {}, { status: 'error', error: e })));
-										},
-										onConnectionStateChange: (e) => {
-											f((t) => {
-												switch (e.state) {
-													case 'idle':
-														return (0, rf.default)(
+									return void f(() =>
+										(0, rf.default)((0, rf.default)({}, a), {}, { reset: y }),
+									);
+								(f(() =>
+									(0, rf.default)((0, rf.default)({}, l), {}, { reset: y }),
+								),
+									(p.current = u.subscription(
+										e.join('.'),
+										null != t ? t : void 0,
+										{
+											onStarted: () => {
+												var e, t;
+												(null == (e = (t = c.current).onStarted) || e.call(t),
+													f((e) =>
+														(0, rf.default)(
+															(0, rf.default)({}, e),
+															{},
+															{ status: 'pending', error: null },
+														),
+													));
+											},
+											onData: (e) => {
+												var t, r;
+												(null == (t = (r = c.current).onData) || t.call(r, e),
+													f((t) =>
+														(0, rf.default)(
 															(0, rf.default)({}, t),
 															{},
-															{ status: e.state, error: null, data: void 0 },
-														);
-													case 'connecting':
-														return (0, rf.default)((0, rf.default)({}, t), {}, { error: e.error, status: e.state });
-													case 'pending':
-														return t;
-												}
-											});
+															{ status: 'pending', data: e, error: null },
+														),
+													));
+											},
+											onError: (e) => {
+												var t, r;
+												(null == (t = (r = c.current).onError) || t.call(r, e),
+													f((t) =>
+														(0, rf.default)(
+															(0, rf.default)({}, t),
+															{},
+															{ status: 'error', error: e },
+														),
+													));
+											},
+											onConnectionStateChange: (e) => {
+												f((t) => {
+													switch (e.state) {
+														case 'idle':
+															return (0, rf.default)(
+																(0, rf.default)({}, t),
+																{},
+																{ status: e.state, error: null, data: void 0 },
+															);
+														case 'connecting':
+															return (0, rf.default)(
+																(0, rf.default)({}, t),
+																{},
+																{ error: e.error, status: e.state },
+															);
+														case 'pending':
+															return t;
+													}
+												});
+											},
+											onComplete: () => {
+												var e, t;
+												(null == (e = (t = c.current).onComplete) || e.call(t),
+													f((e) =>
+														(0, rf.default)(
+															(0, rf.default)({}, e),
+															{},
+															{ status: 'idle', error: null, data: void 0 },
+														),
+													));
+											},
 										},
-										onComplete: () => {
-											var e, t;
-											(null == (e = (t = c.current).onComplete) || e.call(t),
-												f((e) =>
-													(0, rf.default)((0, rf.default)({}, e), {}, { status: 'idle', error: null, data: void 0 }),
-												));
-										},
-									})));
+									)));
 							}, [u, i, s, f]);
 						eE.useEffect(
 							() => (
@@ -4304,19 +5134,34 @@
 					},
 					useInfiniteQuery: function (e, t, r) {
 						var n, s, i, a, l;
-						let { client: c, ssrState: h, prefetchInfiniteQuery: d, queryClient: p, abortOnUnmount: f } = o(),
+						let {
+								client: c,
+								ssrState: h,
+								prefetchInfiniteQuery: d,
+								queryClient: p,
+								abortOnUnmount: f,
+							} = o(),
 							y = tO(e, t, 'infinite'),
 							m = p.getQueryDefaults(y),
 							v = t === e5;
 						'undefined' != typeof window ||
 							'prepass' !== h ||
 							(null == r || null == (n = r.trpc) ? void 0 : n.ssr) === !1 ||
-							(null != (s = null == r ? void 0 : r.enabled) ? s : null == m ? void 0 : m.enabled) === !1 ||
+							(null != (s = null == r ? void 0 : r.enabled)
+								? s
+								: null == m
+									? void 0
+									: m.enabled) === !1 ||
 							v ||
 							p.getQueryCache().find({ queryKey: y }) ||
 							d(y, (0, rf.default)((0, rf.default)({}, m), r));
 						let b = u(y, (0, rf.default)((0, rf.default)({}, m), r)),
-							g = null != (i = null == r || null == (a = r.trpc) ? void 0 : a.abortOnUnmount) ? i : f,
+							g =
+								null !=
+								(i =
+									null == r || null == (a = r.trpc) ? void 0 : a.abortOnUnmount)
+									? i
+									: f,
 							O = tX(
 								(0, rf.default)(
 									(0, rf.default)({}, b),
@@ -4334,14 +5179,18 @@
 														{},
 														{
 															trpc: (0, rf.default)(
-																(0, rf.default)({}, null == b ? void 0 : b.trpc),
+																(0, rf.default)(
+																	{},
+																	null == b ? void 0 : b.trpc,
+																),
 																g ? { signal: e.signal } : { signal: null },
 															),
 														},
 													);
 													return c.query(
 														...ra(y, n, {
-															pageParam: null != (t = e.pageParam) ? t : r.initialCursor,
+															pageParam:
+																null != (t = e.pageParam) ? t : r.initialCursor,
 															direction: e.direction,
 														}),
 													);
@@ -4360,7 +5209,12 @@
 							c = a.queryClient.getQueryDefaults(l),
 							h = t === e5,
 							d = u(l, (0, rf.default)((0, rf.default)({}, c), r)),
-							p = null != (n = null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount) ? n : a.abortOnUnmount;
+							p =
+								null !=
+								(n =
+									null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount)
+									? n
+									: a.abortOnUnmount;
 						!(function (e, t) {
 							let r = eT(void 0);
 							r.getQueryState(e.queryKey) || r.prefetchInfiniteQuery(e);
@@ -4387,7 +5241,8 @@
 												);
 												return a.client.query(
 													...ra(l, n, {
-														pageParam: null != (t = e.pageParam) ? t : r.initialCursor,
+														pageParam:
+															null != (t = e.pageParam) ? t : r.initialCursor,
 														direction: e.direction,
 													}),
 												);
@@ -4402,7 +5257,12 @@
 							h = tO(e, t, 'infinite'),
 							d = c.queryClient.getQueryDefaults(h),
 							p = u(h, (0, rf.default)((0, rf.default)({}, d), r)),
-							f = null != (n = null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount) ? n : c.abortOnUnmount,
+							f =
+								null !=
+								(n =
+									null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount)
+									? n
+									: c.abortOnUnmount,
 							y =
 								((a = (0, rf.default)(
 									(0, rf.default)({}, r),
@@ -4424,7 +5284,8 @@
 											);
 											return c.client.query(
 												...ra(h, n, {
-													pageParam: null != (t = e.pageParam) ? t : r.initialCursor,
+													pageParam:
+														null != (t = e.pageParam) ? t : r.initialCursor,
 													direction: e.direction,
 												}),
 											);
@@ -4432,7 +5293,11 @@
 									},
 								)),
 								(l = c.queryClient),
-								tX({ ...a, enabled: !0, suspense: !0, throwOnError: tB }, t5, l));
+								tX(
+									{ ...a, enabled: !0, suspense: !0, throwOnError: tB },
+									t5,
+									l,
+								));
 						return ((y.trpc = rh({ path: e })), [y.data, y]);
 					},
 				};
@@ -4445,9 +5310,17 @@
 							((s = i[o]),
 								ej.call(e, s) ||
 									s === r ||
-									eO(e, s, { get: ((e) => t[e]).bind(null, s), enumerable: !(n = ex(t, s)) || n.enumerable }));
+									eO(e, s, {
+										get: ((e) => t[e]).bind(null, s),
+										enumerable: !(n = ex(t, s)) || n.enumerable,
+									}));
 					return e;
-				})(!t && e && e.__esModule ? r : eO(r, 'default', { value: e, enumerable: !0 }), e)
+				})(
+					!t && e && e.__esModule
+						? r
+						: eO(r, 'default', { value: e, enumerable: !0 }),
+					e,
+				)
 			))(eq());
 			r(4470);
 			let rb = (function (e) {
@@ -4468,8 +5341,13 @@
 									let r = e.map((e) => e.path).join(','),
 										o = e.map((e) => e.input);
 									return (
-										q((0, er.default)((0, er.default)({}, n), {}, { type: t, path: r, inputs: o, signal: null }))
-											.length <= s
+										q(
+											(0, er.default)(
+												(0, er.default)({}, n),
+												{},
+												{ type: t, path: r, inputs: o, signal: null },
+											),
+										).length <= s
 									);
 								},
 								async fetch(r) {
@@ -4486,7 +5364,8 @@
 											for (let t of e)
 												(null == t ? void 0 : t.aborted)
 													? s()
-													: null == t || t.addEventListener('abort', s, { once: !0 });
+													: null == t ||
+														t.addEventListener('abort', s, { once: !0 });
 											return t.signal;
 										})(...r.map((e) => e.signal)),
 										a = await ((s = (0, er.default)(
@@ -4497,7 +5376,11 @@
 												inputs: o,
 												type: t,
 												headers: () =>
-													e.headers ? ('function' == typeof e.headers ? e.headers({ opList: r }) : e.headers) : {},
+													e.headers
+														? 'function' == typeof e.headers
+															? e.headers({ opList: r })
+															: e.headers
+														: {},
 												signal: u,
 											},
 										)),
@@ -4505,10 +5388,16 @@
 											(0, R.default)(
 												(0, R.default)({}, s),
 												{},
-												{ contentTypeHeader: 'application/json', getUrl: q, getBody: E },
+												{
+													contentTypeHeader: 'application/json',
+													getUrl: q,
+													getBody: E,
+												},
 											),
 										));
-									return (Array.isArray(a.json) ? a.json : r.map(() => a.json)).map((e) => ({ meta: a.meta, json: e }));
+									return (
+										Array.isArray(a.json) ? a.json : r.map(() => a.json)
+									).map((e) => ({ meta: a.meta, json: e }));
 								},
 							}),
 							r = { query: et(t('query')), mutation: et(t('mutation')) };
@@ -4516,7 +5405,9 @@
 							v((t) => {
 								let s;
 								if ('subscription' === e.type)
-									throw Error('Subscriptions are unsupported by `httpLink` - use `httpSubscriptionLink` or `wsLink`');
+									throw Error(
+										'Subscriptions are unsupported by `httpLink` - use `httpSubscriptionLink` or `wsLink`',
+									);
 								return (
 									r[e.type]
 										.load(e)
@@ -4528,13 +5419,21 @@
 													r = (function (e, t) {
 														if ('error' in e) {
 															let r = t.deserialize(e.error);
-															return { ok: !1, error: (0, X.default)((0, X.default)({}, e), {}, { error: r }) };
+															return {
+																ok: !1,
+																error: (0, X.default)(
+																	(0, X.default)({}, e),
+																	{},
+																	{ error: r },
+																),
+															};
 														}
 														return {
 															ok: !0,
 															result: (0, X.default)(
 																(0, X.default)({}, e.result),
-																(!e.result.type || 'data' === e.result.type) && {
+																(!e.result.type ||
+																	'data' === e.result.type) && {
 																	type: 'data',
 																	data: t.deserialize(e.result.data),
 																},
@@ -4545,14 +5444,18 @@
 													throw new Z();
 												}
 												if (
-													(!r.ok && (!O(r.error.error) || 'number' != typeof r.error.error.code)) ||
+													(!r.ok &&
+														(!O(r.error.error) ||
+															'number' != typeof r.error.error.code)) ||
 													(r.ok && !O(r.result))
 												)
 													throw new Z();
 												return r;
 											})(e.json, n.transformer.output);
-											if (!r.ok) return void t.error(S.from(r.error, { meta: e.meta }));
-											(t.next({ context: e.meta, result: r.result }), t.complete());
+											if (!r.ok)
+												return void t.error(S.from(r.error, { meta: e.meta }));
+											(t.next({ context: e.meta, result: r.result }),
+												t.complete());
 										})
 										.catch((e) => {
 											t.error(S.from(e, { meta: null == s ? void 0 : s.meta }));
@@ -4576,7 +5479,10 @@
 												var r;
 												if (s.trpc) return s.trpc;
 												let n = t({}),
-													i = null != (r = n.queryClient) ? r : new rr(n.queryClientConfig),
+													i =
+														null != (r = n.queryClient)
+															? r
+															: new rr(n.queryClientConfig),
 													u = o.createClient(n);
 												return {
 													abortOnUnmount: n.abortOnUnmount,
@@ -4586,9 +5492,17 @@
 													ssrContext: null,
 												};
 											}),
-											{ queryClient: l, trpcClient: c, ssrState: h, ssrContext: d } = a,
+											{
+												queryClient: l,
+												trpcClient: c,
+												ssrState: h,
+												ssrContext: d,
+											} = a,
 											p = null == (i = s.pageProps) ? void 0 : i.trpcState,
-											f = eE.useMemo(() => (p ? r.input.deserialize(p) : p), [p]);
+											f = eE.useMemo(
+												() => (p ? r.input.deserialize(p) : p),
+												[p],
+											);
 										return (0, eM.jsx)(o.Provider, {
 											abortOnUnmount: null != (u = a.abortOnUnmount) && u,
 											client: c,
@@ -4597,7 +5511,10 @@
 											ssrContext: d,
 											children: (0, eM.jsx)(ek, {
 												client: l,
-												children: (0, eM.jsx)(tt, { state: f, children: (0, eM.jsx)(n, (0, rv.default)({}, s)) }),
+												children: (0, eM.jsx)(tt, {
+													state: f,
+													children: (0, eM.jsx)(n, (0, rv.default)({}, s)),
+												}),
 											}),
 										});
 									};
@@ -4611,9 +5528,15 @@
 												i = {},
 												o = await n.getInitialProps(e),
 												u = s ? (null != (t = o.pageProps) ? t : {}) : o;
-											return ((r = i = (0, rv.default)((0, rv.default)({}, u), i)), s ? { pageProps: r } : r);
+											return (
+												(r = i = (0, rv.default)((0, rv.default)({}, u), i)),
+												s ? { pageProps: r } : r
+											);
 										});
-								let a = null != (s = null != (i = n.displayName) ? i : n.name) ? s : 'Component';
+								let a =
+									null != (s = null != (i = n.displayName) ? i : n.name)
+										? s
+										: 'Component';
 								return ((u.displayName = `withTRPC(${a})`), u);
 							};
 						})(e),
@@ -4671,12 +5594,15 @@
 																})(n),
 															);
 														return {
-															infiniteQueryOptions: () => e.infiniteQueryOptions(r, o, s[0]),
+															infiniteQueryOptions: () =>
+																e.infiniteQueryOptions(r, o, s[0]),
 															queryOptions: () => e.queryOptions(r, o, ...s),
 															fetch: () => e.fetchQuery(o, ...s),
-															fetchInfinite: () => e.fetchInfiniteQuery(o, s[0]),
+															fetchInfinite: () =>
+																e.fetchInfiniteQuery(o, s[0]),
 															prefetch: () => e.prefetchQuery(o, ...s),
-															prefetchInfinite: () => e.prefetchInfiniteQuery(o, s[0]),
+															prefetchInfinite: () =>
+																e.prefetchInfiniteQuery(o, s[0]),
 															ensureData: () => e.ensureQueryData(o, ...s),
 															invalidate: () => e.invalidateQueries(o, ...s),
 															reset: () => e.resetQueries(o, ...s),
@@ -4685,18 +5611,24 @@
 															setData: () => {
 																e.setQueryData(o, s[0], s[1]);
 															},
-															setQueriesData: () => e.setQueriesData(o, s[0], s[1], s[2]),
+															setQueriesData: () =>
+																e.setQueriesData(o, s[0], s[1], s[2]),
 															setInfiniteData: () => {
 																e.setInfiniteQueryData(o, s[0], s[1]);
 															},
 															getData: () => e.getQueryData(o),
 															getInfiniteData: () => e.getInfiniteQueryData(o),
-															setMutationDefaults: () => e.setMutationDefaults(tx(r), i),
-															getMutationDefaults: () => e.getMutationDefaults(tx(r)),
-															isMutating: () => e.isMutating({ mutationKey: tx(r) }),
+															setMutationDefaults: () =>
+																e.setMutationDefaults(tx(r), i),
+															getMutationDefaults: () =>
+																e.getMutationDefaults(tx(r)),
+															isMutating: () =>
+																e.isMutating({ mutationKey: tx(r) }),
 														}[n]();
 													});
-												return z((n) => ('client' === n ? t : rn.includes(n) ? e[n] : r[n]));
+												return z((n) =>
+													'client' === n ? t : rn.includes(n) ? e[n] : r[n],
+												);
 											})(e),
 										[e],
 									);
@@ -4711,6 +5643,9 @@
 					);
 				})({ config: () => ({ links: [rb] }), ssr: !1 }),
 				rO = ef({ links: [rb] });
+		},
+		7558: (e, t, r) => {
+			e.exports = r(5989);
 		},
 	},
 	(e) => {

@@ -14,14 +14,20 @@ const SignInPage: NextPage = () => {
 
 	const { refresh } = useUser();
 
-	const [{ email = '', password = '' }, setState] = useState<{ email: string; password: string }>({
+	const [{ email = '', password = '' }, setState] = useState<{
+		email: string;
+		password: string;
+	}>({
 		email: '',
 		password: '',
 	});
 
 	const onSubmit = async (event: FormEvent) => {
 		event.preventDefault();
-		const response = await trpcClient.auth.user.signIn.mutate({ email, password });
+		const response = await trpcClient.auth.user.signIn.mutate({
+			email,
+			password,
+		});
 		const { success } = response;
 		if (success) {
 			alert('Sign In Successfully');
@@ -42,7 +48,10 @@ const SignInPage: NextPage = () => {
 					placeholder="Email"
 					value={email}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, email: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							email: event.target.value,
+						}));
 					}}
 					required
 				/>
@@ -53,13 +62,20 @@ const SignInPage: NextPage = () => {
 					placeholder="Password"
 					value={password}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, password: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							password: event.target.value,
+						}));
 					}}
 					required
 				/>
 				<div className="flex justify-between px-4">
-					<span className="border-b border-dotted text-sm md:text-base">Remember Me</span>
-					<Link href="/auth/password/forget" className="border-b border-dotted text-sm md:text-base">
+					<span className="border-b border-dotted text-sm md:text-base">
+						Remember Me
+					</span>
+					<Link
+						href="/auth/password/forget"
+						className="border-b border-dotted text-sm md:text-base">
 						Forget Password
 					</Link>
 				</div>

@@ -16,7 +16,9 @@ export const Navbar: FC = () => {
 			</Link>
 			{isAuthenticated && (
 				<div className="flex items-center gap-x-2 md:gap-x-4">
-					<p className="w-12 truncate text-right md:w-48">{user?.email ?? ''}</p>
+					<p className="w-12 truncate text-right md:w-48">
+						{user?.email ?? ''}
+					</p>
 					<Button onClick={signOut}>Sign Out</Button>
 				</div>
 			)}

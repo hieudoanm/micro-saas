@@ -37,7 +37,9 @@
 									} = (function (e) {
 										let t,
 											r = { root: e.root || null, margin: e.rootMargin || '' },
-											n = f.find((e) => e.root === r.root && e.margin === r.margin);
+											n = f.find(
+												(e) => e.root === r.root && e.margin === r.margin,
+											);
 										if (n && (t = o.get(n))) return t;
 										let l = new Map();
 										return (
@@ -63,12 +65,17 @@
 										function () {
 											if ((u.delete(e), l.unobserve(e), 0 === u.size)) {
 												(l.disconnect(), o.delete(n));
-												let e = f.findIndex((e) => e.root === n.root && e.margin === n.margin);
+												let e = f.findIndex(
+													(e) => e.root === n.root && e.margin === n.margin,
+												);
 												e > -1 && f.splice(e, 1);
 											}
 										}
 									);
-								})(e, (e) => e && s(e), { root: null == t ? void 0 : t.current, rootMargin: r });
+								})(e, (e) => e && s(e), {
+									root: null == t ? void 0 : t.current,
+									rootMargin: r,
+								});
 						} else if (!i) {
 							let e = (0, l.requestIdleCallback)(() => s(!0));
 							return () => (0, l.cancelIdleCallback)(e);
@@ -83,7 +90,8 @@
 					]
 				);
 			}
-			('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
+			('function' == typeof t.default ||
+				('object' == typeof t.default && null !== t.default)) &&
 				void 0 === t.default.__esModule &&
 				(Object.defineProperty(t.default, '__esModule', { value: !0 }),
 				Object.assign(t.default, t),
@@ -107,7 +115,8 @@
 			'use strict';
 			(Object.defineProperty(t, '__esModule', { value: !0 }),
 				!(function (e, t) {
-					for (var r in t) Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+					for (var r in t)
+						Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
 				})(t, {
 					default: function () {
 						return O;
@@ -134,7 +143,16 @@
 			function h(e, t, r, n) {
 				if ((0, f.isLocalURL)(t)) {
 					if (!n.bypassPrefetchedCheck) {
-						let l = t + '%' + r + '%' + (void 0 !== n.locale ? n.locale : 'locale' in e ? e.locale : void 0);
+						let l =
+							t +
+							'%' +
+							r +
+							'%' +
+							(void 0 !== n.locale
+								? n.locale
+								: 'locale' in e
+									? e.locale
+									: void 0);
 						if (v.has(l)) return;
 						v.add(l);
 					}
@@ -164,7 +182,10 @@
 							legacyBehavior: L = !1,
 							...w
 						} = e;
-					((r = _), L && ('string' == typeof r || 'number' == typeof r) && (r = (0, l.jsx)('a', { children: r })));
+					((r = _),
+						L &&
+							('string' == typeof r || 'number' == typeof r) &&
+							(r = (0, l.jsx)('a', { children: r })));
 					let I = u.default.useContext(s.RouterContext),
 						S = !1 !== j,
 						{ href: T, as: D } = u.default.useMemo(() => {
@@ -182,7 +203,9 @@
 						[N, H, q] = (0, d.useIntersection)({ rootMargin: '200px' }),
 						z = u.default.useCallback(
 							(e) => {
-								((A.current !== D || U.current !== T) && (q(), (A.current = D), (U.current = T)), N(e));
+								((A.current !== D || U.current !== T) &&
+									(q(), (A.current = D), (U.current = T)),
+									N(e));
 							},
 							[D, T, q, N],
 						),
@@ -194,7 +217,10 @@
 						ref: B,
 						onClick(e) {
 							(L || 'function' != typeof k || k(e),
-								L && n.props && 'function' == typeof n.props.onClick && n.props.onClick(e),
+								L &&
+									n.props &&
+									'function' == typeof n.props.onClick &&
+									n.props.onClick(e),
 								I &&
 									(e.defaultPrevented ||
 										(function (e, t, r, n, l, u, o, a, c) {
@@ -236,21 +262,43 @@
 														}
 														let e = null == o || o;
 														'beforePopState' in t
-															? t[l ? 'replace' : 'push'](r, n, { shallow: u, locale: a, scroll: e })
-															: t[l ? 'replace' : 'push'](n || r, { scroll: e });
+															? t[l ? 'replace' : 'push'](r, n, {
+																	shallow: u,
+																	locale: a,
+																	scroll: e,
+																})
+															: t[l ? 'replace' : 'push'](n || r, {
+																	scroll: e,
+																});
 													})());
 											}
 										})(e, I, T, D, O, m, C, P, x)));
 						},
 						onMouseEnter(e) {
 							(L || 'function' != typeof E || E(e),
-								L && n.props && 'function' == typeof n.props.onMouseEnter && n.props.onMouseEnter(e),
-								I && h(I, T, D, { locale: P, priority: !0, bypassPrefetchedCheck: !0 }));
+								L &&
+									n.props &&
+									'function' == typeof n.props.onMouseEnter &&
+									n.props.onMouseEnter(e),
+								I &&
+									h(I, T, D, {
+										locale: P,
+										priority: !0,
+										bypassPrefetchedCheck: !0,
+									}));
 						},
 						onTouchStart: function (e) {
 							(L || 'function' != typeof R || R(e),
-								L && n.props && 'function' == typeof n.props.onTouchStart && n.props.onTouchStart(e),
-								I && h(I, T, D, { locale: P, priority: !0, bypassPrefetchedCheck: !0 }));
+								L &&
+									n.props &&
+									'function' == typeof n.props.onTouchStart &&
+									n.props.onTouchStart(e),
+								I &&
+									h(I, T, D, {
+										locale: P,
+										priority: !0,
+										bypassPrefetchedCheck: !0,
+									}));
 						},
 					};
 					if ((0, c.isAbsoluteUrl)(D)) F.href = D;
@@ -258,15 +306,25 @@
 						let e = void 0 !== P ? P : null == I ? void 0 : I.locale;
 						F.href =
 							((null == I ? void 0 : I.isLocaleDomain) &&
-								(0, p.getDomainLocale)(D, e, null == I ? void 0 : I.locales, null == I ? void 0 : I.domainLocales)) ||
-							(0, b.addBasePath)((0, i.addLocale)(D, e, null == I ? void 0 : I.defaultLocale));
+								(0, p.getDomainLocale)(
+									D,
+									e,
+									null == I ? void 0 : I.locales,
+									null == I ? void 0 : I.domainLocales,
+								)) ||
+							(0, b.addBasePath)(
+								(0, i.addLocale)(D, e, null == I ? void 0 : I.defaultLocale),
+							);
 					}
-					return L ? u.default.cloneElement(n, F) : (0, l.jsx)('a', { ...w, ...F, children: r });
+					return L
+						? u.default.cloneElement(n, F)
+						: (0, l.jsx)('a', { ...w, ...F, children: r });
 				}),
 				j = (0, u.createContext)({ pending: !1 }),
 				M = () => (0, u.useContext)(j),
 				O = _;
-			('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
+			('function' == typeof t.default ||
+				('object' == typeof t.default && null !== t.default)) &&
 				void 0 === t.default.__esModule &&
 				(Object.defineProperty(t.default, '__esModule', { value: !0 }),
 				Object.assign(t.default, t),
@@ -310,7 +368,8 @@
 					return 'function' == typeof r ? r : () => e(null);
 				}
 			}
-			('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
+			('function' == typeof t.default ||
+				('object' == typeof t.default && null !== t.default)) &&
 				void 0 === t.default.__esModule &&
 				(Object.defineProperty(t.default, '__esModule', { value: !0 }),
 				Object.assign(t.default, t),
@@ -329,7 +388,8 @@
 					},
 				}),
 				r(6215),
-				('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
+				('function' == typeof t.default ||
+					('object' == typeof t.default && null !== t.default)) &&
 					void 0 === t.default.__esModule &&
 					(Object.defineProperty(t.default, '__esModule', { value: !0 }),
 					Object.assign(t.default, t),

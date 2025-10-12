@@ -38,7 +38,9 @@ export const FrequentlyAskedQuestions: FC<FrequentlyAskedQuestionsProps> = ({
 										<span className="hidden group-open:inline">-</span>
 									</span>
 								</summary>
-								<div className="px-4 pb-4 text-neutral-600 dark:text-neutral-400">{answer}</div>
+								<div className="px-4 pb-4 text-neutral-600 dark:text-neutral-400">
+									{answer}
+								</div>
 							</details>
 						);
 					})}

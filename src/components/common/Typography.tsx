@@ -24,7 +24,9 @@ export const Heading6: FC<{ children: ReactNode }> = ({ children = <></> }) => {
 	return <h6 className="text-sm font-normal md:text-base">{children}</h6>;
 };
 
-export const Paragraph: FC<{ children: ReactNode }> = ({ children = <></> }) => {
+export const Paragraph: FC<{ children: ReactNode }> = ({
+	children = <></>,
+}) => {
 	return <p className="text-sm md:text-base">{children}</p>;
 };
 

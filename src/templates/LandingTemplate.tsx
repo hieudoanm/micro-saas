@@ -17,7 +17,8 @@ export const LandingTemplate: FC = () => {
 		},
 		features: {
 			title: 'Features',
-			description: 'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
+			description:
+				'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
 			features: {
 				authentication: {
 					emoji: '🔑',
@@ -39,7 +40,10 @@ export const LandingTemplate: FC = () => {
 				},
 			},
 		},
-		demo: { title: 'How to Use', description: 'See it in action — your SaaS, ready to launch in minutes.' },
+		demo: {
+			title: 'How to Use',
+			description: 'See it in action — your SaaS, ready to launch in minutes.',
+		},
 		testimonials: {
 			quote:
 				'"This template saved me weeks of boring setup work. I had my app accepting payments on day one! Highly recommended for solo founders and indie hackers."',
@@ -47,7 +51,8 @@ export const LandingTemplate: FC = () => {
 		},
 		faq: {
 			title: 'Frequently Asked Questions',
-			description: "Got questions? We've got answers to help you launch with confidence.",
+			description:
+				"Got questions? We've got answers to help you launch with confidence.",
 			questions: {
 				'paddle-account': {
 					question: 'Do I need a Paddle account to use this template?',
@@ -71,7 +76,8 @@ export const LandingTemplate: FC = () => {
 				},
 				deployment: {
 					question: 'Is there a deployment guide?',
-					answer: 'Yes — the README includes clear steps to deploy on Vercel, Fly.io, or any Node-compatible host.',
+					answer:
+						'Yes — the README includes clear steps to deploy on Vercel, Fly.io, or any Node-compatible host.',
 				},
 			},
 		},
@@ -95,14 +101,24 @@ export const LandingTemplate: FC = () => {
 						description={landing.features.description}
 						features={landing.features.features}
 					/>
-					<Demo title={landing.demo.title} description={landing.demo.description} />
-					<Testimonials quote={landing.testimonials.quote} source={landing.testimonials.quote} />
+					<Demo
+						title={landing.demo.title}
+						description={landing.demo.description}
+					/>
+					<Testimonials
+						quote={landing.testimonials.quote}
+						source={landing.testimonials.quote}
+					/>
 					<FrequentlyAskedQuestions
 						title={landing.faq.title}
 						description={landing.faq.description}
 						questions={landing.faq.questions}
 					/>
-					<CallToAction title={landing.cta.title} description={landing.cta.description} action={landing.cta.action} />
+					<CallToAction
+						title={landing.cta.title}
+						description={landing.cta.description}
+						action={landing.cta.action}
+					/>
 				</div>
 			</main>
 			<Footer />

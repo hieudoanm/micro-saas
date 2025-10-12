@@ -18,7 +18,10 @@ const PasswordForgetPage: NextPage = () => {
 					placeholder="Email"
 					value={email}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, email: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							email: event.target.value,
+						}));
 					}}
 				/>
 				<Button type="submit">Recover Password</Button>

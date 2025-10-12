@@ -30,7 +30,8 @@
 						(0, s.jsx)('div', {
 							className: 'grow',
 							children: (0, s.jsx)('div', {
-								className: 'flex h-full w-full w-screen items-center justify-center p-4 md:p-8',
+								className:
+									'flex h-full w-full w-screen items-center justify-center p-4 md:p-8',
 								children: (0, s.jsx)('div', {
 									className:
 										'w-full max-w-xl rounded-2xl border border-neutral-800 bg-neutral-900/80 p-8 shadow shadow-neutral-100/10',
@@ -38,7 +39,8 @@
 										className: 'flex flex-col gap-y-8',
 										children: [
 											(0, s.jsx)('h1', {
-												className: 'text-center text-3xl font-black md:text-4xl',
+												className:
+													'text-center text-3xl font-black md:text-4xl',
 												children: (0, s.jsx)(n.WG, { children: c.C }),
 											}),
 											r,
@@ -115,7 +117,8 @@
 									type: t,
 									disabled: l,
 									onClick: a,
-									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
+									className:
+										'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
 									children: d,
 								}),
 							})
@@ -156,7 +159,10 @@
 					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
 					children: (0, s.jsx)('div', {
 						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, s.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: r }),
+						children: (0, s.jsx)('div', {
+							className: 'flex items-center justify-between gap-x-4',
+							children: r,
+						}),
 					}),
 				});
 			};
@@ -178,7 +184,8 @@
 					disabled: x = !1,
 				} = e;
 				return (0, s.jsx)('div', {
-					className: 'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+					className:
+						'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 					children: (0, s.jsx)('input', {
 						type: r,
 						id: t,
@@ -205,7 +212,8 @@
 			let n = new Date().getFullYear(),
 				o = () =>
 					(0, s.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						className:
+							'border-t border-neutral-800 shadow shadow-neutral-100/10',
 						children: (0, s.jsx)('div', {
 							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
 							children: (0, s.jsxs)('div', {
@@ -214,7 +222,9 @@
 									(0, s.jsxs)('div', {
 										className: 'flex flex-col gap-1 md:flex-row',
 										children: [
-											(0, s.jsxs)('p', { children: ['\xa9 ', n, ' ', l.C, '.'] }),
+											(0, s.jsxs)('p', {
+												children: ['\xa9 ', n, ' ', l.C, '.'],
+											}),
 											(0, s.jsx)('p', { children: 'All Rights Reserved.' }),
 										],
 									}),
@@ -246,16 +256,23 @@
 			var s = t(7765);
 			let l = (e) => {
 					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-					return (0, s.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: r });
+					return (0, s.jsx)('h2', {
+						className: 'text-2xl font-extrabold md:text-3xl',
+						children: r,
+					});
 				},
 				a = (e) => {
 					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
-					return (0, s.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: r });
+					return (0, s.jsx)('h6', {
+						className: 'text-sm font-normal md:text-base',
+						children: r,
+					});
 				},
 				d = (e) => {
 					let { children: r = (0, s.jsx)(s.Fragment, {}) } = e;
 					return (0, s.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						className:
+							'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
 						children: r,
 					});
 				};
@@ -283,7 +300,8 @@
 				d = t(616),
 				n = t(5977);
 			let o = () => {
-				let [{ password: e = '', confirmPassword: r = '' }, t] = (0, n.useState)({ password: '', confirmPassword: '' });
+				let [{ password: e = '', confirmPassword: r = '' }, t] = (0,
+				n.useState)({ password: '', confirmPassword: '' });
 				return (0, s.jsx)(d.$, {
 					children: (0, s.jsxs)('form', {
 						className: 'flex flex-col gap-y-4',

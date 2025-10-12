@@ -1,5 +1,13 @@
 import { trpcClient } from '@micro/utils/trpc';
-import { createContext, FC, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
+import {
+	createContext,
+	FC,
+	ReactNode,
+	useContext,
+	useEffect,
+	useMemo,
+	useState,
+} from 'react';
 
 interface User {
 	email: string;
@@ -15,8 +23,15 @@ interface UserContextValue {
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
-export const UserProvider: FC<{ children: ReactNode }> = ({ children }: { children: ReactNode }) => {
-	const [{ isAuthenticated = false, isLoading = false, user = null }, setState] = useState<{
+export const UserProvider: FC<{ children: ReactNode }> = ({
+	children,
+}: {
+	children: ReactNode;
+}) => {
+	const [
+		{ isAuthenticated = false, isLoading = false, user = null },
+		setState,
+	] = useState<{
 		isAuthenticated: boolean;
 		isLoading: boolean;
 		user: User | null;
@@ -33,7 +48,11 @@ export const UserProvider: FC<{ children: ReactNode }> = ({ children }: { childr
 			setState((previous) => ({ ...previous, isAuthenticated: true, user }));
 		} catch (err) {
 			console.error(err);
-			setState((previous) => ({ ...previous, isAuthenticated: false, user: null }));
+			setState((previous) => ({
+				...previous,
+				isAuthenticated: false,
+				user: null,
+			}));
 		} finally {
 			setState((previous) => ({ ...previous, isLoading: false }));
 		}
@@ -44,7 +63,11 @@ export const UserProvider: FC<{ children: ReactNode }> = ({ children }: { childr
 			const { success } = await trpcClient.auth.user.signOut.mutate();
 			if (success) {
 				alert('Sign Out Successfully');
-				setState((previous) => ({ ...previous, isAuthenticated: false, user: null }));
+				setState((previous) => ({
+					...previous,
+					isAuthenticated: false,
+					user: null,
+				}));
 			}
 		} catch (error) {
 			console.error(error);

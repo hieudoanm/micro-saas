@@ -5,7 +5,11 @@ import { FC } from 'react';
 
 type CallToActionProps = { title: string; description: string; action: string };
 
-export const CallToAction: FC<CallToActionProps> = ({ title = '', description = '', action = '' }) => {
+export const CallToAction: FC<CallToActionProps> = ({
+	title = '',
+	description = '',
+	action = '',
+}) => {
 	return (
 		<section className="container mx-auto flex flex-col px-4 pt-8 pb-4 md:px-8 md:pt-16 md:pb-8">
 			<div className="mx-auto w-full max-w-2xl space-y-4 md:space-y-8">

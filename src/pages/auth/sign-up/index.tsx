@@ -11,16 +11,20 @@ const SignUpPage: NextPage = () => {
 	const router = useRouter();
 	const { push } = router;
 
-	const [{ loading = false, name = '', email = '', password = '' }, setState] = useState<{
-		loading: boolean;
-		name: string;
-		email: string;
-		password: string;
-	}>({ loading: false, name: '', email: '', password: '' });
+	const [{ loading = false, name = '', email = '', password = '' }, setState] =
+		useState<{
+			loading: boolean;
+			name: string;
+			email: string;
+			password: string;
+		}>({ loading: false, name: '', email: '', password: '' });
 
 	const onSubmit = async (event: FormEvent) => {
 		event.preventDefault();
-		const response = await trpcClient.auth.user.signUp.mutate({ email, password });
+		const response = await trpcClient.auth.user.signUp.mutate({
+			email,
+			password,
+		});
 		const { success } = response;
 		if (success) {
 			alert('Sign Up Successfully');
@@ -51,7 +55,10 @@ const SignUpPage: NextPage = () => {
 					placeholder="Email"
 					value={email}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, email: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							email: event.target.value,
+						}));
 					}}
 					required
 				/>
@@ -62,7 +69,10 @@ const SignUpPage: NextPage = () => {
 					placeholder="Password"
 					value={password}
 					onChange={(event) => {
-						setState((previous) => ({ ...previous, password: event.target.value }));
+						setState((previous) => ({
+							...previous,
+							password: event.target.value,
+						}));
 					}}
 					required
 				/>

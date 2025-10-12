@@ -1,5 +1,9 @@
 import { JWT } from '@micro/utils/jwt';
-import { CreateNextContextOptions, NextApiRequest, NextApiResponse } from '@trpc/server/adapters/next';
+import {
+	CreateNextContextOptions,
+	NextApiRequest,
+	NextApiResponse,
+} from '@trpc/server/adapters/next';
 
 export const createContext = async ({ req, res }: CreateNextContextOptions) => {
 	const cookiesMap = new Map(Object.entries(req.cookies));
@@ -9,4 +13,8 @@ export const createContext = async ({ req, res }: CreateNextContextOptions) => {
 	return { req, res, email };
 };
 
-export type Context = { req: NextApiRequest; res: NextApiResponse; email: string | null };
+export type Context = {
+	req: NextApiRequest;
+	res: NextApiResponse;
+	email: string | null;
+};

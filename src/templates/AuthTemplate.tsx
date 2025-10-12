@@ -5,7 +5,9 @@ import { Linear } from '@micro/components/common/Typography';
 import { APP_NAME } from '@micro/constants/constants';
 import { FC, ReactNode } from 'react';
 
-export const AuthTemplate: FC<{ children: ReactNode }> = ({ children = <></> }) => {
+export const AuthTemplate: FC<{ children: ReactNode }> = ({
+	children = <></>,
+}) => {
 	return (
 		<div className="flex h-screen w-screen flex-col">
 			<RadialGradientBackground />

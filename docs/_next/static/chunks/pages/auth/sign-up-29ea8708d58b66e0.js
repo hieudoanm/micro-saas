@@ -33,7 +33,8 @@
 						(0, l.jsx)('div', {
 							className: 'grow',
 							children: (0, l.jsx)('div', {
-								className: 'flex h-full w-full w-screen items-center justify-center p-4 md:p-8',
+								className:
+									'flex h-full w-full w-screen items-center justify-center p-4 md:p-8',
 								children: (0, l.jsx)('div', {
 									className:
 										'w-full max-w-xl rounded-2xl border border-neutral-800 bg-neutral-900/80 p-8 shadow shadow-neutral-100/10',
@@ -41,7 +42,8 @@
 										className: 'flex flex-col gap-y-8',
 										children: [
 											(0, l.jsx)('h1', {
-												className: 'text-center text-3xl font-black md:text-4xl',
+												className:
+													'text-center text-3xl font-black md:text-4xl',
 												children: (0, l.jsx)(n.WG, { children: x.C }),
 											}),
 											r,
@@ -118,7 +120,8 @@
 									type: t,
 									disabled: s,
 									onClick: a,
-									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
+									className:
+										'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
 									children: d,
 								}),
 							})
@@ -159,7 +162,10 @@
 					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
 					children: (0, l.jsx)('div', {
 						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, l.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: r }),
+						children: (0, l.jsx)('div', {
+							className: 'flex items-center justify-between gap-x-4',
+							children: r,
+						}),
 					}),
 				});
 			};
@@ -181,7 +187,8 @@
 					disabled: u = !1,
 				} = e;
 				return (0, l.jsx)('div', {
-					className: 'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
+					className:
+						'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 					children: (0, l.jsx)('input', {
 						type: r,
 						id: t,
@@ -208,7 +215,8 @@
 			let n = new Date().getFullYear(),
 				i = () =>
 					(0, l.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						className:
+							'border-t border-neutral-800 shadow shadow-neutral-100/10',
 						children: (0, l.jsx)('div', {
 							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
 							children: (0, l.jsxs)('div', {
@@ -217,7 +225,9 @@
 									(0, l.jsxs)('div', {
 										className: 'flex flex-col gap-1 md:flex-row',
 										children: [
-											(0, l.jsxs)('p', { children: ['\xa9 ', n, ' ', s.C, '.'] }),
+											(0, l.jsxs)('p', {
+												children: ['\xa9 ', n, ' ', s.C, '.'],
+											}),
 											(0, l.jsx)('p', { children: 'All Rights Reserved.' }),
 										],
 									}),
@@ -249,16 +259,23 @@
 			var l = t(7765);
 			let s = (e) => {
 					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: r });
+					return (0, l.jsx)('h2', {
+						className: 'text-2xl font-extrabold md:text-3xl',
+						children: r,
+					});
 				},
 				a = (e) => {
 					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
-					return (0, l.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: r });
+					return (0, l.jsx)('h6', {
+						className: 'text-sm font-normal md:text-base',
+						children: r,
+					});
 				},
 				d = (e) => {
 					let { children: r = (0, l.jsx)(l.Fragment, {}) } = e;
 					return (0, l.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						className:
+							'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
 						children: r,
 					});
 				};
@@ -270,14 +287,17 @@
 				s = t(3963),
 				a = t(4449),
 				d = t(616),
-				n = t(8782),
+				n = t(7311),
 				i = t(2844),
 				o = t.n(i),
 				u = t(69),
 				x = t(5977);
 			let c = () => {
 				let { push: e } = (0, u.useRouter)(),
-					[{ loading: r = !1, name: t = '', email: i = '', password: c = '' }, m] = (0, x.useState)({
+					[
+						{ loading: r = !1, name: t = '', email: i = '', password: c = '' },
+						m,
+					] = (0, x.useState)({
 						loading: !1,
 						name: '',
 						email: '',
@@ -285,8 +305,13 @@
 					}),
 					p = async (r) => {
 						r.preventDefault();
-						let { success: t } = await n.r.auth.user.signUp.mutate({ email: i, password: c });
-						t ? (alert('Sign Up Successfully'), e('/auth/sign-in')) : alert('Failed to Sign Up');
+						let { success: t } = await n.r.auth.user.signUp.mutate({
+							email: i,
+							password: c,
+						});
+						t
+							? (alert('Sign Up Successfully'), e('/auth/sign-in'))
+							: alert('Failed to Sign Up');
 					};
 				return (0, l.jsx)(d.$, {
 					children: (0, l.jsxs)('form', {
@@ -326,8 +351,14 @@
 								},
 								required: !0,
 							}),
-							(0, l.jsx)(s.$, { type: 'submit', children: r ? 'Loading' : 'Sign Up' }),
-							(0, l.jsx)(o(), { href: '/auth/sign-in', children: (0, l.jsx)(s.r, { children: 'Sign In' }) }),
+							(0, l.jsx)(s.$, {
+								type: 'submit',
+								children: r ? 'Loading' : 'Sign Up',
+							}),
+							(0, l.jsx)(o(), {
+								href: '/auth/sign-in',
+								children: (0, l.jsx)(s.r, { children: 'Sign In' }),
+							}),
 						],
 					}),
 				});

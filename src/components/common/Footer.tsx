@@ -15,7 +15,10 @@ export const Footer = () => {
 						<p>All Rights Reserved.</p>
 					</div>
 					<div className="flex flex-col gap-1 md:flex-row md:gap-4">
-						<Link href="https://github.com" target="_blank" className="text-right">
+						<Link
+							href="https://github.com"
+							target="_blank"
+							className="text-right">
 							GitHub
 						</Link>
 						<Link href="https://x.com" target="_blank" className="text-right">

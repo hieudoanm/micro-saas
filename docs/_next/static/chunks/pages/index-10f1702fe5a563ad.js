@@ -14,13 +14,17 @@
 			let c = (e) => {
 				let { title: t = '', description: s = '', action: r = '' } = e;
 				return (0, a.jsx)('section', {
-					className: 'container mx-auto flex flex-col px-4 pt-8 pb-4 md:px-8 md:pt-16 md:pb-8',
+					className:
+						'container mx-auto flex flex-col px-4 pt-8 pb-4 md:px-8 md:pt-16 md:pb-8',
 					children: (0, a.jsxs)('div', {
 						className: 'mx-auto w-full max-w-2xl space-y-4 md:space-y-8',
 						children: [
 							(0, a.jsxs)('div', {
 								className: 'flex flex-col gap-y-4 text-center',
-								children: [(0, a.jsx)(d.fV, { children: t }), (0, a.jsx)(d.TT, { children: s })],
+								children: [
+									(0, a.jsx)(d.fV, { children: t }),
+									(0, a.jsx)(d.TT, { children: s }),
+								],
 							}),
 							(0, a.jsx)('div', {
 								className: 'flex w-full items-center justify-center',
@@ -42,25 +46,36 @@
 							l(window.origin);
 						}, []),
 						(0, a.jsxs)('section', {
-							className: 'container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8',
+							className:
+								'container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8',
 							children: [
 								(0, a.jsxs)('div', {
 									className: 'flex flex-col gap-y-4 text-center',
-									children: [(0, a.jsx)(d.fV, { children: t }), (0, a.jsx)(d.TT, { children: s })],
+									children: [
+										(0, a.jsx)(d.fV, { children: t }),
+										(0, a.jsx)(d.TT, { children: s }),
+									],
 								}),
 								(0, a.jsxs)('div', {
 									className:
 										'overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/40 shadow-lg shadow-neutral-100/10',
 									children: [
 										(0, a.jsxs)('div', {
-											className: 'flex items-center gap-x-4 border-b border-neutral-800 p-2 md:p-4',
+											className:
+												'flex items-center gap-x-4 border-b border-neutral-800 p-2 md:p-4',
 											children: [
 												(0, a.jsxs)('div', {
 													className: 'flex gap-x-2',
 													children: [
-														(0, a.jsx)('span', { className: 'h-3 w-3 rounded-full bg-red-500' }),
-														(0, a.jsx)('span', { className: 'h-3 w-3 rounded-full bg-yellow-500' }),
-														(0, a.jsx)('span', { className: 'h-3 w-3 rounded-full bg-green-500' }),
+														(0, a.jsx)('span', {
+															className: 'h-3 w-3 rounded-full bg-red-500',
+														}),
+														(0, a.jsx)('span', {
+															className: 'h-3 w-3 rounded-full bg-yellow-500',
+														}),
+														(0, a.jsx)('span', {
+															className: 'h-3 w-3 rounded-full bg-green-500',
+														}),
 													],
 												}),
 												(0, a.jsx)('div', {
@@ -70,7 +85,9 @@
 												}),
 											],
 										}),
-										(0, a.jsx)('div', { className: 'aspect-[9/16] w-full md:aspect-[16/9]' }),
+										(0, a.jsx)('div', {
+											className: 'aspect-[9/16] w-full md:aspect-[16/9]',
+										}),
 									],
 								}),
 							],
@@ -80,11 +97,15 @@
 				p = (e) => {
 					let { title: t = '', description: s = '', features: r = {} } = e;
 					return (0, a.jsxs)('section', {
-						className: 'container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8',
+						className:
+							'container mx-auto flex flex-col gap-y-4 px-4 md:gap-y-8 md:px-8',
 						children: [
 							(0, a.jsxs)('div', {
 								className: 'flex flex-col gap-y-4 text-center',
-								children: [(0, a.jsx)(d.fV, { children: t }), (0, a.jsx)(d.TT, { children: s })],
+								children: [
+									(0, a.jsx)(d.fV, { children: t }),
+									(0, a.jsx)(d.TT, { children: s }),
+								],
 							}),
 							(0, a.jsx)('div', {
 								className: 'grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8',
@@ -94,7 +115,12 @@
 										return { id: t, ...s };
 									})
 									.map((e) => {
-										let { id: t = '', emoji: s = '', title: r = '', description: l = '' } = e;
+										let {
+											id: t = '',
+											emoji: s = '',
+											title: r = '',
+											description: l = '',
+										} = e;
 										return (0, a.jsx)(
 											'div',
 											{
@@ -103,9 +129,18 @@
 													className:
 														'flex flex-col items-center justify-center gap-y-2 rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4 shadow shadow-neutral-100/10 transition-all hover:scale-110 md:gap-y-4',
 													children: [
-														(0, a.jsx)('span', { className: 'text-4xl', children: s }),
-														(0, a.jsx)('h3', { className: 'text-bold text-xl', children: r }),
-														(0, a.jsx)('p', { className: 'text-center text-sm text-neutral-400', children: l }),
+														(0, a.jsx)('span', {
+															className: 'text-4xl',
+															children: s,
+														}),
+														(0, a.jsx)('h3', {
+															className: 'text-bold text-xl',
+															children: r,
+														}),
+														(0, a.jsx)('p', {
+															className: 'text-center text-sm text-neutral-400',
+															children: l,
+														}),
 													],
 												}),
 											},
@@ -119,11 +154,15 @@
 				m = (e) => {
 					let { title: t = '', description: s = '', questions: r = {} } = e;
 					return (0, a.jsxs)('section', {
-						className: 'container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8',
+						className:
+							'container mx-auto flex flex-col gap-y-8 px-4 md:gap-y-16 md:px-8',
 						children: [
 							(0, a.jsxs)('div', {
 								className: 'flex flex-col gap-y-4 text-center',
-								children: [(0, a.jsx)(d.fV, { children: t }), (0, a.jsx)(d.TT, { children: s })],
+								children: [
+									(0, a.jsx)(d.fV, { children: t }),
+									(0, a.jsx)(d.TT, { children: s }),
+								],
 							}),
 							(0, a.jsx)('div', {
 								className:
@@ -141,24 +180,33 @@
 												className: 'group',
 												children: [
 													(0, a.jsxs)('summary', {
-														className: 'flex cursor-pointer list-none items-center justify-between px-4 py-3',
+														className:
+															'flex cursor-pointer list-none items-center justify-between px-4 py-3',
 														children: [
 															(0, a.jsxs)('span', {
-																className: 'font-semibold text-neutral-900 dark:text-neutral-100',
+																className:
+																	'font-semibold text-neutral-900 dark:text-neutral-100',
 																children: [t + 1, '. ', r],
 															}),
 															(0, a.jsxs)('span', {
 																className:
 																	'text-lg text-neutral-600 transition-all duration-300 group-open:rotate-180 dark:text-neutral-400',
 																children: [
-																	(0, a.jsx)('span', { className: 'group-open:hidden', children: '+' }),
-																	(0, a.jsx)('span', { className: 'hidden group-open:inline', children: '-' }),
+																	(0, a.jsx)('span', {
+																		className: 'group-open:hidden',
+																		children: '+',
+																	}),
+																	(0, a.jsx)('span', {
+																		className: 'hidden group-open:inline',
+																		children: '-',
+																	}),
 																],
 															}),
 														],
 													}),
 													(0, a.jsx)('div', {
-														className: 'px-4 pb-4 text-neutral-600 dark:text-neutral-400',
+														className:
+															'px-4 pb-4 text-neutral-600 dark:text-neutral-400',
 														children: l,
 													}),
 												],
@@ -171,7 +219,7 @@
 					});
 				};
 			var h = s(4629),
-				f = s(8782);
+				f = s(7311);
 			let g = async (e) => {
 					try {
 						return { data: await e, error: null };
@@ -181,27 +229,43 @@
 				},
 				j = (e) => {
 					let { description: t = '' } = e,
-						[{ loading: s = !1, prompt: r = 'Explain how AI works in a few words', answer: l = '' }, i] = (0,
-						x.useState)({ loading: !1, prompt: 'Explain how AI works in a few words', answer: '' });
+						[
+							{
+								loading: s = !1,
+								prompt: r = 'Explain how AI works in a few words',
+								answer: l = '',
+							},
+							i,
+						] = (0, x.useState)({
+							loading: !1,
+							prompt: 'Explain how AI works in a few words',
+							answer: '',
+						});
 					return (0, a.jsx)('section', {
 						className: 'border-b border-neutral-800 pb-8 md:pb-16',
 						children: (0, a.jsx)('div', {
 							className: 'container mx-auto px-4 py-8 md:px-8 md:py-16',
 							children: (0, a.jsxs)('div', {
-								className: 'mx-auto w-full max-w-2xl space-y-4 text-center md:space-y-8',
+								className:
+									'mx-auto w-full max-w-2xl space-y-4 text-center md:space-y-8',
 								children: [
 									(0, a.jsx)('h1', {
 										className: 'text-center text-5xl font-black md:text-6xl',
 										children: (0, a.jsx)(d.WG, { children: h.C }),
 									}),
-									(0, a.jsx)('p', { className: 'text-center text-base md:text-lg', children: t }),
+									(0, a.jsx)('p', {
+										className: 'text-center text-base md:text-lg',
+										children: t,
+									}),
 									(0, a.jsx)('div', {
-										className: 'mx-auto w-full max-w-lg rounded-full shadow md:shadow-purple-900',
+										className:
+											'mx-auto w-full max-w-lg rounded-full shadow md:shadow-purple-900',
 										children: (0, a.jsx)('div', {
 											className:
 												'overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]',
 											children: (0, a.jsxs)('div', {
-												className: 'flex rounded-full bg-neutral-900 p-1 md:p-2',
+												className:
+													'flex rounded-full bg-neutral-900 p-1 md:p-2',
 												children: [
 													(0, a.jsx)('input', {
 														id: 'prompt',
@@ -217,16 +281,20 @@
 														onClick: async () => {
 															var e, t, s;
 															i((e) => ({ ...e, loading: !0 }));
-															let { data: a, error: l } = await g(f.r.app.gemini.generate.mutate({ prompt: r }));
+															let { data: a, error: l } = await g(
+																f.r.app.gemini.generate.mutate({ prompt: r }),
+															);
 															if ((i((e) => ({ ...e, loading: !1 })), l)) {
 																(console.error(l), alert(l.message));
 																return;
 															}
-															if (!a) return void alert('Invalid Response Data');
+															if (!a)
+																return void alert('Invalid Response Data');
 															let n =
 																null !=
 																(s =
-																	null == (t = a.candidates.at(0)) || null == (e = t.content.parts.at(0))
+																	null == (t = a.candidates.at(0)) ||
+																	null == (e = t.content.parts.at(0))
 																		? void 0
 																		: e.text)
 																	? s
@@ -240,7 +308,9 @@
 											}),
 										}),
 									}),
-									!s && l.length > 0 ? (0, a.jsx)('p', { children: l }) : (0, a.jsx)(a.Fragment, {}),
+									!s && l.length > 0
+										? (0, a.jsx)('p', { children: l })
+										: (0, a.jsx)(a.Fragment, {}),
 								],
 							}),
 						}),
@@ -264,7 +334,8 @@
 									children: [
 										(0, a.jsx)('p', {
 											className: 'w-12 truncate text-right md:w-48',
-											children: null != (e = null == s ? void 0 : s.email) ? e : '',
+											children:
+												null != (e = null == s ? void 0 : s.email) ? e : '',
 										}),
 										(0, a.jsx)(n.$, { onClick: r, children: 'Sign Out' }),
 									],
@@ -273,8 +344,14 @@
 								(0, a.jsxs)('div', {
 									className: 'flex items-center gap-x-2 md:gap-x-4',
 									children: [
-										(0, a.jsx)(o(), { href: '/auth/sign-in', children: (0, a.jsx)(n.r, { children: 'Sign In' }) }),
-										(0, a.jsx)(o(), { href: '/auth/sign-up', children: (0, a.jsx)(n.$, { children: 'Sign Up' }) }),
+										(0, a.jsx)(o(), {
+											href: '/auth/sign-in',
+											children: (0, a.jsx)(n.r, { children: 'Sign In' }),
+										}),
+										(0, a.jsx)(o(), {
+											href: '/auth/sign-up',
+											children: (0, a.jsx)(n.$, { children: 'Sign Up' }),
+										}),
 									],
 								}),
 						],
@@ -283,13 +360,18 @@
 				v = (e) => {
 					let { quote: t = '', source: s = '' } = e;
 					return (0, a.jsx)('section', {
-						className: 'container mx-auto flex flex-col gap-y-8 px-4 py-8 md:gap-y-16 md:px-8 md:py-16',
+						className:
+							'container mx-auto flex flex-col gap-y-8 px-4 py-8 md:gap-y-16 md:px-8 md:py-16',
 						children: (0, a.jsx)('div', {
 							className: 'mx-auto w-full max-w-2xl',
 							children: (0, a.jsxs)('div', {
-								className: 'flex flex-col items-center justify-center gap-y-4 md:gap-y-8',
+								className:
+									'flex flex-col items-center justify-center gap-y-4 md:gap-y-8',
 								children: [
-									(0, a.jsx)('p', { className: 'text-center text-2xl font-medium', children: t }),
+									(0, a.jsx)('p', {
+										className: 'text-center text-2xl font-medium',
+										children: t,
+									}),
 									(0, a.jsxs)('p', { children: ['- ', s, ' -'] }),
 								],
 							}),
@@ -304,7 +386,8 @@
 						},
 						features: {
 							title: 'Features',
-							description: 'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
+							description:
+								'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
 							features: {
 								authentication: {
 									emoji: '\uD83D\uDD11',
@@ -326,7 +409,11 @@
 								},
 							},
 						},
-						demo: { title: 'How to Use', description: 'See it in action — your SaaS, ready to launch in minutes.' },
+						demo: {
+							title: 'How to Use',
+							description:
+								'See it in action — your SaaS, ready to launch in minutes.',
+						},
 						testimonials: {
 							quote:
 								'"This template saved me weeks of boring setup work. I had my app accepting payments on day one! Highly recommended for solo founders and indie hackers."',
@@ -334,7 +421,8 @@
 						},
 						faq: {
 							title: 'Frequently Asked Questions',
-							description: "Got questions? We've got answers to help you launch with confidence.",
+							description:
+								"Got questions? We've got answers to help you launch with confidence.",
 							questions: {
 								'paddle-account': {
 									question: 'Do I need a Paddle account to use this template?',
@@ -371,7 +459,8 @@
 						},
 					};
 					return (0, a.jsxs)('div', {
-						className: 'scrollbar-none flex h-screen flex-col gap-y-8 overflow-y-auto md:gap-y-16',
+						className:
+							'scrollbar-none flex h-screen flex-col gap-y-8 overflow-y-auto md:gap-y-16',
 						children: [
 							(0, a.jsx)(l.q, {}),
 							(0, a.jsx)(w, {}),
@@ -387,10 +476,24 @@
 												description: e.features.description,
 												features: e.features.features,
 											}),
-											(0, a.jsx)(u, { title: e.demo.title, description: e.demo.description }),
-											(0, a.jsx)(v, { quote: e.testimonials.quote, source: e.testimonials.quote }),
-											(0, a.jsx)(m, { title: e.faq.title, description: e.faq.description, questions: e.faq.questions }),
-											(0, a.jsx)(c, { title: e.cta.title, description: e.cta.description, action: e.cta.action }),
+											(0, a.jsx)(u, {
+												title: e.demo.title,
+												description: e.demo.description,
+											}),
+											(0, a.jsx)(v, {
+												quote: e.testimonials.quote,
+												source: e.testimonials.quote,
+											}),
+											(0, a.jsx)(m, {
+												title: e.faq.title,
+												description: e.faq.description,
+												questions: e.faq.questions,
+											}),
+											(0, a.jsx)(c, {
+												title: e.cta.title,
+												description: e.cta.description,
+												action: e.cta.action,
+											}),
 										],
 									}),
 								],
@@ -456,7 +559,8 @@
 									type: s,
 									disabled: r,
 									onClick: l,
-									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
+									className:
+										'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
 									children: n,
 								}),
 							})
@@ -497,7 +601,10 @@
 					className: 'border-b border-neutral-800 shadow shadow-neutral-100/10',
 					children: (0, a.jsx)('div', {
 						className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
-						children: (0, a.jsx)('div', { className: 'flex items-center justify-between gap-x-4', children: t }),
+						children: (0, a.jsx)('div', {
+							className: 'flex items-center justify-between gap-x-4',
+							children: t,
+						}),
 					}),
 				});
 			};
@@ -520,7 +627,8 @@
 			let d = new Date().getFullYear(),
 				i = () =>
 					(0, a.jsx)('footer', {
-						className: 'border-t border-neutral-800 shadow shadow-neutral-100/10',
+						className:
+							'border-t border-neutral-800 shadow shadow-neutral-100/10',
 						children: (0, a.jsx)('div', {
 							className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
 							children: (0, a.jsxs)('div', {
@@ -529,7 +637,9 @@
 									(0, a.jsxs)('div', {
 										className: 'flex flex-col gap-1 md:flex-row',
 										children: [
-											(0, a.jsxs)('p', { children: ['\xa9 ', d, ' ', r.C, '.'] }),
+											(0, a.jsxs)('p', {
+												children: ['\xa9 ', d, ' ', r.C, '.'],
+											}),
 											(0, a.jsx)('p', { children: 'All Rights Reserved.' }),
 										],
 									}),
@@ -561,16 +671,23 @@
 			var a = s(7765);
 			let r = (e) => {
 					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h2', { className: 'text-2xl font-extrabold md:text-3xl', children: t });
+					return (0, a.jsx)('h2', {
+						className: 'text-2xl font-extrabold md:text-3xl',
+						children: t,
+					});
 				},
 				l = (e) => {
 					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
-					return (0, a.jsx)('h6', { className: 'text-sm font-normal md:text-base', children: t });
+					return (0, a.jsx)('h6', {
+						className: 'text-sm font-normal md:text-base',
+						children: t,
+					});
 				},
 				n = (e) => {
 					let { children: t = (0, a.jsx)(a.Fragment, {}) } = e;
 					return (0, a.jsx)('span', {
-						className: 'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
+						className:
+							'bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 bg-clip-text text-transparent',
 						children: t,
 					});
 				};

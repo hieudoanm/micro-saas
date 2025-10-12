@@ -7,7 +7,9 @@ const ErrorPage = () => {
 			<div className="text-center">
 				<h1 className="text-9xl font-extrabold">404</h1>
 				<p className="mt-4 text-2xl font-semibold">Page Not Found</p>
-				<p className="mt-2">Sorry, the page you&apos;re looking for doesn&apos;t exist.</p>
+				<p className="mt-2">
+					Sorry, the page you&apos;re looking for doesn&apos;t exist.
+				</p>
 				<Link href="/">
 					<Button>Go Home</Button>
 				</Link>

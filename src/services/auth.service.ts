@@ -15,7 +15,10 @@ const signUp = async ({
 	const hash = await Password(password).hash();
 	await prismaClient.$connect();
 	const { data: newUser, error } = await tryCatch(
-		prismaClient.user.create({ select: { email: true }, data: { email, password: hash } }),
+		prismaClient.user.create({
+			select: { email: true },
+			data: { email, password: hash },
+		}),
 	);
 	await prismaClient.$disconnect();
 	if (error) throw new Error(error.message);
@@ -31,7 +34,10 @@ const signIn = async ({
 	password: string;
 }): Promise<{ token: string; success: boolean }> => {
 	const { data: user, error } = await tryCatch(
-		prismaClient.user.findUnique({ select: { email: true, password: true }, where: { email } }),
+		prismaClient.user.findUnique({
+			select: { email: true, password: true },
+			where: { email },
+		}),
 	);
 	if (error) throw new Error(error.message);
 	if (!user) throw new Error('Invalid Email or Password');
@@ -43,7 +49,10 @@ const signIn = async ({
 };
 
 const user = ({ email, password }: { email: string; password: string }) => {
-	return { signUp: () => signUp({ email, password }), signIn: () => signIn({ email, password }) };
+	return {
+		signUp: () => signUp({ email, password }),
+		signIn: () => signIn({ email, password }),
+	};
 };
 
 const generateToken = () => {
@@ -81,8 +90,17 @@ const forgetPassword = async ({ email }: { email: string }) => {
 	return { success: true };
 };
 
-const resetPassword = async ({ token, password }: { token: string; password: string }) => {
-	const tokenHash: string = crypto.createHash('sha256').update(token).digest('hex');
+const resetPassword = async ({
+	token,
+	password,
+}: {
+	token: string;
+	password: string;
+}) => {
+	const tokenHash: string = crypto
+		.createHash('sha256')
+		.update(token)
+		.digest('hex');
 	const { data: passwordResetToken, error: findError } = await tryCatch(
 		prismaClient.passwordResetToken.findUnique({
 			where: { token: tokenHash },
@@ -92,7 +110,8 @@ const resetPassword = async ({ token, password }: { token: string; password: str
 	if (findError) throw new Error(findError.message);
 	if (!passwordResetToken) throw new Error('Invalid token');
 	if (passwordResetToken.used) throw new Error('Token already used');
-	if (passwordResetToken.expiresAt < new Date()) throw new Error('Token expired');
+	if (passwordResetToken.expiresAt < new Date())
+		throw new Error('Token expired');
 	const hash = await Password(password).hash();
 	const { data, error: updateError } = await tryCatch(
 		prismaClient.$transaction([
@@ -110,7 +129,8 @@ const resetPassword = async ({ token, password }: { token: string; password: str
 	if (!data) throw new Error('Failed to Update');
 	const [updatedUser, updatedPasswordResetToken] = data;
 	if (!updatedUser) throw new Error('Failed to Update User');
-	if (!updatedPasswordResetToken) throw new Error('Failed to Update Password Reset Token');
+	if (!updatedPasswordResetToken)
+		throw new Error('Failed to Update Password Reset Token');
 	return { success: true };
 };
 

@@ -56,7 +56,8 @@
 									type: r,
 									disabled: d,
 									onClick: s,
-									className: 'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
+									className:
+										'w-full cursor-pointer rounded-full bg-neutral-900 px-3 py-1 text-sm',
 									children: n,
 								}),
 							})
@@ -101,10 +102,22 @@
 					children: (0, l.jsxs)('div', {
 						className: 'text-center',
 						children: [
-							(0, l.jsx)('h1', { className: 'text-9xl font-extrabold', children: '404' }),
-							(0, l.jsx)('p', { className: 'mt-4 text-2xl font-semibold', children: 'Page Not Found' }),
-							(0, l.jsx)('p', { className: 'mt-2', children: "Sorry, the page you're looking for doesn't exist." }),
-							(0, l.jsx)(n(), { href: '/', children: (0, l.jsx)(d.$, { children: 'Go Home' }) }),
+							(0, l.jsx)('h1', {
+								className: 'text-9xl font-extrabold',
+								children: '404',
+							}),
+							(0, l.jsx)('p', {
+								className: 'mt-4 text-2xl font-semibold',
+								children: 'Page Not Found',
+							}),
+							(0, l.jsx)('p', {
+								className: 'mt-2',
+								children: "Sorry, the page you're looking for doesn't exist.",
+							}),
+							(0, l.jsx)(n(), {
+								href: '/',
+								children: (0, l.jsx)(d.$, { children: 'Go Home' }),
+							}),
 						],
 					}),
 				});

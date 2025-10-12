@@ -21,7 +21,10 @@ const changePassword = async ({
 	newPassword: string;
 }) => {
 	const { data: user, error: findError } = await tryCatch(
-		prismaClient.user.findUnique({ select: { email: true, password: true }, where: { email } }),
+		prismaClient.user.findUnique({
+			select: { email: true, password: true },
+			where: { email },
+		}),
 	);
 	if (findError) throw new Error(findError.message);
 	if (!user) throw new Error('Invalid Email or Password');

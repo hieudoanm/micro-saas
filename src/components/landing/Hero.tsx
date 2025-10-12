@@ -6,7 +6,14 @@ import { FC, useState } from 'react';
 import { Linear } from '../common/Typography';
 
 export const Hero: FC<{ description: string }> = ({ description = '' }) => {
-	const [{ loading = false, prompt = 'Explain how AI works in a few words', answer = '' }, setState] = useState<{
+	const [
+		{
+			loading = false,
+			prompt = 'Explain how AI works in a few words',
+			answer = '',
+		},
+		setState,
+	] = useState<{
 		loading: boolean;
 		prompt: string;
 		answer: string;
@@ -32,14 +39,19 @@ export const Hero: FC<{ description: string }> = ({ description = '' }) => {
 									className="grow rounded-full border-0 px-3 py-1 text-sm focus:outline-none md:px-4 md:py-2 md:text-base"
 									value={prompt}
 									onChange={(event) => {
-										setState((previous) => ({ ...previous, prompt: event.target.value }));
+										setState((previous) => ({
+											...previous,
+											prompt: event.target.value,
+										}));
 									}}
 								/>
 								<Button
 									disabled={loading}
 									onClick={async () => {
 										setState((previous) => ({ ...previous, loading: true }));
-										const { data, error } = await tryCatch(trpcClient.app.gemini.generate.mutate({ prompt }));
+										const { data, error } = await tryCatch(
+											trpcClient.app.gemini.generate.mutate({ prompt }),
+										);
 										setState((previous) => ({ ...previous, loading: false }));
 										if (error) {
 											console.error(error);
@@ -50,7 +62,8 @@ export const Hero: FC<{ description: string }> = ({ description = '' }) => {
 											alert('Invalid Response Data');
 											return;
 										}
-										const answer = data.candidates.at(0)?.content.parts.at(0)?.text ?? '';
+										const answer =
+											data.candidates.at(0)?.content.parts.at(0)?.text ?? '';
 										if (!answer) {
 											alert('Invalid Answer');
 											return;

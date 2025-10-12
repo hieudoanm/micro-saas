@@ -10,7 +10,13 @@ export const Button: FC<{
 	disabled?: boolean;
 	onClick?: () => void;
 	children: ReactNode;
-}> = ({ size = 'md', type = 'button', disabled = false, onClick = () => {}, children = <></> }) => {
+}> = ({
+	size = 'md',
+	type = 'button',
+	disabled = false,
+	onClick = () => {},
+	children = <></>,
+}) => {
 	if (size === 'sm') {
 		return (
 			<button
@@ -52,7 +58,13 @@ export const OutlineButton: FC<{
 	disabled?: boolean;
 	onClick?: () => void;
 	children: ReactNode;
-}> = ({ size = 'md', type = 'button', disabled = false, onClick = () => {}, children = <></> }) => {
+}> = ({
+	size = 'md',
+	type = 'button',
+	disabled = false,
+	onClick = () => {},
+	children = <></>,
+}) => {
 	if (size === 'sm') {
 		return (
 			<div className="overflow-hidden rounded-full bg-gradient-to-r from-red-800 via-purple-800 to-blue-800 p-[1px]">
