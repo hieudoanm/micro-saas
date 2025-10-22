@@ -5,6 +5,7 @@ export type DemoProps = { title: string; description: string };
 
 export const Demo: FC<DemoProps> = ({ title = '', description = '' }) => {
 	const [origin, setOrigin] = useState<string>('');
+
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			setOrigin(window.origin);
