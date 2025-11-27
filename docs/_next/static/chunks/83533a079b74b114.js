@@ -3,7 +3,7 @@
 	48063,
 	(e) => {
 		'use strict';
-		let t, r, n, s, i, o, u, a, l, c, h, d, p, f, y, m, b;
+		let t, r, n, s, i, o, u, a, l, c, h, p, d, f, y, m, b;
 		var v,
 			g,
 			O,
@@ -279,7 +279,7 @@
 						output: { serialize: (e) => e, deserialize: (e) => e },
 					};
 		}
-		var B = M(A());
+		var B = M(A(), 1);
 		let J = { query: 'GET', mutation: 'POST', subscription: 'PATCH' };
 		function Y(e) {
 			return 'input' in e
@@ -407,7 +407,7 @@
 			eh = (e) => {
 				Object.freeze && Object.freeze(e);
 			},
-			ed = (e) =>
+			ep = (e) =>
 				(function e(t, r, n) {
 					let s = r.join('.');
 					return (
@@ -440,7 +440,7 @@
 						n[s]
 					);
 				})(e, [], Object.create(null)),
-			ep = (e) =>
+			ed = (e) =>
 				new Proxy(ec, {
 					get(t, r) {
 						if ('then' !== r) return e(r);
@@ -1203,7 +1203,6 @@
 						'undefined' != typeof Symbol &&
 						((n = Symbol.asyncIterator), (s = Symbol.iterator));
 						i--;
-
 					) {
 						if (n && null != (t = e[n])) return t.call(e);
 						if (s && null != (t = e[s])) return new r(t.call(e));
@@ -1437,13 +1436,13 @@
 		let eH = Symbol.for('trpc_untypedClient'),
 			eG = { query: 'query', mutate: 'mutation', subscribe: 'subscription' };
 		function eW(e) {
-			let t = ed(({ path: t, args: r }) => {
+			let t = ep(({ path: t, args: r }) => {
 				let n = [...t],
 					s = eG[n.pop()],
 					i = n.join('.');
 				return e[s](i, ...r);
 			});
-			return ep((r) => (r === eH ? e : t[r]));
+			return ed((r) => (r === eH ? e : t[r]));
 		}
 		function ez(e) {
 			return eW(new eN(e));
@@ -1499,7 +1498,6 @@
 								'undefined' != typeof Symbol &&
 								((n = Symbol.asyncIterator), (s = Symbol.iterator));
 								i--;
-
 							) {
 								if (n && null != (t = e[n])) return t.call(e);
 								if (s && null != (t = e[s])) return new r(t.call(e));
@@ -1846,7 +1844,7 @@
 				},
 			}),
 			e5 = e.i(36960);
-		e.i(41640);
+		e.i(88418);
 		var te = {
 				setTimeout: (e, t) => setTimeout(e, t),
 				clearTimeout: (e) => clearTimeout(e),
@@ -1898,7 +1896,7 @@
 			if (o) {
 				if (n) {
 					if (t.queryHash !== tc(o, t.options)) return !1;
-				} else if (!td(t.queryKey, o)) return !1;
+				} else if (!tp(t.queryKey, o)) return !1;
 			}
 			if ('all' !== r) {
 				let e = t.isActive();
@@ -1916,7 +1914,7 @@
 				if (!t.options.mutationKey) return !1;
 				if (r) {
 					if (th(t.options.mutationKey) !== th(i)) return !1;
-				} else if (!td(t.options.mutationKey, i)) return !1;
+				} else if (!tp(t.options.mutationKey, i)) return !1;
 			}
 			return (!n || t.state.status === n) && (!s || !!s(t));
 		}
@@ -1932,7 +1930,7 @@
 					: t,
 			);
 		}
-		function td(e, t) {
+		function tp(e, t) {
 			return (
 				e === t ||
 				(typeof e == typeof t &&
@@ -1940,10 +1938,10 @@
 					!!t &&
 					'object' == typeof e &&
 					'object' == typeof t &&
-					Object.keys(t).every((r) => td(e[r], t[r])))
+					Object.keys(t).every((r) => tp(e[r], t[r])))
 			);
 		}
-		var tp = Object.prototype.hasOwnProperty;
+		var td = Object.prototype.hasOwnProperty;
 		function tf(e, t) {
 			if (e === t) return e;
 			let r = tm(e) && tm(t);
@@ -1958,7 +1956,7 @@
 					l = e[i],
 					c = t[i];
 				if (l === c) {
-					((o[i] = l), (r ? a < n : tp.call(e, i)) && u++);
+					((o[i] = l), (r ? a < n : td.call(e, i)) && u++);
 					continue;
 				}
 				if (
@@ -2087,18 +2085,18 @@
 									})(a)
 								: void 0,
 							h = void 0 === n.data ? c?.data : n.data,
-							d = void 0 === h ? h : i(h),
-							p = s.get(o),
-							f = p?.state.status === 'pending',
-							y = p?.state.fetchStatus === 'fetching';
-						if (p) {
-							let e = c && void 0 !== l && l > p.state.dataUpdatedAt;
-							if (n.dataUpdatedAt > p.state.dataUpdatedAt || e) {
+							p = void 0 === h ? h : i(h),
+							d = s.get(o),
+							f = d?.state.status === 'pending',
+							y = d?.state.fetchStatus === 'fetching';
+						if (d) {
+							let e = c && void 0 !== l && l > d.state.dataUpdatedAt;
+							if (n.dataUpdatedAt > d.state.dataUpdatedAt || e) {
 								let { fetchStatus: e, ...t } = n;
-								p.setState({ ...t, data: d });
+								d.setState({ ...t, data: p });
 							}
 						} else
-							p = s.build(
+							d = s.build(
 								e,
 								{
 									...e.getDefaultOptions().hydrate?.queries,
@@ -2109,16 +2107,16 @@
 								},
 								{
 									...n,
-									data: d,
+									data: p,
 									fetchStatus: 'idle',
-									status: void 0 !== d ? 'success' : n.status,
+									status: void 0 !== p ? 'success' : n.status,
 								},
 							);
 						a &&
 							!f &&
 							!y &&
-							(void 0 === l || l > p.state.dataUpdatedAt) &&
-							p
+							(void 0 === l || l > d.state.dataUpdatedAt) &&
+							d
 								.fetch(void 0, { initialPromise: Promise.resolve(a).then(i) })
 								.catch(tn);
 					},
@@ -2634,11 +2632,11 @@
 							let o = e.retry ?? 3 * !tr,
 								u = e.retryDelay ?? t7,
 								h = 'function' == typeof u ? u(n, t) : u,
-								d =
+								p =
 									!0 === o ||
 									('number' == typeof o && n < o) ||
 									('function' == typeof o && o(n, t));
-							r || !d
+							r || !p
 								? a(t)
 								: (n++,
 									e.onFail?.(n, t),
@@ -2696,19 +2694,19 @@
 				#l;
 				#c;
 				#h;
-				#d;
 				#p;
+				#d;
 				constructor(e) {
 					(super(),
-						(this.#p = !1),
-						(this.#d = e.defaultOptions),
+						(this.#d = !1),
+						(this.#p = e.defaultOptions),
 						this.setOptions(e.options),
 						(this.observers = []),
 						(this.#c = e.client),
 						(this.#l = this.#c.getQueryCache()),
 						(this.queryKey = e.queryKey),
 						(this.queryHash = e.queryHash),
-						(this.#u = re(this.options)),
+						(this.#u = rt(this.options)),
 						(this.state = e.state ?? this.#u),
 						this.scheduleGc());
 				}
@@ -2720,14 +2718,13 @@
 				}
 				setOptions(e) {
 					if (
-						((this.options = { ...this.#d, ...e }),
+						((this.options = { ...this.#p, ...e }),
 						this.updateGcTime(this.options.gcTime),
 						this.state && void 0 === this.state.data)
 					) {
-						let e = re(this.options);
+						let e = rt(this.options);
 						void 0 !== e.data &&
-							(this.setData(e.data, { updatedAt: e.dataUpdatedAt, manual: !0 }),
-							(this.#u = e));
+							(this.setState(re(e.data, e.dataUpdatedAt)), (this.#u = e));
 					}
 				}
 				optionalRemove() {
@@ -2815,7 +2812,7 @@
 						((this.observers = this.observers.filter((t) => t !== e)),
 						this.observers.length ||
 							(this.#h &&
-								(this.#p
+								(this.#d
 									? this.#h.cancel({ revert: !0 })
 									: this.#h.cancelRetry()),
 							this.scheduleGc()),
@@ -2849,7 +2846,7 @@
 						s = (e) => {
 							Object.defineProperty(e, 'signal', {
 								enumerable: !0,
-								get: () => ((this.#p = !0), n.signal),
+								get: () => ((this.#d = !0), n.signal),
 							});
 						},
 						i = () => {
@@ -2864,7 +2861,7 @@
 										}),
 									),
 									e);
-							return ((this.#p = !1), this.options.persister)
+							return ((this.#d = !1), this.options.persister)
 								? this.options.persister(r, n, this)
 								: r(n);
 						},
@@ -2958,12 +2955,8 @@
 							case 'success':
 								let r = {
 									...t,
-									data: e.data,
+									...re(e.data, e.dataUpdatedAt),
 									dataUpdateCount: t.dataUpdateCount + 1,
-									dataUpdatedAt: e.dataUpdatedAt ?? Date.now(),
-									error: null,
-									isInvalidated: !1,
-									status: 'success',
 									...(!e.manual && {
 										fetchStatus: 'idle',
 										fetchFailureCount: 0,
@@ -3006,7 +2999,16 @@
 				...(void 0 === e && { error: null, status: 'pending' }),
 			};
 		}
-		function re(e) {
+		function re(e, t) {
+			return {
+				data: e,
+				dataUpdatedAt: t ?? Date.now(),
+				error: null,
+				isInvalidated: !1,
+				status: 'success',
+			};
+		}
+		function rt(e) {
 			let t =
 					'function' == typeof e.initialData ? e.initialData() : e.initialData,
 				r = void 0 !== t,
@@ -3030,7 +3032,7 @@
 				fetchStatus: 'idle',
 			};
 		}
-		var rt = class extends t0 {
+		var rr = class extends t0 {
 				constructor(e = {}) {
 					(super(), (this.config = e), (this.#y = new Map()));
 				}
@@ -3108,7 +3110,7 @@
 					});
 				}
 			},
-			rr = class extends t8 {
+			rn = class extends t8 {
 				#c;
 				#m;
 				#b;
@@ -3119,7 +3121,7 @@
 						(this.mutationId = e.mutationId),
 						(this.#b = e.mutationCache),
 						(this.#m = []),
-						(this.state = e.state || rn()),
+						(this.state = e.state || rs()),
 						this.setOptions(e.options),
 						this.scheduleGc());
 				}
@@ -3312,7 +3314,7 @@
 						}));
 				}
 			};
-		function rn() {
+		function rs() {
 			return {
 				context: void 0,
 				data: void 0,
@@ -3325,7 +3327,7 @@
 				submittedAt: 0,
 			};
 		}
-		var rs = class extends t0 {
+		var ri = class extends t0 {
 			constructor(e = {}) {
 				(super(),
 					(this.config = e),
@@ -3337,7 +3339,7 @@
 			#g;
 			#O;
 			build(e, t, r) {
-				let n = new rr({
+				let n = new rn({
 					client: e,
 					mutationCache: this,
 					mutationId: ++this.#O,
@@ -3348,7 +3350,7 @@
 			}
 			add(e) {
 				this.#v.add(e);
-				let t = ri(e);
+				let t = ro(e);
 				if ('string' == typeof t) {
 					let r = this.#g.get(t);
 					r ? r.push(e) : this.#g.set(t, [e]);
@@ -3357,7 +3359,7 @@
 			}
 			remove(e) {
 				if (this.#v.delete(e)) {
-					let t = ri(e);
+					let t = ro(e);
 					if ('string' == typeof t) {
 						let r = this.#g.get(t);
 						if (r)
@@ -3370,7 +3372,7 @@
 				this.notify({ type: 'removed', mutation: e });
 			}
 			canRun(e) {
-				let t = ri(e);
+				let t = ro(e);
 				if ('string' != typeof t) return !0;
 				{
 					let r = this.#g.get(t),
@@ -3379,7 +3381,7 @@
 				}
 			}
 			runNext(e) {
-				let t = ri(e);
+				let t = ro(e);
 				if ('string' != typeof t) return Promise.resolve();
 				{
 					let r = this.#g.get(t)?.find((t) => t !== e && t.state.isPaused);
@@ -3419,10 +3421,10 @@
 				);
 			}
 		};
-		function ri(e) {
+		function ro(e) {
 			return e.options.scope?.id;
 		}
-		function ro(e) {
+		function ru(e) {
 			return {
 				onFetch: (t, r) => {
 					let n = t.options,
@@ -3472,12 +3474,12 @@
 							if (s && i.length) {
 								let e = 'backward' === s,
 									t = { pages: i, pageParams: o },
-									r = (e ? ra : ru)(n, t);
+									r = (e ? rl : ra)(n, t);
 								u = await c(t, r, e);
 							} else {
 								let t = e ?? i.length;
 								do {
-									let e = 0 === a ? (o[0] ?? n.initialPageParam) : ru(n, u);
+									let e = 0 === a ? (o[0] ?? n.initialPageParam) : ra(n, u);
 									if (a > 0 && null == e) break;
 									((u = await c(u, e)), a++);
 								} while (a < t);
@@ -3500,26 +3502,26 @@
 				},
 			};
 		}
-		function ru(e, { pages: t, pageParams: r }) {
+		function ra(e, { pages: t, pageParams: r }) {
 			let n = t.length - 1;
 			return t.length > 0 ? e.getNextPageParam(t[n], t, r[n], r) : void 0;
 		}
-		function ra(e, { pages: t, pageParams: r }) {
+		function rl(e, { pages: t, pageParams: r }) {
 			return t.length > 0 ? e.getPreviousPageParam?.(t[0], t, r[0], r) : void 0;
 		}
-		var rl = class {
+		var rc = class {
 				#x;
 				#b;
-				#d;
+				#p;
 				#w;
 				#P;
 				#j;
 				#S;
 				#C;
 				constructor(e = {}) {
-					((this.#x = e.queryCache || new rt()),
-						(this.#b = e.mutationCache || new rs()),
-						(this.#d = e.defaultOptions || {}),
+					((this.#x = e.queryCache || new rr()),
+						(this.#b = e.mutationCache || new ri()),
+						(this.#p = e.defaultOptions || {}),
 						(this.#w = new Map()),
 						(this.#P = new Map()),
 						(this.#j = 0));
@@ -3656,13 +3658,13 @@
 					return this.fetchQuery(e).then(tn).catch(tn);
 				}
 				fetchInfiniteQuery(e) {
-					return ((e.behavior = ro(e.pages)), this.fetchQuery(e));
+					return ((e.behavior = ru(e.pages)), this.fetchQuery(e));
 				}
 				prefetchInfiniteQuery(e) {
 					return this.fetchInfiniteQuery(e).then(tn).catch(tn);
 				}
 				ensureInfiniteQueryData(e) {
-					return ((e.behavior = ro(e.pages)), this.ensureQueryData(e));
+					return ((e.behavior = ru(e.pages)), this.ensureQueryData(e));
 				}
 				resumePausedMutations() {
 					return t2.isOnline()
@@ -3676,10 +3678,10 @@
 					return this.#b;
 				}
 				getDefaultOptions() {
-					return this.#d;
+					return this.#p;
 				}
 				setDefaultOptions(e) {
-					this.#d = e;
+					this.#p = e;
 				}
 				setQueryDefaults(e, t) {
 					this.#w.set(th(e), { queryKey: e, defaultOptions: t });
@@ -3689,7 +3691,7 @@
 						r = {};
 					return (
 						t.forEach((t) => {
-							td(e, t.queryKey) && Object.assign(r, t.defaultOptions);
+							tp(e, t.queryKey) && Object.assign(r, t.defaultOptions);
 						}),
 						r
 					);
@@ -3702,7 +3704,7 @@
 						r = {};
 					return (
 						t.forEach((t) => {
-							td(e, t.mutationKey) && Object.assign(r, t.defaultOptions);
+							tp(e, t.mutationKey) && Object.assign(r, t.defaultOptions);
 						}),
 						r
 					);
@@ -3710,7 +3712,7 @@
 				defaultQueryOptions(e) {
 					if (e._defaulted) return e;
 					let t = {
-						...this.#d.queries,
+						...this.#p.queries,
 						...this.getQueryDefaults(e.queryKey),
 						...e,
 						_defaulted: !0,
@@ -3729,7 +3731,7 @@
 					return e?._defaulted
 						? e
 						: {
-								...this.#d.mutations,
+								...this.#p.mutations,
 								...(e?.mutationKey && this.getMutationDefaults(e.mutationKey)),
 								...e,
 								_defaulted: !0,
@@ -3739,7 +3741,7 @@
 					(this.#x.clear(), this.#b.clear());
 				}
 			},
-			rc = class extends t0 {
+			rh = class extends t0 {
 				constructor(e, t) {
 					(super(),
 						(this.options = t),
@@ -3770,7 +3772,7 @@
 				onSubscribe() {
 					1 === this.listeners.size &&
 						(this.#q.addObserver(this),
-						rh(this.#q, this.options) ? this.#L() : this.updateResult(),
+						rp(this.#q, this.options) ? this.#L() : this.updateResult(),
 						this.#N());
 				}
 				onUnsubscribe() {
@@ -3813,7 +3815,7 @@
 									observer: this,
 								}));
 					let n = this.hasListeners();
-					(n && rp(this.#q, r, this.options, t) && this.#L(),
+					(n && rf(this.#q, r, this.options, t) && this.#L(),
 						this.updateResult(),
 						n &&
 							(this.#q !== r ||
@@ -3937,13 +3939,13 @@
 						h = !1;
 					if (t._optimisticResults) {
 						let r = this.hasListeners(),
-							i = !r && rh(e, t),
-							o = r && rp(e, n, t, s);
+							i = !r && rp(e, t),
+							o = r && rf(e, n, t, s);
 						((i || o) && (c = { ...c, ...t5(l.data, e.options) }),
 							'isRestoring' === t._optimisticResults &&
 								(c.fetchStatus = 'idle'));
 					}
-					let { error: d, errorUpdatedAt: p, status: f } = c;
+					let { error: p, errorUpdatedAt: d, status: f } = c;
 					r = c.data;
 					let y = !1;
 					if (void 0 !== t.placeholderData && void 0 === r && 'pending' === f) {
@@ -3970,7 +3972,7 @@
 								this.#Q = e;
 							}
 					this.#Q &&
-						((d = this.#Q), (r = this.#T), (p = Date.now()), (f = 'error'));
+						((p = this.#Q), (r = this.#T), (d = Date.now()), (f = 'error'));
 					let m = 'fetching' === c.fetchStatus,
 						b = 'pending' === f,
 						v = 'error' === f,
@@ -3986,8 +3988,8 @@
 							isLoading: g,
 							data: r,
 							dataUpdatedAt: c.dataUpdatedAt,
-							error: d,
-							errorUpdatedAt: p,
+							error: p,
+							errorUpdatedAt: d,
 							failureCount: c.fetchFailureCount,
 							failureReason: c.fetchFailureReason,
 							errorUpdateCount: c.errorUpdateCount,
@@ -4001,7 +4003,7 @@
 							isPaused: 'paused' === c.fetchStatus,
 							isPlaceholderData: h,
 							isRefetchError: v && O,
-							isStale: rf(e, t),
+							isStale: ry(e, t),
 							refetch: this.refetch,
 							promise: this.#_,
 							isEnabled: !1 !== tu(t.enabled, e),
@@ -4077,7 +4079,7 @@
 					});
 				}
 			};
-		function rh(e, t) {
+		function rp(e, t) {
 			return (
 				(!1 !== tu(t.enabled, e) &&
 					void 0 === e.state.data &&
@@ -4088,21 +4090,21 @@
 		function rd(e, t, r) {
 			if (!1 !== tu(t.enabled, e) && 'static' !== to(t.staleTime, e)) {
 				let n = 'function' == typeof r ? r(e) : r;
-				return 'always' === n || (!1 !== n && rf(e, t));
+				return 'always' === n || (!1 !== n && ry(e, t));
 			}
 			return !1;
 		}
-		function rp(e, t, r, n) {
+		function rf(e, t, r, n) {
 			return (
 				(e !== t || !1 === tu(n.enabled, e)) &&
 				(!r.suspense || 'error' !== e.state.status) &&
-				rf(e, r)
+				ry(e, r)
 			);
 		}
-		function rf(e, t) {
+		function ry(e, t) {
 			return !1 !== tu(t.enabled, e) && e.isStaleByTime(to(t.staleTime, e));
 		}
-		var ry = class extends rc {
+		var rm = class extends rh {
 				constructor(e, t) {
 					super(e, t);
 				}
@@ -4112,10 +4114,10 @@
 						(this.fetchPreviousPage = this.fetchPreviousPage.bind(this)));
 				}
 				setOptions(e) {
-					super.setOptions({ ...e, behavior: ro() });
+					super.setOptions({ ...e, behavior: ru() });
 				}
 				getOptimisticResult(e) {
-					return ((e.behavior = ro()), super.getOptimisticResult(e));
+					return ((e.behavior = ru()), super.getOptimisticResult(e));
 				}
 				fetchNextPage(e) {
 					return this.fetch({
@@ -4141,26 +4143,26 @@
 						} = i,
 						c = s.fetchMeta?.fetchMore?.direction,
 						h = a && 'forward' === c,
-						d = o && 'forward' === c,
-						p = a && 'backward' === c,
+						p = o && 'forward' === c,
+						d = a && 'backward' === c,
 						f = o && 'backward' === c;
 					return {
 						...i,
 						fetchNextPage: this.fetchNextPage,
 						fetchPreviousPage: this.fetchPreviousPage,
-						hasNextPage: !!(r = s.data) && null != ru(t, r),
+						hasNextPage: !!(r = s.data) && null != ra(t, r),
 						hasPreviousPage:
-							!!(n = s.data) && !!t.getPreviousPageParam && null != ra(t, n),
+							!!(n = s.data) && !!t.getPreviousPageParam && null != rl(t, n),
 						isFetchNextPageError: h,
-						isFetchingNextPage: d,
-						isFetchPreviousPageError: p,
+						isFetchingNextPage: p,
+						isFetchPreviousPageError: d,
 						isFetchingPreviousPage: f,
-						isRefetchError: l && !h && !p,
-						isRefetching: u && !d && !f,
+						isRefetchError: l && !h && !d,
+						isRefetching: u && !p && !f,
 					};
 				}
 			},
-			rm = e5.createContext(
+			rb = e5.createContext(
 				((a = !1),
 				{
 					clearReset: () => {
@@ -4172,17 +4174,17 @@
 					isReset: () => a,
 				}),
 			),
-			rb = (e, t) => {
+			rv = (e, t) => {
 				(e.suspense || e.throwOnError || e.experimental_prefetchInRender) &&
 					!t.isReset() &&
 					(e.retryOnMount = !1);
 			},
-			rv = (e) => {
+			rg = (e) => {
 				e5.useEffect(() => {
 					e.clearReset();
 				}, [e]);
 			},
-			rg = ({
+			rO = ({
 				result: e,
 				errorResetBoundary: t,
 				throwOnError: r,
@@ -4194,10 +4196,10 @@
 				!e.isFetching &&
 				n &&
 				((s && void 0 === e.data) || tj(r, [e.error, n])),
-			rO = e5.createContext(!1);
-		rO.Provider;
-		var rx = (e, t) => void 0 === t.state.data,
-			rw = (e) => {
+			rx = e5.createContext(!1);
+		rx.Provider;
+		var rw = (e, t) => void 0 === t.state.data,
+			rP = (e) => {
 				if (e.suspense) {
 					let t = (e) => ('static' === e ? e : Math.max(e ?? 1e3, 1e3)),
 						r = e.staleTime;
@@ -4206,22 +4208,22 @@
 							(e.gcTime = Math.max(e.gcTime, 1e3)));
 				}
 			},
-			rP = (e, t) => e.isLoading && e.isFetching && !t,
-			rj = (e, t) => e?.suspense && t.isPending,
-			rS = (e, t, r) =>
+			rj = (e, t) => e.isLoading && e.isFetching && !t,
+			rS = (e, t) => e?.suspense && t.isPending,
+			rC = (e, t, r) =>
 				t.fetchOptimistic(e).catch(() => {
 					r.clearReset();
 				});
-		function rC(e, t, r) {
-			let n = e5.useContext(rO),
-				s = e5.useContext(rm),
+		function rQ(e, t, r) {
+			let n = e5.useContext(rx),
+				s = e5.useContext(rb),
 				i = tR(r),
 				o = i.defaultQueryOptions(e);
 			(i.getDefaultOptions().queries?._experimental_beforeQuery?.(o),
 				(o._optimisticResults = n ? 'isRestoring' : 'optimistic'),
-				rw(o),
-				rb(o, s),
-				rv(s));
+				rP(o),
+				rv(o, s),
+				rg(s));
 			let u = !i.getQueryCache().get(o.queryHash),
 				[a] = e5.useState(() => new t(i, o)),
 				l = a.getOptimisticResult(o),
@@ -4241,11 +4243,11 @@
 				e5.useEffect(() => {
 					a.setOptions(o);
 				}, [o, a]),
-				rj(o, l))
+				rS(o, l))
 			)
-				throw rS(o, a, s);
+				throw rC(o, a, s);
 			if (
-				rg({
+				rO({
 					result: l,
 					errorResetBoundary: s,
 					throwOnError: o.throwOnError,
@@ -4256,16 +4258,16 @@
 				throw l.error;
 			if (
 				(i.getDefaultOptions().queries?._experimental_afterQuery?.(o, l),
-				o.experimental_prefetchInRender && !tr && rP(l, n))
+				o.experimental_prefetchInRender && !tr && rj(l, n))
 			) {
-				let e = u ? rS(o, a, s) : i.getQueryCache().get(o.queryHash)?.promise;
+				let e = u ? rC(o, a, s) : i.getQueryCache().get(o.queryHash)?.promise;
 				e?.catch(tn).finally(() => {
 					a.updateResult();
 				});
 			}
 			return o.notifyOnChangeProps ? l : a.trackResult(l);
 		}
-		var rQ = class extends t0 {
+		var r_ = class extends t0 {
 			#c;
 			#E = void 0;
 			#Y;
@@ -4324,7 +4326,7 @@
 				);
 			}
 			#X() {
-				let e = this.#Y?.state ?? rn();
+				let e = this.#Y?.state ?? rs();
 				this.#E = {
 					...e,
 					isPending: 'pending' === e.status,
@@ -4358,11 +4360,11 @@
 				});
 			}
 		};
-		function r_(e, t) {
+		function rq(e, t) {
 			let r = new Set(t);
 			return e.filter((e) => !r.has(e));
 		}
-		var rq = class extends t0 {
+		var rR = class extends t0 {
 			#c;
 			#Z;
 			#y;
@@ -4422,10 +4424,10 @@
 							(this.#Z = n),
 							this.hasListeners() &&
 								(o &&
-									(r_(e, r).forEach((e) => {
+									(rq(e, r).forEach((e) => {
 										e.destroy();
 									}),
-									r_(r, e).forEach((e) => {
+									rq(r, e).forEach((e) => {
 										e.subscribe((t) => {
 											this.#ei(e, t);
 										});
@@ -4471,18 +4473,19 @@
 					: e;
 			}
 			#eo(e) {
-				let t = new Map(this.#m.map((e) => [e.options.queryHash, e])),
-					r = [];
+				let t = new Map();
+				this.#m.forEach((e) => {
+					let r = e.options.queryHash;
+					if (!r) return;
+					let n = t.get(r);
+					n ? n.push(e) : t.set(r, [e]);
+				});
+				let r = [];
 				return (
 					e.forEach((e) => {
 						let n = this.#c.defaultQueryOptions(e),
-							s = t.get(n.queryHash);
-						s
-							? r.push({ defaultedQueryOptions: n, observer: s })
-							: r.push({
-									defaultedQueryOptions: n,
-									observer: new rc(this.#c, n),
-								});
+							s = t.get(n.queryHash)?.shift() ?? new rh(this.#c, n);
+						r.push({ defaultedQueryOptions: n, observer: s });
 					}),
 					r
 				);
@@ -4509,10 +4512,10 @@
 				}
 			}
 		};
-		function rR({ queries: e, ...t }, r) {
+		function rE({ queries: e, ...t }, r) {
 			let n = tR(r),
-				s = e5.useContext(rO),
-				i = e5.useContext(rm),
+				s = e5.useContext(rx),
+				i = e5.useContext(rb),
 				o = e5.useMemo(
 					() =>
 						e.map((e) => {
@@ -4525,10 +4528,10 @@
 					[e, n, s],
 				);
 			(o.forEach((e) => {
-				(rw(e), rb(e, i));
+				(rP(e), rv(e, i));
 			}),
-				rv(i));
-			let [u] = e5.useState(() => new rq(n, o, t)),
+				rg(i));
+			let [u] = e5.useState(() => new rR(n, o, t)),
 				[a, l, c] = u.getOptimisticResult(o, t.combine),
 				h = !s && !1 !== t.subscribed;
 			(e5.useSyncExternalStore(
@@ -4539,23 +4542,23 @@
 				e5.useEffect(() => {
 					u.setQueries(o, t);
 				}, [o, t, u]));
-			let d = a.some((e, t) => rj(o[t], e))
+			let p = a.some((e, t) => rS(o[t], e))
 				? a.flatMap((e, t) => {
 						let r = o[t];
 						if (r) {
-							let t = new rc(n, r);
-							if (rj(r, e)) return rS(r, t, i);
-							rP(e, s) && rS(r, t, i);
+							let t = new rh(n, r);
+							if (rS(r, e)) return rC(r, t, i);
+							rj(e, s) && rC(r, t, i);
 						}
 						return [];
 					})
 				: [];
-			if (d.length > 0) throw Promise.all(d);
-			let p = a.find((e, t) => {
+			if (p.length > 0) throw Promise.all(p);
+			let d = a.find((e, t) => {
 				let r = o[t];
 				return (
 					r &&
-					rg({
+					rO({
 						result: e,
 						errorResetBoundary: i,
 						throwOnError: r.throwOnError,
@@ -4564,19 +4567,19 @@
 					})
 				);
 			});
-			if (p?.error) throw p.error;
+			if (d?.error) throw d.error;
 			return l(c());
 		}
-		let rE = ['client', 'ssrContext', 'ssrState', 'abortOnUnmount'],
-			rD = null == (S = e5.createContext) ? void 0 : S.call(e5, null);
-		var rM = tK(t$(), 1);
-		function rI(e) {
+		let rD = ['client', 'ssrContext', 'ssrState', 'abortOnUnmount'],
+			rM = null == (S = e5.createContext) ? void 0 : S.call(e5, null);
+		var rI = tK(t$(), 1);
+		function rT(e) {
 			let t = e instanceof eN ? e : e[eH];
-			return ed((e) => {
+			return ep((e) => {
 				let r = e.path,
 					n = r.join('.'),
 					[s, i] = e.args;
-				return (0, rM.default)(
+				return (0, rI.default)(
 					{
 						queryKey: tV(r, s, 'query'),
 						queryFn: () => t.query(n, s, null == i ? void 0 : i.trpc),
@@ -4585,16 +4588,16 @@
 				);
 			});
 		}
-		var rT = tK(t$(), 1);
-		function rk(e, t, r) {
+		var rk = tK(t$(), 1);
+		function rF(e, t, r) {
 			var n, s;
 			let i = e[0],
 				o = null == (n = e[1]) ? void 0 : n.input;
 			return (
 				r &&
-					(o = (0, rT.default)(
-						(0, rT.default)(
-							(0, rT.default)({}, null != (s = o) ? s : {}),
+					(o = (0, rk.default)(
+						(0, rk.default)(
+							(0, rk.default)({}, null != (s = o) ? s : {}),
 							r.pageParam ? { cursor: r.pageParam } : {},
 						),
 						{},
@@ -4603,7 +4606,7 @@
 				[i.join('.'), o, null == t ? void 0 : t.trpc]
 			);
 		}
-		var rF = tK(
+		var rA = tK(
 			tU({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/asyncIterator.js'(
 					e,
@@ -4652,7 +4655,6 @@
 							'undefined' != typeof Symbol &&
 							((n = Symbol.asyncIterator), (s = Symbol.iterator));
 							i--;
-
 						) {
 							if (n && null != (t = e[n])) return t.call(e);
 							if (s && null != (t = e[s])) return new r(t.call(e));
@@ -4666,14 +4668,14 @@
 			})(),
 			1,
 		);
-		function rA(e) {
+		function rU(e) {
 			return { path: e.path.join('.') };
 		}
-		function rU(e) {
-			let t = rA(e);
+		function rK(e) {
+			let t = rU(e);
 			return e5.useMemo(() => t, [t]);
 		}
-		async function rK(e, t, r) {
+		async function rL(e, t, r) {
 			let n = t.getQueryCache().build(t, { queryKey: r });
 			n.setState({ data: [], status: 'success' });
 			let s = [];
@@ -4681,7 +4683,7 @@
 				o = !1;
 			try {
 				for (
-					var u, a, l = (0, rF.default)(e);
+					var u, a, l = (0, rA.default)(e);
 					(i = !(a = await l.next()).done);
 					i = !1
 				) {
@@ -4699,10 +4701,10 @@
 			}
 			return s;
 		}
-		var rL = tK(t$(), 1),
-			rN = tK(t$());
-		let rH = (e, t) => new Proxy(e, { get: (e, r) => (t(r), e[r]) });
-		function rG(e) {
+		var rN = tK(t$(), 1),
+			rH = tK(t$());
+		let rG = (e, t) => new Proxy(e, { get: (e, r) => (t(r), e[r]) });
+		function rW(e) {
 			var t, r, n;
 			let s =
 					null !=
@@ -4714,7 +4716,7 @@
 							: r.onSuccess)
 						? t
 						: (e) => e.originalFn(),
-				i = null != (n = null == e ? void 0 : e.context) ? n : rD;
+				i = null != (n = null == e ? void 0 : e.context) ? n : rM;
 			function o() {
 				let e = e5.useContext(i);
 				if (!e)
@@ -4731,7 +4733,7 @@
 					(null == (r = n.getQueryCache().find({ queryKey: e }))
 						? void 0
 						: r.state.status) === 'error'
-					? (0, rN.default)({ retryOnMount: !1 }, t)
+					? (0, rH.default)({ retryOnMount: !1 }, t)
 					: t;
 			}
 			let a = { data: void 0, error: null, status: 'idle' },
@@ -4753,12 +4755,12 @@
 											let o = (null == (s = t[1]) ? void 0 : s.input) === tw,
 												u = async (e) => {
 													var s;
-													let i = (0, rL.default)(
-														(0, rL.default)({}, r),
+													let i = (0, rN.default)(
+														(0, rN.default)({}, r),
 														{},
 														{
-															trpc: (0, rL.default)(
-																(0, rL.default)(
+															trpc: (0, rN.default)(
+																(0, rN.default)(
 																	{},
 																	null == r ? void 0 : r.trpc,
 																),
@@ -4773,15 +4775,15 @@
 														},
 													);
 													return await n.query(
-														...rk(t, i, {
+														...rF(t, i, {
 															direction: e.direction,
 															pageParam: e.pageParam,
 														}),
 													);
 												};
 											return Object.assign(
-												(0, rL.default)(
-													(0, rL.default)({}, r),
+												(0, rN.default)(
+													(0, rN.default)({}, r),
 													{},
 													{
 														initialData: null == r ? void 0 : r.initialData,
@@ -4793,7 +4795,7 @@
 																: null,
 													},
 												),
-												{ trpc: rA({ path: e }) },
+												{ trpc: rU({ path: e }) },
 											);
 										},
 										queryOptions: (e, t, s) => {
@@ -4801,12 +4803,12 @@
 											let o = (null == (i = t[1]) ? void 0 : i.input) === tw,
 												u = async (e) => {
 													var i;
-													let o = (0, rL.default)(
-															(0, rL.default)({}, s),
+													let o = (0, rN.default)(
+															(0, rN.default)({}, s),
 															{},
 															{
-																trpc: (0, rL.default)(
-																	(0, rL.default)(
+																trpc: (0, rN.default)(
+																	(0, rN.default)(
 																		{},
 																		null == s ? void 0 : s.trpc,
 																	),
@@ -4820,12 +4822,12 @@
 																),
 															},
 														),
-														u = await n.query(...rk(t, o));
-													return H(u) ? rK(u, r, t) : u;
+														u = await n.query(...rF(t, o));
+													return H(u) ? rL(u, r, t) : u;
 												};
 											return Object.assign(
-												(0, rL.default)(
-													(0, rL.default)({}, s),
+												(0, rN.default)(
+													(0, rN.default)({}, s),
 													{},
 													{
 														initialData: null == s ? void 0 : s.initialData,
@@ -4833,28 +4835,28 @@
 														queryFn: o ? tw : u,
 													},
 												),
-												{ trpc: rA({ path: e }) },
+												{ trpc: rU({ path: e }) },
 											);
 										},
 										fetchQuery: (e, t) =>
 											r.fetchQuery(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
-													{ queryKey: e, queryFn: () => n.query(...rk(e, t)) },
+													{ queryKey: e, queryFn: () => n.query(...rF(e, t)) },
 												),
 											),
 										fetchInfiniteQuery: (e, t) => {
 											var s;
 											return r.fetchInfiniteQuery(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{
 														queryKey: e,
 														queryFn: ({ pageParam: r, direction: s }) =>
 															n.query(
-																...rk(e, t, { pageParam: r, direction: s }),
+																...rF(e, t, { pageParam: r, direction: s }),
 															),
 														initialPageParam:
 															null != (s = null == t ? void 0 : t.initialCursor)
@@ -4866,23 +4868,23 @@
 										},
 										prefetchQuery: (e, t) =>
 											r.prefetchQuery(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
-													{ queryKey: e, queryFn: () => n.query(...rk(e, t)) },
+													{ queryKey: e, queryFn: () => n.query(...rF(e, t)) },
 												),
 											),
 										prefetchInfiniteQuery: (e, t) => {
 											var s;
 											return r.prefetchInfiniteQuery(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{
 														queryKey: e,
 														queryFn: ({ pageParam: r, direction: s }) =>
 															n.query(
-																...rk(e, t, { pageParam: r, direction: s }),
+																...rF(e, t, { pageParam: r, direction: s }),
 															),
 														initialPageParam:
 															null != (s = null == t ? void 0 : t.initialCursor)
@@ -4894,16 +4896,16 @@
 										},
 										ensureQueryData: (e, t) =>
 											r.ensureQueryData(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
-													{ queryKey: e, queryFn: () => n.query(...rk(e, t)) },
+													{ queryKey: e, queryFn: () => n.query(...rF(e, t)) },
 												),
 											),
 										invalidateQueries: (e, t, n) =>
 											r.invalidateQueries(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{ queryKey: e },
 												),
@@ -4911,8 +4913,8 @@
 											),
 										resetQueries: (e, t, n) =>
 											r.resetQueries(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{ queryKey: e },
 												),
@@ -4920,8 +4922,8 @@
 											),
 										refetchQueries: (e, t, n) =>
 											r.refetchQueries(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{ queryKey: e },
 												),
@@ -4931,8 +4933,8 @@
 										setQueryData: (e, t, n) => r.setQueryData(e, t, n),
 										setQueriesData: (e, t, n, s) =>
 											r.setQueriesData(
-												(0, rL.default)(
-													(0, rL.default)({}, t),
+												(0, rN.default)(
+													(0, rN.default)({}, t),
 													{},
 													{ queryKey: e },
 												),
@@ -4949,7 +4951,7 @@
 												'function' == typeof s
 													? s({
 															canonicalMutationFn: (t) =>
-																n.mutation(...rk([i, { input: t }], e)),
+																n.mutation(...rF([i, { input: t }], e)),
 														})
 													: s,
 											);
@@ -4957,8 +4959,8 @@
 										getMutationDefaults: (e) => r.getMutationDefaults(e),
 										isMutating: (e) =>
 											r.isMutating(
-												(0, rL.default)(
-													(0, rL.default)({}, e),
+												(0, rN.default)(
+													(0, rN.default)({}, e),
 													{},
 													{ exact: !0 },
 												),
@@ -4969,7 +4971,7 @@
 						),
 						c = e5.useMemo(
 							() =>
-								(0, rN.default)(
+								(0, rH.default)(
 									{
 										abortOnUnmount: r,
 										queryClient: n,
@@ -4995,8 +4997,8 @@
 					var s, i, a, l, c;
 					let {
 							abortOnUnmount: h,
-							client: d,
-							ssrState: p,
+							client: p,
+							ssrState: d,
 							queryClient: f,
 							prefetchQuery: y,
 						} = o(),
@@ -5004,7 +5006,7 @@
 						b = f.getQueryDefaults(m),
 						v = r === tw;
 					'undefined' != typeof window ||
-						'prepass' !== p ||
+						'prepass' !== d ||
 						(null == n || null == (s = n.trpc) ? void 0 : s.ssr) === !1 ||
 						(null != (i = null == n ? void 0 : n.enabled)
 							? i
@@ -5014,7 +5016,7 @@
 						v ||
 						f.getQueryCache().find({ queryKey: m }) ||
 						y(m, n);
-					let g = u(m, (0, rN.default)((0, rN.default)({}, b), n)),
+					let g = u(m, (0, rH.default)((0, rH.default)({}, b), n)),
 						O =
 							null !=
 							(a =
@@ -5027,21 +5029,21 @@
 										: e.abortOnUnmount)
 								? a
 								: h,
-						x = rC(
-							(0, rN.default)(
-								(0, rN.default)({}, g),
+						x = rQ(
+							(0, rH.default)(
+								(0, rH.default)({}, g),
 								{},
 								{
 									queryKey: m,
 									queryFn: v
 										? r
 										: async (e) => {
-												let t = (0, rN.default)(
-														(0, rN.default)({}, g),
+												let t = (0, rH.default)(
+														(0, rH.default)({}, g),
 														{},
 														{
-															trpc: (0, rN.default)(
-																(0, rN.default)(
+															trpc: (0, rH.default)(
+																(0, rH.default)(
 																	{},
 																	null == g ? void 0 : g.trpc,
 																),
@@ -5049,58 +5051,22 @@
 															),
 														},
 													),
-													r = await d.query(...rk(m, t));
-												return H(r) ? rK(r, f, m) : r;
+													r = await p.query(...rF(m, t));
+												return H(r) ? rL(r, f, m) : r;
 											},
 								},
 							),
-							rc,
+							rh,
 							f,
 						);
-					return ((x.trpc = rU({ path: t })), x);
+					return ((x.trpc = rK({ path: t })), x);
 				},
 				usePrefetchQuery: function (t, r, n) {
 					var s, i, u, a;
 					let l,
 						c = o(),
 						h = tV(t, r, 'query'),
-						d = r === tw,
-						p =
-							null !=
-							(s =
-								null !=
-								(i =
-									null == n || null == (u = n.trpc) ? void 0 : u.abortOnUnmount)
-									? i
-									: null == e
-										? void 0
-										: e.abortOnUnmount)
-								? s
-								: c.abortOnUnmount;
-					((a = (0, rN.default)(
-						(0, rN.default)({}, n),
-						{},
-						{
-							queryKey: h,
-							queryFn: d
-								? r
-								: (e) => {
-										let t = {
-											trpc: (0, rN.default)(
-												(0, rN.default)({}, null == n ? void 0 : n.trpc),
-												p ? { signal: e.signal } : {},
-											),
-										};
-										return c.client.query(...rk(h, t));
-									},
-						},
-					)),
-						(l = tR(void 0)).getQueryState(a.queryKey) || l.prefetchQuery(a));
-				},
-				useSuspenseQuery: function (t, r, n) {
-					var s, i, u, a, l;
-					let c = o(),
-						h = tV(t, r, 'query'),
+						p = r === tw,
 						d =
 							null !=
 							(s =
@@ -5112,41 +5078,77 @@
 										? void 0
 										: e.abortOnUnmount)
 								? s
-								: c.abortOnUnmount,
+								: c.abortOnUnmount;
+					((a = (0, rH.default)(
+						(0, rH.default)({}, n),
+						{},
+						{
+							queryKey: h,
+							queryFn: p
+								? r
+								: (e) => {
+										let t = {
+											trpc: (0, rH.default)(
+												(0, rH.default)({}, null == n ? void 0 : n.trpc),
+												d ? { signal: e.signal } : {},
+											),
+										};
+										return c.client.query(...rF(h, t));
+									},
+						},
+					)),
+						(l = tR(void 0)).getQueryState(a.queryKey) || l.prefetchQuery(a));
+				},
+				useSuspenseQuery: function (t, r, n) {
+					var s, i, u, a, l;
+					let c = o(),
+						h = tV(t, r, 'query'),
 						p =
-							((a = (0, rN.default)(
-								(0, rN.default)({}, n),
+							null !=
+							(s =
+								null !=
+								(i =
+									null == n || null == (u = n.trpc) ? void 0 : u.abortOnUnmount)
+									? i
+									: null == e
+										? void 0
+										: e.abortOnUnmount)
+								? s
+								: c.abortOnUnmount,
+						d =
+							((a = (0, rH.default)(
+								(0, rH.default)({}, n),
 								{},
 								{
 									queryKey: h,
 									queryFn: (e) => {
-										let t = (0, rN.default)(
-											(0, rN.default)({}, n),
+										let t = (0, rH.default)(
+											(0, rH.default)({}, n),
 											{},
 											{
-												trpc: (0, rN.default)(
-													(0, rN.default)({}, null == n ? void 0 : n.trpc),
-													d ? { signal: e.signal } : { signal: null },
+												trpc: (0, rH.default)(
+													(0, rH.default)({}, null == n ? void 0 : n.trpc),
+													p ? { signal: e.signal } : { signal: null },
 												),
 											},
 										);
-										return c.client.query(...rk(h, t));
+										return c.client.query(...rF(h, t));
 									},
 								},
 							)),
 							(l = c.queryClient),
-							rC(
+							rQ(
 								{
 									...a,
 									enabled: !0,
 									suspense: !0,
-									throwOnError: rx,
+									throwOnError: rw,
 									placeholderData: void 0,
 								},
-								rc,
+								rh,
 								l,
 							));
-					return ((p.trpc = rU({ path: t })), [p.data, p]);
+					return ((d.trpc = rK({ path: t })), [d.data, d]);
 				},
 				useQueries: (e, t) => {
 					let {
@@ -5155,7 +5157,7 @@
 							prefetchQuery: s,
 							client: i,
 						} = o(),
-						u = e(rI(i));
+						u = e(rT(i));
 					if ('undefined' == typeof window && 'prepass' === r)
 						for (let e of u) {
 							var a;
@@ -5163,11 +5165,11 @@
 								n.getQueryCache().find({ queryKey: e.queryKey }) ||
 								s(e.queryKey, e);
 						}
-					return rR(
+					return rE(
 						{
 							queries: u.map((e) =>
-								(0, rN.default)(
-									(0, rN.default)({}, e),
+								(0, rH.default)(
+									(0, rH.default)({}, e),
 									{},
 									{ queryKey: e.queryKey },
 								),
@@ -5182,21 +5184,21 @@
 					let { queryClient: r, client: n } = o(),
 						s =
 							((t = {
-								queries: e(rI(n)).map((e) =>
-									(0, rN.default)(
-										(0, rN.default)({}, e),
+								queries: e(rT(n)).map((e) =>
+									(0, rH.default)(
+										(0, rH.default)({}, e),
 										{},
 										{ queryFn: e.queryFn, queryKey: e.queryKey },
 									),
 								),
 							}),
-							rR(
+							rE(
 								{
 									...t,
 									queries: t.queries.map((e) => ({
 										...e,
 										suspense: !0,
-										throwOnError: rx,
+										throwOnError: rw,
 										enabled: !0,
 										placeholderData: void 0,
 									})),
@@ -5211,7 +5213,7 @@
 						u = n.defaultMutationOptions(n.getMutationDefaults(i)),
 						a = (function (e, t) {
 							let r = tR(t),
-								[n] = e5.useState(() => new rQ(r, e));
+								[n] = e5.useState(() => new r_(r, e));
 							e5.useEffect(() => {
 								n.setOptions(e);
 							}, [n, e]);
@@ -5230,12 +5232,12 @@
 								throw s.error;
 							return { ...s, mutate: i, mutateAsync: s.mutate };
 						})(
-							(0, rN.default)(
-								(0, rN.default)({}, t),
+							(0, rH.default)(
+								(0, rH.default)({}, t),
 								{},
 								{
 									mutationKey: i,
-									mutationFn: (n) => r.mutation(...rk([e, { input: n }], t)),
+									mutationFn: (n) => r.mutation(...rF([e, { input: n }], t)),
 									onSuccess(...e) {
 										var r, i;
 										return s({
@@ -5268,7 +5270,7 @@
 							),
 							n,
 						);
-					return ((a.trpc = rU({ path: e })), a);
+					return ((a.trpc = rK({ path: e })), a);
 				},
 				useSubscription: function (e, t, r) {
 					var n;
@@ -5280,13 +5282,13 @@
 						c.current = r;
 					});
 					let [h] = e5.useState(new Set([])),
-						d = e5.useCallback(
+						p = e5.useCallback(
 							(e) => {
 								h.add(e);
 							},
 							[h],
 						),
-						p = e5.useRef(null),
+						d = e5.useRef(null),
 						f = e5.useCallback(
 							(e) => {
 								let t = m.current,
@@ -5297,17 +5299,17 @@
 										n = !0;
 										break;
 									}
-								n && v(rH(r, d));
+								n && v(rG(r, p));
 							},
-							[d, h],
+							[p, h],
 						),
 						y = e5.useCallback(() => {
 							var r;
-							(null == (r = p.current) || r.unsubscribe(), s)
+							(null == (r = d.current) || r.unsubscribe(), s)
 								? (f(() =>
-										(0, rN.default)((0, rN.default)({}, l), {}, { reset: y }),
+										(0, rH.default)((0, rH.default)({}, l), {}, { reset: y }),
 									),
-									(p.current = u.subscription(
+									(d.current = u.subscription(
 										e.join('.'),
 										null != t ? t : void 0,
 										{
@@ -5315,8 +5317,8 @@
 												var e, t;
 												(null == (e = (t = c.current).onStarted) || e.call(t),
 													f((e) =>
-														(0, rN.default)(
-															(0, rN.default)({}, e),
+														(0, rH.default)(
+															(0, rH.default)({}, e),
 															{},
 															{ status: 'pending', error: null },
 														),
@@ -5326,8 +5328,8 @@
 												var t, r;
 												(null == (t = (r = c.current).onData) || t.call(r, e),
 													f((t) =>
-														(0, rN.default)(
-															(0, rN.default)({}, t),
+														(0, rH.default)(
+															(0, rH.default)({}, t),
 															{},
 															{ status: 'pending', data: e, error: null },
 														),
@@ -5337,8 +5339,8 @@
 												var t, r;
 												(null == (t = (r = c.current).onError) || t.call(r, e),
 													f((t) =>
-														(0, rN.default)(
-															(0, rN.default)({}, t),
+														(0, rH.default)(
+															(0, rH.default)({}, t),
 															{},
 															{ status: 'error', error: e },
 														),
@@ -5348,14 +5350,14 @@
 												f((t) => {
 													switch (e.state) {
 														case 'idle':
-															return (0, rN.default)(
-																(0, rN.default)({}, t),
+															return (0, rH.default)(
+																(0, rH.default)({}, t),
 																{},
 																{ status: e.state, error: null, data: void 0 },
 															);
 														case 'connecting':
-															return (0, rN.default)(
-																(0, rN.default)({}, t),
+															return (0, rH.default)(
+																(0, rH.default)({}, t),
 																{},
 																{ error: e.error, status: e.state },
 															);
@@ -5368,8 +5370,8 @@
 												var e, t;
 												(null == (e = (t = c.current).onComplete) || e.call(t),
 													f((e) =>
-														(0, rN.default)(
-															(0, rN.default)({}, e),
+														(0, rH.default)(
+															(0, rH.default)({}, e),
 															{},
 															{ status: 'idle', error: null, data: void 0 },
 														),
@@ -5378,7 +5380,7 @@
 										},
 									)))
 								: f(() =>
-										(0, rN.default)((0, rN.default)({}, a), {}, { reset: y }),
+										(0, rH.default)((0, rH.default)({}, a), {}, { reset: y }),
 									);
 						}, [u, i, s, f]);
 					e5.useEffect(
@@ -5386,17 +5388,17 @@
 							y(),
 							() => {
 								var e;
-								null == (e = p.current) || e.unsubscribe();
+								null == (e = d.current) || e.unsubscribe();
 							}
 						),
 						[y],
 					);
 					let m = e5.useRef(
 							s
-								? (0, rN.default)((0, rN.default)({}, l), {}, { reset: y })
-								: (0, rN.default)((0, rN.default)({}, a), {}, { reset: y }),
+								? (0, rH.default)((0, rH.default)({}, l), {}, { reset: y })
+								: (0, rH.default)((0, rH.default)({}, a), {}, { reset: y }),
 						),
-						[b, v] = e5.useState(rH(m.current, d));
+						[b, v] = e5.useState(rG(m.current, p));
 					return b;
 				},
 				useInfiniteQuery: function (e, t, r) {
@@ -5404,12 +5406,12 @@
 					let {
 							client: c,
 							ssrState: h,
-							prefetchInfiniteQuery: d,
-							queryClient: p,
+							prefetchInfiniteQuery: p,
+							queryClient: d,
 							abortOnUnmount: f,
 						} = o(),
 						y = tV(e, t, 'infinite'),
-						m = p.getQueryDefaults(y),
+						m = d.getQueryDefaults(y),
 						b = t === tw;
 					'undefined' != typeof window ||
 						'prepass' !== h ||
@@ -5420,18 +5422,18 @@
 								? void 0
 								: m.enabled) === !1 ||
 						b ||
-						p.getQueryCache().find({ queryKey: y }) ||
-						d(y, (0, rN.default)((0, rN.default)({}, m), r));
-					let v = u(y, (0, rN.default)((0, rN.default)({}, m), r)),
+						d.getQueryCache().find({ queryKey: y }) ||
+						p(y, (0, rH.default)((0, rH.default)({}, m), r));
+					let v = u(y, (0, rH.default)((0, rH.default)({}, m), r)),
 						g =
 							null !=
 							(i =
 								null == r || null == (a = r.trpc) ? void 0 : a.abortOnUnmount)
 								? i
 								: f,
-						O = rC(
-							(0, rN.default)(
-								(0, rN.default)({}, v),
+						O = rQ(
+							(0, rH.default)(
+								(0, rH.default)({}, v),
 								{},
 								{
 									initialPageParam: null != (l = r.initialCursor) ? l : null,
@@ -5441,18 +5443,18 @@
 										? t
 										: (e) => {
 												var t;
-												let n = (0, rN.default)(
-													(0, rN.default)({}, v),
+												let n = (0, rH.default)(
+													(0, rH.default)({}, v),
 													{},
 													{
-														trpc: (0, rN.default)(
-															(0, rN.default)({}, null == v ? void 0 : v.trpc),
+														trpc: (0, rH.default)(
+															(0, rH.default)({}, null == v ? void 0 : v.trpc),
 															g ? { signal: e.signal } : { signal: null },
 														),
 													},
 												);
 												return c.query(
-													...rk(y, n, {
+													...rF(y, n, {
 														pageParam:
 															null != (t = e.pageParam) ? t : r.initialCursor,
 														direction: e.direction,
@@ -5461,47 +5463,47 @@
 											},
 								},
 							),
-							ry,
-							p,
+							rm,
+							d,
 						);
-					return ((O.trpc = rU({ path: e })), O);
+					return ((O.trpc = rK({ path: e })), O);
 				},
 				usePrefetchInfiniteQuery: function (e, t, r) {
 					var n, s, i, a;
 					let l,
 						c = o(),
 						h = tV(e, t, 'infinite'),
-						d = c.queryClient.getQueryDefaults(h),
-						p = t === tw,
-						f = u(h, (0, rN.default)((0, rN.default)({}, d), r)),
+						p = c.queryClient.getQueryDefaults(h),
+						d = t === tw,
+						f = u(h, (0, rH.default)((0, rH.default)({}, p), r)),
 						y =
 							null !=
 							(n =
 								null == r || null == (s = r.trpc) ? void 0 : s.abortOnUnmount)
 								? n
 								: c.abortOnUnmount;
-					((a = (0, rN.default)(
-						(0, rN.default)({}, r),
+					((a = (0, rH.default)(
+						(0, rH.default)({}, r),
 						{},
 						{
 							initialPageParam: null != (i = r.initialCursor) ? i : null,
 							queryKey: h,
-							queryFn: p
+							queryFn: d
 								? t
 								: (e) => {
 										var t;
-										let n = (0, rN.default)(
-											(0, rN.default)({}, f),
+										let n = (0, rH.default)(
+											(0, rH.default)({}, f),
 											{},
 											{
-												trpc: (0, rN.default)(
-													(0, rN.default)({}, null == f ? void 0 : f.trpc),
+												trpc: (0, rH.default)(
+													(0, rH.default)({}, null == f ? void 0 : f.trpc),
 													y ? { signal: e.signal } : {},
 												),
 											},
 										);
 										return c.client.query(
-											...rk(h, n, {
+											...rF(h, n, {
 												pageParam:
 													null != (t = e.pageParam) ? t : r.initialCursor,
 												direction: e.direction,
@@ -5517,8 +5519,8 @@
 					var n, s, i, a, l;
 					let c = o(),
 						h = tV(e, t, 'infinite'),
-						d = c.queryClient.getQueryDefaults(h),
-						p = u(h, (0, rN.default)((0, rN.default)({}, d), r)),
+						p = c.queryClient.getQueryDefaults(h),
+						d = u(h, (0, rH.default)((0, rH.default)({}, p), r)),
 						f =
 							null !=
 							(n =
@@ -5526,26 +5528,26 @@
 								? n
 								: c.abortOnUnmount,
 						y =
-							((a = (0, rN.default)(
-								(0, rN.default)({}, r),
+							((a = (0, rH.default)(
+								(0, rH.default)({}, r),
 								{},
 								{
 									initialPageParam: null != (i = r.initialCursor) ? i : null,
 									queryKey: h,
 									queryFn: (e) => {
 										var t;
-										let n = (0, rN.default)(
-											(0, rN.default)({}, p),
+										let n = (0, rH.default)(
+											(0, rH.default)({}, d),
 											{},
 											{
-												trpc: (0, rN.default)(
-													(0, rN.default)({}, null == p ? void 0 : p.trpc),
+												trpc: (0, rH.default)(
+													(0, rH.default)({}, null == d ? void 0 : d.trpc),
 													f ? { signal: e.signal } : {},
 												),
 											},
 										);
 										return c.client.query(
-											...rk(h, n, {
+											...rF(h, n, {
 												pageParam:
 													null != (t = e.pageParam) ? t : r.initialCursor,
 												direction: e.direction,
@@ -5555,12 +5557,12 @@
 								},
 							)),
 							(l = c.queryClient),
-							rC({ ...a, enabled: !0, suspense: !0, throwOnError: rx }, ry, l));
-					return ((y.trpc = rU({ path: e })), [y.data, y]);
+							rQ({ ...a, enabled: !0, suspense: !0, throwOnError: rw }, rm, l));
+					return ((y.trpc = rK({ path: e })), [y.data, y]);
 				},
 			};
 		}
-		var rW =
+		var rz =
 			((h = null != (l = e9()) ? eV(e1(l)) : {}),
 			((e, t, r, n) => {
 				if ((t && 'object' == typeof t) || 'function' == typeof t)
@@ -5579,31 +5581,31 @@
 					: eX(h, 'default', { value: l, enumerable: !0 }),
 				l,
 			));
-		let rz =
-				((d = {
+		let r$ =
+				((p = {
 					url: (x = v =
 						{ url: '/api/trpc', headers: async () => ({}) }).url.toString(),
 					fetch: x.fetch,
 					transformer: $(x.transformer),
 					methodOverride: x.methodOverride,
 				}),
-				(p = null != (g = v.maxURLLength) ? g : 1 / 0),
+				(d = null != (g = v.maxURLLength) ? g : 1 / 0),
 				(f = null != (O = v.maxItems) ? O : 1 / 0),
 				() => {
 					let e = (e) => ({
 							validate(t) {
-								if (p === 1 / 0 && f === 1 / 0) return !0;
+								if (d === 1 / 0 && f === 1 / 0) return !0;
 								if (t.length > f) return !1;
 								let r = t.map((e) => e.path).join(','),
 									n = t.map((e) => e.input);
 								return (
 									V(
 										(0, eP.default)(
-											(0, eP.default)({}, d),
+											(0, eP.default)({}, p),
 											{},
 											{ type: e, path: r, inputs: n, signal: null },
 										),
-									).length <= p
+									).length <= d
 								);
 							},
 							async fetch(t) {
@@ -5625,7 +5627,7 @@
 										return t.signal;
 									})(...t.map((e) => e.signal)),
 									o = await ((r = (0, eP.default)(
-										(0, eP.default)({}, d),
+										(0, eP.default)({}, p),
 										{},
 										{
 											path: n,
@@ -5706,7 +5708,7 @@
 											)
 												throw new eO();
 											return r;
-										})(e.json, d.transformer.output);
+										})(e.json, p.transformer.output);
 										t.ok
 											? (r.next({ context: e.meta, result: t.result }),
 												r.complete())
@@ -5719,14 +5721,14 @@
 							);
 						});
 				}),
-			r$ =
-				((y = rG((w = { config: () => ({ links: [rz] }), ssr: !1 }))),
+			rB =
+				((y = rW((w = { config: () => ({ links: [r$] }), ssr: !1 }))),
 				(m = (function (e) {
 					let { config: t } = e,
 						r = $(e.transformer);
 					return (n) => {
 						var s, i;
-						let o = rG(e),
+						let o = rW(e),
 							u = (s) => {
 								var i, u;
 								let [a] = (0, e5.useState)(() => {
@@ -5736,7 +5738,7 @@
 											i =
 												null != (r = n.queryClient)
 													? r
-													: new rl(n.queryClientConfig),
+													: new rc(n.queryClientConfig),
 											u = o.createClient(n);
 										return {
 											abortOnUnmount: n.abortOnUnmount,
@@ -5750,24 +5752,24 @@
 										queryClient: l,
 										trpcClient: c,
 										ssrState: h,
-										ssrContext: d,
+										ssrContext: p,
 									} = a,
-									p = null == (i = s.pageProps) ? void 0 : i.trpcState,
+									d = null == (i = s.pageProps) ? void 0 : i.trpcState,
 									f = e5.default.useMemo(
-										() => (p ? r.input.deserialize(p) : p),
-										[p],
+										() => (d ? r.input.deserialize(d) : d),
+										[d],
 									);
 								return (0, t_.jsx)(o.Provider, {
 									abortOnUnmount: null != (u = a.abortOnUnmount) && u,
 									client: c,
 									queryClient: l,
 									ssrState: h,
-									ssrContext: d,
+									ssrContext: p,
 									children: (0, t_.jsx)(tE, {
 										client: l,
 										children: (0, t_.jsx)(tD, {
 											state: f,
-											children: (0, t_.jsx)(n, (0, rW.default)({}, s)),
+											children: (0, t_.jsx)(n, (0, rz.default)({}, s)),
 										}),
 									}),
 								});
@@ -5783,7 +5785,7 @@
 										o = await n.getInitialProps(e),
 										u = s ? (null != (t = o.pageProps) ? t : {}) : o;
 									return (
-										(r = i = (0, rW.default)((0, rW.default)({}, u), i)),
+										(r = i = (0, rz.default)((0, rz.default)({}, u), i)),
 										s ? { pageProps: r } : r
 									);
 								});
@@ -5794,7 +5796,7 @@
 						return ((u.displayName = `withTRPC(${a})`), u);
 					};
 				})(w)),
-				(b = ed(({ path: e, args: t }) => {
+				(b = ep(({ path: e, args: t }) => {
 					var r;
 					let n = [...e],
 						s = n.pop();
@@ -5804,7 +5806,7 @@
 						u = null != (r = o[0]) ? r : {};
 					return y[s](n, i, u);
 				})),
-				ep((e) =>
+				ed((e) =>
 					'useContext' === e || 'useUtils' === e
 						? () => {
 								let e = y.useUtils();
@@ -5812,7 +5814,7 @@
 									let t, r;
 									return (
 										(t = eW(e.client)),
-										(r = ed((t) => {
+										(r = ep((t) => {
 											let r = [...t.path],
 												n = r.pop(),
 												s = [...t.args],
@@ -5877,8 +5879,8 @@
 												isMutating: () => e.isMutating({ mutationKey: tX(r) }),
 											}[n]();
 										})),
-										ep((n) =>
-											'client' === n ? t : rE.includes(n) ? e[n] : r[n],
+										ed((n) =>
+											'client' === n ? t : rD.includes(n) ? e[n] : r[n],
 										)
 									);
 								}, [e]);
@@ -5891,7 +5893,7 @@
 									? m
 									: b[e],
 				)),
-			rB = ez({ links: [rz] });
-		e.s(['trpcClient', 0, rB, 'trpcHook', 0, r$], 48063);
+			rJ = ez({ links: [r$] });
+		e.s(['trpcClient', 0, rJ, 'trpcHook', 0, rB], 48063);
 	},
 ]);

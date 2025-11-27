@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	54508,
+	55867,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -12,7 +12,7 @@
 			}));
 		let n = e.r(2879)._(e.r(36960)).default.createContext({});
 	},
-	7891,
+	41574,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -30,7 +30,7 @@
 		'use strict';
 		var t = e.i(94601),
 			r = e.i(3300),
-			n = e.i(70285);
+			n = e.i(68733);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	89045,
+	96264,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((a.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.0_@babel+core@7.27.4_@opentelemetry+api@1.4.1_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.0.5_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/process/'),
 			(t.exports = a(229)));
 	},
-	41640,
+	88418,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(89045);
+				: e.r(96264);
 	},
 	2879,
 	(e, t, r) => {
@@ -334,7 +334,7 @@
 	14513,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(41640),
+		var n = e.i(88418),
 			o = Symbol.for('react.transitional.element'),
 			a = Symbol.for('react.portal'),
 			s = Symbol.for('react.fragment'),
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	74159,
+	69623,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -961,7 +961,7 @@
 			return JSON.stringify({ message: e.message, stack: e.stack });
 		}
 	},
-	6493,
+	32838,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -972,7 +972,7 @@
 				},
 			}));
 		let n = e.r(36960),
-			o = e.r(18649),
+			o = e.r(2743),
 			a = 'function' == typeof IntersectionObserver,
 			s = new Map(),
 			l = [];
@@ -1054,7 +1054,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	99793,
+	38148,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1067,7 +1067,7 @@
 					return n;
 				},
 			}),
-			e.r(34041),
+			e.r(66845),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1075,7 +1075,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	48976,
+	1534,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1121,7 +1121,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	93106,
+	86132,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1133,7 +1133,7 @@
 			}));
 		let n = (e) => {};
 	},
-	62611,
+	40360,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1149,17 +1149,17 @@
 		let a = e.r(87602),
 			s = e.r(94601),
 			l = a._(e.r(36960)),
-			i = e.r(59145),
-			u = e.r(98128),
-			c = e.r(62623),
-			d = e.r(74159),
-			f = e.r(74624),
-			p = e.r(32228),
-			m = e.r(6493),
-			x = e.r(99793),
-			h = e.r(15158),
-			y = e.r(48976);
-		e.r(93106);
+			i = e.r(36083),
+			u = e.r(47128),
+			c = e.r(64048),
+			d = e.r(69623),
+			f = e.r(64205),
+			p = e.r(17378),
+			m = e.r(32838),
+			x = e.r(38148),
+			h = e.r(75517),
+			y = e.r(1534);
+		e.r(86132);
 		let g = new Set();
 		function b(e, t, r, n) {
 			if ('undefined' != typeof window && (0, u.isLocalURL)(t)) {
@@ -1339,9 +1339,9 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	70285,
+	68733,
 	(e, t, r) => {
-		t.exports = e.r(62611);
+		t.exports = e.r(40360);
 	},
 	77001,
 	(e) => {
@@ -1506,7 +1506,7 @@
 			n = e.i(53992),
 			o = e.i(77001),
 			a = e.i(5806),
-			s = e.i(70285);
+			s = e.i(68733);
 		let l = ({ title: e = '', description: r = '', action: n = '' }) =>
 			(0, t.jsx)('section', {
 				className:
@@ -1952,20 +1952,20 @@
 					window.__NEXT_P.push(['/']);
 				}));
 	},
-	30830,
+	20276,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/618fb8cba5791a6d.js'].map((t) => e.l(t)),
-			).then(() => t(65358)),
+				['static/chunks/c93e25075c061aac.js'].map((t) => e.l(t)),
+			).then(() => t(3807)),
 		);
 	},
-	41165,
+	2759,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/e4fc12354b51efc8.js'].map((t) => e.l(t)),
-			).then(() => t(81475)),
+				['static/chunks/57d950c2dd41ce78.js'].map((t) => e.l(t)),
+			).then(() => t(58361)),
 		);
 	},
 ]);
