@@ -1761,7 +1761,7 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e6 = e7({
+			e8 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js'(
 					e,
 					t,
@@ -1776,12 +1776,12 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e8 = e7({
+			e6 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js'(
 					e,
 					t,
 				) {
-					var r = e6();
+					var r = e8();
 					((t.exports = function (e, t, n) {
 						return (
 							(t = r(t)) in e
@@ -1799,12 +1799,12 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e9 = e7({
+			e5 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js'(
 					e,
 					t,
 				) {
-					var r = e8();
+					var r = e6();
 					function n(e, t) {
 						var r = Object.keys(e);
 						if (Object.getOwnPropertySymbols) {
@@ -1843,8 +1843,8 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e5 = e.i(36960);
-		e.i(88418);
+			e9 = e.i(24412);
+		e.i(53288);
 		var te = {
 				setTimeout: (e, t) => setTimeout(e, t),
 				clearTimeout: (e) => clearTimeout(e),
@@ -2122,17 +2122,17 @@
 					},
 				));
 		}
-		var t_ = e.i(94601),
-			tq = e5.createContext(void 0),
+		var t_ = e.i(28626),
+			tq = e9.createContext(void 0),
 			tR = (e) => {
-				let t = e5.useContext(tq);
+				let t = e9.useContext(tq);
 				if (e) return e;
 				if (!t)
 					throw Error('No QueryClient set, use QueryClientProvider to set one');
 				return t;
 			},
 			tE = ({ client: e, children: t }) => (
-				e5.useEffect(
+				e9.useEffect(
 					() => (
 						e.mount(),
 						() => {
@@ -2145,11 +2145,11 @@
 			),
 			tD = ({ children: e, options: t = {}, state: r, queryClient: n }) => {
 				let s = tR(n),
-					i = e5.useRef(t);
-				e5.useEffect(() => {
+					i = e9.useRef(t);
+				e9.useEffect(() => {
 					i.current = t;
 				});
-				let o = e5.useMemo(() => {
+				let o = e9.useMemo(() => {
 					if (r) {
 						if ('object' != typeof r) return;
 						let e = s.getQueryCache(),
@@ -2175,7 +2175,7 @@
 					}
 				}, [s, r]);
 				return (
-					e5.useEffect(() => {
+					e9.useEffect(() => {
 						o && tQ(s, { queries: o }, i.current);
 					}, [s, o]),
 					e
@@ -2591,7 +2591,7 @@
 					(this.silent = e?.silent));
 			}
 		};
-		function t6(e) {
+		function t8(e) {
 			let t,
 				r = !1,
 				n = 0,
@@ -2669,7 +2669,7 @@
 				start: () => (o() ? c() : l().then(c), s),
 			};
 		}
-		var t8 = class {
+		var t6 = class {
 				#o;
 				destroy() {
 					this.clearGcTimeout();
@@ -2688,7 +2688,7 @@
 					this.#o && (tt.clearTimeout(this.#o), (this.#o = void 0));
 				}
 			},
-			t9 = class extends t8 {
+			t5 = class extends t6 {
 				#u;
 				#a;
 				#l;
@@ -2882,7 +2882,7 @@
 						('idle' === this.state.fetchStatus ||
 							this.state.fetchMeta !== o.fetchOptions?.meta) &&
 							this.#f({ type: 'fetch', meta: o.fetchOptions?.meta }),
-						(this.#h = t6({
+						(this.#h = t8({
 							initialPromise: t?.initialPromise,
 							fn: o.fetchFn,
 							onCancel: (e) => {
@@ -2949,7 +2949,7 @@
 							case 'fetch':
 								return {
 									...t,
-									...t5(t.data, this.options),
+									...t9(t.data, this.options),
 									fetchMeta: e.meta ?? null,
 								};
 							case 'success':
@@ -2991,7 +2991,7 @@
 						}));
 				}
 			};
-		function t5(e, t) {
+		function t9(e, t) {
 			return {
 				fetchFailureCount: 0,
 				fetchFailureReason: null,
@@ -3043,7 +3043,7 @@
 						i = this.get(s);
 					return (
 						i ||
-							((i = new t9({
+							((i = new t5({
 								client: e,
 								queryKey: n,
 								queryHash: s,
@@ -3110,7 +3110,7 @@
 					});
 				}
 			},
-			rn = class extends t8 {
+			rn = class extends t6 {
 				#c;
 				#m;
 				#b;
@@ -3168,7 +3168,7 @@
 							meta: this.options.meta,
 							mutationKey: this.options.mutationKey,
 						};
-					this.#h = t6({
+					this.#h = t8({
 						fn: () =>
 							this.options.mutationFn
 								? this.options.mutationFn(e, r)
@@ -3941,7 +3941,7 @@
 						let r = this.hasListeners(),
 							i = !r && rp(e, t),
 							o = r && rf(e, n, t, s);
-						((i || o) && (c = { ...c, ...t5(l.data, e.options) }),
+						((i || o) && (c = { ...c, ...t9(l.data, e.options) }),
 							'isRestoring' === t._optimisticResults &&
 								(c.fetchStatus = 'idle'));
 					}
@@ -4162,7 +4162,7 @@
 					};
 				}
 			},
-			rb = e5.createContext(
+			rb = e9.createContext(
 				((a = !1),
 				{
 					clearReset: () => {
@@ -4180,7 +4180,7 @@
 					(e.retryOnMount = !1);
 			},
 			rg = (e) => {
-				e5.useEffect(() => {
+				e9.useEffect(() => {
 					e.clearReset();
 				}, [e]);
 			},
@@ -4196,7 +4196,7 @@
 				!e.isFetching &&
 				n &&
 				((s && void 0 === e.data) || tj(r, [e.error, n])),
-			rx = e5.createContext(!1);
+			rx = e9.createContext(!1);
 		rx.Provider;
 		var rw = (e, t) => void 0 === t.state.data,
 			rP = (e) => {
@@ -4215,8 +4215,8 @@
 					r.clearReset();
 				});
 		function rQ(e, t, r) {
-			let n = e5.useContext(rx),
-				s = e5.useContext(rb),
+			let n = e9.useContext(rx),
+				s = e9.useContext(rb),
 				i = tR(r),
 				o = i.defaultQueryOptions(e);
 			(i.getDefaultOptions().queries?._experimental_beforeQuery?.(o),
@@ -4225,12 +4225,12 @@
 				rv(o, s),
 				rg(s));
 			let u = !i.getQueryCache().get(o.queryHash),
-				[a] = e5.useState(() => new t(i, o)),
+				[a] = e9.useState(() => new t(i, o)),
 				l = a.getOptimisticResult(o),
 				c = !n && !1 !== e.subscribed;
 			if (
-				(e5.useSyncExternalStore(
-					e5.useCallback(
+				(e9.useSyncExternalStore(
+					e9.useCallback(
 						(e) => {
 							let t = c ? a.subscribe(tZ.batchCalls(e)) : tn;
 							return (a.updateResult(), t);
@@ -4240,7 +4240,7 @@
 					() => a.getCurrentResult(),
 					() => a.getCurrentResult(),
 				),
-				e5.useEffect(() => {
+				e9.useEffect(() => {
 					a.setOptions(o);
 				}, [o, a]),
 				rS(o, l))
@@ -4514,9 +4514,9 @@
 		};
 		function rE({ queries: e, ...t }, r) {
 			let n = tR(r),
-				s = e5.useContext(rx),
-				i = e5.useContext(rb),
-				o = e5.useMemo(
+				s = e9.useContext(rx),
+				i = e9.useContext(rb),
+				o = e9.useMemo(
 					() =>
 						e.map((e) => {
 							let t = n.defaultQueryOptions(e);
@@ -4531,15 +4531,15 @@
 				(rP(e), rv(e, i));
 			}),
 				rg(i));
-			let [u] = e5.useState(() => new rR(n, o, t)),
+			let [u] = e9.useState(() => new rR(n, o, t)),
 				[a, l, c] = u.getOptimisticResult(o, t.combine),
 				h = !s && !1 !== t.subscribed;
-			(e5.useSyncExternalStore(
-				e5.useCallback((e) => (h ? u.subscribe(tZ.batchCalls(e)) : tn), [u, h]),
+			(e9.useSyncExternalStore(
+				e9.useCallback((e) => (h ? u.subscribe(tZ.batchCalls(e)) : tn), [u, h]),
 				() => u.getCurrentResult(),
 				() => u.getCurrentResult(),
 			),
-				e5.useEffect(() => {
+				e9.useEffect(() => {
 					u.setQueries(o, t);
 				}, [o, t, u]));
 			let p = a.some((e, t) => rS(o[t], e))
@@ -4571,7 +4571,7 @@
 			return l(c());
 		}
 		let rD = ['client', 'ssrContext', 'ssrState', 'abortOnUnmount'],
-			rM = null == (S = e5.createContext) ? void 0 : S.call(e5, null);
+			rM = null == (S = e9.createContext) ? void 0 : S.call(e9, null);
 		var rI = tK(t$(), 1);
 		function rT(e) {
 			let t = e instanceof eN ? e : e[eH];
@@ -4673,7 +4673,7 @@
 		}
 		function rK(e) {
 			let t = rU(e);
-			return e5.useMemo(() => t, [t]);
+			return e9.useMemo(() => t, [t]);
 		}
 		async function rL(e, t, r) {
 			let n = t.getQueryCache().build(t, { queryKey: r });
@@ -4718,7 +4718,7 @@
 						: (e) => e.originalFn(),
 				i = null != (n = null == e ? void 0 : e.context) ? n : rM;
 			function o() {
-				let e = e5.useContext(i);
+				let e = e9.useContext(i);
 				if (!e)
 					throw Error(
 						'Unable to find tRPC Context. Did you forget to wrap your App inside `withTRPC` HoC?',
@@ -4742,9 +4742,9 @@
 				Provider: (e) => {
 					var t;
 					let { abortOnUnmount: r = !1, queryClient: n, ssrContext: s } = e,
-						[o, u] = e5.useState(null != (t = e.ssrState) && t),
+						[o, u] = e9.useState(null != (t = e.ssrState) && t),
 						a = e.client instanceof eN ? e.client : e.client[eH],
-						l = e5.useMemo(
+						l = e9.useMemo(
 							() =>
 								(function (e) {
 									let { client: t, queryClient: r } = e,
@@ -4969,7 +4969,7 @@
 								})({ client: a, queryClient: n }),
 							[a, n],
 						),
-						c = e5.useMemo(
+						c = e9.useMemo(
 							() =>
 								(0, rH.default)(
 									{
@@ -4984,7 +4984,7 @@
 							[r, a, l, n, s, o],
 						);
 					return (
-						e5.useEffect(() => {
+						e9.useEffect(() => {
 							u((e) => !!e && 'mounted');
 						}, []),
 						(0, t_.jsx)(i.Provider, { value: c, children: e.children })
@@ -5213,16 +5213,16 @@
 						u = n.defaultMutationOptions(n.getMutationDefaults(i)),
 						a = (function (e, t) {
 							let r = tR(t),
-								[n] = e5.useState(() => new r_(r, e));
-							e5.useEffect(() => {
+								[n] = e9.useState(() => new r_(r, e));
+							e9.useEffect(() => {
 								n.setOptions(e);
 							}, [n, e]);
-							let s = e5.useSyncExternalStore(
-									e5.useCallback((e) => n.subscribe(tZ.batchCalls(e)), [n]),
+							let s = e9.useSyncExternalStore(
+									e9.useCallback((e) => n.subscribe(tZ.batchCalls(e)), [n]),
 									() => n.getCurrentResult(),
 									() => n.getCurrentResult(),
 								),
-								i = e5.useCallback(
+								i = e9.useCallback(
 									(e, t) => {
 										n.mutate(e, t).catch(tn);
 									},
@@ -5277,19 +5277,19 @@
 					let s = null != (n = null == r ? void 0 : r.enabled) ? n : t !== tw,
 						i = th(tV(e, t, 'any')),
 						{ client: u } = o(),
-						c = e5.useRef(r);
-					e5.useEffect(() => {
+						c = e9.useRef(r);
+					e9.useEffect(() => {
 						c.current = r;
 					});
-					let [h] = e5.useState(new Set([])),
-						p = e5.useCallback(
+					let [h] = e9.useState(new Set([])),
+						p = e9.useCallback(
 							(e) => {
 								h.add(e);
 							},
 							[h],
 						),
-						d = e5.useRef(null),
-						f = e5.useCallback(
+						d = e9.useRef(null),
+						f = e9.useCallback(
 							(e) => {
 								let t = m.current,
 									r = (m.current = e(t)),
@@ -5303,7 +5303,7 @@
 							},
 							[p, h],
 						),
-						y = e5.useCallback(() => {
+						y = e9.useCallback(() => {
 							var r;
 							(null == (r = d.current) || r.unsubscribe(), s)
 								? (f(() =>
@@ -5383,7 +5383,7 @@
 										(0, rH.default)((0, rH.default)({}, a), {}, { reset: y }),
 									);
 						}, [u, i, s, f]);
-					e5.useEffect(
+					e9.useEffect(
 						() => (
 							y(),
 							() => {
@@ -5393,12 +5393,12 @@
 						),
 						[y],
 					);
-					let m = e5.useRef(
+					let m = e9.useRef(
 							s
 								? (0, rH.default)((0, rH.default)({}, l), {}, { reset: y })
 								: (0, rH.default)((0, rH.default)({}, a), {}, { reset: y }),
 						),
-						[b, v] = e5.useState(rG(m.current, p));
+						[b, v] = e9.useState(rG(m.current, p));
 					return b;
 				},
 				useInfiniteQuery: function (e, t, r) {
@@ -5563,7 +5563,7 @@
 			};
 		}
 		var rz =
-			((h = null != (l = e9()) ? eV(e1(l)) : {}),
+			((h = null != (l = e5()) ? eV(e1(l)) : {}),
 			((e, t, r, n) => {
 				if ((t && 'object' == typeof t) || 'function' == typeof t)
 					for (var s, i = e0(t), o = 0, u = i.length; o < u; o++)
@@ -5731,7 +5731,7 @@
 						let o = rW(e),
 							u = (s) => {
 								var i, u;
-								let [a] = (0, e5.useState)(() => {
+								let [a] = (0, e9.useState)(() => {
 										var r;
 										if (s.trpc) return s.trpc;
 										let n = t({}),
@@ -5755,7 +5755,7 @@
 										ssrContext: p,
 									} = a,
 									d = null == (i = s.pageProps) ? void 0 : i.trpcState,
-									f = e5.default.useMemo(
+									f = e9.default.useMemo(
 										() => (d ? r.input.deserialize(d) : d),
 										[d],
 									);
@@ -5810,7 +5810,7 @@
 					'useContext' === e || 'useUtils' === e
 						? () => {
 								let e = y.useUtils();
-								return (0, e5.useMemo)(() => {
+								return (0, e9.useMemo)(() => {
 									let t, r;
 									return (
 										(t = eW(e.client)),

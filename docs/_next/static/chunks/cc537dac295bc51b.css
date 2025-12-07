@@ -953,14 +953,12 @@
 			--tab-radius-limit: min(var(--radius-field), var(--tab-radius-min));
 			--tab-radius-grad:
 				#0000 calc(69% - var(--border)),
-				var(--tab-border-color) calc(calc(69% - var(--border)) + 0.25px),
-				var(--tab-border-color) calc(calc(69% - var(--border)) + var(--border)),
-				var(--tab-bg) calc(calc(69% - var(--border)) + var(--border) + 0.25px);
+				var(--tab-border-color) calc(69% - var(--border) + 0.25px),
+				var(--tab-border-color) 69%, var(--tab-bg) calc(69% + 0.25px);
 			order: var(--tab-order);
 			height: var(--tab-height);
+			padding-inline: var(--tab-p);
 			border-color: #0000;
-			padding-inline-start: var(--tab-p);
-			padding-inline-end: var(--tab-p);
 			font-size: 0.875rem;
 		}
 		.tab:is(input[type='radio']) {

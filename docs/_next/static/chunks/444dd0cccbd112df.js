@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	92406,
+	22133,
 	(e, t, n) => {
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -10,7 +10,7 @@
 					return a;
 				},
 			}));
-		let r = e.r(36960),
+		let r = e.r(24412),
 			o = 'undefined' == typeof window,
 			i = o ? () => {} : r.useLayoutEffect,
 			l = o ? () => {} : r.useEffect;
@@ -58,7 +58,7 @@
 			);
 		}
 	},
-	21808,
+	88142,
 	(e, t, n) => {
 		'use strict';
 		Object.defineProperty(n, '__esModule', { value: !0 });
@@ -73,10 +73,10 @@
 		for (var o in r) Object.defineProperty(n, o, { enumerable: !0, get: r[o] });
 		let i = e.r(2879),
 			l = e.r(87602),
-			a = e.r(94601),
-			d = l._(e.r(36960)),
-			s = i._(e.r(92406)),
-			u = e.r(55867);
+			a = e.r(28626),
+			d = l._(e.r(24412)),
+			s = i._(e.r(22133)),
+			u = e.r(91468);
 		function c() {
 			return [
 				(0, a.jsx)('meta', { charSet: 'utf-8' }, 'charset'),
@@ -102,7 +102,7 @@
 						)
 					: e.concat(t);
 		}
-		e.r(41574);
+		e.r(18037);
 		let p = ['name', 'httpEquiv', 'charSet', 'itemProp'];
 		function h(e) {
 			let t, n, r, o;
@@ -166,7 +166,7 @@
 			Object.assign(n.default, n),
 			(t.exports = n.default));
 	},
-	34753,
+	50019,
 	(e, t, n) => {
 		'use strict';
 		Object.defineProperty(n, '__esModule', { value: !0 });
@@ -205,7 +205,7 @@
 			return (delete n[t], a(e, n));
 		}
 	},
-	3807,
+	92461,
 	(e, t, n) => {
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -216,9 +216,9 @@
 				},
 			}));
 		let r = e.r(2879),
-			o = e.r(94601),
-			i = r._(e.r(36960)),
-			l = r._(e.r(21808)),
+			o = e.r(28626),
+			i = r._(e.r(24412)),
+			l = r._(e.r(88142)),
 			a = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
@@ -230,7 +230,7 @@
 				i = n && n.statusCode ? n.statusCode : r ? r.statusCode : 404;
 			if ('undefined' != typeof window) o = window.location.hostname;
 			else if (t) {
-				let { getRequestMeta: n } = e.r(34753),
+				let { getRequestMeta: n } = e.r(50019),
 					r = n(t, 'initURL');
 				r && (o = new URL(r).hostname);
 			}

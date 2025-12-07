@@ -1,9 +1,9 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	29060,
+	51942,
 	(e, t, r) => {
 		'use strict';
-		var a = e.r(36960);
+		var a = e.r(24412);
 		function n(e) {
 			var t = 'https://react.dev/errors/' + e;
 			if (1 < arguments.length) {
@@ -174,9 +174,9 @@
 			(r.useFormStatus = function () {
 				return l.H.useHostTransitionStatus();
 			}),
-			(r.version = '19.2.0'));
+			(r.version = '19.2.1'));
 	},
-	5674,
+	67720,
 	(e, t, r) => {
 		'use strict';
 		(!(function e() {
@@ -190,9 +190,9 @@
 					console.error(e);
 				}
 		})(),
-			(t.exports = e.r(29060)));
+			(t.exports = e.r(51942)));
 	},
-	23613,
+	19632,
 	(e, t, r) => {
 		'use strict';
 		function a() {
@@ -219,7 +219,7 @@
 				},
 			}));
 	},
-	95338,
+	65765,
 	(e, t, r) => {
 		'use strict';
 		function a(e, t = {}) {
@@ -239,9 +239,9 @@
 					return a;
 				},
 			}),
-			e.r(41574));
+			e.r(18037));
 	},
-	47755,
+	31924,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -289,7 +289,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	74585,
+	4886,
 	(e, t, r) => {
 		'use strict';
 		function a(e, t = '') {
@@ -305,7 +305,7 @@
 				},
 			}));
 	},
-	16958,
+	44636,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -315,8 +315,8 @@
 					return i;
 				},
 			}));
-		let a = e.r(69623),
-			n = e.r(78092);
+		let a = e.r(15715),
+			n = e.r(61754);
 		function i(e, t, r = !0) {
 			let o = new URL(
 					'undefined' == typeof window
@@ -356,7 +356,7 @@
 			};
 		}
 	},
-	15645,
+	71524,
 	(e, t, r) => {
 		'use strict';
 		let a;
@@ -387,7 +387,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	88772,
+	21899,
 	(e, t, r) => {
 		'use strict';
 		function a() {
@@ -401,7 +401,7 @@
 				},
 			}));
 	},
-	52286,
+	57884,
 	(e, t, r) => {
 		'use strict';
 		function a(e) {
@@ -418,7 +418,7 @@
 				},
 			}));
 	},
-	18535,
+	52074,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -437,11 +437,11 @@
 			},
 		};
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
-		(e.r(2879), e.r(74585));
-		let i = e.r(15645),
-			o = e.r(2743),
-			s = e.r(88772),
-			l = e.r(52286);
+		(e.r(2879), e.r(4886));
+		let i = e.r(71524),
+			o = e.r(73358),
+			s = e.r(21899),
+			l = e.r(57884);
 		function u(e, t, r) {
 			let a,
 				n = t.get(e);
@@ -713,7 +713,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	48210,
+	95240,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -780,7 +780,7 @@
 			}
 		}
 	},
-	77128,
+	52070,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -798,12 +798,12 @@
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
 		let i = e.r(2879),
 			o = e.r(87602),
-			s = e.r(94601),
-			l = i._(e.r(5674)),
-			u = o._(e.r(36960)),
-			c = e.r(55867),
-			h = e.r(47755),
-			d = e.r(2743),
+			s = e.r(28626),
+			l = i._(e.r(67720)),
+			u = o._(e.r(24412)),
+			c = e.r(91468),
+			h = e.r(31924),
+			d = e.r(73358),
 			f = new Map(),
 			p = new Set(),
 			_ = (e) => {
@@ -1007,7 +1007,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	26270,
+	72592,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1029,7 +1029,7 @@
 			return null === t || t.hasOwnProperty('isPrototypeOf');
 		}
 	},
-	87138,
+	84263,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1042,7 +1042,7 @@
 			},
 		};
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
-		let i = e.r(26270);
+		let i = e.r(72592);
 		function o(e) {
 			return (
 				'object' == typeof e && null !== e && 'name' in e && 'message' in e
@@ -1070,7 +1070,7 @@
 					);
 		}
 	},
-	85848,
+	42178,
 	(e, t, r) => {
 		'use strict';
 		function a(e) {
@@ -1084,7 +1084,7 @@
 				},
 			}));
 	},
-	3419,
+	69010,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1094,8 +1094,8 @@
 					return i;
 				},
 			}));
-		let a = e.r(10977),
-			n = e.r(85848);
+		let a = e.r(59531),
+			n = e.r(42178);
 		function i(e) {
 			let t = (0, n.normalizePathSep)(e);
 			return t.startsWith('/index/') && !(0, a.isDynamicRoute)(t)
@@ -1105,7 +1105,7 @@
 					: '/';
 		}
 	},
-	88550,
+	7347,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1131,7 +1131,7 @@
 					{ pathname: (e = e.slice(r.length + 1) || '/'), detectedLocale: r });
 		}
 	},
-	91975,
+	97001,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1149,7 +1149,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	21348,
+	7761,
 	(e, t, r) => {
 		'use strict';
 		function a(e, t) {
@@ -1162,7 +1162,7 @@
 					return a;
 				},
 			}),
-			e.r(553),
+			e.r(94603),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1170,7 +1170,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	75247,
+	10387,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1180,7 +1180,7 @@
 					return n;
 				},
 			}),
-			e.r(93322));
+			e.r(73822));
 		let a = '/micro-saas';
 		function n(e) {
 			return (
@@ -1197,7 +1197,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	24117,
+	37595,
 	(e, t, r) => {
 		'use strict';
 		function a(e) {
@@ -1211,7 +1211,7 @@
 				},
 			}));
 	},
-	36720,
+	16798,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1221,14 +1221,14 @@
 					return n;
 				},
 			}));
-		let a = e.r(56162);
+		let a = e.r(60867);
 		function n(e, t) {
 			if (!(0, a.pathHasPrefix)(e, t)) return e;
 			let r = e.slice(t.length);
 			return r.startsWith('/') ? r : `/${r}`;
 		}
 	},
-	99453,
+	89928,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1238,9 +1238,9 @@
 					return o;
 				},
 			}));
-		let a = e.r(88550),
-			n = e.r(36720),
-			i = e.r(56162);
+		let a = e.r(7347),
+			n = e.r(16798),
+			i = e.r(60867);
 		function o(e, t) {
 			let { basePath: r, i18n: o, trailingSlash: s } = t.nextConfig ?? {},
 				l = { pathname: e, trailingSlash: '/' !== e ? e.endsWith('/') : s };
@@ -1277,7 +1277,7 @@
 			return l;
 		}
 	},
-	24730,
+	52031,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1287,14 +1287,14 @@
 					return n;
 				},
 			}));
-		let a = e.r(553);
+		let a = e.r(94603);
 		function n(e, t) {
 			if (!e.startsWith('/') || !t) return e;
 			let { pathname: r, query: n, hash: i } = (0, a.parsePath)(e);
 			return `${r}${t}${n}${i}`;
 		}
 	},
-	84671,
+	43497,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1304,8 +1304,8 @@
 					return i;
 				},
 			}));
-		let a = e.r(5796),
-			n = e.r(56162);
+		let a = e.r(33547),
+			n = e.r(60867);
 		function i(e, t, r, i) {
 			if (!t || t === r) return e;
 			let o = e.toLowerCase();
@@ -1316,7 +1316,7 @@
 				: (0, a.addPathPrefix)(e, `/${t}`);
 		}
 	},
-	34670,
+	47131,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1326,10 +1326,10 @@
 					return s;
 				},
 			}));
-		let a = e.r(91824),
-			n = e.r(5796),
-			i = e.r(24730),
-			o = e.r(84671);
+		let a = e.r(48198),
+			n = e.r(33547),
+			i = e.r(52031),
+			o = e.r(43497);
 		function s(e) {
 			let t = (0, o.addLocale)(
 				e.pathname,
@@ -1353,7 +1353,7 @@
 			);
 		}
 	},
-	36565,
+	54539,
 	(e, t, r) => {
 		'use strict';
 		function a(e, t) {
@@ -1381,7 +1381,7 @@
 				},
 			}));
 	},
-	43932,
+	51733,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1394,7 +1394,7 @@
 		let a =
 			/[\w-]+-Google|Google-[\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight/i;
 	},
-	13072,
+	45275,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1413,7 +1413,7 @@
 			},
 		};
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
-		let i = e.r(43932),
+		let i = e.r(51733),
 			o = /Googlebot(?!-)|Googlebot$/i,
 			s = i.HTML_LIMITED_BOT_UA_RE.source;
 		function l(e) {
@@ -1426,7 +1426,7 @@
 			return o.test(e) ? 'dom' : l(e) ? 'html' : void 0;
 		}
 	},
-	37382,
+	1921,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1444,37 +1444,37 @@
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
 		let i = e.r(2879),
 			o = e.r(87602),
-			s = e.r(91824),
-			l = e.r(18535),
-			u = e.r(77128),
-			c = o._(e.r(87138)),
-			h = e.r(3419),
-			d = e.r(88550),
-			f = i._(e.r(23613)),
-			p = e.r(69623),
-			_ = e.r(25140),
-			m = e.r(16958),
-			g = e.r(36502),
-			y = e.r(82729),
-			b = e.r(64048);
-		e.r(91975);
-		let P = e.r(553),
-			v = e.r(64205),
-			O = e.r(21348),
-			w = e.r(75247),
-			E = e.r(75517),
-			R = e.r(93322),
-			S = e.r(36083),
-			j = e.r(24117),
-			L = e.r(99453),
-			C = e.r(34670),
-			T = e.r(36565),
-			M = e.r(47128),
-			I = e.r(13072),
-			A = e.r(45356),
-			x = e.r(39201),
-			D = e.r(95338),
-			N = e.r(66457);
+			s = e.r(48198),
+			l = e.r(52074),
+			u = e.r(52070),
+			c = o._(e.r(84263)),
+			h = e.r(69010),
+			d = e.r(7347),
+			f = i._(e.r(19632)),
+			p = e.r(15715),
+			_ = e.r(15622),
+			m = e.r(44636),
+			g = e.r(28770),
+			y = e.r(66390),
+			b = e.r(85651);
+		e.r(97001);
+		let P = e.r(94603),
+			v = e.r(9807),
+			O = e.r(7761),
+			w = e.r(10387),
+			E = e.r(74335),
+			R = e.r(73822),
+			S = e.r(1724),
+			j = e.r(37595),
+			L = e.r(89928),
+			C = e.r(47131),
+			T = e.r(54539),
+			M = e.r(50460),
+			I = e.r(45275),
+			A = e.r(93971),
+			x = e.r(76518),
+			D = e.r(65765),
+			N = e.r(2465);
 		function H() {
 			return Object.assign(
 				Object.defineProperty(Error('Route Cancelled'), '__NEXT_ERROR_CODE', {
@@ -1941,7 +1941,7 @@
 					if (!this._bfl_s && !this._bfl_d) {
 						let r,
 							i,
-							{ BloomFilter: o } = e.r(48210);
+							{ BloomFilter: o } = e.r(95240);
 						try {
 							({ __routerFilterStatic: r, __routerFilterDynamic: i } = await (0,
 							l.getClientBuildManifest)());
@@ -2752,7 +2752,7 @@
 			}
 		}
 	},
-	78308,
+	65350,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -2763,9 +2763,9 @@
 				},
 			}),
 			e.r(2879));
-		let a = e.r(94601);
-		e.r(36960);
-		let n = e.r(88564);
+		let a = e.r(28626);
+		e.r(24412);
+		let n = e.r(29790);
 		function i(e) {
 			function t(t) {
 				return (0, a.jsx)(e, { router: (0, n.useRouter)(), ...t });
@@ -2783,7 +2783,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	88564,
+	29790,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -2809,11 +2809,11 @@
 		};
 		for (var n in a) Object.defineProperty(r, n, { enumerable: !0, get: a[n] });
 		let i = e.r(2879),
-			o = i._(e.r(36960)),
-			s = i._(e.r(37382)),
-			l = e.r(17378),
-			u = i._(e.r(87138)),
-			c = i._(e.r(78308)),
+			o = i._(e.r(24412)),
+			s = i._(e.r(1921)),
+			l = e.r(15759),
+			u = i._(e.r(84263)),
+			c = i._(e.r(65350)),
 			h = {
 				router: null,
 				readyCallbacks: [],
