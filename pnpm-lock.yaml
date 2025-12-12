@@ -19,19 +19,19 @@ importers:
         version: 8.0.0(@capacitor/core@8.0.0)
       '@prisma/client':
         specifier: 7.1.0
-        version: 7.1.0(prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3))(typescript@5.9.3)
+        version: 7.1.0(prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(typescript@5.9.3)
       '@tanstack/react-query':
         specifier: 5.90.12
-        version: 5.90.12(react@19.2.1)
+        version: 5.90.12(react@19.2.3)
       '@trpc/client':
         specifier: 11.7.2
         version: 11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3)
       '@trpc/next':
         specifier: 11.7.2
-        version: 11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)
+        version: 11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@trpc/react-query':
         specifier: 11.7.2
-        version: 11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)
+        version: 11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@trpc/server':
         specifier: 11.7.2
         version: 11.7.2(typescript@5.9.3)
@@ -46,16 +46,16 @@ importers:
         version: 9.0.3
       next:
         specifier: 16.0.8
-        version: 16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react:
-        specifier: 19.2.1
-        version: 19.2.1
+        specifier: 19.2.3
+        version: 19.2.3
       react-dom:
-        specifier: 19.2.1
-        version: 19.2.1(react@19.2.1)
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
       resend:
         specifier: 6.6.0
-        version: 6.6.0(@react-email/render@1.1.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1))
+        version: 6.6.0(@react-email/render@1.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       zod:
         specifier: 4.1.13
         version: 4.1.13
@@ -116,7 +116,7 @@ importers:
         version: 0.7.2(prettier@3.7.4)
       prisma:
         specifier: 7.1.0
-        version: 7.1.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)
+        version: 7.1.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       prisma-dbml-generator:
         specifier: 0.12.0
         version: 0.12.0
@@ -3208,6 +3208,7 @@ packages:
   next@16.0.8:
     resolution: {integrity: sha512-LmcZzG04JuzNXi48s5P+TnJBsTGPJunViNKV/iE4uM6kstjTQsQhvsAv+xF6MJxU2Pr26tl15eVbp0jQnsv6/g==}
     engines: {node: '>=20.9.0'}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -3606,10 +3607,10 @@ packages:
   rc9@2.1.2:
     resolution: {integrity: sha512-btXCnMmRIBINM2LDZoEmOogIZU7Qe7zn4BpomSKZ/ykbLObuBdvG+mFq11DL6fjH1DRwHhrlgtYWG96bJiC7Cg==}
 
-  react-dom@19.2.1:
-    resolution: {integrity: sha512-ibrK8llX2a4eOskq1mXKu/TGZj9qzomO+sNfO98M6d9zIPOEhlBkMkBUBLd1vgS0gQsLDBzA+8jJBVXDnfHmJg==}
+  react-dom@19.2.3:
+    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
     peerDependencies:
-      react: ^19.2.1
+      react: ^19.2.3
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3620,8 +3621,8 @@ packages:
   react-promise-suspense@0.3.4:
     resolution: {integrity: sha512-I42jl7L3Ze6kZaq+7zXWSunBa3b1on5yfvUW6Eo/3fFOj6dZ5Bqmcd264nJbTK/gn1HjjILAjSwnZbV4RpSaNQ==}
 
-  react@19.2.1:
-    resolution: {integrity: sha512-DGrYcCWK7tvYMnWh79yrPHt+vdx9tY+1gPZa7nJQtO/p8bLTDaHp4dzwEhQB7pZ4Xe3ok4XKuEPrVuc+wlpkmw==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   read-pkg-up@7.0.1:
@@ -5204,11 +5205,11 @@ snapshots:
 
   '@prisma/client-runtime-utils@7.1.0': {}
 
-  '@prisma/client@7.1.0(prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3))(typescript@5.9.3)':
+  '@prisma/client@7.1.0(prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(typescript@5.9.3)':
     dependencies:
       '@prisma/client-runtime-utils': 7.1.0
     optionalDependencies:
-      prisma: 7.1.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)
+      prisma: 7.1.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       typescript: 5.9.3
 
   '@prisma/config@7.1.0':
@@ -5379,18 +5380,18 @@ snapshots:
 
   '@prisma/query-plan-executor@6.18.0': {}
 
-  '@prisma/studio-core@0.8.2(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)':
+  '@prisma/studio-core@0.8.2(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@types/react': 19.2.7
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
-  '@react-email/render@1.1.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)':
+  '@react-email/render@1.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       html-to-text: 9.0.5
       prettier: 3.7.4
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
       react-promise-suspense: 0.3.4
     optional: true
 
@@ -5491,10 +5492,10 @@ snapshots:
 
   '@tanstack/query-core@5.90.12': {}
 
-  '@tanstack/react-query@5.90.12(react@19.2.1)':
+  '@tanstack/react-query@5.90.12(react@19.2.3)':
     dependencies:
       '@tanstack/query-core': 5.90.12
-      react: 19.2.1
+      react: 19.2.3
 
   '@tauri-apps/cli-darwin-arm64@2.9.6':
     optional: true
@@ -5548,25 +5549,25 @@ snapshots:
       '@trpc/server': 11.7.2(typescript@5.9.3)
       typescript: 5.9.3
 
-  '@trpc/next@11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)':
+  '@trpc/next@11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)':
     dependencies:
       '@trpc/client': 11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3)
       '@trpc/server': 11.7.2(typescript@5.9.3)
-      next: 16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
+      next: 16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
       typescript: 5.9.3
     optionalDependencies:
-      '@tanstack/react-query': 5.90.12(react@19.2.1)
-      '@trpc/react-query': 11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)
+      '@tanstack/react-query': 5.90.12(react@19.2.3)
+      '@trpc/react-query': 11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
 
-  '@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.1))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3)':
+  '@trpc/react-query@11.7.2(@tanstack/react-query@5.90.12(react@19.2.3))(@trpc/client@11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3))(@trpc/server@11.7.2(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)':
     dependencies:
-      '@tanstack/react-query': 5.90.12(react@19.2.1)
+      '@tanstack/react-query': 5.90.12(react@19.2.3)
       '@trpc/client': 11.7.2(@trpc/server@11.7.2(typescript@5.9.3))(typescript@5.9.3)
       '@trpc/server': 11.7.2(typescript@5.9.3)
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
       typescript: 5.9.3
 
   '@trpc/server@11.7.2(typescript@5.9.3)':
@@ -8040,15 +8041,15 @@ snapshots:
 
   new-github-issue-url@0.2.1: {}
 
-  next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  next@16.0.8(@babel/core@7.28.5)(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@next/env': 16.0.8
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001759
       postcss: 8.4.31
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
-      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.1)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.0.8
       '@next/swc-darwin-x64': 16.0.8
@@ -8343,12 +8344,12 @@ snapshots:
       - encoding
       - supports-color
 
-  prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(typescript@5.9.3):
+  prisma@7.1.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3):
     dependencies:
       '@prisma/config': 7.1.0
       '@prisma/dev': 0.15.0(typescript@5.9.3)
       '@prisma/engines': 7.1.0
-      '@prisma/studio-core': 0.8.2(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@prisma/studio-core': 0.8.2(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       mysql2: 3.15.3
       postgres: 3.4.7
     optionalDependencies:
@@ -8395,9 +8396,9 @@ snapshots:
       defu: 6.1.4
       destr: 2.0.5
 
-  react-dom@19.2.1(react@19.2.1):
+  react-dom@19.2.3(react@19.2.3):
     dependencies:
-      react: 19.2.1
+      react: 19.2.3
       scheduler: 0.27.0
 
   react-is@16.13.1: {}
@@ -8409,7 +8410,7 @@ snapshots:
       fast-deep-equal: 2.0.1
     optional: true
 
-  react@19.2.1: {}
+  react@19.2.3: {}
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -8478,11 +8479,11 @@ snapshots:
 
   requires-port@1.0.0: {}
 
-  resend@6.6.0(@react-email/render@1.1.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)):
+  resend@6.6.0(@react-email/render@1.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)):
     dependencies:
       svix: 1.76.1
     optionalDependencies:
-      '@react-email/render': 1.1.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      '@react-email/render': 1.1.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
 
   resolve-cwd@3.0.0:
     dependencies:
@@ -8828,10 +8829,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.1):
+  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.3):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.1
+      react: 19.2.3
     optionalDependencies:
       '@babel/core': 7.28.5
 
