@@ -67,7 +67,7 @@
 		"@types/node": "24.10.3",
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3",
-		"daisyui": "5.5.11",
+		"daisyui": "5.5.13",
 		"eslint": "9.39.1",
 		"eslint-config-next": "16.0.8",
 		"husky": "9.1.7",
