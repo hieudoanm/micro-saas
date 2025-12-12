@@ -704,15 +704,22 @@
 		overflow: var(--page-overflow);
 	}
 	:root {
-		--page-scroll-bg-on: linear-gradient(var(--root-bg), var(--root-bg))
-			var(--root-bg);
+		background: var(--page-scroll-bg, var(--root-bg));
+		--page-scroll-bg-on: linear-gradient(
+				var(--root-bg, #0000),
+				var(--root-bg, #0000)
+			)
+			var(--root-bg, #0000);
 	}
 	@supports (color: color-mix(in lab, red, red)) {
 		:root {
-			--page-scroll-bg-on: linear-gradient(var(--root-bg), var(--root-bg))
+			--page-scroll-bg-on: linear-gradient(
+					var(--root-bg, #0000),
+					var(--root-bg, #0000)
+				)
 				color-mix(
 					in srgb,
-					var(--root-bg),
+					var(--root-bg, #0000),
 					lab(0% 0 0) calc(var(--page-has-backdrop, 0) * 40%)
 				);
 		}
@@ -726,9 +733,6 @@
 				else: unset
 		);
 	}
-	:root:root {
-		background: var(--page-scroll-bg, var(--root-bg, var(--color-base-100)));
-	}
 	@keyframes set-page-has-scroll {
 		0%,
 		to {
@@ -737,7 +741,7 @@
 	}
 	:root,
 	[data-theme] {
-		background-color: var(--root-bg, var(--color-base-100));
+		background: var(--page-scroll-bg, var(--root-bg));
 		color: var(--color-base-content);
 	}
 	:where(:root, [data-theme]) {
@@ -1610,10 +1614,10 @@
 				0 1px currentColor,
 				0 0 0 2rem var(--range-thumb) inset,
 				calc(
-						(var(--range-dir, 1) * -100rem) -
+						(var(--range-dir, 1) * -100cqw) -
 							(var(--range-dir, 1) * var(--range-thumb-size) / 2)
 					)
-					0 0 calc(100rem * var(--range-fill));
+					0 0 calc(100cqw * var(--range-fill));
 			position: relative;
 			top: 50%;
 			transform: translateY(-50%);
@@ -1627,10 +1631,10 @@
 						color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
 					0 0 0 2rem var(--range-thumb) inset,
 					calc(
-							(var(--range-dir, 1) * -100rem) -
+							(var(--range-dir, 1) * -100cqw) -
 								(var(--range-dir, 1) * var(--range-thumb-size) / 2)
 						)
-						0 0 calc(100rem * var(--range-fill));
+						0 0 calc(100cqw * var(--range-fill));
 			}
 		}
 		.range::-moz-range-track {
@@ -1654,10 +1658,10 @@
 				0 1px currentColor,
 				0 0 0 2rem var(--range-thumb) inset,
 				calc(
-						(var(--range-dir, 1) * -100rem) -
+						(var(--range-dir, 1) * -100cqw) -
 							(var(--range-dir, 1) * var(--range-thumb-size) / 2)
 					)
-					0 0 calc(100rem * var(--range-fill));
+					0 0 calc(100cqw * var(--range-fill));
 			background-color: currentColor;
 			position: relative;
 			top: 50%;
@@ -1671,10 +1675,10 @@
 						color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000),
 					0 0 0 2rem var(--range-thumb) inset,
 					calc(
-							(var(--range-dir, 1) * -100rem) -
+							(var(--range-dir, 1) * -100cqw) -
 								(var(--range-dir, 1) * var(--range-thumb-size) / 2)
 						)
-						0 0 calc(100rem * var(--range-fill));
+						0 0 calc(100cqw * var(--range-fill));
 			}
 		}
 		.range:disabled {
@@ -2593,7 +2597,7 @@
 			--list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto)
 				minmax(0, auto) minmax(0, auto) 1fr;
 		}
-		.list .list-row > :not(.list-col-wrap) {
+		.list .list-row > * {
 			grid-row-start: 1;
 		}
 		.steps .step-neutral + .step-neutral:before,

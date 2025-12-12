@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	29817,
+	11200,
 	(e, t, o) => {
 		'use strict';
 		(Object.defineProperty(o, '__esModule', { value: !0 }),
@@ -11,9 +11,9 @@
 				},
 			}));
 		let r = e.r(2879),
-			l = e.r(28626),
-			u = r._(e.r(24412)),
-			a = e.r(15715);
+			l = e.r(68601),
+			u = r._(e.r(75705)),
+			a = e.r(65268);
 		async function i({ Component: e, ctx: t }) {
 			return { pageProps: await (0, a.loadGetInitialProps)(e, t) };
 		}

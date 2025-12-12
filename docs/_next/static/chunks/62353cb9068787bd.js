@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	91468,
+	19972,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -10,9 +10,9 @@
 					return n;
 				},
 			}));
-		let n = e.r(2879)._(e.r(24412)).default.createContext({});
+		let n = e.r(2879)._(e.r(75705)).default.createContext({});
 	},
-	18037,
+	19223,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -27,7 +27,7 @@
 	96874,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'NavbarContainer',
 			0,
@@ -47,7 +47,7 @@
 	5806,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'Heading2',
 			0,
@@ -77,9 +77,9 @@
 	53992,
 	(e) => {
 		'use strict';
-		var t = e.i(28626),
+		var t = e.i(68601),
 			r = e.i(3300),
-			n = e.i(80844);
+			n = e.i(44753);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	43641,
+	4807,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -187,26 +187,26 @@
 							}
 						}
 					}
-					var i = [],
-						s = !1,
+					var s = [],
+						i = !1,
 						c = -1;
 					function f() {
-						s &&
+						i &&
 							n &&
-							((s = !1),
-							n.length ? (i = n.concat(i)) : (c = -1),
-							i.length && d());
+							((i = !1),
+							n.length ? (s = n.concat(s)) : (c = -1),
+							s.length && d());
 					}
 					function d() {
-						if (!s) {
+						if (!i) {
 							var e = a(f);
-							s = !0;
-							for (var t = i.length; t; ) {
-								for (n = i, i = []; ++c < t; ) n && n[c].run();
-								((c = -1), (t = i.length));
+							i = !0;
+							for (var t = s.length; t; ) {
+								for (n = s, s = []; ++c < t; ) n && n[c].run();
+								((c = -1), (t = s.length));
 							}
 							((n = null),
-								(s = !1),
+								(i = !1),
 								(function (e) {
 									if (r === clearTimeout) return clearTimeout(e);
 									if ((r === l || !r) && clearTimeout)
@@ -232,7 +232,7 @@
 						if (arguments.length > 1)
 							for (var r = 1; r < arguments.length; r++)
 								t[r - 1] = arguments[r];
-						(i.push(new p(e, t)), 1 !== i.length || s || a(d));
+						(s.push(new p(e, t)), 1 !== s.length || i || a(d));
 					}),
 						(p.prototype.run = function () {
 							this.fun.apply(null, this.array);
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((u.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.7_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
 			(t.exports = u(229)));
 	},
-	53288,
+	75667,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(43641);
+				: e.r(4807);
 	},
 	2879,
 	(e, t, r) => {
@@ -303,7 +303,7 @@
 			return e && e.__esModule ? e : { default: e };
 		};
 	},
-	91639,
+	39893,
 	(e, t, r) => {
 		'use strict';
 		var n = Symbol.for('react.transitional.element');
@@ -326,21 +326,21 @@
 		}
 		((r.Fragment = Symbol.for('react.fragment')), (r.jsx = o), (r.jsxs = o));
 	},
-	28626,
+	68601,
 	(e, t, r) => {
 		'use strict';
-		t.exports = e.r(91639);
+		t.exports = e.r(39893);
 	},
-	70307,
+	12836,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(53288),
+		var n = e.i(75667),
 			o = Symbol.for('react.transitional.element'),
 			u = Symbol.for('react.portal'),
 			l = Symbol.for('react.fragment'),
 			a = Symbol.for('react.strict_mode'),
-			i = Symbol.for('react.profiler'),
-			s = Symbol.for('react.consumer'),
+			s = Symbol.for('react.profiler'),
+			i = Symbol.for('react.consumer'),
 			c = Symbol.for('react.context'),
 			f = Symbol.for('react.forward_ref'),
 			d = Symbol.for('react.suspense'),
@@ -387,8 +387,8 @@
 		((w.constructor = j), x(w, v.prototype), (w.isPureReactComponent = !0));
 		var E = Array.isArray;
 		function P() {}
-		var k = { H: null, A: null, T: null, S: null },
-			N = Object.prototype.hasOwnProperty;
+		var N = { H: null, A: null, T: null, S: null },
+			k = Object.prototype.hasOwnProperty;
 		function O(e, t, r) {
 			var n = r.ref;
 			return {
@@ -399,10 +399,10 @@
 				props: r,
 			};
 		}
-		function S(e) {
+		function C(e) {
 			return 'object' == typeof e && null !== e && e.$$typeof === o;
 		}
-		var C = /\/+/g;
+		var S = /\/+/g;
 		function T(e, t) {
 			var r, n;
 			return 'object' == typeof e && null !== e && null != e.key
@@ -420,8 +420,8 @@
 				l = 0;
 			return (
 				!(function e(t, r, n, l, a) {
-					var i,
-						s,
+					var s,
+						i,
 						c,
 						f = typeof t;
 					('undefined' === f || 'boolean' === f) && (t = null);
@@ -450,20 +450,20 @@
 							(d = '' === l ? '.' + T(t, 0) : l),
 							E(a)
 								? ((n = ''),
-									null != d && (n = d.replace(C, '$&/') + '/'),
+									null != d && (n = d.replace(S, '$&/') + '/'),
 									e(a, r, n, '', function (e) {
 										return e;
 									}))
 								: null != a &&
-									(S(a) &&
-										((i = a),
-										(s =
+									(C(a) &&
+										((s = a),
+										(i =
 											n +
 											(null == a.key || (t && t.key === a.key)
 												? ''
-												: ('' + a.key).replace(C, '$&/') + '/') +
+												: ('' + a.key).replace(S, '$&/') + '/') +
 											d),
-										(a = O(i.type, s, i.props))),
+										(a = O(s.type, i, s.props))),
 									r.push(a)),
 							1
 						);
@@ -611,7 +611,7 @@
 					);
 				},
 				only: function (e) {
-					if (!S(e))
+					if (!C(e))
 						throw Error(
 							'React.Children.only expected to receive a single React element child.',
 						);
@@ -620,15 +620,15 @@
 			}),
 			(r.Component = v),
 			(r.Fragment = l),
-			(r.Profiler = i),
+			(r.Profiler = s),
 			(r.PureComponent = j),
 			(r.StrictMode = a),
 			(r.Suspense = d),
-			(r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = k),
+			(r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = N),
 			(r.__COMPILER_RUNTIME = {
 				__proto__: null,
 				c: function (e) {
-					return k.H.useMemoCache(e);
+					return N.H.useMemoCache(e);
 				},
 			}),
 			(r.cache = function (e) {
@@ -648,7 +648,7 @@
 					o = e.key;
 				if (null != t)
 					for (u in (void 0 !== t.key && (o = '' + t.key), t))
-						N.call(t, u) &&
+						k.call(t, u) &&
 							'key' !== u &&
 							'__self' !== u &&
 							'__source' !== u &&
@@ -672,7 +672,7 @@
 						Provider: null,
 						Consumer: null,
 					}).Provider = e),
-					(e.Consumer = { $$typeof: s, _context: e }),
+					(e.Consumer = { $$typeof: i, _context: e }),
 					e
 				);
 			}),
@@ -682,7 +682,7 @@
 					u = null;
 				if (null != t)
 					for (n in (void 0 !== t.key && (u = '' + t.key), t))
-						N.call(t, n) &&
+						k.call(t, n) &&
 							'key' !== n &&
 							'__self' !== n &&
 							'__source' !== n &&
@@ -690,7 +690,7 @@
 				var l = arguments.length - 2;
 				if (1 === l) o.children = r;
 				else if (1 < l) {
-					for (var a = Array(l), i = 0; i < l; i++) a[i] = arguments[i + 2];
+					for (var a = Array(l), s = 0; s < l; s++) a[s] = arguments[s + 2];
 					o.children = a;
 				}
 				if (e && e.defaultProps)
@@ -703,7 +703,7 @@
 			(r.forwardRef = function (e) {
 				return { $$typeof: f, render: e };
 			}),
-			(r.isValidElement = S),
+			(r.isValidElement = C),
 			(r.lazy = function (e) {
 				return { $$typeof: m, _payload: { _status: -1, _result: e }, _init: M };
 			}),
@@ -711,12 +711,12 @@
 				return { $$typeof: p, type: e, compare: void 0 === t ? null : t };
 			}),
 			(r.startTransition = function (e) {
-				var t = k.T,
+				var t = N.T,
 					r = {};
-				k.T = r;
+				N.T = r;
 				try {
 					var n = e(),
-						o = k.S;
+						o = N.S;
 					(null !== o && o(r, n),
 						'object' == typeof n &&
 							null !== n &&
@@ -725,73 +725,73 @@
 				} catch (e) {
 					A(e);
 				} finally {
-					(null !== t && null !== r.types && (t.types = r.types), (k.T = t));
+					(null !== t && null !== r.types && (t.types = r.types), (N.T = t));
 				}
 			}),
 			(r.unstable_useCacheRefresh = function () {
-				return k.H.useCacheRefresh();
+				return N.H.useCacheRefresh();
 			}),
 			(r.use = function (e) {
-				return k.H.use(e);
+				return N.H.use(e);
 			}),
 			(r.useActionState = function (e, t, r) {
-				return k.H.useActionState(e, t, r);
+				return N.H.useActionState(e, t, r);
 			}),
 			(r.useCallback = function (e, t) {
-				return k.H.useCallback(e, t);
+				return N.H.useCallback(e, t);
 			}),
 			(r.useContext = function (e) {
-				return k.H.useContext(e);
+				return N.H.useContext(e);
 			}),
 			(r.useDebugValue = function () {}),
 			(r.useDeferredValue = function (e, t) {
-				return k.H.useDeferredValue(e, t);
+				return N.H.useDeferredValue(e, t);
 			}),
 			(r.useEffect = function (e, t) {
-				return k.H.useEffect(e, t);
+				return N.H.useEffect(e, t);
 			}),
 			(r.useEffectEvent = function (e) {
-				return k.H.useEffectEvent(e);
+				return N.H.useEffectEvent(e);
 			}),
 			(r.useId = function () {
-				return k.H.useId();
+				return N.H.useId();
 			}),
 			(r.useImperativeHandle = function (e, t, r) {
-				return k.H.useImperativeHandle(e, t, r);
+				return N.H.useImperativeHandle(e, t, r);
 			}),
 			(r.useInsertionEffect = function (e, t) {
-				return k.H.useInsertionEffect(e, t);
+				return N.H.useInsertionEffect(e, t);
 			}),
 			(r.useLayoutEffect = function (e, t) {
-				return k.H.useLayoutEffect(e, t);
+				return N.H.useLayoutEffect(e, t);
 			}),
 			(r.useMemo = function (e, t) {
-				return k.H.useMemo(e, t);
+				return N.H.useMemo(e, t);
 			}),
 			(r.useOptimistic = function (e, t) {
-				return k.H.useOptimistic(e, t);
+				return N.H.useOptimistic(e, t);
 			}),
 			(r.useReducer = function (e, t, r) {
-				return k.H.useReducer(e, t, r);
+				return N.H.useReducer(e, t, r);
 			}),
 			(r.useRef = function (e) {
-				return k.H.useRef(e);
+				return N.H.useRef(e);
 			}),
 			(r.useState = function (e) {
-				return k.H.useState(e);
+				return N.H.useState(e);
 			}),
 			(r.useSyncExternalStore = function (e, t, r) {
-				return k.H.useSyncExternalStore(e, t, r);
+				return N.H.useSyncExternalStore(e, t, r);
 			}),
 			(r.useTransition = function () {
-				return k.H.useTransition();
+				return N.H.useTransition();
 			}),
-			(r.version = '19.2.1'));
+			(r.version = '19.2.3'));
 	},
-	24412,
+	75705,
 	(e, t, r) => {
 		'use strict';
-		t.exports = e.r(70307);
+		t.exports = e.r(12836);
 	},
 	87602,
 	(e, t, r) => {
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	15715,
+	65268,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -858,13 +858,13 @@
 				return f;
 			},
 			getLocationOrigin: function () {
-				return s;
+				return i;
 			},
 			getURL: function () {
 				return c;
 			},
 			isAbsoluteUrl: function () {
-				return i;
+				return s;
 			},
 			isResSent: function () {
 				return d;
@@ -887,14 +887,14 @@
 			return (...n) => (r || ((r = !0), (t = e(...n))), t);
 		}
 		let a = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/,
-			i = (e) => a.test(e);
-		function s() {
+			s = (e) => a.test(e);
+		function i() {
 			let { protocol: e, hostname: t, port: r } = window.location;
 			return `${e}//${t}${r ? ':' + r : ''}`;
 		}
 		function c() {
 			let { href: e } = window.location,
-				t = s();
+				t = i();
 			return e.substring(t.length);
 		}
 		function f(e) {
@@ -964,7 +964,7 @@
 	77001,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'Button',
 			0,
@@ -1050,24 +1050,24 @@
 							}),
 		]);
 	},
-	59838,
+	2501,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
 			Object.defineProperty(r, 'useIntersection', {
 				enumerable: !0,
 				get: function () {
-					return i;
+					return s;
 				},
 			}));
-		let n = e.r(24412),
-			o = e.r(73358),
+		let n = e.r(75705),
+			o = e.r(28035),
 			u = 'function' == typeof IntersectionObserver,
 			l = new Map(),
 			a = [];
-		function i({ rootRef: e, rootMargin: t, disabled: r }) {
-			let i = r || !u,
-				[s, c] = (0, n.useState)(!1),
+		function s({ rootRef: e, rootMargin: t, disabled: r }) {
+			let s = r || !u,
+				[i, c] = (0, n.useState)(!1),
 				f = (0, n.useRef)(null),
 				d = (0, n.useCallback)((e) => {
 					f.current = e;
@@ -1075,7 +1075,7 @@
 			return (
 				(0, n.useEffect)(() => {
 					if (u) {
-						if (i || s) return;
+						if (s || i) return;
 						let r = f.current;
 						if (r && r.tagName)
 							return (function (e, t, r) {
@@ -1122,14 +1122,14 @@
 									}
 								);
 							})(r, (e) => e && c(e), { root: e?.current, rootMargin: t });
-					} else if (!s) {
+					} else if (!i) {
 						let e = (0, o.requestIdleCallback)(() => c(!0));
 						return () => (0, o.cancelIdleCallback)(e);
 					}
-				}, [i, t, e, s, f.current]),
+				}, [s, t, e, i, f.current]),
 				[
 					d,
-					s,
+					i,
 					(0, n.useCallback)(() => {
 						c(!1);
 					}, []),
@@ -1143,7 +1143,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	81573,
+	22322,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1156,7 +1156,7 @@
 					return n;
 				},
 			}),
-			e.r(1340),
+			e.r(61005),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1164,7 +1164,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	38546,
+	77841,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1174,7 +1174,7 @@
 					return o;
 				},
 			}));
-		let n = e.r(24412);
+		let n = e.r(75705);
 		function o(e, t) {
 			let r = (0, n.useRef)(null),
 				o = (0, n.useRef)(null);
@@ -1210,7 +1210,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	86156,
+	291,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1222,7 +1222,7 @@
 			}));
 		let n = (e) => {};
 	},
-	639,
+	61841,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1236,22 +1236,22 @@
 		};
 		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
 		let u = e.r(87602),
-			l = e.r(28626),
-			a = u._(e.r(24412)),
-			i = e.r(1724),
-			s = e.r(50460),
-			c = e.r(85651),
-			f = e.r(15715),
-			d = e.r(9807),
-			p = e.r(15759),
-			m = e.r(59838),
-			y = e.r(81573),
-			h = e.r(74335),
-			b = e.r(38546);
-		e.r(86156);
+			l = e.r(68601),
+			a = u._(e.r(75705)),
+			s = e.r(29664),
+			i = e.r(64917),
+			c = e.r(84206),
+			f = e.r(65268),
+			d = e.r(56827),
+			p = e.r(35208),
+			m = e.r(2501),
+			y = e.r(22322),
+			h = e.r(20260),
+			b = e.r(77841);
+		e.r(291);
 		let x = new Set();
 		function g(e, t, r, n) {
-			if ('undefined' != typeof window && (0, s.isLocalURL)(t)) {
+			if ('undefined' != typeof window && (0, i.isLocalURL)(t)) {
 				if (!n.bypassPrefetchedCheck) {
 					let o =
 						t +
@@ -1285,15 +1285,15 @@
 						shallow: w,
 						scroll: E,
 						locale: P,
-						onClick: k,
-						onNavigate: N,
+						onClick: N,
+						onNavigate: k,
 						onMouseEnter: O,
-						onTouchStart: S,
-						legacyBehavior: C = !1,
+						onTouchStart: C,
+						legacyBehavior: S = !1,
 						...T
 					} = e;
 				((r = c),
-					C &&
+					S &&
 						('string' == typeof r || 'number' == typeof r) &&
 						(r = (0, l.jsx)('a', { children: r })));
 				let R = a.default.useContext(p.RouterContext),
@@ -1303,13 +1303,13 @@
 							let e = v(o);
 							return { href: e, as: u ? v(u) : e };
 						}
-						let [e, t] = (0, i.resolveHref)(R, o, !0);
-						return { href: e, as: u ? (0, i.resolveHref)(R, u) : t || e };
+						let [e, t] = (0, s.resolveHref)(R, o, !0);
+						return { href: e, as: u ? (0, s.resolveHref)(R, u) : t || e };
 					}, [R, o, u]),
 					$ = a.default.useRef(A),
 					I = a.default.useRef(H);
-				C && (n = a.default.Children.only(r));
-				let L = C ? n && 'object' == typeof n && n.ref : t,
+				S && (n = a.default.Children.only(r));
+				let L = S ? n && 'object' == typeof n && n.ref : t,
 					[F, D, U] = (0, m.useIntersection)({ rootMargin: '200px' }),
 					B = a.default.useCallback(
 						(e) => {
@@ -1326,14 +1326,14 @@
 				let z = {
 					ref: q,
 					onClick(e) {
-						(C || 'function' != typeof k || k(e),
-							C &&
+						(S || 'function' != typeof N || N(e),
+							S &&
 								n.props &&
 								'function' == typeof n.props.onClick &&
 								n.props.onClick(e),
 							!R ||
 								e.defaultPrevented ||
-								(function (e, t, r, n, o, u, l, a, i) {
+								(function (e, t, r, n, o, u, l, a, s) {
 									let c,
 										{ nodeName: f } = e.currentTarget;
 									if (
@@ -1349,16 +1349,16 @@
 											e.currentTarget.hasAttribute('download')
 										)
 									) {
-										if (!(0, s.isLocalURL)(r)) {
+										if (!(0, i.isLocalURL)(r)) {
 											o && (e.preventDefault(), location.replace(r));
 											return;
 										}
 										(e.preventDefault(),
 											(() => {
-												if (i) {
+												if (s) {
 													let e = !1;
 													if (
-														(i({
+														(s({
 															preventDefault: () => {
 																e = !0;
 															},
@@ -1377,11 +1377,11 @@
 													: t[o ? 'replace' : 'push'](n || r, { scroll: e });
 											})());
 									}
-								})(e, R, A, H, j, w, E, P, N));
+								})(e, R, A, H, j, w, E, P, k));
 					},
 					onMouseEnter(e) {
-						(C || 'function' != typeof O || O(e),
-							C &&
+						(S || 'function' != typeof O || O(e),
+							S &&
 								n.props &&
 								'function' == typeof n.props.onMouseEnter &&
 								n.props.onMouseEnter(e),
@@ -1393,8 +1393,8 @@
 								}));
 					},
 					onTouchStart: function (e) {
-						(C || 'function' != typeof S || S(e),
-							C &&
+						(S || 'function' != typeof C || C(e),
+							S &&
 								n.props &&
 								'function' == typeof n.props.onTouchStart &&
 								n.props.onTouchStart(e),
@@ -1407,14 +1407,14 @@
 					},
 				};
 				if ((0, f.isAbsoluteUrl)(H)) z.href = H;
-				else if (!C || _ || ('a' === n.type && !('href' in n.props))) {
+				else if (!S || _ || ('a' === n.type && !('href' in n.props))) {
 					let e = void 0 !== P ? P : R?.locale;
 					z.href =
 						(R?.isLocaleDomain &&
 							(0, y.getDomainLocale)(H, e, R?.locales, R?.domainLocales)) ||
 						(0, h.addBasePath)((0, d.addLocale)(H, e, R?.defaultLocale));
 				}
-				return C
+				return S
 					? a.default.cloneElement(n, z)
 					: (0, l.jsx)('a', { ...T, ...z, children: r });
 			}),
@@ -1428,15 +1428,15 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	80844,
+	44753,
 	(e, t, r) => {
-		t.exports = e.r(639);
+		t.exports = e.r(61841);
 	},
 	32376,
 	41495,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s(
 			[
 				'Input',
@@ -1449,8 +1449,8 @@
 					value: u = '',
 					onChange: l = () => {},
 					required: a = !1,
-					readOnly: i = !1,
-					disabled: s = !1,
+					readOnly: s = !1,
+					disabled: i = !1,
 				}) =>
 					(0, t.jsx)('div', {
 						className:
@@ -1465,15 +1465,15 @@
 							value: u,
 							onChange: l,
 							required: a,
-							readOnly: i,
-							disabled: s,
+							readOnly: s,
+							disabled: i,
 						}),
 					}),
 			],
 			32376,
 		);
 		var r = t,
-			n = e.i(80844),
+			n = e.i(44753),
 			o = e.i(96874),
 			u = e.i(5806);
 		let l = () =>
@@ -1485,8 +1485,8 @@
 				}),
 			});
 		var a = e.i(21662),
-			i = e.i(53992),
-			s = e.i(3300);
+			s = e.i(53992),
+			i = e.i(3300);
 		e.s(
 			[
 				'AuthTemplate',
@@ -1495,7 +1495,7 @@
 					(0, r.jsxs)('div', {
 						className: 'flex h-screen w-screen flex-col',
 						children: [
-							(0, r.jsx)(i.RadialGradientBackground, {}),
+							(0, r.jsx)(s.RadialGradientBackground, {}),
 							(0, r.jsx)(l, {}),
 							(0, r.jsx)('div', {
 								className: 'grow',
@@ -1512,7 +1512,7 @@
 													className:
 														'text-center text-3xl font-black md:text-4xl',
 													children: (0, r.jsx)(u.Linear, {
-														children: s.APP_NAME,
+														children: i.APP_NAME,
 													}),
 												}),
 												e,
@@ -1528,73 +1528,74 @@
 			41495,
 		);
 	},
-	64754,
+	35959,
 	(e) => {
 		'use strict';
-		var t = e.i(28626),
+		var t = e.i(68601),
 			r = e.i(77001),
 			n = e.i(32376),
 			o = e.i(41495),
-			u = e.i(80844),
-			l = e.i(24412);
+			u = e.i(75705);
 		e.s([
 			'default',
 			0,
 			() => {
-				let [{ email: e = '' }, a] = (0, l.useState)({ email: '' });
+				let [{ password: e = '', confirmPassword: l = '' }, a] = (0,
+				u.useState)({ password: '', confirmPassword: '' });
 				return (0, t.jsx)(o.AuthTemplate, {
 					children: (0, t.jsxs)('form', {
 						className: 'flex flex-col gap-y-4',
 						children: [
 							(0, t.jsx)(n.Input, {
-								id: 'email',
-								type: 'email',
-								name: 'email',
-								placeholder: 'Email',
+								id: 'password',
+								type: 'password',
+								name: 'password',
+								placeholder: 'Password',
 								value: e,
 								onChange: (e) => {
-									a((t) => ({ ...t, email: e.target.value }));
+									a((t) => ({ ...t, password: e.target.value }));
 								},
 							}),
-							(0, t.jsx)(r.Button, {
-								type: 'submit',
-								children: 'Recover Password',
+							(0, t.jsx)(n.Input, {
+								id: 'password',
+								type: 'confirmPassword',
+								name: 'confirmPassword',
+								placeholder: 'Confirm Password',
+								value: l,
+								onChange: (e) => {
+									a((t) => ({ ...t, confirmPassword: e.target.value }));
+								},
 							}),
-							(0, t.jsx)(u.default, {
-								href: '/auth/sign-in',
-								children: (0, t.jsx)(r.OutlineButton, {
-									children: 'Back to Sign In',
-								}),
-							}),
+							(0, t.jsx)(r.Button, { children: 'Reset Password' }),
 						],
 					}),
 				});
 			},
 		]);
 	},
-	46696,
+	87223,
 	(e, t, r) => {
-		let n = '/auth/password/forget';
-		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(64754)]),
+		let n = '/auth/password/reset';
+		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(35959)]),
 			t.hot &&
 				t.hot.dispose(function () {
 					window.__NEXT_P.push([n]);
 				}));
 	},
-	31001,
+	13164,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/444dd0cccbd112df.js'].map((t) => e.l(t)),
-			).then(() => t(92461)),
+				['static/chunks/0bf8814b37dcef57.js'].map((t) => e.l(t)),
+			).then(() => t(4250)),
 		);
 	},
-	24377,
+	10005,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/505b6e63c12df0e5.js'].map((t) => e.l(t)),
-			).then(() => t(29817)),
+				['static/chunks/51f4cee286df5819.js'].map((t) => e.l(t)),
+			).then(() => t(11200)),
 		);
 	},
 ]);

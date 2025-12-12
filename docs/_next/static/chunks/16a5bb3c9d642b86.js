@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	91468,
+	19972,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -10,9 +10,9 @@
 					return n;
 				},
 			}));
-		let n = e.r(2879)._(e.r(24412)).default.createContext({});
+		let n = e.r(2879)._(e.r(75705)).default.createContext({});
 	},
-	18037,
+	19223,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -28,9 +28,9 @@
 	53992,
 	(e) => {
 		'use strict';
-		var t = e.i(28626),
+		var t = e.i(68601),
 			r = e.i(3300),
-			n = e.i(80844);
+			n = e.i(44753);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -98,7 +98,7 @@
 	5806,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'Heading2',
 			0,
@@ -127,7 +127,7 @@
 	96874,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'NavbarContainer',
 			0,
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	43641,
+	4807,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((a.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.7_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
 			(t.exports = a(229)));
 	},
-	53288,
+	75667,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(43641);
+				: e.r(4807);
 	},
 	2879,
 	(e, t, r) => {
@@ -303,7 +303,7 @@
 			return e && e.__esModule ? e : { default: e };
 		};
 	},
-	91639,
+	39893,
 	(e, t, r) => {
 		'use strict';
 		var n = Symbol.for('react.transitional.element');
@@ -326,15 +326,15 @@
 		}
 		((r.Fragment = Symbol.for('react.fragment')), (r.jsx = o), (r.jsxs = o));
 	},
-	28626,
+	68601,
 	(e, t, r) => {
 		'use strict';
-		t.exports = e.r(91639);
+		t.exports = e.r(39893);
 	},
-	70307,
+	12836,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(53288),
+		var n = e.i(75667),
 			o = Symbol.for('react.transitional.element'),
 			a = Symbol.for('react.portal'),
 			s = Symbol.for('react.fragment'),
@@ -786,12 +786,12 @@
 			(r.useTransition = function () {
 				return S.H.useTransition();
 			}),
-			(r.version = '19.2.1'));
+			(r.version = '19.2.3'));
 	},
-	24412,
+	75705,
 	(e, t, r) => {
 		'use strict';
-		t.exports = e.r(70307);
+		t.exports = e.r(12836);
 	},
 	87602,
 	(e, t, r) => {
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	15715,
+	65268,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -961,7 +961,7 @@
 			return JSON.stringify({ message: e.message, stack: e.stack });
 		}
 	},
-	59838,
+	2501,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -971,8 +971,8 @@
 					return i;
 				},
 			}));
-		let n = e.r(24412),
-			o = e.r(73358),
+		let n = e.r(75705),
+			o = e.r(28035),
 			a = 'function' == typeof IntersectionObserver,
 			s = new Map(),
 			l = [];
@@ -1054,7 +1054,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	81573,
+	22322,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1067,7 +1067,7 @@
 					return n;
 				},
 			}),
-			e.r(1340),
+			e.r(61005),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1075,7 +1075,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	38546,
+	77841,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1085,7 +1085,7 @@
 					return o;
 				},
 			}));
-		let n = e.r(24412);
+		let n = e.r(75705);
 		function o(e, t) {
 			let r = (0, n.useRef)(null),
 				o = (0, n.useRef)(null);
@@ -1121,7 +1121,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	86156,
+	291,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1133,7 +1133,7 @@
 			}));
 		let n = (e) => {};
 	},
-	639,
+	61841,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1147,19 +1147,19 @@
 		};
 		for (var o in n) Object.defineProperty(r, o, { enumerable: !0, get: n[o] });
 		let a = e.r(87602),
-			s = e.r(28626),
-			l = a._(e.r(24412)),
-			i = e.r(1724),
-			u = e.r(50460),
-			c = e.r(85651),
-			d = e.r(15715),
-			f = e.r(9807),
-			p = e.r(15759),
-			m = e.r(59838),
-			x = e.r(81573),
-			h = e.r(74335),
-			y = e.r(38546);
-		e.r(86156);
+			s = e.r(68601),
+			l = a._(e.r(75705)),
+			i = e.r(29664),
+			u = e.r(64917),
+			c = e.r(84206),
+			d = e.r(65268),
+			f = e.r(56827),
+			p = e.r(35208),
+			m = e.r(2501),
+			x = e.r(22322),
+			h = e.r(20260),
+			y = e.r(77841);
+		e.r(291);
 		let g = new Set();
 		function b(e, t, r, n) {
 			if ('undefined' != typeof window && (0, u.isLocalURL)(t)) {
@@ -1339,14 +1339,14 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	80844,
+	44753,
 	(e, t, r) => {
-		t.exports = e.r(639);
+		t.exports = e.r(61841);
 	},
 	77001,
 	(e) => {
 		'use strict';
-		var t = e.i(28626);
+		var t = e.i(68601);
 		e.s([
 			'Button',
 			0,
@@ -1435,9 +1435,9 @@
 	5980,
 	(e) => {
 		'use strict';
-		var t = e.i(28626),
+		var t = e.i(68601),
 			r = e.i(48063),
-			n = e.i(24412);
+			n = e.i(75705);
 		let o = (0, n.createContext)(void 0);
 		function a() {
 			let e = (0, n.useContext)(o);
@@ -1498,15 +1498,15 @@
 			() => a,
 		]);
 	},
-	4395,
+	87856,
 	(e) => {
 		'use strict';
-		var t = e.i(28626),
+		var t = e.i(68601),
 			r = e.i(21662),
 			n = e.i(53992),
 			o = e.i(77001),
 			a = e.i(5806),
-			s = e.i(80844);
+			s = e.i(44753);
 		let l = ({ title: e = '', description: r = '', action: n = '' }) =>
 			(0, t.jsx)('section', {
 				className:
@@ -1531,7 +1531,7 @@
 					],
 				}),
 			});
-		var i = e.i(24412);
+		var i = e.i(75705);
 		let u = ({ title: e = '', description: r = '' }) => {
 				let [n, o] = (0, i.useState)('');
 				return (
@@ -1942,30 +1942,30 @@
 					],
 				});
 			};
-		e.s(['default', 0, () => (0, t.jsx)(v, {})], 4395);
+		e.s(['default', 0, () => (0, t.jsx)(v, {})], 87856);
 	},
 	55075,
 	(e, t, r) => {
-		((window.__NEXT_P = window.__NEXT_P || []).push(['/', () => e.r(4395)]),
+		((window.__NEXT_P = window.__NEXT_P || []).push(['/', () => e.r(87856)]),
 			t.hot &&
 				t.hot.dispose(function () {
 					window.__NEXT_P.push(['/']);
 				}));
 	},
-	31001,
+	13164,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/444dd0cccbd112df.js'].map((t) => e.l(t)),
-			).then(() => t(92461)),
+				['static/chunks/0bf8814b37dcef57.js'].map((t) => e.l(t)),
+			).then(() => t(4250)),
 		);
 	},
-	24377,
+	10005,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/505b6e63c12df0e5.js'].map((t) => e.l(t)),
-			).then(() => t(29817)),
+				['static/chunks/51f4cee286df5819.js'].map((t) => e.l(t)),
+			).then(() => t(11200)),
 		);
 	},
 ]);

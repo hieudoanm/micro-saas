@@ -2,13 +2,12 @@
 	'object' == typeof document ? document.currentScript : void 0,
 	{
 		otherChunks: [
-			'static/chunks/da444a109b1f54c7.js',
-			'static/chunks/45b7ff2173f8b4af.js',
-			'static/chunks/413c29e83fbfa96c.js',
-			'static/chunks/7159db8c00739621.js',
-			'static/chunks/ff36fedf680860b0.js',
+			'static/chunks/62353cb9068787bd.js',
+			'static/chunks/3ca00a2cf547351b.js',
+			'static/chunks/01340dd07500e41e.js',
+			'static/chunks/26ecb72ca27db514.js',
 		],
-		runtimeModuleIds: [77030, 55075],
+		runtimeModuleIds: [29530, 87223],
 	},
 ]),
 	(() => {

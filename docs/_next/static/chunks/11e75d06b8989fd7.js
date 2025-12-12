@@ -1741,7 +1741,7 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e4 = e7({
+			e6 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPrimitive.js'(
 					e,
 					t,
@@ -1761,13 +1761,13 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e8 = e7({
+			e5 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/toPropertyKey.js'(
 					e,
 					t,
 				) {
 					var r = e3().default,
-						n = e4();
+						n = e6();
 					((t.exports = function (e) {
 						var t = n(e, 'string');
 						return 'symbol' == r(t) ? t : t + '';
@@ -1776,12 +1776,12 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e6 = e7({
+			e4 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/defineProperty.js'(
 					e,
 					t,
 				) {
-					var r = e8();
+					var r = e5();
 					((t.exports = function (e, t, n) {
 						return (
 							(t = r(t)) in e
@@ -1799,12 +1799,12 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e5 = e7({
+			e8 = e7({
 				'../../node_modules/.pnpm/@oxc-project+runtime@0.72.2/node_modules/@oxc-project/runtime/src/helpers/objectSpread2.js'(
 					e,
 					t,
 				) {
-					var r = e6();
+					var r = e4();
 					function n(e, t) {
 						var r = Object.keys(e);
 						if (Object.getOwnPropertySymbols) {
@@ -1843,8 +1843,8 @@
 						(t.exports.default = t.exports));
 				},
 			}),
-			e9 = e.i(24412);
-		e.i(53288);
+			e9 = e.i(75705);
+		e.i(75667);
 		var te = {
 				setTimeout: (e, t) => setTimeout(e, t),
 				clearTimeout: (e) => clearTimeout(e),
@@ -2122,7 +2122,7 @@
 					},
 				));
 		}
-		var t_ = e.i(28626),
+		var t_ = e.i(68601),
 			tq = e9.createContext(void 0),
 			tR = (e) => {
 				let t = e9.useContext(tq);
@@ -2584,14 +2584,14 @@
 		function t3(e) {
 			return (e ?? 'online') !== 'online' || t2.isOnline();
 		}
-		var t4 = class extends Error {
+		var t6 = class extends Error {
 			constructor(e) {
 				(super('CancelledError'),
 					(this.revert = e?.revert),
 					(this.silent = e?.silent));
 			}
 		};
-		function t8(e) {
+		function t5(e) {
 			let t,
 				r = !1,
 				n = 0,
@@ -2654,7 +2654,7 @@
 				status: () => s.status,
 				cancel: (t) => {
 					if ('pending' === s.status) {
-						let r = new t4(t);
+						let r = new t6(t);
 						(a(r), e.onCancel?.(r));
 					}
 				},
@@ -2669,7 +2669,7 @@
 				start: () => (o() ? c() : l().then(c), s),
 			};
 		}
-		var t6 = class {
+		var t4 = class {
 				#o;
 				destroy() {
 					this.clearGcTimeout();
@@ -2688,7 +2688,7 @@
 					this.#o && (tt.clearTimeout(this.#o), (this.#o = void 0));
 				}
 			},
-			t5 = class extends t6 {
+			t8 = class extends t4 {
 				#u;
 				#a;
 				#l;
@@ -2882,11 +2882,11 @@
 						('idle' === this.state.fetchStatus ||
 							this.state.fetchMeta !== o.fetchOptions?.meta) &&
 							this.#f({ type: 'fetch', meta: o.fetchOptions?.meta }),
-						(this.#h = t8({
+						(this.#h = t5({
 							initialPromise: t?.initialPromise,
 							fn: o.fetchFn,
 							onCancel: (e) => {
-								(e instanceof t4 &&
+								(e instanceof t6 &&
 									e.revert &&
 									this.setState({ ...this.#a, fetchStatus: 'idle' }),
 									n.abort());
@@ -2916,7 +2916,7 @@
 							e
 						);
 					} catch (e) {
-						if (e instanceof t4) {
+						if (e instanceof t6) {
 							if (e.silent) return this.#h.promise;
 							else if (e.revert) {
 								if (void 0 === this.state.data) throw e;
@@ -3043,7 +3043,7 @@
 						i = this.get(s);
 					return (
 						i ||
-							((i = new t5({
+							((i = new t8({
 								client: e,
 								queryKey: n,
 								queryHash: s,
@@ -3110,7 +3110,7 @@
 					});
 				}
 			},
-			rn = class extends t6 {
+			rn = class extends t4 {
 				#c;
 				#m;
 				#b;
@@ -3168,7 +3168,7 @@
 							meta: this.options.meta,
 							mutationKey: this.options.mutationKey,
 						};
-					this.#h = t8({
+					this.#h = t5({
 						fn: () =>
 							this.options.mutationFn
 								? this.options.mutationFn(e, r)
@@ -5563,7 +5563,7 @@
 			};
 		}
 		var rz =
-			((h = null != (l = e5()) ? eV(e1(l)) : {}),
+			((h = null != (l = e8()) ? eV(e1(l)) : {}),
 			((e, t, r, n) => {
 				if ((t && 'object' == typeof t) || 'function' == typeof t)
 					for (var s, i = e0(t), o = 0, u = i.length; o < u; o++)
