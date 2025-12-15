@@ -7,7 +7,7 @@
 			'static/chunks/26ecb72ca27db514.js',
 			'static/chunks/01340dd07500e41e.js',
 			'static/chunks/11e75d06b8989fd7.js',
-			'static/chunks/e8406005ac79d225.css',
+			'static/chunks/4fff0dfe8f8ce841.css',
 		],
 		runtimeModuleIds: [29530, 94757],
 	},

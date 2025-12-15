@@ -1387,7 +1387,6 @@
 			outline: 2px solid var(--input-color);
 			outline-offset: 2px;
 			isolation: isolate;
-			z-index: 1;
 		}
 		@media (pointer: coarse) {
 			@supports (-webkit-touch-callout: none) {
@@ -1816,7 +1815,6 @@
 			outline: 2px solid var(--input-color);
 			outline-offset: 2px;
 			isolation: isolate;
-			z-index: 1;
 		}
 		.select:is(:disabled, [disabled]),
 		fieldset:disabled .select {
@@ -2483,6 +2481,15 @@
 				box-shadow: 0 2px 3px -1px
 					color-mix(in oklab, currentColor calc(var(--depth) * 100%), #0000);
 			}
+		}
+		.tabs {
+			--tabs-height: auto;
+			--tabs-direction: row;
+			--tab-height: calc(var(--size-field, 0.25rem) * 10);
+			height: var(--tabs-height);
+			flex-wrap: wrap;
+			flex-direction: var(--tabs-direction);
+			display: flex;
 		}
 		.footer {
 			grid-auto-flow: row;
