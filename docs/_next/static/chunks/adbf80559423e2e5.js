@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	19972,
+	64631,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -12,7 +12,7 @@
 			}));
 		let n = e.r(2879)._(e.r(75705)).default.createContext({});
 	},
-	19223,
+	52785,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -73,13 +73,13 @@
 				}),
 		]);
 	},
-	21662,
+	52915,
 	53992,
 	(e) => {
 		'use strict';
 		var t = e.i(68601),
 			r = e.i(3300),
-			n = e.i(44753);
+			n = e.i(51663);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -125,7 +125,7 @@
 						}),
 					}),
 			],
-			21662,
+			52915,
 		),
 			e.s(
 				[
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	4807,
+	46563,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((u.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.1.1_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
 			(t.exports = u(229)));
 	},
-	75667,
+	73137,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(4807);
+				: e.r(46563);
 	},
 	2879,
 	(e, t, r) => {
@@ -334,7 +334,7 @@
 	12836,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(75667),
+		var n = e.i(73137),
 			o = Symbol.for('react.transitional.element'),
 			u = Symbol.for('react.portal'),
 			l = Symbol.for('react.fragment'),
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	65268,
+	78423,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1050,7 +1050,7 @@
 							}),
 		]);
 	},
-	2501,
+	17825,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1061,7 +1061,7 @@
 				},
 			}));
 		let n = e.r(75705),
-			o = e.r(28035),
+			o = e.r(46657),
 			u = 'function' == typeof IntersectionObserver,
 			l = new Map(),
 			a = [];
@@ -1143,7 +1143,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	22322,
+	30463,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1156,7 +1156,7 @@
 					return n;
 				},
 			}),
-			e.r(61005),
+			e.r(90014),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1164,7 +1164,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	77841,
+	91191,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1210,7 +1210,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	291,
+	33911,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1222,7 +1222,7 @@
 			}));
 		let n = (e) => {};
 	},
-	61841,
+	73396,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1238,17 +1238,17 @@
 		let u = e.r(87602),
 			l = e.r(68601),
 			a = u._(e.r(75705)),
-			s = e.r(29664),
-			i = e.r(64917),
-			c = e.r(84206),
-			f = e.r(65268),
-			d = e.r(56827),
-			p = e.r(35208),
-			m = e.r(2501),
-			y = e.r(22322),
-			h = e.r(20260),
-			b = e.r(77841);
-		e.r(291);
+			s = e.r(27500),
+			i = e.r(46012),
+			c = e.r(23437),
+			f = e.r(78423),
+			d = e.r(88288),
+			p = e.r(17893),
+			m = e.r(17825),
+			y = e.r(30463),
+			h = e.r(17942),
+			b = e.r(91191);
+		e.r(33911);
 		let x = new Set();
 		function g(e, t, r, n) {
 			if ('undefined' != typeof window && (0, i.isLocalURL)(t)) {
@@ -1428,9 +1428,9 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	44753,
+	51663,
 	(e, t, r) => {
-		t.exports = e.r(61841);
+		t.exports = e.r(73396);
 	},
 	32376,
 	41495,
@@ -1473,7 +1473,7 @@
 			32376,
 		);
 		var r = t,
-			n = e.i(44753),
+			n = e.i(51663),
 			o = e.i(96874),
 			u = e.i(5806);
 		let l = () =>
@@ -1484,7 +1484,7 @@
 					children: (0, t.jsx)(u.Linear, { children: 'micro/saas' }),
 				}),
 			});
-		var a = e.i(21662),
+		var a = e.i(52915),
 			s = e.i(53992),
 			i = e.i(3300);
 		e.s(
@@ -1582,20 +1582,20 @@
 					window.__NEXT_P.push([n]);
 				}));
 	},
-	13164,
+	30901,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/0bf8814b37dcef57.js'].map((t) => e.l(t)),
-			).then(() => t(4250)),
+				['static/chunks/250ad4ce85d9f8b6.js'].map((t) => e.l(t)),
+			).then(() => t(57707)),
 		);
 	},
-	10005,
+	4437,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/51f4cee286df5819.js'].map((t) => e.l(t)),
-			).then(() => t(11200)),
+				['static/chunks/5ecc01f9b81c0d17.js'].map((t) => e.l(t)),
+			).then(() => t(20218)),
 		);
 	},
 ]);

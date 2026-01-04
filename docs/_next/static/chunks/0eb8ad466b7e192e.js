@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	19972,
+	64631,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -12,7 +12,7 @@
 			}));
 		let n = e.r(2879)._(e.r(75705)).default.createContext({});
 	},
-	19223,
+	52785,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -24,13 +24,13 @@
 			}));
 		let n = (e) => {};
 	},
-	21662,
+	52915,
 	53992,
 	(e) => {
 		'use strict';
 		var t = e.i(68601),
 			r = e.i(3300),
-			n = e.i(44753);
+			n = e.i(51663);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -76,7 +76,7 @@
 						}),
 					}),
 			],
-			21662,
+			52915,
 		),
 			e.s(
 				[
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	4807,
+	46563,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((a.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.1.1_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
 			(t.exports = a(229)));
 	},
-	75667,
+	73137,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(4807);
+				: e.r(46563);
 	},
 	2879,
 	(e, t, r) => {
@@ -334,7 +334,7 @@
 	12836,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(75667),
+		var n = e.i(73137),
 			o = Symbol.for('react.transitional.element'),
 			a = Symbol.for('react.portal'),
 			s = Symbol.for('react.fragment'),
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	65268,
+	78423,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -961,7 +961,7 @@
 			return JSON.stringify({ message: e.message, stack: e.stack });
 		}
 	},
-	2501,
+	17825,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -972,7 +972,7 @@
 				},
 			}));
 		let n = e.r(75705),
-			o = e.r(28035),
+			o = e.r(46657),
 			a = 'function' == typeof IntersectionObserver,
 			s = new Map(),
 			l = [];
@@ -1054,7 +1054,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	22322,
+	30463,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1067,7 +1067,7 @@
 					return n;
 				},
 			}),
-			e.r(61005),
+			e.r(90014),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1075,7 +1075,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	77841,
+	91191,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1121,7 +1121,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	291,
+	33911,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1133,7 +1133,7 @@
 			}));
 		let n = (e) => {};
 	},
-	61841,
+	73396,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1149,17 +1149,17 @@
 		let a = e.r(87602),
 			s = e.r(68601),
 			l = a._(e.r(75705)),
-			i = e.r(29664),
-			u = e.r(64917),
-			c = e.r(84206),
-			d = e.r(65268),
-			f = e.r(56827),
-			p = e.r(35208),
-			m = e.r(2501),
-			x = e.r(22322),
-			h = e.r(20260),
-			y = e.r(77841);
-		e.r(291);
+			i = e.r(27500),
+			u = e.r(46012),
+			c = e.r(23437),
+			d = e.r(78423),
+			f = e.r(88288),
+			p = e.r(17893),
+			m = e.r(17825),
+			x = e.r(30463),
+			h = e.r(17942),
+			y = e.r(91191);
+		e.r(33911);
 		let g = new Set();
 		function b(e, t, r, n) {
 			if ('undefined' != typeof window && (0, u.isLocalURL)(t)) {
@@ -1339,9 +1339,9 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	44753,
+	51663,
 	(e, t, r) => {
-		t.exports = e.r(61841);
+		t.exports = e.r(73396);
 	},
 	77001,
 	(e) => {
@@ -1502,11 +1502,11 @@
 	(e) => {
 		'use strict';
 		var t = e.i(68601),
-			r = e.i(21662),
+			r = e.i(52915),
 			n = e.i(53992),
 			o = e.i(77001),
 			a = e.i(5806),
-			s = e.i(44753);
+			s = e.i(51663);
 		let l = ({ title: e = '', description: r = '', action: n = '' }) =>
 			(0, t.jsx)('section', {
 				className:
@@ -1952,20 +1952,20 @@
 					window.__NEXT_P.push(['/']);
 				}));
 	},
-	13164,
+	30901,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/0bf8814b37dcef57.js'].map((t) => e.l(t)),
-			).then(() => t(4250)),
+				['static/chunks/250ad4ce85d9f8b6.js'].map((t) => e.l(t)),
+			).then(() => t(57707)),
 		);
 	},
-	10005,
+	4437,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/51f4cee286df5819.js'].map((t) => e.l(t)),
-			).then(() => t(11200)),
+				['static/chunks/5ecc01f9b81c0d17.js'].map((t) => e.l(t)),
+			).then(() => t(20218)),
 		);
 	},
 ]);

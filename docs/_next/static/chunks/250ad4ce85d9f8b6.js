@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	4185,
+	89709,
 	(e, t, n) => {
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -58,7 +58,7 @@
 			);
 		}
 	},
-	21002,
+	4025,
 	(e, t, n) => {
 		'use strict';
 		Object.defineProperty(n, '__esModule', { value: !0 });
@@ -75,8 +75,8 @@
 			l = e.r(87602),
 			a = e.r(68601),
 			d = l._(e.r(75705)),
-			s = i._(e.r(4185)),
-			u = e.r(19972);
+			s = i._(e.r(89709)),
+			u = e.r(64631);
 		function c() {
 			return [
 				(0, a.jsx)('meta', { charSet: 'utf-8' }, 'charset'),
@@ -102,7 +102,7 @@
 						)
 					: e.concat(t);
 		}
-		e.r(19223);
+		e.r(52785);
 		let p = ['name', 'httpEquiv', 'charSet', 'itemProp'];
 		function h(e) {
 			let t, n, r, o;
@@ -166,7 +166,7 @@
 			Object.assign(n.default, n),
 			(t.exports = n.default));
 	},
-	79077,
+	60161,
 	(e, t, n) => {
 		'use strict';
 		Object.defineProperty(n, '__esModule', { value: !0 });
@@ -205,7 +205,7 @@
 			return (delete n[t], a(e, n));
 		}
 	},
-	4250,
+	57707,
 	(e, t, n) => {
 		'use strict';
 		(Object.defineProperty(n, '__esModule', { value: !0 }),
@@ -218,7 +218,7 @@
 		let r = e.r(2879),
 			o = e.r(68601),
 			i = r._(e.r(75705)),
-			l = r._(e.r(21002)),
+			l = r._(e.r(4025)),
 			a = {
 				400: 'Bad Request',
 				404: 'This page could not be found',
@@ -230,7 +230,7 @@
 				i = n && n.statusCode ? n.statusCode : r ? r.statusCode : 404;
 			if ('undefined' != typeof window) o = window.location.hostname;
 			else if (t) {
-				let { getRequestMeta: n } = e.r(79077),
+				let { getRequestMeta: n } = e.r(60161),
 					r = n(t, 'initURL');
 				r && (o = new URL(r).hostname);
 			}

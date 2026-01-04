@@ -1,6 +1,6 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([
 	'object' == typeof document ? document.currentScript : void 0,
-	19972,
+	64631,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -12,7 +12,7 @@
 			}));
 		let n = e.r(2879)._(e.r(75705)).default.createContext({});
 	},
-	19223,
+	52785,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -73,13 +73,13 @@
 				}),
 		]);
 	},
-	21662,
+	52915,
 	53992,
 	(e) => {
 		'use strict';
 		var t = e.i(68601),
 			r = e.i(3300),
-			n = e.i(44753);
+			n = e.i(51663);
 		let o = new Date().getFullYear();
 		(e.s(
 			[
@@ -125,7 +125,7 @@
 						}),
 					}),
 			],
-			21662,
+			52915,
 		),
 			e.s(
 				[
@@ -149,7 +149,7 @@
 		'use strict';
 		e.s(['APP_NAME', 0, 'micro/saas']);
 	},
-	4807,
+	46563,
 	(e, t, r) => {
 		var n = {
 				229: function (e) {
@@ -283,10 +283,10 @@
 			return r.exports;
 		}
 		((u.ab =
-			'/ROOT/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
+			'/ROOT/node_modules/.pnpm/next@16.1.1_@babel+core@7.28.5_@opentelemetry+api@1.4.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/'),
 			(t.exports = u(229)));
 	},
-	75667,
+	73137,
 	(e, t, r) => {
 		'use strict';
 		var n, o;
@@ -294,7 +294,7 @@
 			(null == (n = e.g.process) ? void 0 : n.env) &&
 			'object' == typeof (null == (o = e.g.process) ? void 0 : o.env)
 				? e.g.process
-				: e.r(4807);
+				: e.r(46563);
 	},
 	2879,
 	(e, t, r) => {
@@ -334,7 +334,7 @@
 	12836,
 	(e, t, r) => {
 		'use strict';
-		var n = e.i(75667),
+		var n = e.i(73137),
 			o = Symbol.for('react.transitional.element'),
 			u = Symbol.for('react.portal'),
 			l = Symbol.for('react.fragment'),
@@ -356,19 +356,19 @@
 				enqueueReplaceState: function () {},
 				enqueueSetState: function () {},
 			},
-			g = Object.assign,
-			x = {};
+			x = Object.assign,
+			g = {};
 		function v(e, t, r) {
 			((this.props = e),
 				(this.context = t),
-				(this.refs = x),
+				(this.refs = g),
 				(this.updater = r || b));
 		}
 		function _() {}
 		function j(e, t, r) {
 			((this.props = e),
 				(this.context = t),
-				(this.refs = x),
+				(this.refs = g),
 				(this.updater = r || b));
 		}
 		((v.prototype.isReactComponent = {}),
@@ -384,10 +384,10 @@
 			}),
 			(_.prototype = v.prototype));
 		var w = (j.prototype = new _());
-		((w.constructor = j), g(w, v.prototype), (w.isPureReactComponent = !0));
+		((w.constructor = j), x(w, v.prototype), (w.isPureReactComponent = !0));
 		var E = Array.isArray;
 		function P() {}
-		var S = { H: null, A: null, T: null, S: null },
+		var k = { H: null, A: null, T: null, S: null },
 			N = Object.prototype.hasOwnProperty;
 		function O(e, t, r) {
 			var n = r.ref;
@@ -399,7 +399,7 @@
 				props: r,
 			};
 		}
-		function k(e) {
+		function S(e) {
 			return 'object' == typeof e && null !== e && e.$$typeof === o;
 		}
 		var C = /\/+/g;
@@ -455,7 +455,7 @@
 										return e;
 									}))
 								: null != a &&
-									(k(a) &&
+									(S(a) &&
 										((i = a),
 										(s =
 											n +
@@ -611,7 +611,7 @@
 					);
 				},
 				only: function (e) {
-					if (!k(e))
+					if (!S(e))
 						throw Error(
 							'React.Children.only expected to receive a single React element child.',
 						);
@@ -624,11 +624,11 @@
 			(r.PureComponent = j),
 			(r.StrictMode = a),
 			(r.Suspense = d),
-			(r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = S),
+			(r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = k),
 			(r.__COMPILER_RUNTIME = {
 				__proto__: null,
 				c: function (e) {
-					return S.H.useMemoCache(e);
+					return k.H.useMemoCache(e);
 				},
 			}),
 			(r.cache = function (e) {
@@ -644,7 +644,7 @@
 					throw Error(
 						'The argument must be a React element, but you passed ' + e + '.',
 					);
-				var n = g({}, e.props),
+				var n = x({}, e.props),
 					o = e.key;
 				if (null != t)
 					for (u in (void 0 !== t.key && (o = '' + t.key), t))
@@ -703,7 +703,7 @@
 			(r.forwardRef = function (e) {
 				return { $$typeof: f, render: e };
 			}),
-			(r.isValidElement = k),
+			(r.isValidElement = S),
 			(r.lazy = function (e) {
 				return { $$typeof: m, _payload: { _status: -1, _result: e }, _init: M };
 			}),
@@ -711,12 +711,12 @@
 				return { $$typeof: p, type: e, compare: void 0 === t ? null : t };
 			}),
 			(r.startTransition = function (e) {
-				var t = S.T,
+				var t = k.T,
 					r = {};
-				S.T = r;
+				k.T = r;
 				try {
 					var n = e(),
-						o = S.S;
+						o = k.S;
 					(null !== o && o(r, n),
 						'object' == typeof n &&
 							null !== n &&
@@ -725,66 +725,66 @@
 				} catch (e) {
 					A(e);
 				} finally {
-					(null !== t && null !== r.types && (t.types = r.types), (S.T = t));
+					(null !== t && null !== r.types && (t.types = r.types), (k.T = t));
 				}
 			}),
 			(r.unstable_useCacheRefresh = function () {
-				return S.H.useCacheRefresh();
+				return k.H.useCacheRefresh();
 			}),
 			(r.use = function (e) {
-				return S.H.use(e);
+				return k.H.use(e);
 			}),
 			(r.useActionState = function (e, t, r) {
-				return S.H.useActionState(e, t, r);
+				return k.H.useActionState(e, t, r);
 			}),
 			(r.useCallback = function (e, t) {
-				return S.H.useCallback(e, t);
+				return k.H.useCallback(e, t);
 			}),
 			(r.useContext = function (e) {
-				return S.H.useContext(e);
+				return k.H.useContext(e);
 			}),
 			(r.useDebugValue = function () {}),
 			(r.useDeferredValue = function (e, t) {
-				return S.H.useDeferredValue(e, t);
+				return k.H.useDeferredValue(e, t);
 			}),
 			(r.useEffect = function (e, t) {
-				return S.H.useEffect(e, t);
+				return k.H.useEffect(e, t);
 			}),
 			(r.useEffectEvent = function (e) {
-				return S.H.useEffectEvent(e);
+				return k.H.useEffectEvent(e);
 			}),
 			(r.useId = function () {
-				return S.H.useId();
+				return k.H.useId();
 			}),
 			(r.useImperativeHandle = function (e, t, r) {
-				return S.H.useImperativeHandle(e, t, r);
+				return k.H.useImperativeHandle(e, t, r);
 			}),
 			(r.useInsertionEffect = function (e, t) {
-				return S.H.useInsertionEffect(e, t);
+				return k.H.useInsertionEffect(e, t);
 			}),
 			(r.useLayoutEffect = function (e, t) {
-				return S.H.useLayoutEffect(e, t);
+				return k.H.useLayoutEffect(e, t);
 			}),
 			(r.useMemo = function (e, t) {
-				return S.H.useMemo(e, t);
+				return k.H.useMemo(e, t);
 			}),
 			(r.useOptimistic = function (e, t) {
-				return S.H.useOptimistic(e, t);
+				return k.H.useOptimistic(e, t);
 			}),
 			(r.useReducer = function (e, t, r) {
-				return S.H.useReducer(e, t, r);
+				return k.H.useReducer(e, t, r);
 			}),
 			(r.useRef = function (e) {
-				return S.H.useRef(e);
+				return k.H.useRef(e);
 			}),
 			(r.useState = function (e) {
-				return S.H.useState(e);
+				return k.H.useState(e);
 			}),
 			(r.useSyncExternalStore = function (e, t, r) {
-				return S.H.useSyncExternalStore(e, t, r);
+				return k.H.useSyncExternalStore(e, t, r);
 			}),
 			(r.useTransition = function () {
-				return S.H.useTransition();
+				return k.H.useTransition();
 			}),
 			(r.version = '19.2.3'));
 	},
@@ -822,7 +822,7 @@
 			return ((o.default = e), r && r.set(e, o), o);
 		};
 	},
-	65268,
+	78423,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -837,10 +837,10 @@
 				return v;
 			},
 			NormalizeError: function () {
-				return g;
+				return x;
 			},
 			PageNotFoundError: function () {
-				return x;
+				return g;
 			},
 			SP: function () {
 				return y;
@@ -935,8 +935,8 @@
 					(e) => 'function' == typeof performance[e],
 				);
 		class b extends Error {}
-		class g extends Error {}
-		class x extends Error {
+		class x extends Error {}
+		class g extends Error {
 			constructor(e) {
 				(super(),
 					(this.code = 'ENOENT'),
@@ -1050,7 +1050,7 @@
 							}),
 		]);
 	},
-	2501,
+	17825,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1061,7 +1061,7 @@
 				},
 			}));
 		let n = e.r(75705),
-			o = e.r(28035),
+			o = e.r(46657),
 			u = 'function' == typeof IntersectionObserver,
 			l = new Map(),
 			a = [];
@@ -1143,7 +1143,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	22322,
+	30463,
 	(e, t, r) => {
 		'use strict';
 		function n(e, t, r, n) {
@@ -1156,7 +1156,7 @@
 					return n;
 				},
 			}),
-			e.r(61005),
+			e.r(90014),
 			('function' == typeof r.default ||
 				('object' == typeof r.default && null !== r.default)) &&
 				void 0 === r.default.__esModule &&
@@ -1164,7 +1164,7 @@
 				Object.assign(r.default, r),
 				(t.exports = r.default)));
 	},
-	77841,
+	91191,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1210,7 +1210,7 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	291,
+	33911,
 	(e, t, r) => {
 		'use strict';
 		(Object.defineProperty(r, '__esModule', { value: !0 }),
@@ -1222,7 +1222,7 @@
 			}));
 		let n = (e) => {};
 	},
-	61841,
+	73396,
 	(e, t, r) => {
 		'use strict';
 		Object.defineProperty(r, '__esModule', { value: !0 });
@@ -1238,19 +1238,19 @@
 		let u = e.r(87602),
 			l = e.r(68601),
 			a = u._(e.r(75705)),
-			i = e.r(29664),
-			s = e.r(64917),
-			c = e.r(84206),
-			f = e.r(65268),
-			d = e.r(56827),
-			p = e.r(35208),
-			m = e.r(2501),
-			y = e.r(22322),
-			h = e.r(20260),
-			b = e.r(77841);
-		e.r(291);
-		let g = new Set();
-		function x(e, t, r, n) {
+			i = e.r(27500),
+			s = e.r(46012),
+			c = e.r(23437),
+			f = e.r(78423),
+			d = e.r(88288),
+			p = e.r(17893),
+			m = e.r(17825),
+			y = e.r(30463),
+			h = e.r(17942),
+			b = e.r(91191);
+		e.r(33911);
+		let x = new Set();
+		function g(e, t, r, n) {
 			if ('undefined' != typeof window && (0, s.isLocalURL)(t)) {
 				if (!n.bypassPrefetchedCheck) {
 					let o =
@@ -1263,8 +1263,8 @@
 							: 'locale' in e
 								? e.locale
 								: void 0);
-					if (g.has(o)) return;
-					g.add(o);
+					if (x.has(o)) return;
+					x.add(o);
 				}
 				e.prefetch(t, r, n).catch((e) => {});
 			}
@@ -1279,16 +1279,16 @@
 						href: o,
 						as: u,
 						children: c,
-						prefetch: g = null,
+						prefetch: x = null,
 						passHref: _,
 						replace: j,
 						shallow: w,
 						scroll: E,
 						locale: P,
-						onClick: S,
+						onClick: k,
 						onNavigate: N,
 						onMouseEnter: O,
-						onTouchStart: k,
+						onTouchStart: S,
 						legacyBehavior: C = !1,
 						...T
 					} = e;
@@ -1297,8 +1297,8 @@
 						('string' == typeof r || 'number' == typeof r) &&
 						(r = (0, l.jsx)('a', { children: r })));
 				let R = a.default.useContext(p.RouterContext),
-					M = !1 !== g,
-					{ href: A, as: I } = a.default.useMemo(() => {
+					M = !1 !== x,
+					{ href: A, as: H } = a.default.useMemo(() => {
 						if (!R) {
 							let e = v(o);
 							return { href: e, as: u ? v(u) : e };
@@ -1306,27 +1306,27 @@
 						let [e, t] = (0, i.resolveHref)(R, o, !0);
 						return { href: e, as: u ? (0, i.resolveHref)(R, u) : t || e };
 					}, [R, o, u]),
-					H = a.default.useRef(A),
-					L = a.default.useRef(I);
+					$ = a.default.useRef(A),
+					I = a.default.useRef(H);
 				C && (n = a.default.Children.only(r));
-				let $ = C ? n && 'object' == typeof n && n.ref : t,
-					[F, U, D] = (0, m.useIntersection)({ rootMargin: '200px' }),
+				let L = C ? n && 'object' == typeof n && n.ref : t,
+					[F, D, U] = (0, m.useIntersection)({ rootMargin: '200px' }),
 					B = a.default.useCallback(
 						(e) => {
-							((L.current !== I || H.current !== A) &&
-								(D(), (L.current = I), (H.current = A)),
+							((I.current !== H || $.current !== A) &&
+								(U(), (I.current = H), ($.current = A)),
 								F(e));
 						},
-						[I, A, D, F],
+						[H, A, U, F],
 					),
-					q = (0, b.useMergedRef)(B, $);
+					q = (0, b.useMergedRef)(B, L);
 				a.default.useEffect(() => {
-					!R || (U && M && x(R, A, I, { locale: P }));
-				}, [I, A, U, P, M, R?.locale, R]);
+					!R || (D && M && g(R, A, H, { locale: P }));
+				}, [H, A, D, P, M, R?.locale, R]);
 				let z = {
 					ref: q,
 					onClick(e) {
-						(C || 'function' != typeof S || S(e),
+						(C || 'function' != typeof k || k(e),
 							C &&
 								n.props &&
 								'function' == typeof n.props.onClick &&
@@ -1377,7 +1377,7 @@
 													: t[o ? 'replace' : 'push'](n || r, { scroll: e });
 											})());
 									}
-								})(e, R, A, I, j, w, E, P, N));
+								})(e, R, A, H, j, w, E, P, N));
 					},
 					onMouseEnter(e) {
 						(C || 'function' != typeof O || O(e),
@@ -1386,33 +1386,33 @@
 								'function' == typeof n.props.onMouseEnter &&
 								n.props.onMouseEnter(e),
 							R &&
-								x(R, A, I, {
+								g(R, A, H, {
 									locale: P,
 									priority: !0,
 									bypassPrefetchedCheck: !0,
 								}));
 					},
 					onTouchStart: function (e) {
-						(C || 'function' != typeof k || k(e),
+						(C || 'function' != typeof S || S(e),
 							C &&
 								n.props &&
 								'function' == typeof n.props.onTouchStart &&
 								n.props.onTouchStart(e),
 							R &&
-								x(R, A, I, {
+								g(R, A, H, {
 									locale: P,
 									priority: !0,
 									bypassPrefetchedCheck: !0,
 								}));
 					},
 				};
-				if ((0, f.isAbsoluteUrl)(I)) z.href = I;
+				if ((0, f.isAbsoluteUrl)(H)) z.href = H;
 				else if (!C || _ || ('a' === n.type && !('href' in n.props))) {
 					let e = void 0 !== P ? P : R?.locale;
 					z.href =
 						(R?.isLocaleDomain &&
-							(0, y.getDomainLocale)(I, e, R?.locales, R?.domainLocales)) ||
-						(0, h.addBasePath)((0, d.addLocale)(I, e, R?.defaultLocale));
+							(0, y.getDomainLocale)(H, e, R?.locales, R?.domainLocales)) ||
+						(0, h.addBasePath)((0, d.addLocale)(H, e, R?.defaultLocale));
 				}
 				return C
 					? a.default.cloneElement(n, z)
@@ -1428,9 +1428,9 @@
 			Object.assign(r.default, r),
 			(t.exports = r.default));
 	},
-	44753,
+	51663,
 	(e, t, r) => {
-		t.exports = e.r(61841);
+		t.exports = e.r(73396);
 	},
 	32376,
 	41495,
@@ -1473,7 +1473,7 @@
 			32376,
 		);
 		var r = t,
-			n = e.i(44753),
+			n = e.i(51663),
 			o = e.i(96874),
 			u = e.i(5806);
 		let l = () =>
@@ -1484,7 +1484,7 @@
 					children: (0, t.jsx)(u.Linear, { children: 'micro/saas' }),
 				}),
 			});
-		var a = e.i(21662),
+		var a = e.i(52915),
 			i = e.i(53992),
 			s = e.i(3300);
 		e.s(
@@ -1528,90 +1528,43 @@
 			41495,
 		);
 	},
-	41393,
-	(e, t, r) => {
-		t.exports = e.r(48606);
-	},
-	89822,
+	64754,
 	(e) => {
 		'use strict';
 		var t = e.i(68601),
 			r = e.i(77001),
 			n = e.i(32376),
 			o = e.i(41495),
-			u = e.i(48063),
-			l = e.i(44753),
-			a = e.i(41393),
-			i = e.i(75705);
+			u = e.i(51663),
+			l = e.i(75705);
 		e.s([
 			'default',
 			0,
 			() => {
-				let { push: e } = (0, a.useRouter)(),
-					[
-						{ loading: s = !1, name: c = '', email: f = '', password: d = '' },
-						p,
-					] = (0, i.useState)({
-						loading: !1,
-						name: '',
-						email: '',
-						password: '',
-					}),
-					m = async (t) => {
-						t.preventDefault();
-						let { success: r } = await u.trpcClient.auth.user.signUp.mutate({
-							email: f,
-							password: d,
-						});
-						r
-							? (alert('Sign Up Successfully'), e('/auth/sign-in'))
-							: alert('Failed to Sign Up');
-					};
+				let [{ email: e = '' }, a] = (0, l.useState)({ email: '' });
 				return (0, t.jsx)(o.AuthTemplate, {
 					children: (0, t.jsxs)('form', {
-						onSubmit: m,
 						className: 'flex flex-col gap-y-4',
 						children: [
-							(0, t.jsx)(n.Input, {
-								id: 'name',
-								type: 'name',
-								name: 'name',
-								placeholder: 'Name',
-								value: c,
-								onChange: (e) => {
-									p((t) => ({ ...t, name: e.target.value }));
-								},
-								required: !0,
-							}),
 							(0, t.jsx)(n.Input, {
 								id: 'email',
 								type: 'email',
 								name: 'email',
 								placeholder: 'Email',
-								value: f,
+								value: e,
 								onChange: (e) => {
-									p((t) => ({ ...t, email: e.target.value }));
+									a((t) => ({ ...t, email: e.target.value }));
 								},
-								required: !0,
-							}),
-							(0, t.jsx)(n.Input, {
-								id: 'password',
-								type: 'password',
-								name: 'password',
-								placeholder: 'Password',
-								value: d,
-								onChange: (e) => {
-									p((t) => ({ ...t, password: e.target.value }));
-								},
-								required: !0,
 							}),
 							(0, t.jsx)(r.Button, {
 								type: 'submit',
-								children: s ? 'Loading' : 'Sign Up',
+								children: 'Recover Password',
 							}),
-							(0, t.jsx)(l.default, {
+							(0, t.jsx)(u.default, {
 								href: '/auth/sign-in',
-								children: (0, t.jsx)(r.OutlineButton, { children: 'Sign In' }),
+								children: (0, t.jsx)(r.OutlineButton, {
+									children: 'Back to Sign In',
+								}),
 							}),
 						],
 					}),
@@ -1619,29 +1572,29 @@
 			},
 		]);
 	},
-	18247,
+	46696,
 	(e, t, r) => {
-		let n = '/auth/sign-up';
-		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(89822)]),
+		let n = '/auth/password/forget';
+		((window.__NEXT_P = window.__NEXT_P || []).push([n, () => e.r(64754)]),
 			t.hot &&
 				t.hot.dispose(function () {
 					window.__NEXT_P.push([n]);
 				}));
 	},
-	13164,
+	30901,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/0bf8814b37dcef57.js'].map((t) => e.l(t)),
-			).then(() => t(4250)),
+				['static/chunks/250ad4ce85d9f8b6.js'].map((t) => e.l(t)),
+			).then(() => t(57707)),
 		);
 	},
-	10005,
+	4437,
 	(e) => {
 		e.v((t) =>
 			Promise.all(
-				['static/chunks/51f4cee286df5819.js'].map((t) => e.l(t)),
-			).then(() => t(11200)),
+				['static/chunks/5ecc01f9b81c0d17.js'].map((t) => e.l(t)),
+			).then(() => t(20218)),
 		);
 	},
 ]);
