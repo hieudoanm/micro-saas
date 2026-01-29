@@ -1,21 +1,21 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/4cf4b9e48920944e.js"
+    "static/chunks/4c3628ef599bcbc7.js"
   ],
   "/_error": [
-    "static/chunks/a2b6fbe9d5375a43.js"
+    "static/chunks/11431aacc51f4382.js"
   ],
   "/auth/password/forget": [
-    "static/chunks/7b3ed3d9b26249f9.js"
+    "static/chunks/84db44c900a03cd7.js"
   ],
   "/auth/password/reset": [
-    "static/chunks/01ddc55546882231.js"
+    "static/chunks/befc7445ff96c938.js"
   ],
   "/auth/sign-in": [
-    "static/chunks/f2f8a0ee9b373683.js"
+    "static/chunks/6f9335d93083bde9.js"
   ],
   "/auth/sign-up": [
-    "static/chunks/5d3f243db645472b.js"
+    "static/chunks/04f6d6caf3308891.js"
   ],
   "__rewrites": {
     "afterFiles": [],
