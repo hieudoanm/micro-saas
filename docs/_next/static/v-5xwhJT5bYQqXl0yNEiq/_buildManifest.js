@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/4c3628ef599bcbc7.js"
+    "static/chunks/87fc4c74045457cf.js"
   ],
   "/_error": [
     "static/chunks/11431aacc51f4382.js"
@@ -12,10 +12,10 @@ self.__BUILD_MANIFEST = {
     "static/chunks/befc7445ff96c938.js"
   ],
   "/auth/sign-in": [
-    "static/chunks/6f9335d93083bde9.js"
+    "static/chunks/04e7e4d1db93133a.js"
   ],
   "/auth/sign-up": [
-    "static/chunks/04f6d6caf3308891.js"
+    "static/chunks/7e381f98d845fe68.js"
   ],
   "__rewrites": {
     "afterFiles": [],
