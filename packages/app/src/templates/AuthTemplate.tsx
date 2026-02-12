@@ -1,5 +1,5 @@
 import { Navbar } from '@micro/components/auth/Navbar';
-import { Footer } from '@micro/components/common/Footer';
+import { Footer } from '@micro/components/common/Footer/Footer';
 import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
 import { Linear } from '@micro/components/common/Typography';
 import { APP_NAME } from '@micro/constants/constants';

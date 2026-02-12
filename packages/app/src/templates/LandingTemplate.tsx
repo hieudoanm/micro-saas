@@ -1,4 +1,4 @@
-import { Footer } from '@micro/components/common/Footer';
+import { Footer } from '@micro/components/common/Footer/Footer';
 import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
 import { CallToAction } from '@micro/components/landing/CallToAction';
 import { Demo } from '@micro/components/landing/Demo';
