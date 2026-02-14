@@ -1,4 +1,4 @@
-import { LandingTemplate } from '@micro/templates/LandingTemplate';
+import { LandingTemplate } from '@start/templates/LandingTemplate';
 import { NextPage } from 'next';
 
 const HomePage: NextPage = () => {

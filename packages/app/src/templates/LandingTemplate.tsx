@@ -1,12 +1,12 @@
-import { Footer } from '@micro/components/common/Footer/Footer';
-import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
-import { CallToAction } from '@micro/components/landing/CallToAction';
-import { Demo } from '@micro/components/landing/Demo';
-import { Features } from '@micro/components/landing/Features';
-import { FrequentlyAskedQuestions } from '@micro/components/landing/FrequentlyAskedQuestions';
-import { Hero } from '@micro/components/landing/Hero';
-import { Navbar } from '@micro/components/landing/Navbar';
-import { Testimonials } from '@micro/components/landing/Testimonials';
+import { Footer } from '@start/components/common/Footer/Footer';
+import { RadialGradientBackground } from '@start/components/common/RadialGradientBackground';
+import { CallToAction } from '@start/components/landing/CallToAction';
+import { Demo } from '@start/components/landing/Demo';
+import { Features } from '@start/components/landing/Features';
+import { FrequentlyAskedQuestions } from '@start/components/landing/FrequentlyAskedQuestions';
+import { Hero } from '@start/components/landing/Hero';
+import { Navbar } from '@start/components/landing/Navbar';
+import { Testimonials } from '@start/components/landing/Testimonials';
 import { FC } from 'react';
 
 export const LandingTemplate: FC = () => {
@@ -18,7 +18,7 @@ export const LandingTemplate: FC = () => {
 		features: {
 			title: 'Features',
 			description:
-				'Everything you need to launch and scale your micro SaaS — zero boilerplate, maximum speed.',
+				'Everything you need to launch and scale your start SaaS — zero boilerplate, maximum speed.',
 			features: {
 				authentication: {
 					emoji: '🔑',
@@ -84,7 +84,7 @@ export const LandingTemplate: FC = () => {
 		cta: {
 			title: 'Get Started for Free',
 			description:
-				'Join today and see how quickly you can launch your micro SaaS. Sign up in seconds — no credit card required.',
+				'Join today and see how quickly you can launch your start SaaS. Sign up in seconds — no credit card required.',
 			action: 'Sign Up Now',
 		},
 	};

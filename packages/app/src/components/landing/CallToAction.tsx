@@ -1,5 +1,5 @@
-import { Button } from '@micro/components/common/Button';
-import { Heading2, Heading6 } from '@micro/components/common/Typography';
+import { Button } from '@start/components/common/Button';
+import { Heading2, Heading6 } from '@start/components/common/Typography';
 import Link from 'next/link';
 import { FC } from 'react';
 

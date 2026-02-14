@@ -1,7 +1,7 @@
-import { Button, OutlineButton } from '@micro/components/common/Button';
-import { Input } from '@micro/components/common/Input';
-import { AuthTemplate } from '@micro/templates/AuthTemplate';
-import { trpcClient } from '@micro/utils/trpc';
+import { Button, OutlineButton } from '@start/components/common/Button';
+import { Input } from '@start/components/common/Input';
+import { AuthTemplate } from '@start/templates/AuthTemplate';
+import { trpcClient } from '@start/utils/trpc';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

@@ -1,4 +1,4 @@
-import { APP_NAME } from '@micro/constants/constants';
+import { APP_NAME } from '@start/constants/constants';
 import Link from 'next/link';
 
 const year = new Date().getFullYear();

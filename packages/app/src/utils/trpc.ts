@@ -1,4 +1,4 @@
-import type { AppRouter } from '@micro/server/routers/_app';
+import type { AppRouter } from '@start/server/routers/_app';
 import { createTRPCClient, httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 

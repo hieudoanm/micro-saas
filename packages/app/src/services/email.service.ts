@@ -1,4 +1,4 @@
-import { resend } from '@micro/clients/email/resend.client';
+import { resend } from '@start/clients/email/resend.client';
 import { CreateEmailResponse, CreateEmailResponseSuccess } from 'resend';
 
 const FROM = 'onboarding@resend.dev';

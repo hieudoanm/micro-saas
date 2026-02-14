@@ -1,4 +1,4 @@
-import { trpcClient } from '@micro/utils/trpc';
+import { trpcClient } from '@start/utils/trpc';
 import {
 	createContext,
 	FC,

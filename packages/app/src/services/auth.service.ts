@@ -1,9 +1,9 @@
-import { prismaClient } from '@micro/clients/database/prisma.client';
-import { JWT } from '@micro/utils/jwt';
-import { Password } from '@micro/utils/password';
-import { tryCatch } from '@micro/utils/try-catch';
+import { prismaClient } from '@start/clients/database/prisma.client';
+import { JWT } from '@start/utils/jwt';
+import { Password } from '@start/utils/password';
+import { tryCatch } from '@start/utils/try-catch';
 import crypto from 'node:crypto';
-import { EmailService } from '@micro/services/email.service';
+import { EmailService } from '@start/services/email.service';
 
 const signUp = async ({
 	email = '',

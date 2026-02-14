@@ -1,6 +1,6 @@
-import { privateProcedure } from '@micro/server/router';
-import { UserService } from '@micro/services/user.service';
-import { tryCatch } from '@micro/utils/try-catch';
+import { privateProcedure } from '@start/server/router';
+import { UserService } from '@start/services/user.service';
+import { tryCatch } from '@start/utils/try-catch';
 import { z } from 'zod';
 
 export const user = {

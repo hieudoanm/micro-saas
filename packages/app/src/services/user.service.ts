@@ -1,6 +1,6 @@
-import { prismaClient } from '@micro/clients/database/prisma.client';
-import { Password } from '@micro/utils/password';
-import { tryCatch } from '@micro/utils/try-catch';
+import { prismaClient } from '@start/clients/database/prisma.client';
+import { Password } from '@start/utils/password';
+import { tryCatch } from '@start/utils/try-catch';
 
 export const getUser = async ({ email }: { email: string }) => {
 	const { data: user, error: findError } = await tryCatch(

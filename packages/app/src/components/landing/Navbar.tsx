@@ -1,6 +1,6 @@
-import { Button, OutlineButton } from '@micro/components/common/Button';
-import { APP_NAME } from '@micro/constants/constants';
-import { useUser } from '@micro/contexts/UserContext';
+import { Button, OutlineButton } from '@start/components/common/Button';
+import { APP_NAME } from '@start/constants/constants';
+import { useUser } from '@start/contexts/UserContext';
 import Link from 'next/link';
 import { FC } from 'react';
 import { NavbarContainer } from '../common/NavbarContainer';

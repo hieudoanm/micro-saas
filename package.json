@@ -1,17 +1,17 @@
 {
-  "name": "@micro-saas/workspaces",
+  "name": "@start/workspaces",
   "version": "0.0.1",
-  "description": "micro-saas",
+  "description": "start",
   "keywords": [
-    "micro-saas"
+    "start"
   ],
-  "homepage": "https://hieudoanm.github.io/micro-saas",
+  "homepage": "https://hieudoanm.github.io/start",
   "bugs": {
-    "url": "https://github.com/hieudoanm/micro-saas/issues"
+    "url": "https://github.com/hieudoanm/start/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/micro-saas.git"
+    "url": "git+ssh://git@github.com/hieudoanm/start.git"
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

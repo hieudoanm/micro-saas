@@ -1,7 +1,7 @@
-import { Button } from '@micro/components/common/Button';
-import { APP_NAME } from '@micro/constants/constants';
-import { trpcClient } from '@micro/utils/trpc';
-import { tryCatch } from '@micro/utils/try-catch';
+import { Button } from '@start/components/common/Button';
+import { APP_NAME } from '@start/constants/constants';
+import { trpcClient } from '@start/utils/trpc';
+import { tryCatch } from '@start/utils/try-catch';
 import { FC, useState } from 'react';
 import { Linear } from '../common/Typography';
 

@@ -1,6 +1,6 @@
-import { Button } from '@micro/components/common/Button';
-import { Input } from '@micro/components/common/Input';
-import { AuthTemplate } from '@micro/templates/AuthTemplate';
+import { Button } from '@start/components/common/Button';
+import { Input } from '@start/components/common/Input';
+import { AuthTemplate } from '@start/templates/AuthTemplate';
 import { NextPage } from 'next';
 import { useState } from 'react';
 

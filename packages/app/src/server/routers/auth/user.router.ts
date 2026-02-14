@@ -1,6 +1,6 @@
-import { publicProcedure } from '@micro/server/router';
-import { AuthService } from '@micro/services/auth.service';
-import { tryCatch } from '@micro/utils/try-catch';
+import { publicProcedure } from '@start/server/router';
+import { AuthService } from '@start/services/auth.service';
+import { tryCatch } from '@start/utils/try-catch';
 import { serialize } from 'cookie'; // built-in cookie serialization helper
 import { NextApiResponse } from 'next';
 import z from 'zod';

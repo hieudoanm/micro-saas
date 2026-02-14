@@ -1,4 +1,4 @@
-import { JWT } from '@micro/utils/jwt';
+import { JWT } from '@start/utils/jwt';
 import {
 	CreateNextContextOptions,
 	NextApiRequest,

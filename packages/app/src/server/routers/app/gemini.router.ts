@@ -1,6 +1,6 @@
-import { GeminiModel, generateContent } from '@micro/clients/api/gemini.client';
-import { publicProcedure } from '@micro/server/router';
-import { tryCatch } from '@micro/utils/try-catch';
+import { GeminiModel, generateContent } from '@start/clients/api/gemini.client';
+import { publicProcedure } from '@start/server/router';
+import { tryCatch } from '@start/utils/try-catch';
 import { z } from 'zod';
 
 export const gemini = {

@@ -1,7 +1,7 @@
-import { APP_NAME } from '@micro/constants/constants';
-import { UserProvider } from '@micro/contexts/UserContext';
-import '@micro/styles/globals.css';
-import { trpcHook } from '@micro/utils/trpc';
+import { APP_NAME } from '@start/constants/constants';
+import { UserProvider } from '@start/contexts/UserContext';
+import '@start/styles/globals.css';
+import { trpcHook } from '@start/utils/trpc';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';

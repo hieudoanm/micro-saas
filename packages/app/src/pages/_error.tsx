@@ -1,4 +1,4 @@
-import { Button } from '@micro/components/common/Button';
+import { Button } from '@start/components/common/Button';
 import Link from 'next/link';
 
 const ErrorPage = () => {

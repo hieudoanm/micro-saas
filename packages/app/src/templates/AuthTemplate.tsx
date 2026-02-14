@@ -1,8 +1,8 @@
-import { Navbar } from '@micro/components/auth/Navbar';
-import { Footer } from '@micro/components/common/Footer/Footer';
-import { RadialGradientBackground } from '@micro/components/common/RadialGradientBackground';
-import { Linear } from '@micro/components/common/Typography';
-import { APP_NAME } from '@micro/constants/constants';
+import { Navbar } from '@start/components/auth/Navbar';
+import { Footer } from '@start/components/common/Footer/Footer';
+import { RadialGradientBackground } from '@start/components/common/RadialGradientBackground';
+import { Linear } from '@start/components/common/Typography';
+import { APP_NAME } from '@start/constants/constants';
 import { FC, ReactNode } from 'react';
 
 export const AuthTemplate: FC<{ children: ReactNode }> = ({
