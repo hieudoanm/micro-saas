@@ -1,1 +1,1 @@
-export const APP_NAME: string = 'micro/saas';
+export const APP_NAME: string = 'Start';

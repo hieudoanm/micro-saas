@@ -7,7 +7,7 @@ export const Navbar: FC = () => {
 	return (
 		<NavbarContainer>
 			<Link href="/" className="text-xl font-black">
-				<Linear>micro/saas</Linear>
+				<Linear>Start</Linear>
 			</Link>
 		</NavbarContainer>
 	);
